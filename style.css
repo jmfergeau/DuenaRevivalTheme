@@ -1,17 +1,18 @@
 /*
-Theme Name: Duena
+Theme Name: Duena Revival
 Theme URI: http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/
-Author: Duena Studio
-Author URI: http://profiles.wordpress.org/duena_studio
-Description: Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template! 
-Version: 2.0.0
+Author: Duena Studio, Max le Fou
+Author URI: http://profiles.wordpress.org/maxlefou
+Description: Duena Revival is a project that aims to maintain and update the Wordpress theme Duena. Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template! 
+Version: 2.1.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
 Text Domain: duena
 
 Duena WordPress theme, Copyright (C) 2013 Duena Studio
-Duena WordPress theme is licensed under the GPL.
+Duena Revival project is initiated by Max le Fou
+Duena Revival WordPress theme is licensed under the GPL.
 */
 
 @import url(//fonts.googleapis.com/css?family=Damion);
@@ -1608,7 +1609,7 @@ padding:10px 20px 20px;
   text-decoration: none;
 }
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
   .portf_item .featured-thumbnail {
     max-height: 267px;
   }
@@ -1725,7 +1726,7 @@ padding:10px 20px 20px;
   padding: 20px 0 10px 0;
 }
 /* Landscape phones and down */
-@media (max-width: 480px) { 
+@media (max-width: 480px) {
   .error404-num {
     font-size: 100px;
     line-height: 80px;

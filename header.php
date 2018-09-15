@@ -17,6 +17,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php if( '' != of_get_option('favicon') ){ ?>
 <link rel="icon" href="<?php echo esc_url( of_get_option('favicon', "" ) ); ?>" type="image/x-icon" />
+
 <?php } ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -44,24 +45,24 @@
 			<?php } ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div>
-			<?php if ( of_get_option('g_search_box_id') == 'yes') { ?>  
+			<?php if ( of_get_option('g_search_box_id') == 'yes') { ?>
 	          <div id="top-search">
 	            <form method="get" action="<?php echo home_url(); ?>/">
 	              <input type="text" name="s"  class="input-search" /><input type="submit" value="" id="submit">
 	            </form>
-	          </div>  
+	          </div>
 	        <?php } ?>
 	        <div class="clear"></div>
 			<nav id="site-navigation" class="main-nav" role="navigation">
 				<div class="navbar_inner">
-				<?php 
-					wp_nav_menu( array( 
-						'container'       => 'ul', 
-		                'menu_class'      => 'sf-menu', 
+				<?php
+					wp_nav_menu( array(
+						'container'       => 'ul',
+		                'menu_class'      => 'sf-menu',
 		                'menu_id'         => 'topnav',
 		                'depth'           => 0,
-		                'theme_location' => 'primary' 
-					) ); 
+		                'theme_location' => 'primary'
+					) );
 				?>
 				</div>
 			</nav><!-- #site-navigation -->
@@ -72,7 +73,7 @@
 		<div class="container">
 	    	<?php get_template_part( 'slider' ); ?>
 		</div>
-	</section><!--#slider--> 
+	</section><!--#slider-->
   	<?php } ?>
 	<div id="main" class="site-main">
 		<div class="container">

@@ -1,4 +1,4 @@
-Thanks for choosing Duena theme.
+Thanks for choosing Duena Revival theme.
 
 --------------------------------------------------------------------------------
  Licenses:
@@ -11,7 +11,7 @@ Twitter Boostrap is licensed under Apache License v2.0
 http://twitter.github.com/bootstrap/
 
 Font Awesome is licensed under SIL Open Font License for font and MIT for CSS.
-http://fortawesome.github.com/Font-Awesome/
+https://fontawesome.com
 
 jQuery FlexSlider v2.1 is licensed under Apache License v2.0
 http://www.woothemes.com/flexslider/
@@ -31,15 +31,9 @@ Other icons and images are created by Duena Studio and licensed under GPL.
 Changelog
 --------------------------------------------------------------------------------
 
-v1.1.0
+v2.1.0
+- Feature: Font Awesome updated and fetching from them instead of having it locally
 
-- Fix: styles for taxonomy description
-- Fix: init for lightboxes in gallery post format
-- Fix: word-breaks for paragraphs
-- Fix: slider's caption position when using sliding effect
-- Fix: pasting tags for lightbox hover overlay
-- Tweak: add option for choosing category for portfolio page template
-- Tweak: add option for changing "Read more" button text on blog page
 
 v2.0.0
 - Fix: fixed minor admin CSS issues for WordPress 3.8
@@ -56,3 +50,13 @@ v2.0.0
 - Feature: added new options for managing portfolio pages
 - Feature: upgrade option 'Which category to pull from?' - now You can easily select category to pull slides from
 - Feature: upgrade portfolio page template - now you can select category to put portfolio posts from and columns number
+
+
+v1.1.0
+- Fix: styles for taxonomy description
+- Fix: init for lightboxes in gallery post format
+- Fix: word-breaks for paragraphs
+- Fix: slider's caption position when using sliding effect
+- Fix: pasting tags for lightbox hover overlay
+- Tweak: add option for choosing category for portfolio page template
+- Tweak: add option for changing "Read more" button text on blog page

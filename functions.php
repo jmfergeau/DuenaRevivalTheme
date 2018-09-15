@@ -38,7 +38,7 @@ if ( !function_exists( 'optionsframework_init' ) ) {
 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
 	include_once( get_template_directory() . '/options/options-framework.php' );
 }
-	
+
 
 
 /*
@@ -177,7 +177,7 @@ function duena_styles() {
 	wp_enqueue_style( 'magnific' );
 
 	// FontAwesome stylesheet
-	wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', '', '4.0.3');
+	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.3.1/css/all.css', '', '5.3.1');
 	wp_enqueue_style( 'font-awesome' );
 
 	// Main stylesheet
@@ -214,7 +214,7 @@ function duena_scripts() {
 
 	// Slider
 	wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '2.1', true);
-	
+
 	// PopUp
 	wp_enqueue_script('magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '0.8.9', true);
 
@@ -317,7 +317,7 @@ if (! function_exists( 'duena_breadcrumb' )) {
   	} else {
 
     	echo '<ul class="breadcrumb breadcrumb__t"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
-	
+
 	if ( is_home() ) {
 		echo $before . 'Blog' . $after;
 	} elseif ( is_category() ) {
@@ -421,16 +421,16 @@ function duena_show_author_bio() {
 		<div class="social_box">
 	<?php
 		if ( '' != of_get_option('g_author_bio_social_twitter') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='fa fa-twitter'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='fab fa-twitter'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_facebook') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fa fa-facebook'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fab fa-facebook-f'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_google') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_google') )."'><i class='fa fa-google-plus'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_google') )."'><i class='fab fa-google-plus-g'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_linked') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fa fa-linkedin'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fab fa-linkedin-in'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_rss') ) {
 			echo "<a href='".esc_url( of_get_option('g_author_bio_social_rss') )."'><i class='fa fa-rss'></i></a>\n";
@@ -466,10 +466,10 @@ function duena_show_author_bio() {
 /*-----------------------------------------------------------------------------------*/
 /*	Pagination (based on Twenty Fourteen pagination function)
 /*-----------------------------------------------------------------------------------*/
-function duena_pagination() { 
+function duena_pagination() {
 
 	global $wp_query, $wp_rewrite;
-    
+
 	if ( $wp_query->max_num_pages < 2 ) {
 		return;
 	}
@@ -520,7 +520,7 @@ function duena_pagination() {
 function duena_comment($comment, $args, $depth) {
      $GLOBALS['comment'] = $comment;
 
-?> 
+?>
    <li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>" class="clearfix">
      	<div id="comment-<?php comment_ID(); ?>" class="comment-body clearfix">
       		<div class="clearfix">
@@ -530,9 +530,9 @@ function duena_comment($comment, $args, $depth) {
   	      		</div>
   		      	<?php if ($comment->comment_approved == '0') : ?>
   		        	<em><?php _e('Your comment is awaiting moderation.', 'cherry') ?></em>
-  		      	<?php endif; ?>	      	
+  		      	<?php endif; ?>
   		     	<div class="extra-wrap">
-  		     		<?php comment_text() ?>	     	
+  		     		<?php comment_text() ?>
   		     	</div>
   		    </div>
 	     	<div class="clearfix comment-footer">
@@ -594,16 +594,16 @@ if (!function_exists('duena_footer_js')) {
 			jQuery(function(){
 				// main navigation init
 				jQuery('.navbar_inner > ul').superfish({
-					delay:       <?php echo $sf_delay; ?>, 		// one second delay on mouseout 
+					delay:       <?php echo $sf_delay; ?>, 		// one second delay on mouseout
 					animation:   {opacity:"<?php echo $sf_f_animation; ?>", height:"<?php echo $sf_sl_animation; ?>"}, // fade-in and slide-down animation
-					speed:       '<?php echo $sf_speed; ?>',  // faster animation speed 
+					speed:       '<?php echo $sf_speed; ?>',  // faster animation speed
 					autoArrows:  <?php echo $sf_arrows; ?>,   // generation of arrow mark-up (for submenu)
 					dropShadows: false
 				});
 				jQuery('.navbar_inner > div > ul').superfish({
-					delay:       <?php echo $sf_delay; ?>, 		// one second delay on mouseout 
+					delay:       <?php echo $sf_delay; ?>, 		// one second delay on mouseout
 					animation:   {opacity:"<?php echo $sf_f_animation; ?>", height:"<?php echo $sf_sl_animation; ?>"}, // fade-in and slide-down animation
-					speed:       '<?php echo $sf_speed; ?>',  // faster animation speed 
+					speed:       '<?php echo $sf_speed; ?>',  // faster animation speed
 					autoArrows:  <?php echo $sf_arrows; ?>,   // generation of arrow mark-up (for submenu)
 					dropShadows: false
 				});
