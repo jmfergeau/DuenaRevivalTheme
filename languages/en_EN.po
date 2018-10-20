@@ -410,11 +410,11 @@ msgid "Enter Author Facebook URL"
 msgstr ""
 
 #: ../options.php:245
-msgid "Author Google+ URL"
+msgid "Author Tumblr URL"
 msgstr ""
 
 #: ../options.php:246
-msgid "Enter Author Google+ URL"
+msgid "Enter Author Tumblr URL"
 msgstr ""
 
 #: ../options.php:252

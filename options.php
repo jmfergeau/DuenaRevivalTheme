@@ -3,37 +3,37 @@
  * A unique identifier is defined to store the options in the database and reference them from the theme.
  * By default it uses the theme name, in lowercase and without spaces, but this can be changed if needed.
  * If the identifier changes, it'll appear as if the options have been reset.
- * 
+ *
  */
 
 if(!function_exists('optionsframework_option_name')) {
 	function optionsframework_option_name() {
 		// This gets the theme name from the stylesheet (lowercase and without spaces)
 		$themename = 'duena';
-		
+
 		$optionsframework_settings = get_option('optionsframework');
 		$optionsframework_settings['id'] = $themename;
 		update_option('optionsframework', $optionsframework_settings);
-		
+
 	}
 }
 
 /**
  * Defines an array of options that will be used to generate the settings page and be saved in the database.
  * When creating the "id" fields, make sure to use all lowercase and no spaces.
- *  
+ *
  */
 
 if(!function_exists('optionsframework_options')) {
 
 	function optionsframework_options() {
-	
+
 		// Logo type
 		$logo_type = array(
 			"image_logo" => __( "Image Logo", 'duena'),
 			"text_logo" => __( "Text Logo", 'duena')
 		);
-		
+
 		// Search box in the header
 		$g_search_box = array(
 			"yes" => __( "Yes", 'duena'),
@@ -45,32 +45,32 @@ if(!function_exists('optionsframework_options')) {
 			"yes" => __( "Yes", 'duena'),
 			"no" => __( "No", 'duena')
 		);
-		
+
 		// Superfish fade-in animation
 		$sf_f_animation_array = array(
 			"show" => __( "Enable fade-in animation", 'duena'),
 			"false" => __( "Disable fade-in animation", 'duena')
 		);
-		
+
 		// Superfish slide-down animation
 		$sf_sl_animation_array = array(
 			"show" => __( "Enable slide-down animation", 'duena'),
 			"false" => __( "Disable slide-down animation", 'duena')
 		);
-		
+
 		// Superfish animation speed
 		$sf_speed_array = array(
 			"slow" => __( "Slow", 'duena'),
 			"normal" => __( "Normal", 'duena'),
 			"fast" => __( "Fast", 'duena')
 		);
-		
+
 		// Superfish arrows markup
 		$sf_arrows_array = array(
 			"true" => __( "Yes", 'duena'),
 			"false" => __( "No", 'duena')
 		);
-		
+
 		// Slider show
 		$sl_show_array = array(
 			"yes" => __( "Show", 'duena'),
@@ -85,8 +85,8 @@ if(!function_exists('optionsframework_options')) {
 
 		// Slider direction
 		$sl_direction_array = array(
-			'horizontal' => __( 'Horizontal', 'duena'), 
-			'vertical' => __( 'Vertical', 'duena') 
+			'horizontal' => __( 'Horizontal', 'duena'),
+			'vertical' => __( 'Vertical', 'duena')
 		);
 
 		// Slider slideshow
@@ -136,48 +136,48 @@ if(!function_exists('optionsframework_options')) {
 
 
 		$post_sidebar_array = array("left" => __( "Left Sidebar", 'duena'), "right" => __( "Right Sidebar", 'duena') );
-		
+
 		// Featured image on the blog.
 		$post_image_array = array(
 			"normal" => __( "Yes", 'duena'),
 			"noimg" => __( "No", 'duena')
 		);
-		
+
 		// Featured image size on the single page.
 		$single_image_array = array(
 			"normal" => __( "Yes", 'duena'),
 			"noimg" => __( "No", 'duena')
 		);
-		
+
 		// True/False options array for blog
 		$post_opt_array = array("true" => __( "Yes", 'duena'), "false" => __( "No", 'duena') );
-		
-		
-		
-		
-		
+
+
+
+
+
 		// Pull all the categories into an array
-		$options_categories = array();  
+		$options_categories = array();
 		$options_categories_obj = get_categories();
 		foreach ($options_categories_obj as $category) {
 				$options_categories[$category->cat_ID] = $category->cat_name;
 		}
-		
+
 		$all_cats_array = array('from_all' => __( 'Select from all', 'duena' ) ) + $options_categories;
 
 		// Pull all the pages into an array
-		$options_pages = array();  
+		$options_pages = array();
 		$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
 		$options_pages[''] = __( "Select a page:", "duena" );
 		foreach ($options_pages_obj as $page) {
 				$options_pages[$page->ID] = $page->post_title;
 		}
-			
+
 		// If using image radio buttons, define a directory path
 		$imagepath =  get_template_directory_uri() . '/inc/images/';
-			
+
 		$options = array();
-		
+
 		$options[] = array( "name" => __( "General", "duena" ),
 							"type" => "heading");
 
@@ -187,7 +187,7 @@ if(!function_exists('optionsframework_options')) {
 							"type"    => "radio",
 							"std"     => "yes",
 							"options" => $g_search_box);
-		
+
 		$options['g_breadcrumbs_id'] = array( "name" => __( "Display breadcrumbs?", "duena" ),
 							"desc"    => __( "Display breadcrumbs?", "duena" ),
 							"id"      => "g_breadcrumbs_id",
@@ -242,9 +242,9 @@ if(!function_exists('optionsframework_options')) {
 							"class" => "hidden",
 							"std"   => "#");
 
-		$options['g_author_bio_social_google'] = array( "name" => __( "Author Google+ URL", "duena" ),
-							"desc"  => __( "Enter Author Google+ URL", "duena" ),
-							"id"    => "g_author_bio_social_google",
+		$options['g_author_bio_social_tumblr'] = array( "name" => __( "Author Tumblr URL", "duena" ),
+							"desc"  => __( "Enter Author Tumblr URL", "duena" ),
+							"id"    => "g_author_bio_social_tumblr",
 							"type"  => "text",
 							"class" => "hidden",
 							"std"   => "#");
@@ -262,31 +262,31 @@ if(!function_exists('optionsframework_options')) {
 							"type"  => "text",
 							"class" => "hidden",
 							"std"   => "#");
-		
-		
-		
-		
+
+
+
+
 		$options[] = array( "name" => __( "Logo & Favicon", "duena" ),
 							"type" => "heading");
-		
+
 		$options['logo_type'] = array( "name" => __( "What kind of logo?", "duena" ),
 							"desc"    => __( "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead.", "duena" ),
 							"id"      => "logo_type",
 							"std"     => "text_logo",
 							"type"    => "radio",
 							"options" => $logo_type);
-		
+
 		$options['logo_url'] = array( "name" => __( "Logo Image Path", "duena" ),
 							"desc" => __( "Upload logo image", "duena" ),
 							"id"   => "logo_url",
 							"type" => "upload");
-		
+
 		$options['favicon'] = array( "name" => __( "Favicon", "duena" ),
 							"desc" => __( "Click Upload or Enter the direct path to your favicon.", "duena" ),
 							"id"   => "favicon",
 							"std"  => "",
 							"type" => "upload");
-		
+
 		$options[] = array( "name" => __( "Color scheme", "duena" ),
 							"type" => "heading");
 
@@ -311,28 +311,28 @@ if(!function_exists('optionsframework_options')) {
 
 		$options[] = array( "name" => __( "Navigation", "duena" ),
 							"type" => "heading");
-		
+
 		$options['sf_delay'] = array( "name" => __( "Delay", "duena" ),
 							"desc"  => __( "miliseconds delay on mouseout.", "duena" ),
 							"id"    => "sf_delay",
 							"std"   => "1000",
 							"class" => "mini",
 							"type"  => "text");
-		
+
 		$options['sf_f_animation'] = array( "name" => __( "Fade-in animation", "duena" ),
 							"desc"    => __( "Fade-in animation.", "duena" ),
 							"id"      => "sf_f_animation",
 							"std"     => "show",
 							"type"    => "radio",
 							"options" => $sf_f_animation_array);
-		
+
 		$options['sf_sl_animation'] = array( "name" => __( "Slide-down animation", "duena" ),
 							"desc"    => __( "Slide-down animation.", "duena" ),
 							"id"      => "sf_sl_animation",
 							"std"     => "show",
 							"type"    => "radio",
 							"options" => $sf_sl_animation_array);
-		
+
 		$options['sf_speed'] = array( "name" => __( "Speed", "duena" ),
 							"desc"    => __( "Animation speed.", "duena" ),
 							"id"      => "sf_speed",
@@ -340,7 +340,7 @@ if(!function_exists('optionsframework_options')) {
 							"std"     => "normal",
 							"class"   => "tiny", //mini, tiny, small
 							"options" => $sf_speed_array);
-		
+
 		$options['sf_arrows'] = array( "name" => __( "Arrows markup", "duena" ),
 							"desc"    => __( "Do you want to generate arrow mark-up?", "duena" ),
 							"id"      => "sf_arrows",
@@ -351,7 +351,7 @@ if(!function_exists('optionsframework_options')) {
 
 		$options[] = array( "name" => __( "Slider (visualisation)", "duena" ),
 							"type" => "heading");
- 
+
 		$options['sl_show'] = array( "name" => __( "Show slider", "duena" ),
 							"desc"    => __( "Show / Hide slider on home page", "duena" ),
 							"id"      => "sl_show",
@@ -400,12 +400,12 @@ if(!function_exists('optionsframework_options')) {
 							"class"   => "tiny", //mini, tiny, small
 							"options" => $sl_direction_nav_array);
 
-        
+
 
 
 		$options[] = array( "name" => __( "Slider (content)", "duena" ),
 							"type" => "heading");
- 
+
 		$options['sl_num'] = array( "name" => __( "How many slides to show?", "duena" ),
 							"desc"    => __( "This is how many slides will be displayed.", "duena" ),
 							"id"      => "sl_num",
@@ -476,17 +476,17 @@ if(!function_exists('optionsframework_options')) {
 							"class" => "tiny hidden");
 
 
-		
+
 		$options[] = array( "name" => __( "Blog", "duena" ),
 							"type" => "heading");
-		
+
 		$options['blog_sidebar_pos'] = array( "name" => __( "Sidebar position", "duena" ),
 							"desc"    => __( "Choose sidebar position.", "duena" ),
 							"id"      => "blog_sidebar_pos",
 							"std"     => "right",
 							"type"    => "radio",
 							"options" => $post_sidebar_array);
-		
+
 		$options['post_image_size'] = array( "name" => __( "Show featured image on Blog page", "duena" ),
 							"desc"    => __( "Show or hide featured image on Blog page", "duena" ),
 							"id"      => "post_image_size",
@@ -494,7 +494,7 @@ if(!function_exists('optionsframework_options')) {
 							"std"     => "normal",
 							"class"   => "small", //mini, tiny, small
 							"options" => $post_image_array);
-		
+
 		$options['single_image_size'] = array( "name" => __( "Show featured image on Single post page", "duena" ),
 							"desc"    => __( "Show or hide featured image on Single post page", "duena" ),
 							"id"      => "single_image_size",
@@ -502,14 +502,14 @@ if(!function_exists('optionsframework_options')) {
 							"std"     => "normal",
 							"class"   => "small", //mini, tiny, small
 							"options" => $single_image_array);
-		
+
 		$options['post_meta'] = array( "name" => __( "Enable Meta for blog posts?", "duena" ),
 							"desc"    => __( "Enable or Disable meta information for blog posts.", "duena" ),
 							"id"      => "post_meta",
 							"std"     => "true",
 							"type"    => "radio",
 							"options" => $post_opt_array);
-		
+
 		$options['post_excerpt'] = array( "name" => __( "Enable excerpt for blog posts?", "duena" ),
 							"desc"    => __( "Enable or Disable excerpt for blog posts.", "duena" ),
 							"id"      => "post_excerpt",
@@ -537,14 +537,14 @@ if(!function_exists('optionsframework_options')) {
 							"std"     => "true",
 							"type"    => "radio",
 							"options" => $post_opt_array);
-		
+
 
 		$options['blog_related'] = array( "name" => __( "Related Posts Title", "duena" ),
 							"desc" => __( "Enter Your Title used on Single Post page for related posts.", "duena" ),
 							"id"   => "blog_related",
 							"std"  => __( 'Related posts', 'duena' ),
 							"type" => "text");
-		
+
 		$options[] = array( "name" => __( "Portfolio", "duena" ),
 							"type" => "heading");
 
@@ -585,27 +585,27 @@ if(!function_exists('optionsframework_options')) {
 
 		$options[] = array( "name" => __( "Footer", "duena" ),
 							"type" => "heading");
-		
+
 		$options['footer_text'] = array( "name" => __( "Footer copyright text", "duena" ),
 							"desc" => __( "Enter text used in the right side of the footer. HTML tags are allowed.", "duena" ),
 							"id"   => "footer_text",
 							"std"  => "",
 							"type" => "textarea");
-		
+
 		$options['footer_menu'] = array( "name" => __( "Display Footer menu?", "duena" ),
 							"desc"    => __( "Do you want to display footer menu?", "duena" ),
 							"id"      => "footer_menu",
 							"std"     => "false",
 							"type"    => "radio",
 							"options" => $footer_menu_array);
-					
-		
+
+
 		return $options;
 	}
 
 }
 
-/* 
+/*
  * This is an example of how to add custom scripts to the options panel.
  * This example shows/hides an option when a checkbox is clicked.
  */
@@ -623,11 +623,11 @@ if(!function_exists('optionsframework_custom_scripts')) {
 			$('#example_showhidden').click(function() {
 					$('#section-example_text_hidden').fadeToggle(400);
 			});
-			
+
 			if ($('#example_showhidden:checked').val() !== undefined) {
 				$('#section-example_text_hidden').show();
 			}
-			
+
 		});
 		</script>
 
@@ -653,9 +653,9 @@ if(!function_exists('duena_register')) {
 		 * can load them into $options for easy reference
 		 */
 		$options = optionsframework_options();
-		
-		
-		
+
+
+
 		/*-----------------------------------------------------------------------------------*/
 		/*	General
 		/*-----------------------------------------------------------------------------------*/
@@ -663,8 +663,8 @@ if(!function_exists('duena_register')) {
 			'title' => __( 'General', 'duena' ),
 			'priority' => 200
 		));
-		
-		
+
+
 		/* Search Box */
 		$wp_customize->add_setting( 'duena[g_search_box_id]', array(
 				'default' => $options['g_search_box_id']['std'],
@@ -678,7 +678,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['g_search_box_id']['options'],
 				'priority' => 11
 		) );
-		
+
 		/* Breadcrumbs */
 		$wp_customize->add_setting( 'duena[g_breadcrumbs_id]', array(
 				'default' => $options['g_breadcrumbs_id']['std'],
@@ -821,16 +821,16 @@ if(!function_exists('duena_register')) {
 				'type' => $options['g_author_bio_social_rss']['type'],
 				'priority' => 22
 		) );
-		
+
 		/*-----------------------------------------------------------------------------------*/
 		/*	Logo
 		/*-----------------------------------------------------------------------------------*/
-		
+
 		$wp_customize->add_section( 'duena_logo', array(
 			'title' => __( 'Logo & Favicon', 'duena' ),
 			'priority' => 201
 		) );
-		
+
 		/* Logo Type */
 		$wp_customize->add_setting( 'duena[logo_type]', array(
 				'default' => $options['logo_type']['std'],
@@ -849,7 +849,7 @@ if(!function_exists('duena_register')) {
 		$wp_customize->add_setting( 'duena[logo_url]', array(
 			'type' => 'option'
 		) );
-		
+
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_url', array(
 			'label' => $options['logo_url']['name'],
 			'section' => 'duena_logo',
@@ -861,18 +861,18 @@ if(!function_exists('duena_register')) {
 		$wp_customize->add_setting( 'duena[favicon]', array(
 			'type' => 'option'
 		) );
-		
+
 		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'favicon', array(
 			'label' => $options['favicon']['name'],
 			'section' => 'duena_logo',
 			'settings' => 'duena[favicon]',
 			'priority' => 13
 		) ) );
-		
+
 		/*-----------------------------------------------------------------------------------*/
 		/*	Navigation
 		/*-----------------------------------------------------------------------------------*/
-		
+
 		/* Nav Delay */
 		$wp_customize->add_setting( 'duena[sf_delay]', array(
 				'default' => $options['sf_delay']['std'],
@@ -946,7 +946,7 @@ if(!function_exists('duena_register')) {
 		/*-----------------------------------------------------------------------------------*/
 		/*  Slider (visualisation)
 		/*-----------------------------------------------------------------------------------*/
- 
+
 		$wp_customize->add_section( 'duena_slider_visual', array(
 		    'title' => __( 'Slider (visualisation)', 'duena' ),
 		    'priority' => 202
@@ -965,7 +965,7 @@ if(!function_exists('duena_register')) {
 		        'choices' => $options['sl_show']['options'],
 		        'priority' => 11
 		) );
-		 
+
 		/* Slider Effect */
 		$wp_customize->add_setting( 'duena[sl_effect]', array(
 		        'default' => $options['sl_effect']['std'],
@@ -1035,17 +1035,17 @@ if(!function_exists('duena_register')) {
 		        'choices' => $options['sl_direction_nav']['options'],
 		        'priority' => 16
 		) );
- 
+
 
 		/*-----------------------------------------------------------------------------------*/
 		/*  Slider (content)
 		/*-----------------------------------------------------------------------------------*/
- 
+
 		$wp_customize->add_section( 'duena_slider_content', array(
 		    'title' => __( 'Slider (content)', 'duena' ),
 		    'priority' => 203
 		) );
-		
+
 		/* Slider Number */
 		$wp_customize->add_setting( 'duena[sl_num]', array(
 		        'default' => $options['sl_num']['std'],
@@ -1155,7 +1155,7 @@ if(!function_exists('duena_register')) {
 		        'choices' => $options['sl_capt_btn']['options'],
 		        'priority' => 18
 		) );
-		
+
 		/* Slider Caption Button Text */
 		$wp_customize->add_setting( 'duena[sl_capt_btn_txt]', array(
 		        'default' => $options['sl_capt_btn_txt']['std'],
@@ -1172,8 +1172,8 @@ if(!function_exists('duena_register')) {
 		/*-----------------------------------------------------------------------------------*/
 		/*	Blog
 		/*-----------------------------------------------------------------------------------*/
-		
-		
+
+
 		$wp_customize->add_section( 'duena_blog', array(
 				'title' => __( 'Blog', 'duena' ),
 				'priority' => 204
@@ -1192,7 +1192,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['blog_sidebar_pos']['options'],
 				'priority' => 11
 		) );
-		
+
 		/* Blog image size */
 		$wp_customize->add_setting( 'duena[post_image_size]', array(
 				'default' => $options['post_image_size']['std'],
@@ -1206,7 +1206,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['post_image_size']['options'],
 				'priority' => 12
 		) );
-		
+
 		/* Single post image size */
 		$wp_customize->add_setting( 'duena[single_image_size]', array(
 				'default' => $options['single_image_size']['std'],
@@ -1220,7 +1220,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['single_image_size']['options'],
 				'priority' => 13
 		) );
-		
+
 		/* Post Meta */
 		$wp_customize->add_setting( 'duena[post_meta]', array(
 				'default' => $options['post_meta']['std'],
@@ -1234,7 +1234,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['post_meta']['options'],
 				'priority' => 14
 		) );
-		
+
 		/* Post Excerpt */
 		$wp_customize->add_setting( 'duena[post_excerpt]', array(
 				'default' => $options['post_excerpt']['std'],
@@ -1290,7 +1290,7 @@ if(!function_exists('duena_register')) {
 				'choices' => $options['post_author']['options'],
 				'priority' => 19
 		) );
-		
+
 
 		/* Related title */
 		$wp_customize->add_setting( 'duena[blog_related]', array(
@@ -1308,8 +1308,8 @@ if(!function_exists('duena_register')) {
 		/*-----------------------------------------------------------------------------------*/
 		/*	Portfolio
 		/*-----------------------------------------------------------------------------------*/
-		
-		
+
+
 		$wp_customize->add_section( 'duena_portfolio', array(
 				'title' => __( 'Portfolio', 'duena' ),
 				'priority' => 205
@@ -1387,12 +1387,12 @@ if(!function_exists('duena_register')) {
 		/*-----------------------------------------------------------------------------------*/
 		/*	Footer
 		/*-----------------------------------------------------------------------------------*/
-		
+
 		$wp_customize->add_section( 'duena_footer', array(
 			'title' => __( 'Footer', 'duena' ),
 			'priority' => 206
 		) );
-			
+
 		/* Footer Copyright Text */
 		$wp_customize->add_setting( 'duena[footer_text]', array(
 				'default' => $options['footer_text']['std'],
@@ -1404,8 +1404,8 @@ if(!function_exists('duena_register')) {
 				'settings' => 'duena[footer_text]',
 				'type' => 'text'
 		) );
-		
-		
+
+
 		/* Display Footer Menu */
 		$wp_customize->add_setting( 'duena[footer_menu]', array(
 				'default' => $options['footer_menu']['std'],
@@ -1418,9 +1418,9 @@ if(!function_exists('duena_register')) {
 				'type' => $options['footer_menu']['type'],
 				'choices' => $options['footer_menu']['options']
 		) );
-		
 
-	
+
+
 	};
 
 }
