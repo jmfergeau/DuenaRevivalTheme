@@ -3,7 +3,10 @@ Thanks for choosing Duena Revival theme.
 --------------------------------------------------------------------------------
  Licenses:
 --------------------------------------------------------------------------------
-The Duena theme licensed under GPL3. See license.txt for further details.
+The Duena theme licensed under GPL3. See LICENSE for further details.
+
+The source code is available here:
+https://gitlab.com/maxlefou/DuenaRevivalTheme
 
 The resources used in Duena theme are all GPL-compatible:
 
@@ -32,7 +35,9 @@ Changelog
 --------------------------------------------------------------------------------
 
 v2.1.0
-- Feature: Font Awesome updated and fetching from them instead of having it locally
+- Tweak: Replaced Google+ logo and entry bu Tumblr since Google+ is about to close
+- Tweak: FontAwesome is now fetched from fontawesome.com for easier update of glyphes
+- Feature: The main orange color is now customizable in the colors section of theme customization
 
 
 v2.0.0
