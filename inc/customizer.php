@@ -26,28 +26,6 @@ function duena_customize_preview_js() {
 }
 add_action( 'customize_preview_init', 'duena_customize_preview_js' );
 
-// Fixing background or not (2.1.0)
-function duena_background_fixed() {
-	$bgfixingopt = get_option( 'duena_background_fixed' );
-	if ($bgfixingopt == 'true') {
-		$bgfixing = 'fixed';
-	} else {
-		$bgfixing = 'scroll';
-	}
-
-
-
-	?>
-	<style>
-		body {
-			background-attachment: <?php echo $bgfixing; ?>;
-		}
-	</style>
-	<?php
-}
-
-add_action( 'wp_head', 'duena_background_fixed' );
-
 
 // Customize primary color (2.1.0)
 function duena_customize_colors() {

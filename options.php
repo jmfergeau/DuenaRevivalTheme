@@ -864,25 +864,6 @@ if(!function_exists('duena_register')) {
 		);
 
 		/*-----------------------------------------------------------------------------------*/
-		/*	Background tweaks (2.1.0)
-		/*-----------------------------------------------------------------------------------*/
-		$wp_customize->add_setting( 'duena_background_fixed', array(
-				'default' => 'false',
-				'type' => 'option'
-		) );
-		$wp_customize->add_control(
-			new WP_Customize_Control(
-				$wp_customize, 'duena_background_fixed', array(
-					'label' => $options['duena_background_fixed']['name'],
-					'section' => 'background_image',
-					'settings' => 'duena[duena_background_fixed]',
-					'type' => $options['duena_background_fixed']['type'],
-					'choices' => $options['duena_background_fixed']['options']
-				)
-			)
-		);
-
-		/*-----------------------------------------------------------------------------------*/
 		/*	Logo
 		/*-----------------------------------------------------------------------------------*/
 
