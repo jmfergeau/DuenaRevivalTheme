@@ -13,6 +13,6 @@ Demo URL - ​http://www.tmbhtest.com/themes/duena (dead url)
 #### What more will it have ?
 - FontAwesome updated to its latest
 - Gutenberg-ready formatting
+- Main color customization (in the "colors" section)
 - Replaced Google+ by Tumblr (since Google+ is closing)
-- Main color change in one click (maybe?)
 - Maybe more...

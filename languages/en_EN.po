@@ -1031,3 +1031,10 @@ msgstr ""
 #: ../post-formats/related-posts.php:26
 msgid "Related Posts"
 msgstr ""
+
+# Color schemes 2.1.0
+msgid "Color scheme"
+msgstr ""
+
+msgid "Main color"
+msgstr ""

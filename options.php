@@ -783,16 +783,16 @@ if(!function_exists('duena_register')) {
 				'priority' => 19
 		) );
 
-		/* g_author_bio_social_google */
-		$wp_customize->add_setting( 'duena[g_author_bio_social_google]', array(
-				'default' => $options['g_author_bio_social_google']['std'],
+		/* g_author_bio_social_tumblr */
+		$wp_customize->add_setting( 'duena[g_author_bio_social_tumblr]', array(
+				'default' => $options['g_author_bio_social_tumblr']['std'],
 				'type' => 'option'
 		) );
-		$wp_customize->add_control( 'duena_g_author_bio_social_google', array(
-				'label' => $options['g_author_bio_social_google']['name'],
+		$wp_customize->add_control( 'duena_g_author_bio_social_tumblr', array(
+				'label' => $options['g_author_bio_social_tumblr']['name'],
 				'section' => 'duena_header',
-				'settings' => 'duena[g_author_bio_social_google]',
-				'type' => $options['g_author_bio_social_google']['type'],
+				'settings' => 'duena[g_author_bio_social_tumblr]',
+				'type' => $options['g_author_bio_social_tumblr']['type'],
 				'priority' => 20
 		) );
 
@@ -1036,6 +1036,23 @@ if(!function_exists('duena_register')) {
 		        'priority' => 16
 		) );
 
+		/*-----------------------------------------------------------------------------------*/
+		/*  Color scheme (2.1.0) That orange color changer #ff5b5b
+		/*-----------------------------------------------------------------------------------*/
+		$wp_customize->add_setting( 'main_color', array(
+			'default'=>'#ff5b5b',
+			'type' => 'option',
+			'capability' =>  'edit_theme_options'
+			)
+		);
+		$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize, 'main_color', array(
+		        'label' => 'Main color',
+	        	'section' => 'colors',
+	        	'settings' => 'main_color')
+	    )
+		);
 
 		/*-----------------------------------------------------------------------------------*/
 		/*  Slider (content)
