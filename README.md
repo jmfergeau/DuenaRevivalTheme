@@ -44,4 +44,5 @@ Demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 
 #### What more to do
 - Gutenberg-ready formatting
+- Making compatible the new menu feature in customization
 - Maybe more...
