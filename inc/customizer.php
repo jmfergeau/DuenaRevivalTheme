@@ -181,7 +181,7 @@ function duena_customize_colors() {
 		right: 0;
 		top: 0;
 		height: 6px;
-		background: url(images/page-top-bg.jpg) no-repeat center 0 <?php echo $primary_color; ?>;
+		background: url(<?php echo get_template_directory_uri(); ?>/images/page-top-bg.jpg) no-repeat center 0 <?php echo $primary_color; ?>;
 	}
 	#slider-wrapper .flexslider {
 		border-top: 6px solid <?php echo $primary_color; ?>;
@@ -207,7 +207,7 @@ function duena_customize_colors() {
 	  background: none;
 	  font-weight: bold;
 	  padding: 0 15px;
-	  font-family: 'BenchNine', sans-serif;
+	  /* font-family: 'BenchNine', sans-serif; */
 	  border-bottom: 0 solid <?php echo $primary_color; ?>;
 	}
 	@media (min-width: 768px) and (max-width: 979px) {
@@ -470,7 +470,7 @@ function duena_customize_colors() {
 	  left: -69px;
 	  width: 69px;
 	  height: 60px;
-	  background: <?php echo $primary_color; ?> url(images/post-format-icons.png) no-repeat 0 -240px;
+	  background: <?php echo $primary_color; ?> url(<?php echo get_template_directory_uri(); ?>/images/post-format-icons.png) no-repeat 0 -240px;
 	  border-radius: 30px 0 0 30px;
 	}
 	.post_meta i {
@@ -634,6 +634,37 @@ function duena_customize_colors() {
 	  -moz-transition: all 300ms linear;
 	  -o-transition: all 300ms linear;
 	  transition: all 300ms linear;
+	}
+
+	/* flexslider.css */
+	.flex-direction-nav a {
+		width: 50px;
+		height: 50px;
+		margin: -25px 0 0;
+		display: block;
+		background: url(<?php echo get_template_directory_uri(); ?>/images/bg_direction_nav.png) no-repeat 0 0 <?php echo $primary_color; ?>;
+		position: absolute;
+		top: 50%;
+		z-index: 10;
+		cursor: pointer;
+		text-indent: -99px;
+		z-index: 999;
+		opacity: 0;
+		overflow: hidden;
+		border-radius: 25px;
+		filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+		-webkit-transition: all .3s ease;
+		-moz-transition: all .3s ease;
+		-o-transition: all .3s ease;
+		-ms-transition: all .3s ease;
+		transition: all .3s ease;
+	}
+	.flex-control-paging li a:hover {
+		background: <?php echo $primary_color; ?>;
+	}
+	.flex-control-paging li a.flex-active {
+		background: <?php echo $primary_color; ?>;
+		cursor: default;
 	}
 
 	</style>
