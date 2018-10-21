@@ -11,6 +11,12 @@ Sources of the original Duena (might be obsolete) - https://github.com/DuenaStud
 Theme URL - http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/ (dead url)<br>
 Demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 
+## What more to do
+- Gutenberg-ready formatting
+- Making compatible the new menu feature in customization
+- Maybe more...
+
+
 ## Changelog
 #### v2.1.0 (Revival started here)
 - Tweak: Replaced Google+ logo and entry bu Tumblr since Google+ is about to close
@@ -41,8 +47,3 @@ Demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 - Fix: pasting tags for lightbox hover overlay
 - Tweak: add option for choosing category for portfolio page template
 - Tweak: add option for changing “Read more” button text on blog page
-
-#### What more to do
-- Gutenberg-ready formatting
-- Making compatible the new menu feature in customization
-- Maybe more...
