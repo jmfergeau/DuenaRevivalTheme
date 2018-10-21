@@ -1020,10 +1020,3 @@ msgstr ""
 #. Theme URI of the plugin/theme
 msgid "http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/"
 msgstr ""
-
-# Color schemes 2.1.0
-msgid "Color scheme"
-msgstr "Couleurs du site"
-
-msgid "Main color"
-msgstr "Couleur principale"

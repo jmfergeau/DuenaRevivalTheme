@@ -599,6 +599,14 @@ if(!function_exists('optionsframework_options')) {
 							"type"    => "radio",
 							"options" => $footer_menu_array);
 
+		// 2.1.0
+		$options['duena_background_fixed'] = array( "name" => __( "Fix background", "duena" ),
+							"desc"    => __( "Make the background fixed during scrolling.", "duena" ),
+							"id"      => "duena_background_fixed",
+							"std"     => "false",
+							"type"    => "radio",
+							"options" => $post_opt_array);
+
 
 		return $options;
 	}
@@ -823,6 +831,58 @@ if(!function_exists('duena_register')) {
 		) );
 
 		/*-----------------------------------------------------------------------------------*/
+		/*  Color scheme (2.1.0) That orange color changer #ff5b5b
+		/*-----------------------------------------------------------------------------------*/
+		$wp_customize->add_setting( 'cs_primary_color', array(
+			'default'=>'#ff5b5b',
+			'type' => 'option',
+			'capability' =>  'edit_theme_options'
+			)
+		);
+		$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize, 'cs_primary_color', array(
+		        'label' => $options['cs_primary_color']['name'],
+	        	'section' => 'colors',
+	        	'settings' => 'cs_primary_color')
+	    )
+		);
+
+		$wp_customize->add_setting( 'cs_secondary_color', array(
+			'default'=>'#71A08B',
+			'type' => 'option',
+			'capability' =>  'edit_theme_options'
+			)
+		);
+		$wp_customize->add_control(
+	    new WP_Customize_Color_Control(
+	        $wp_customize, 'cs_secondary_color', array(
+		        'label' => $options['cs_secondary_color']['name'],
+	        	'section' => 'colors',
+	        	'settings' => 'cs_secondary_color')
+	    )
+		);
+
+		/*-----------------------------------------------------------------------------------*/
+		/*	Background tweaks (2.1.0)
+		/*-----------------------------------------------------------------------------------*/
+		$wp_customize->add_setting( 'duena_background_fixed', array(
+				'default' => 'false',
+				'type' => 'option'
+		) );
+		$wp_customize->add_control(
+			new WP_Customize_Control(
+				$wp_customize, 'duena_background_fixed', array(
+					'label' => $options['duena_background_fixed']['name'],
+					'section' => 'background_image',
+					'settings' => 'duena[duena_background_fixed]',
+					'type' => $options['duena_background_fixed']['type'],
+					'choices' => $options['duena_background_fixed']['options']
+				)
+			)
+		);
+
+		/*-----------------------------------------------------------------------------------*/
 		/*	Logo
 		/*-----------------------------------------------------------------------------------*/
 
@@ -1035,24 +1095,6 @@ if(!function_exists('duena_register')) {
 		        'choices' => $options['sl_direction_nav']['options'],
 		        'priority' => 16
 		) );
-
-		/*-----------------------------------------------------------------------------------*/
-		/*  Color scheme (2.1.0) That orange color changer #ff5b5b
-		/*-----------------------------------------------------------------------------------*/
-		$wp_customize->add_setting( 'main_color', array(
-			'default'=>'#ff5b5b',
-			'type' => 'option',
-			'capability' =>  'edit_theme_options'
-			)
-		);
-		$wp_customize->add_control(
-	    new WP_Customize_Color_Control(
-	        $wp_customize, 'main_color', array(
-		        'label' => 'Main color',
-	        	'section' => 'colors',
-	        	'settings' => 'main_color')
-	    )
-		);
 
 		/*-----------------------------------------------------------------------------------*/
 		/*  Slider (content)
