@@ -13,6 +13,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no" />
+<meta name="theme-color" content="<?php echo get_option( 'cs_primary_color' ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php if( '' != of_get_option('favicon') ){ ?>
