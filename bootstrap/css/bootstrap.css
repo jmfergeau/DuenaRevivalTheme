@@ -27,10 +27,12 @@ audio,
 canvas,
 video {
   display: inline-block;
+  width: 100%; /* Damn gutenberg */
 }
 audio:not([controls]) {
   display: none;
   height: 0;
+  width: 100%; /* Damn gutenberg */
 }
 [hidden],
 template {

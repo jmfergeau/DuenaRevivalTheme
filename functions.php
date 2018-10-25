@@ -638,3 +638,6 @@ function wpb_image_editor_default_to_gd( $editors ) {
     return $editors;
 }
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
+
+/* Gutenberg support (2.1.0) */
+add_theme_support( 'align-wide' );

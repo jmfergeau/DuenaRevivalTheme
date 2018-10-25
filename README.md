@@ -23,6 +23,7 @@ Original demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 - Tweak: Added meta tag "theme-color". This colorize the address bar of some browsers (Chrome on Android, Vivaldi,...) with the primary color
 - Tweak: Replaced Google+ logo and entry bu Tumblr since Google+ is about to close
 - Tweak: FontAwesome is now fetched from fontawesome.com for easier update of glyphes
+- Feature: Some uncompatible Gutenberg features have been made compatible (audio, blockquotes, pullquotes and files)
 - Feature: The main orange color is now customizable in the colors section of theme customization
 
 #### v2.0.0
