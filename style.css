@@ -2781,3 +2781,8 @@ figure.wp-block-pullquote cite {
 div.wp-block-file {
   text-align: center;
 }
+
+p.wp-block-cover-text {
+  font-size: 3em !important;
+  font-family: 'BenchNine', sans-serif;
+}
