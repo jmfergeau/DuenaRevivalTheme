@@ -635,6 +635,18 @@ function duena_customize_colors() {
 	.flex-control-paging li a.flex-active {
 		background: <?php echo $primary_color; ?>;
 	}
+	.has-user-primary-color {
+		color: <?php echo $primary_color; ?>;
+	}
+	.has-user-primary-background-color {
+		background-color: <?php echo $primary_color; ?>;
+	}
+	.has-user-secondary-color {
+		color: <?php echo $secondary_color; ?>;
+	}
+	.has-user-secondary-background-color {
+		background-color: <?php echo $secondary_color; ?>;
+	}
 
 	</style>
 

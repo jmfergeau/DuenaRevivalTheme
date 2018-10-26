@@ -2743,6 +2743,13 @@ textarea {
     margin: 0 auto;
   }
 }
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+  font-family: sans-serif;
+  background: none;
+  padding: 0 0 0 0 !important;
+  list-style: none;
+}
 
 figure.wp-block-audio audio {
   width: 100%;
@@ -2787,4 +2794,36 @@ div.wp-block-file {
 p.wp-block-cover-text {
   font-size: 3em !important;
   font-family: 'BenchNine', sans-serif;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.has-user-primary-color {
+  color: #ff5b5b;
+}
+
+.has-user-primary-background-color {
+  background-color: #ff5b5b;
+}
+
+.has-user-secondary-color {
+  color: #71A08B;
+}
+
+.has-user-secondary-background-color {
+  background-color: #71A08B;
+}
+
+.has-small-font-size {
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.has-large-font-size {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.has-larger-font-size {
+    font-size: 25px;
+    line-height: 1.25;
 }

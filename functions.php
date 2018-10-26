@@ -640,4 +640,54 @@ function wpb_image_editor_default_to_gd( $editors ) {
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 
 /* Gutenberg support (2.1.0) */
+function duena_setup_theme_supported_features() {
+    add_theme_support( 'editor-color-palette', array(
+        array(
+            'name' => __( 'Primary color', 'themeLangDomain' ),
+            'slug' => 'user-primary',
+            'color' => $primary_color,
+        ),
+        array(
+            'name' => __( 'Secondary color', 'themeLangDomain' ),
+            'slug' => 'user-secondary',
+            'color' => $secondary_color,
+        ),
+        array(
+            'name' => __( 'very light gray', 'themeLangDomain' ),
+            'slug' => 'very-light-gray',
+            'color' => '#eee',
+        ),
+        array(
+            'name' => __( 'very dark gray', 'themeLangDomain' ),
+            'slug' => 'very-dark-gray',
+            'color' => '#444',
+        ),
+    ) );
+}
+
+add_action( 'after_setup_theme', 'duena_setup_theme_supported_features' );
+
 add_theme_support( 'align-wide' );
+add_theme_support( 'responsive-embeds' );
+add_theme_support('editor-styles');
+
+add_theme_support( 'editor-font-sizes', array(
+    array(
+        'name' => __( 'small', 'themeLangDomain' ),
+        'shortName' => __( 'S', 'themeLangDomain' ),
+        'size' => 10,
+        'slug' => 'small'
+    ),
+    array(
+        'name' => __( 'large', 'themeLangDomain' ),
+        'shortName' => __( 'L', 'themeLangDomain' ),
+        'size' => 20,
+        'slug' => 'large'
+    ),
+    array(
+        'name' => __( 'larger', 'themeLangDomain' ),
+        'shortName' => __( 'XL', 'themeLangDomain' ),
+        'size' => 25,
+        'slug' => 'larger'
+    )
+) );
