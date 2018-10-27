@@ -1,6 +1,7 @@
 v2.1.0 (Revival started here)
 - Fix: The main colors are now customizable in the colors section of theme customization
-- Tweak: Replaced Google+ logo and entry bu Tumblr since Google+ is about to close
+- Tweak: Added support of child themes for the function duena_show_author_bio
+- Tweak: Replaced Google+ logo and entry by Tumblr since Google+ is about to close
 - Tweak: FontAwesome is now fetched from fontawesome.com for easier update of glyphes
 - Feature: Partial Gutenberg support
 - Feature: Added meta tag "theme-color". This colorize the address bar of some browsers (Chrome on Android, Vivaldi,...) with the primary color
