@@ -34,6 +34,15 @@ function duena_customize_colors() {
 
 	?>
 	<style>
+	/* This will disable the top page picture if the main color has changed */
+	<?php
+	if ( $primary_color == '#ff5b5b') {
+		$pagetoppic = 'url('.get_template_directory_uri().'/images/page-top-bg.jpg) no-repeat center 0 #bd5bff';
+	} else {
+		$pagetoppic = $primary_color.' no-repeat center 0';
+	} ?>
+
+
 	/* bootstrap.css */
 	a {
 	  color: <?php echo $primary_color; ?>;
@@ -329,8 +338,9 @@ function duena_customize_colors() {
 	.footer-menu li.current-menu-item a {
 	  color: <?php echo $secondary_color; ?>;
 	}
+	/* This is where the top page pic changes */
 	.page-wrapper:before {
-		background: url(<?php echo get_template_directory_uri(); ?>/images/page-top-bg.jpg) no-repeat center 0 <?php echo $primary_color; ?>;
+		background: <?php echo $pagetoppic; ?>;
 	}
 	#slider-wrapper .flexslider {
 		border-top: 6px solid <?php echo $primary_color; ?>;

@@ -25,7 +25,7 @@ msgstr "Page de portfolio"
 
 #. Template Name of the plugin/theme
 msgid "Fullwidth Page"
-msgstr ""
+msgstr "Pleine page"
 
 #: sidebar.php:24
 msgid "Meta"
@@ -103,11 +103,11 @@ msgstr "Mis en avant"
 
 #: options.php:596
 msgid "Do you want to display footer menu?"
-msgstr ""
+msgstr "Afficher le pied de page?"
 
 #: options.php:595
 msgid "Display Footer menu?"
-msgstr ""
+msgstr "Afficher le pied de page?"
 
 #: options.php:590
 msgid "Enter text used in the right side of the footer. HTML tags are allowed."
@@ -916,7 +916,7 @@ msgstr "Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Ma
 
 #: comments.php:67
 msgid "Comments are closed."
-msgstr "Les commentaires sont fermés."
+msgstr "Commentaires fermés."
 
 #: comments.php:41 comments.php:57
 msgid "Newer Comments &rarr;"
@@ -996,6 +996,8 @@ msgstr "Archives de catégorie&nbsp;: %s"
 #: 404.php:19
 msgid "Please try using our search box below to look for information on the internet."
 msgstr ""
+"Essayez notre outil de recherche ci-dessous pour chercher des informations "
+"sur Internet."
 
 #: 404.php:18
 msgid "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
@@ -1007,7 +1009,7 @@ msgstr "Page non trouvée"
 
 #: 404.php:15
 msgid "Sorry!"
-msgstr ""
+msgstr "Désolé !"
 
 #. Author URI of the plugin/theme
 msgid "http://profiles.wordpress.org/duena_studio"

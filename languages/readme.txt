@@ -1,8 +1,5 @@
-Place your theme language files in this directory.
-Additionnal languages are archived here: https://translate.wordpress.org/projects/wp-themes/duena
-You are invited to add your preferred language in pull requests.
+These files are blank .po and .mo files used for translation.
+Note that there's probably an available translation of the theme here:
+https://translate.wordpress.org/projects/wp-themes/duena
 
-Please visit the following links to learn more about translating WordPress themes:
-
-http://codex.wordpress.org/Translating_WordPress
-http://codex.wordpress.org/Function_Reference/load_theme_textdomain
+Get the desired language, ensure the files are called "duena-(lang_code_" (ex: duena-fr_FR.po and duena-fr_FR.mo) and place them in "wp-content/languages/themes".
