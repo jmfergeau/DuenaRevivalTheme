@@ -177,7 +177,7 @@ function duena_styles() {
 	wp_enqueue_style( 'magnific' );
 
 	// FontAwesome stylesheet
-	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.4.1/css/all.css', '', '5.4.1');
+	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.4.2/css/all.css', '', '5.4.2');
 	wp_enqueue_style( 'font-awesome' );
 
 	// Main stylesheet
