@@ -2797,6 +2797,37 @@ p.wp-block-cover-text {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.wp-block-button {
+  text-align: center;
+}
+
+.wp-block-file
+.wp-block-file__button {
+    background: #ff5b5b;
+    border-radius: 2em;
+    color: #fff;
+    font-size: 13px;
+    padding: .5em 1em;
+}
+
+.wp-block-button__link {
+    background-color: #ff5b5b;
+    border: none;
+    border-radius: 23px;
+    box-shadow: none;
+    color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
+    padding: 11px 24px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    word-break: break-all;
+}
+
 .has-user-primary-color {
   color: #ff5b5b;
 }

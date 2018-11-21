@@ -634,6 +634,14 @@ function duena_customize_colors() {
 	input[type="submit"] {
 	  background: <?php echo $primary_color; ?>;
 	}
+	.wp-block-file
+	.wp-block-file__button {
+	    background: <?php echo $primary_color; ?>;
+	}
+
+	.wp-block-button__link {
+	    background-color: <?php echo $primary_color; ?>;
+	}
 
 	/* flexslider.css */
 	.flex-direction-nav a {
