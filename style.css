@@ -930,7 +930,8 @@ margin-bottom:10px;
   font-style: italic;
 }
 .more_link:after {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900; /* Why do I must put this sh*t */
   content: "\f105";
   font-style: normal;
   font-size: 9px;
