@@ -1,35 +1,35 @@
 <!--BEGIN .post -->
 <article id="post-<?php the_ID(); ?>" <?php post_class('post__holder'); ?>>
 
-	<?php 
+	<?php
 	$stickyclass = 'sticky';
-	if(!is_singular()) : 
+	if(!is_singular()) :
 		duena_gallery_sl();
 	endif; ?>
 	<header class="post-header <?php if( is_singular() && is_sticky() ) echo esc_attr( $stickyclass ); ?>">
 
-		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fa fa-thumb-tack'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
+		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fas fa-thumbtack' style='font-weight: 900;'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
 
 		<?php if(!is_singular()) : ?>
 
 		<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
-		
+
 		<?php else :?>
-		
+
 		<h1 class="post-title"><?php the_title(); ?></h1>
-		
+
 		<?php endif; ?>
-	
+
 	</header>
-	
-	
+
+
 
 	<?php if(!is_singular()) : ?>
 
 		<div class="post_content">
 			<?php if ( 'false' != of_get_option('post_excerpt')) { ?>
 				<div class="excerpt">
-				<?php 
+				<?php
 					$excerpt = get_the_excerpt();
 					if (has_excerpt()) {
 						the_excerpt();
@@ -43,13 +43,13 @@
 				<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
 			<?php } ?>
 		</div>
-	
+
 	<?php else :?>
 
 		<!-- Gallery Post -->
 		<div class="gallery-post">
-			
-			<?php 
+
+			<?php
 				if ( function_exists('the_remaining_content') ) {
 					the_remaining_content( __( 'Continue reading', 'duena' ) );
 				} else {
@@ -57,7 +57,7 @@
 				}
 			?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'duena' ), 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) );  ?>
-		
+
 		</div>
 		<!-- /Gallery Post -->
 		<?php if( has_tag() ) { ?>
