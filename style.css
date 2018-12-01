@@ -2825,9 +2825,13 @@ p.wp-block-cover-text {
     margin: 0;
     padding: 11px 24px;
     text-align: center;
-    text-decoration: none;
     white-space: normal;
     word-break: break-all;
+}
+
+.wp-block-button__link:hover, .wp-block-button__link:active {
+  background: #262626;
+  text-decoration: none !important;
 }
 
 .has-user-primary-color {
