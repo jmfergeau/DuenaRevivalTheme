@@ -54,9 +54,9 @@ ul {
   overflow: hidden;
 }
 ul li {
-  padding: 0 0 10px 16px;
-  background: url(images/list-bullet.svg) no-repeat 0 0;
-  background-size: 3px 20px;
+  padding: 0 0 6px 10px;
+  background: url(images/list-bullet.svg) no-repeat 0 7px;
+  background-size: 3px 5px;
   list-style: none;
   margin: 0;
 }
