@@ -46,7 +46,7 @@
 			<?php
 
 				wp_list_comments( array( 'callback' => 'duena_comment' ) );
-				
+
 			?>
 		</ol><!-- .comment-list -->
 
@@ -67,11 +67,11 @@
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'duena' ); ?></p>
 	<?php endif; ?>
 
-	<?php 
+	<?php
 		$args =  array(
-			'comment_notes_after' => '<p class="form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ), ' <pre>' . allowed_tags() . '</pre>' ) . '</p>'
+			'comment_notes_after' => '<p class="form-allowed-tags">' . sprintf( __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s', 'duena' ), ' <pre>' . allowed_tags() . '</pre>' ) . '</p>'
 		);
-		comment_form($args); 
+		comment_form($args);
 	?>
 
 </div><!-- #comments -->
