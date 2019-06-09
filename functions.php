@@ -302,7 +302,7 @@ if (! function_exists( 'duena_breadcrumb' )) {
 	function duena_breadcrumb() {
 	  $showOnHome = 0; // 1 - show "breadcrumbs" on home page, 0 - hide
 	  $delimiter = '<li class="divider">/</li>'; // divider
-	  $home = 'Home'; // text for link "Home"
+	  $home = __( 'Home', 'duena'); // text for link "Home"
 	  $showCurrent = 1; // 1 - show title current post/page, 0 - hide
 	  $before = '<li class="active">'; // open tag for active breadcrumb
 	  $after = '</li>'; // close tag for active breadcrumb
