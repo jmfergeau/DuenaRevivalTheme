@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Themes - Duena\n"
-"POT-Creation-Date: 2019-06-09 21:27+0200\n"
-"PO-Revision-Date: 2019-06-09 21:28+0200\n"
+"POT-Creation-Date: 2019-06-09 22:10+0200\n"
+"PO-Revision-Date: 2019-06-09 22:11+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 2.2.3\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;esc_attr_e;_e\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:1,2,4c;_ex:1,2c;"
+"esc_attr_x:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -110,6 +111,14 @@ msgstr ""
 "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
 "Essayez en lançant une recherche."
 
+#: ../comments.php:32
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Une réflexion sur &laquo;&nbsp;%2$s&nbsp;&raquo;"
+msgstr[1] "%1$s réflexions sur &laquo;&nbsp;%2$s&nbsp;&raquo;"
+
 #: ../comments.php:39 ../comments.php:55
 msgid "Comment navigation"
 msgstr "Navigation des commentaires"
@@ -134,10 +143,6 @@ msgid ""
 msgstr ""
 "Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Markup "
 "Language\">HTML</abbr>&nbsp;: %s"
-
-#: ../footer.php:23
-msgid "A Semantic Personal Publishing Platform"
-msgstr "Une plate-forme sémantique de publication personnelle"
 
 #: ../footer.php:23
 #, php-format
@@ -948,14 +953,6 @@ msgstr "Valeur par défaut"
 msgid "Select Color"
 msgstr "Sélectionner une couleur"
 
-#: ../options/options-framework.php:348
-msgid "Save Options"
-msgstr "Sauvegarder les options"
-
-#: ../options/options-framework.php:349
-msgid "Restore Defaults"
-msgstr "Restaurer les paramètres par défaut"
-
 #: ../options/options-framework.php:349
 msgid "Click OK to reset. Any theme settings will be lost!"
 msgstr ""
@@ -1087,15 +1084,6 @@ msgstr "Continuer à lire"
 msgid "Tags: "
 msgstr "Mots-clés : "
 
-#: ../post-formats/audio.php:7 ../post-formats/chat.php:7
-#: ../post-formats/gallery.php:15 ../post-formats/image.php:20
-#: ../post-formats/link.php:13 ../post-formats/link.php:23
-#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
-#: ../post-formats/post-meta.php:54 ../post-formats/post-thumb.php:4
-#: ../post-formats/standard.php:13 ../post-formats/video.php:15
-msgid "Permalink to:"
-msgstr "Permalien vers :"
-
 #: ../post-formats/author-bio.php:15
 msgid "About"
 msgstr "À propos"
@@ -1147,9 +1135,36 @@ msgstr "Articles en rapport"
 msgid "Search Results for: %s"
 msgstr "Résultats de recherche pour %s"
 
+#: ../searchform.php:9
+msgctxt "assistive text"
+msgid "Search"
+msgstr "Rechercher"
+
+#: ../searchform.php:10
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Recherche &hellip;"
+
+#: ../searchform.php:11
+msgctxt "submit button"
+msgid "Search"
+msgstr "Rechercher"
+
 #: ../sidebar.php:24
 msgid "Meta"
 msgstr "Méta"
+
+#~ msgid "A Semantic Personal Publishing Platform"
+#~ msgstr "Une plate-forme sémantique de publication personnelle"
+
+#~ msgid "Save Options"
+#~ msgstr "Sauvegarder les options"
+
+#~ msgid "Restore Defaults"
+#~ msgstr "Restaurer les paramètres par défaut"
+
+#~ msgid "Permalink to:"
+#~ msgstr "Permalien vers :"
 
 #~ msgid "Author Tumblr URL"
 #~ msgstr "Entrer l'URL du Tumblr de l'auteur"
@@ -1192,24 +1207,6 @@ msgstr "Méta"
 
 #~ msgid "Fullwidth Page"
 #~ msgstr "Pleine page"
-
-#~ msgctxt "submit button"
-#~ msgid "Search"
-#~ msgstr "Rechercher"
-
-#~ msgctxt "placeholder"
-#~ msgid "Search &hellip;"
-#~ msgstr "Recherche &hellip;"
-
-#~ msgctxt "assistive text"
-#~ msgid "Search"
-#~ msgstr "Rechercher"
-
-#~ msgctxt "comments title"
-#~ msgid "One thought on &ldquo;%2$s&rdquo;"
-#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-#~ msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
-#~ msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
 
 #~ msgid "Duena Studio"
 #~ msgstr "Duena Studio"

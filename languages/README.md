@@ -23,8 +23,6 @@ If your language is not available, do as follows:
 - Push all of this in your forked repo and make a merge request ;)
 
 ## Install
-When you install the theme in your wordpress, feel free to only keep the language(s) you're interested, as long as you:
-- keep `en_EN.mo` and `en_EN.po` for the missing strings
-- compile the `.mo` file of your language if it's missing in the repository (using POEditor for instance)
+When you install the theme in your wordpress, feel free to only keep the language(s) you're interested, as long as you compile the `.mo` file of your language if it's missing in the repository (using POEditor for instance)
 
 Know that most of the languages are not 100% translated yet.
