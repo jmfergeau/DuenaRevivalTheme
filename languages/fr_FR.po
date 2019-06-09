@@ -2,1003 +2,1103 @@
 # This file is distributed under the same license as the Themes - Duena package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-06-08 21:12+0200\n"
+"Project-Id-Version: Themes - Duena\n"
+"POT-Creation-Date: 2019-06-09 21:27+0200\n"
+"PO-Revision-Date: 2019-06-09 21:28+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 2.2.3\n"
-"Language: fr\n"
-"Project-Id-Version: Themes - Duena\n"
-"POT-Creation-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-
-#. Description of the plugin/theme
-msgid "Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template!"
-msgstr ""
-
-#. Theme Name of the plugin/theme
-msgid "Duena"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Portfolio Page"
-msgstr "Page de portfolio"
-
-#. Template Name of the plugin/theme
-msgid "Fullwidth Page"
-msgstr "Pleine page"
-
-#: sidebar.php:24
-msgid "Meta"
-msgstr "Méta"
-
-#: searchform.php:11
-msgctxt "submit button"
-msgid "Search"
-msgstr "Rechercher"
-
-#: searchform.php:10
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr "Recherche&hellip;"
-
-#: searchform.php:9
-msgctxt "assistive text"
-msgid "Search"
-msgstr "Rechercher"
-
-#: search.php:16
-msgid "Search Results for: %s"
-msgstr "Résultats de recherche pour %s"
-
-#: post-formats/related-posts.php:26
-msgid "Related Posts"
-msgstr "Articles en rapport"
-
-#: post-formats/post-nav.php:12
-msgid "Newer Entries &raquo;"
-msgstr "Nouvelles entrées &raquo;"
-
-#: post-formats/post-nav.php:9
-msgid "&laquo; Older Entries"
-msgstr "&laquo; Entrées anciennes"
-
-#: post-formats/post-meta.php:31 post-formats/post-meta.php:42 post-formats/post-meta.php:54
-msgid "Permalink"
-msgstr "Permaliens"
-
-#: post-formats/author-bio.php:15
-msgid "About"
-msgstr "A propos"
-
-#: post-formats/audio.php:7 post-formats/chat.php:7 post-formats/gallery.php:15 post-formats/image.php:20 post-formats/link.php:13 post-formats/link.php:23 post-formats/post-meta.php:31 post-formats/post-meta.php:42 post-formats/post-meta.php:54 post-formats/post-thumb.php:4 post-formats/standard.php:12 post-formats/video.php:15
-msgid "Permalink to:"
-msgstr "Permalien vers:"
-
-#: post-formats/aside.php:13 post-formats/audio.php:32 post-formats/chat.php:27 post-formats/gallery.php:65 post-formats/image.php:43 post-formats/link.php:41 post-formats/quote.php:21 post-formats/standard.php:60 post-formats/status.php:14 post-formats/video.php:36
-msgid "Tags: "
-msgstr "Mots-clés : "
-
-#: post-formats/aside.php:7 post-formats/audio.php:23 post-formats/gallery.php:54 post-formats/image.php:31 post-formats/link.php:35 post-formats/quote.php:15 post-formats/status.php:7 post-formats/video.php:26
-msgid "Continue reading"
-msgstr "la suite..."
-
-#: post-formats/aside.php:6 post-formats/audio.php:5 post-formats/chat.php:5 post-formats/gallery.php:11 post-formats/image.php:6 post-formats/link.php:6 post-formats/quote.php:4 post-formats/standard.php:9 post-formats/status.php:6 post-formats/video.php:13
-msgid "Featured"
-msgstr "Mis en avant"
-
-#: options.php:596
-msgid "Do you want to display footer menu?"
-msgstr "Afficher le pied de page?"
-
-#: options.php:595
-msgid "Display Footer menu?"
-msgstr "Afficher le pied de page?"
-
-#: options.php:590
-msgid "Enter text used in the right side of the footer. HTML tags are allowed."
-msgstr ""
-
-#: options.php:589
-msgid "Footer copyright text"
-msgstr "texte du droit d'auteur dans le pied de page"
-
-#: options.php:586 options.php:1392
-msgid "Footer"
-msgstr "Pied de page"
-
-#: options.php:580
-msgid "Show or hide 'Read more' on portfolio pages."
-msgstr ""
-
-#: options.php:579
-msgid "Show 'Read more' link"
-msgstr ""
-
-#: options.php:573
-msgid "Show or hide post excerpt on portfolio pages."
-msgstr ""
-
-#: options.php:572
-msgid "Show excerpt"
-msgstr "Montrer le résumé"
-
-#: options.php:566
-msgid "Show or hide post title on portfolio pages."
-msgstr ""
-
-#: options.php:565
-msgid "Show title"
-msgstr "Afficher le titre"
-
-#: options.php:559
-msgid "Show or hide post thumbnail on portfolio pages."
-msgstr ""
-
-#: options.php:558
-msgid "Show thumbnail"
-msgstr ""
-
-#: options.php:552
-msgid "Enter number of post per page on portfolio page template"
-msgstr ""
-
-#: options.php:551
-msgid "Posts per page"
-msgstr "Articles par page"
-
-#: options.php:548 options.php:1314
-msgid "Portfolio"
-msgstr "Portefolio"
-
-#: options.php:545
-msgid "Related posts"
-msgstr "Articles en rapport"
-
-#: options.php:543
-msgid "Enter Your Title used on Single Post page for related posts."
-msgstr ""
-
-#: options.php:542
-msgid "Related Posts Title"
-msgstr ""
-
-#: options.php:535
-msgid "Show or hide author bio on single post page."
-msgstr ""
-
-#: options.php:534
-msgid "Show author bio on single post page?"
-msgstr ""
-
-#: options.php:530
-msgid "Read More"
-msgstr "Lire la suite"
-
-#: options.php:528
-msgid "Enter 'read more' button text."
-msgstr ""
-
-#: options.php:527
-msgid "'Read more' button text"
-msgstr ""
-
-#: options.php:521
-msgid "Enable or Disable read more button for blog posts."
-msgstr ""
-
-#: options.php:520
-msgid "Enable read more button for blog posts?"
-msgstr ""
-
-#: options.php:514
-msgid "Enable or Disable excerpt for blog posts."
-msgstr ""
-
-#: options.php:513
-msgid "Enable excerpt for blog posts?"
-msgstr ""
-
-#: options.php:507
-msgid "Enable or Disable meta information for blog posts."
-msgstr ""
-
-#: options.php:506
-msgid "Enable Meta for blog posts?"
-msgstr ""
-
-#: options.php:499
-msgid "Show or hide featured image on Single post page"
-msgstr ""
-
-#: options.php:498
-msgid "Show featured image on Single post page"
-msgstr ""
-
-#: options.php:491
-msgid "Show or hide featured image on Blog page"
-msgstr ""
-
-#: options.php:490
-msgid "Show featured image on Blog page"
-msgstr ""
-
-#: options.php:484
-msgid "Choose sidebar position."
-msgstr ""
-
-#: options.php:483
-msgid "Sidebar position"
-msgstr "Position de la sidebar"
-
-#: options.php:480 options.php:1178
-msgid "Blog"
-msgstr "Blog"
-
-#: options.php:471 options.php:472
-msgid "Slide caption button text"
-msgstr ""
-
-#: options.php:463 options.php:464
-msgid "Show/Hide slide caption button"
-msgstr ""
-
-#: options.php:457
-msgid "How many words are displayed in the excerpt?"
-msgstr ""
-
-#: options.php:456
-msgid "Slide caption excerpt length"
-msgstr ""
-
-#: options.php:449
-msgid "Show/Hide slide caption excerpt."
-msgstr ""
-
-#: options.php:448
-msgid "Show/Hide slide caption excerpt"
-msgstr ""
-
-#: options.php:441
-msgid "Show/Hide slide caption title."
-msgstr ""
-
-#: options.php:440
-msgid "Show/Hide slide caption title"
-msgstr ""
-
-#: options.php:433
-msgid "Show/Hide slide caption."
-msgstr ""
-
-#: options.php:432
-msgid "Show/Hide slide caption"
-msgstr ""
-
-#: options.php:425
-msgid "Add/remove permalink to slides"
-msgstr ""
-
-#: options.php:424
-msgid "Slide as link to the post"
-msgstr ""
-
-#: options.php:418
-msgid "Select the category you'd like to pull slides from."
-msgstr ""
-
-#: options.php:417
-msgid "Which category to pull from?"
-msgstr ""
-
-#: options.php:410
-msgid "This is how many slides will be displayed."
-msgstr ""
-
-#: options.php:409
-msgid "How many slides to show?"
-msgstr ""
-
-#: options.php:406 options.php:1045
-msgid "Slider (content)"
-msgstr ""
-
-#: options.php:396
-msgid "Create controls for previous/next navigation?"
-msgstr ""
-
-#: options.php:395
-msgid "Previous/Next navigation"
-msgstr ""
-
-#: options.php:388
-msgid "Create navigation for paging control of each slide?"
-msgstr ""
-
-#: options.php:387
-msgid "Paging control"
-msgstr ""
-
-#: options.php:380
-msgid "Animate slider automatically?"
-msgstr ""
-
-#: options.php:379
-msgid "Slideshow"
-msgstr ""
-
-#: options.php:372
-msgid "Select the sliding direction"
-msgstr ""
-
-#: options.php:371
-msgid "Sliding direction"
-msgstr ""
-
-#: options.php:364
-msgid "Select your animation type"
-msgstr ""
-
-#: options.php:363
-msgid "Sliding effect"
-msgstr ""
-
-#: options.php:356
-msgid "Show / Hide slider on home page"
-msgstr ""
-
-#: options.php:355
-msgid "Show slider"
-msgstr "Afficher curseur"
-
-#: options.php:352 options.php:951
-msgid "Slider (visualisation)"
-msgstr ""
-
-#: options.php:345
-msgid "Do you want to generate arrow mark-up?"
-msgstr ""
-
-#: options.php:344
-msgid "Arrows markup"
-msgstr ""
-
-#: options.php:337
-msgid "Animation speed."
-msgstr ""
-
-#: options.php:336
-msgid "Speed"
-msgstr ""
-
-#: options.php:330
-msgid "Slide-down animation."
-msgstr ""
-
-#: options.php:329
-msgid "Slide-down animation"
-msgstr ""
-
-#: options.php:323
-msgid "Fade-in animation."
-msgstr ""
-
-#: options.php:322
-msgid "Fade-in animation"
-msgstr ""
-
-#: options.php:316
-msgid "miliseconds delay on mouseout."
-msgstr ""
-
-#: options.php:315
-msgid "Delay"
-msgstr ""
-
-#: options.php:312
-msgid "Navigation"
-msgstr "Navigation"
-
-#: options.php:307
-msgid "Upload image for list bullet (Note. Use small image for bullet, not larger than 10*10px, also reccomended to leave some empty space at image before bullet(5-8px))"
-msgstr ""
-
-#: options.php:306
-msgid "Default list bullet"
-msgstr ""
-
-#: options.php:300
-msgid "Color of links hovers"
-msgstr ""
-
-#: options.php:299
-msgid "Secondary color"
-msgstr "Couleur Secondaire"
-
-#: options.php:294
-msgid "Color of links, borders on content boxes, social icons, meta icons, post type labels"
-msgstr ""
-
-#: options.php:293
-msgid "Primary color"
-msgstr "Couleur principale"
-
-#: options.php:290
-msgid "Color scheme"
-msgstr "Jeu de couleurs"
-
-#: options.php:285
-msgid "Click Upload or Enter the direct path to your favicon."
-msgstr ""
-
-#: options.php:284
-msgid "Favicon"
-msgstr "Favicon"
-
-#: options.php:280
-msgid "Upload logo image"
-msgstr ""
-
-#: options.php:279
-msgid "Logo Image Path"
-msgstr ""
-
-#: options.php:273
-msgid "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead."
-msgstr ""
-
-#: options.php:272
-msgid "What kind of logo?"
-msgstr ""
-
-#: options.php:269 options.php:830
-msgid "Logo & Favicon"
-msgstr "Logo & Favicon"
-
-#: options.php:260
-msgid "Enter Author RSS URL"
-msgstr ""
-
-#: options.php:259
-msgid "Author RSS URL"
-msgstr ""
-
-#: options.php:253
-msgid "Enter Author LinkedIn URL"
-msgstr ""
-
-#: options.php:252
-msgid "Author LinkedIn URL"
-msgstr ""
-
-#: options.php:246
-msgid "Enter Author Google+ URL"
-msgstr ""
-
-#: options.php:245
-msgid "Author Google+ URL"
-msgstr ""
-
-#: options.php:239
-msgid "Enter Author Facebook URL"
-msgstr ""
-
-#: options.php:238
-msgid "Author Facebook URL"
-msgstr ""
-
-#: options.php:232
-msgid "Enter Author Twitter URL"
-msgstr ""
-
-#: options.php:231
-msgid "Author Twitter URL"
-msgstr ""
-
-#: options.php:229
-msgid "Hello, and welcome to my site! I hope you like the place and decide to stay."
-msgstr ""
-
-#: options.php:225
-msgid "Enter Author Bio Message (HTML tags allowed)"
-msgstr ""
-
-#: options.php:224
-msgid "Author Bio Message"
-msgstr ""
-
-#: options.php:219
-msgid "Upload Author Bio image"
-msgstr ""
-
-#: options.php:218
-msgid "Author Bio image"
-msgstr ""
-
-#: options.php:216
-msgid "Welcome to my site"
-msgstr ""
-
-#: options.php:212
-msgid "Enter Author Bio Title"
-msgstr ""
-
-#: options.php:211
-msgid "Author Bio Title"
-msgstr ""
-
-#: options.php:205
-msgid "Show/hide author bio in sidebar"
-msgstr ""
-
-#: options.php:204
-msgid "Display Author Bio in sidebar"
-msgstr ""
-
-#: options.php:199
-msgid "Enter category slug, from which you like to fill portfolio page"
-msgstr ""
-
-#: options.php:198
-msgid "Category slug for portfolio page"
-msgstr ""
-
-#: options.php:191 options.php:192
-msgid "Display breadcrumbs?"
-msgstr ""
-
-#: options.php:185
-msgid "Display search box in the header?"
-msgstr ""
-
-#: options.php:184
-msgid "Display search box?"
-msgstr ""
-
-#: options.php:181 options.php:663
-msgid "General"
-msgstr "Général"
-
-#: options.php:171
-msgid "Select a page:"
-msgstr ""
-
-#: options.php:138
-msgid "Right Sidebar"
-msgstr "Colonne latérale droite"
-
-#: options.php:138
-msgid "Left Sidebar"
-msgstr "Colonne latérale gauche"
-
-#: options.php:89
-msgid "Vertical"
-msgstr "vertical"
-
-#: options.php:88
-msgid "Horizontal"
-msgstr "horizontal"
-
-#: options.php:83
-msgid "Slide"
-msgstr "Slide"
-
-#: options.php:82
-msgid "Fade"
-msgstr "Fondu"
-
-#: options.php:77 options.php:122 options.php:125 options.php:128 options.php:131
-msgid "Hide"
-msgstr "Cacher"
-
-#: options.php:76 options.php:122 options.php:125 options.php:128 options.php:131
-msgid "Show"
-msgstr "Afficher"
-
-#: options.php:65
-msgid "Fast"
-msgstr "Rapide"
-
-#: options.php:63
-msgid "Slow"
-msgstr "Lente"
-
-#: options.php:58
-msgid "Disable slide-down animation"
-msgstr ""
-
-#: options.php:57
-msgid "Enable slide-down animation"
-msgstr ""
-
-#: options.php:52
-msgid "Disable fade-in animation"
-msgstr ""
-
-#: options.php:51
-msgid "Enable fade-in animation"
-msgstr ""
-
-#: options.php:40 options.php:46 options.php:71 options.php:95 options.php:101 options.php:107 options.php:113 options.php:135 options.php:143 options.php:149 options.php:153
-msgid "No"
-msgstr "Non"
-
-#: options.php:39 options.php:45 options.php:70 options.php:94 options.php:100 options.php:106 options.php:112 options.php:135 options.php:142 options.php:148 options.php:153
-msgid "Yes"
-msgstr "Oui"
-
-#: options.php:34
-msgid "Text Logo"
-msgstr ""
-
-#: options.php:33
-msgid "Image Logo"
-msgstr ""
-
-#: options/options-sanitize.php:351
-msgid "Bold Italic"
-msgstr "Italique gras"
-
-#: options/options-sanitize.php:350
-msgid "Bold"
-msgstr "Gras"
-
-#: options/options-sanitize.php:349
-msgid "Italic"
-msgstr "Italique"
-
-#: options/options-sanitize.php:348 options.php:64
-msgid "Normal"
-msgstr "Normal"
-
-#: options/options-sanitize.php:274
-msgid "Fixed in Place"
-msgstr "Fixe"
-
-#: options/options-sanitize.php:273
-msgid "Scroll Normally"
-msgstr "Défilement normal"
-
-#: options/options-sanitize.php:260
-msgid "Bottom Right"
-msgstr "Bas droite"
-
-#: options/options-sanitize.php:259
-msgid "Bottom Center"
-msgstr "En bas au centre"
-
-#: options/options-sanitize.php:258
-msgid "Bottom Left"
-msgstr "Bas gauche"
-
-#: options/options-sanitize.php:257
-msgid "Middle Right"
-msgstr "Au milieu à droite"
-
-#: options/options-sanitize.php:256
-msgid "Middle Center"
-msgstr "Au milieu à centre"
-
-#: options/options-sanitize.php:255
-msgid "Middle Left"
-msgstr "Au milieu à gauche"
-
-#: options/options-sanitize.php:254
-msgid "Top Right"
-msgstr "En haut à droite"
-
-#: options/options-sanitize.php:253
-msgid "Top Center"
-msgstr "En haut au centre"
-
-#: options/options-sanitize.php:252
-msgid "Top Left"
-msgstr "Haut gauche"
-
-#: options/options-sanitize.php:239
-msgid "Repeat All"
-msgstr "Répéter dans toutes les directions"
-
-#: options/options-sanitize.php:238
-msgid "Repeat Vertically"
-msgstr "Répéter verticalement"
-
-#: options/options-sanitize.php:237
-msgid "Repeat Horizontally"
-msgstr "Répéter horizontalement"
-
-#: options/options-sanitize.php:236
-msgid "No Repeat"
-msgstr "Pas de répétition"
-
-#: options/options-media-uploader.php:78
-msgid "View File"
-msgstr "Voir le fichier"
-
-#: options/options-media-uploader.php:54
-msgid "Upgrade your version of WordPress for full media support."
-msgstr "Upgrade your version of WordPress for full media support."
-
-#: options/options-media-uploader.php:51 options/options-media-uploader.php:107
-msgid "Remove"
-msgstr "Retirer"
-
-#: options/options-media-uploader.php:49 options/options-media-uploader.php:106
-msgid "Upload"
-msgstr "Envoyer"
-
-#: options/options-media-uploader.php:46
-msgid "No file chosen"
-msgstr "Aucun fichier choisi"
-
-#: options/options-framework.php:435
-msgid "Options saved."
-msgstr "Options enregistrées."
-
-#: options/options-framework.php:381
-msgid "Default options restored."
-msgstr "Les paramètres par défaut ont été restaurés."
-
-#: options/options-framework.php:349
-msgid "Click OK to reset. Any theme settings will be lost!"
-msgstr "Cliquez OK pour restaurer les paramètres par défaut. Tous les paramètres personnalisés seront perdus!"
-
-#: options/options-framework.php:349
-msgid "Restore Defaults"
-msgstr "Restaurer les paramètres par défaut"
-
-#: options/options-framework.php:348
-msgid "Save Options"
-msgstr "Sauvegarder les options"
-
-#: options/options-framework.php:303
-msgid "Select Color"
-msgstr "Sélectionner une couleur"
-
-#: options/options-framework.php:302
-msgid "Default"
-msgstr "Valeur par défaut"
-
-#: options/options-framework.php:301
-msgid "Clear"
-msgstr "Effacer"
-
-#: options/options-framework.php:255 options/options-framework.php:256 options/options-framework.php:485
-msgid "Theme Options"
-msgstr "Options du thème"
-
-#: options/options-framework.php:66
-msgid "Your current theme does not have support for the Options Framework plugin.  <a href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide Notice</a>"
-msgstr ""
-
-#: no-results.php:23
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
-msgstr "Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer avec des mots différents."
-
-#: no-results.php:19
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr "Prêt à publier votre premier article&nbsp;? <a href=\"%1$s\">Lancez-vous</a>&nbsp;!"
-
-#: no-results.php:13
-msgid "Nothing Found"
-msgstr "Rien de trouvé"
-
-#: inc/extras.php:449 options.php:166
-msgid "Select from all"
-msgstr ""
-
-#: inc/extras.php:438
-msgid "Select category to pull posts from"
-msgstr ""
-
-#: inc/extras.php:418
-msgid "Select columns number"
-msgstr ""
-
-#: inc/extras.php:409
-msgid "Page Options"
-msgstr "Options de la page"
-
-#: inc/extras.php:290 options.php:474 post-formats/gallery.php:43 post-formats/standard.php:41 slider.php:68
-msgid "Read more"
-msgstr "Lire la suite"
-
-#: inc/extras.php:66
-msgid "Page %s"
-msgstr "Page %s"
-
-#: image.php:110
-msgid "Both comments and trackbacks are currently closed."
-msgstr "Commentaires et trackbacks clos."
-
-#: image.php:108
-msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
-msgstr "Trackbacks clos, mais vous pouvez <a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">poster un commentaire</a>."
-
-#: image.php:106
-msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "Commentaires clos, mais vous pouvez laisser un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
-
-#: image.php:104
-msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
-
-#: image.php:98 page-templates/fullwidth.php:23 post-formats/aside.php:8 post-formats/audio.php:28 post-formats/chat.php:23 post-formats/gallery.php:59 post-formats/image.php:37 post-formats/link.php:36 post-formats/quote.php:16 post-formats/standard.php:54 post-formats/status.php:8 post-formats/video.php:31
-msgid "Pages:"
-msgstr "Pages&nbsp;:"
-
-#: image.php:43
-msgid "Next <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
-
-#: image.php:40
-msgid "<span class=\"meta-nav\">&larr;</span> Previous"
-msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
-
-#: image.php:36 image.php:112
-msgid "Edit"
-msgstr "Modifier"
-
-#: image.php:25
-msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
-msgstr "Publié <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> sur <a href=\"%3$s\" title=\"Lien vers image taille réelle\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Retour vers %7$s\" rel=\"gallery\">%8$s</a>"
-
-#: functions.php:542
-msgid "%1$s"
-msgstr "%1$s"
-
-#: functions.php:532
-msgid "Your comment is awaiting moderation."
-msgstr "Votre commentaire est en attente de validation."
-
-#: functions.php:529
-msgid "<span class=\"author fn\">%1$s</span>"
-msgstr ""
-
-#: functions.php:501
-msgid "Next &rarr;"
-msgstr "Suivant &rarr;"
-
-#: functions.php:500
-msgid "&larr; Previous"
-msgstr "&larr; Précédent"
-
-#: functions.php:149
-msgid "Sidebar"
-msgstr "Colonne latérale"
-
-#: functions.php:104
-msgid "Footer Menu"
-msgstr "Menu du bas de page"
-
-#: functions.php:103
-msgid "Primary Menu"
-msgstr "Menu principal"
-
-#: footer.php:23
-msgid "Proudly powered by %s"
-msgstr "Fièrement propulsé par %s"
-
-#: footer.php:23
-msgid "A Semantic Personal Publishing Platform"
-msgstr "Une plate-forme sémantique de publication personnelle"
-
-#: comments.php:72
-msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
-msgstr "Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Markup Language\">HTML</abbr>&nbsp;: %s"
-
-#: comments.php:67
-msgid "Comments are closed."
-msgstr "Commentaires fermés."
-
-#: comments.php:41 comments.php:57
-msgid "Newer Comments &rarr;"
-msgstr "Commentaires plus récents &rarr;"
-
-#: comments.php:40 comments.php:56
-msgid "&larr; Older Comments"
-msgstr "&larr; Commentaire plus ancien"
-
-#: comments.php:39 comments.php:55
-msgid "Comment navigation"
-msgstr "Navigation des commentaires"
-
-#: comments.php:32
-msgctxt "comments title"
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
-msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
-
-#: author.php:61 index.php:34 no-results.php:28 post-formats/index.php:30
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
-msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
-
-#: author.php:24
-msgid "About: %s"
-msgstr ""
-
-#: archive.php:63 sidebar.php:17
-msgid "Archives"
-msgstr "Archives"
-
-#: archive.php:60
-msgid "Links"
-msgstr "Liens"
-
-#: archive.php:57
-msgid "Quotes"
-msgstr "Citations"
-
-#: archive.php:54
-msgid "Videos"
-msgstr "Vidéos"
-
-#: archive.php:51
-msgid "Images"
-msgstr "Images"
-
-#: archive.php:48
-msgid "Asides"
-msgstr "En passant"
-
-#: archive.php:45
-msgid "Yearly Archives: %s"
-msgstr "Archives annuelles&nbsp;: %s"
-
-#: archive.php:42
-msgid "Monthly Archives: %s"
-msgstr "Archives mensuelles&nbsp;: %s"
-
-#: archive.php:39
-msgid "Daily Archives: %s"
-msgstr "Archives quotidiennes&nbsp;:"
-
-#: archive.php:31 author.php:45
-msgid "Author Archives: %s"
-msgstr "Archives de l&rsquo;auteur&nbsp;: %s"
-
-#: archive.php:24
-msgid "Tag Archives: %s"
-msgstr "Archives par mot-clé&nbsp;: %s"
-
-#: archive.php:21
-msgid "Category Archives: %s"
-msgstr "Archives de catégorie&nbsp;: %s"
-
-#: 404.php:19
-msgid "Please try using our search box below to look for information on the internet."
-msgstr "Essayez notre outil de recherche ci-dessous pour chercher des informations sur Internet."
-
-#: 404.php:18
-msgid "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
-msgstr "La page que vous cherchez a pu être supprimée, renommée ou est temporairement inaccessible."
-
-#: 404.php:16
-msgid "Page Not Found"
-msgstr "Page non trouvée"
-
-#: 404.php:15
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;esc_attr_e;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:15
 msgid "Sorry!"
 msgstr "Désolé !"
 
-#. Author URI of the plugin/theme
-msgid "http://profiles.wordpress.org/duena_studio"
-msgstr ""
+#: ../404.php:16
+msgid "Page Not Found"
+msgstr "Page non trouvée"
 
-#. Author of the plugin/theme
-msgid "Duena Studio"
+#: ../404.php:18
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
 msgstr ""
+"La page que vous cherchez a pu être supprimée, renommée ou est "
+"temporairement inaccessible."
 
-#. Theme URI of the plugin/theme
-msgid "http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/"
+#: ../404.php:19
+msgid ""
+"Please try using our search box below to look for information on the "
+"internet."
 msgstr ""
+"Essayez notre outil de recherche ci-dessous pour chercher des informations "
+"sur Internet."
+
+#: ../archive.php:21
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Archives de catégorie&nbsp;: %s"
+
+#: ../archive.php:24
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Archives par mot-clé&nbsp;: %s"
+
+#: ../archive.php:31 ../author.php:45
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Archives de l&rsquo;auteur&nbsp;: %s"
+
+#: ../archive.php:39
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archives quotidiennes : %s"
+
+#: ../archive.php:42
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archives mensuelles&nbsp;: %s"
+
+#: ../archive.php:45
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archives annuelles&nbsp;: %s"
+
+#: ../archive.php:48
+msgid "Asides"
+msgstr "En passant"
+
+#: ../archive.php:51
+msgid "Images"
+msgstr "Images"
+
+#: ../archive.php:54
+msgid "Videos"
+msgstr "Vidéos"
+
+#: ../archive.php:57
+msgid "Quotes"
+msgstr "Citations"
+
+#: ../archive.php:60
+msgid "Links"
+msgstr "Liens"
+
+#: ../archive.php:63 ../sidebar.php:17
+msgid "Archives"
+msgstr "Archives"
+
+#: ../author.php:24
+#, php-format
+msgid "About: %s"
+msgstr "À propos de : %s"
+
+#: ../author.php:61 ../index.php:34 ../no-results.php:28
+#: ../post-formats/index.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
+"Essayez en lançant une recherche."
+
+#: ../comments.php:39 ../comments.php:55
+msgid "Comment navigation"
+msgstr "Navigation des commentaires"
+
+#: ../comments.php:40 ../comments.php:56
+msgid "&larr; Older Comments"
+msgstr "&larr; Commentaire plus ancien"
+
+#: ../comments.php:41 ../comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr "Commentaires plus récents &rarr;"
+
+#: ../comments.php:67
+msgid "Comments are closed."
+msgstr "Commentaires fermés."
+
+#: ../comments.php:72
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+"Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Markup "
+"Language\">HTML</abbr>&nbsp;: %s"
+
+#: ../footer.php:23
+msgid "A Semantic Personal Publishing Platform"
+msgstr "Une plate-forme sémantique de publication personnelle"
+
+#: ../footer.php:23
+#, php-format
+msgid "Proudly powered by %s"
+msgstr "Fièrement propulsé par %s"
+
+#: ../functions.php:103
+msgid "Primary Menu"
+msgstr "Menu principal"
+
+#: ../functions.php:104
+msgid "Footer Menu"
+msgstr "Menu du bas de page"
+
+#: ../functions.php:149
+msgid "Sidebar"
+msgstr "Colonne latérale"
 
 #: ../functions.php:305
 msgid "Home"
 msgstr "Accueil"
+
+#: ../functions.php:502
+msgid "&larr; Previous"
+msgstr "&larr; Précédent"
+
+#: ../functions.php:503
+msgid "Next &rarr;"
+msgstr "Suivant &rarr;"
+
+#: ../functions.php:531
+#, php-format
+msgid "<span class=\"author fn\">%1$s</span>"
+msgstr "<span class=\"author fn\">%1$s</span>"
+
+#: ../functions.php:534
+msgid "Your comment is awaiting moderation."
+msgstr "Votre commentaire est en attente de validation."
+
+#: ../functions.php:544
+#, php-format
+msgid "%1$s"
+msgstr "%1$s"
+
+#: ../functions.php:648 ../options.php:293
+msgid "Primary color"
+msgstr "Couleur principale"
+
+#: ../functions.php:653 ../options.php:299
+msgid "Secondary color"
+msgstr "Couleur Secondaire"
+
+#: ../functions.php:658
+msgid "very light gray"
+msgstr "gris très clair"
+
+#: ../functions.php:663
+msgid "very dark gray"
+msgstr "gris très foncé"
+
+#: ../functions.php:678
+msgid "small"
+msgstr "petit"
+
+#: ../functions.php:679
+msgid "S"
+msgstr "S"
+
+#: ../functions.php:684
+msgid "large"
+msgstr "large"
+
+#: ../functions.php:685
+msgid "L"
+msgstr "L"
+
+#: ../functions.php:690
+msgid "larger"
+msgstr "énorme"
+
+#: ../functions.php:691
+msgid "XL"
+msgstr "XL"
+
+#: ../image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+"Publié <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
+"\">%2$s</time></span> sur <a href=\"%3$s\" title=\"Lien vers image taille "
+"réelle\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Retour vers %7$s"
+"\" rel=\"gallery\">%8$s</a>"
+
+#: ../image.php:36 ../image.php:112
+msgid "Edit"
+msgstr "Modifier"
+
+#: ../image.php:40
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Précédent"
+
+#: ../image.php:43
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Suivant <span class=\"meta-nav\">&rarr;</span>"
+
+#: ../image.php:98 ../page-templates/fullwidth.php:23
+#: ../post-formats/aside.php:8 ../post-formats/audio.php:28
+#: ../post-formats/chat.php:23 ../post-formats/gallery.php:59
+#: ../post-formats/image.php:37 ../post-formats/link.php:36
+#: ../post-formats/quote.php:16 ../post-formats/standard.php:55
+#: ../post-formats/status.php:8 ../post-formats/video.php:31
+msgid "Pages:"
+msgstr "Pages&nbsp;:"
+
+#: ../image.php:104
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire"
+"\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de "
+"Trackback</a>."
+
+#: ../image.php:106
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Commentaires clos, mais vous pouvez laisser un trackback: <a class="
+"\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback"
+"\">URL de Trackback</a>."
+
+#: ../image.php:108
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Trackbacks clos, mais vous pouvez <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Poster un commentaire\">poster un commentaire</a>."
+
+#: ../image.php:110
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Commentaires et trackbacks clos."
+
+#: ../inc/extras.php:66
+#, php-format
+msgid "Page %s"
+msgstr "Page %s"
+
+#: ../inc/extras.php:290 ../options.php:474 ../post-formats/gallery.php:43
+#: ../post-formats/standard.php:42 ../slider.php:68
+msgid "Read more"
+msgstr "Lire la suite"
+
+#: ../inc/extras.php:409
+msgid "Page Options"
+msgstr "Options de la page"
+
+#: ../inc/extras.php:418
+msgid "Select columns number"
+msgstr "Choisir le nombre de colonnes"
+
+#: ../inc/extras.php:438
+msgid "Select category to pull posts from"
+msgstr "Choisir la catégorie des articles souhaités"
+
+#: ../inc/extras.php:449 ../options.php:166
+msgid "Select from all"
+msgstr "Tout sélectionner"
+
+#: ../no-results.php:13
+msgid "Nothing Found"
+msgstr "Rien de trouvé"
+
+#: ../no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Prêt à publier votre premier article ? <a href=\"%1$s\">Lancez-vous</a>."
+
+#: ../no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer avec "
+"des mots différents."
+
+#: ../options.php:33
+msgid "Image Logo"
+msgstr "Logo image"
+
+#: ../options.php:34
+msgid "Text Logo"
+msgstr "Logo texte"
+
+#: ../options.php:39 ../options.php:45 ../options.php:70 ../options.php:94
+#: ../options.php:100 ../options.php:106 ../options.php:112 ../options.php:135
+#: ../options.php:142 ../options.php:148 ../options.php:153
+msgid "Yes"
+msgstr "Oui"
+
+#: ../options.php:40 ../options.php:46 ../options.php:71 ../options.php:95
+#: ../options.php:101 ../options.php:107 ../options.php:113 ../options.php:135
+#: ../options.php:143 ../options.php:149 ../options.php:153
+msgid "No"
+msgstr "Non"
+
+#: ../options.php:51
+msgid "Enable fade-in animation"
+msgstr "Activer le fondu"
+
+#: ../options.php:52
+msgid "Disable fade-in animation"
+msgstr "Désactiver le fondu"
+
+#: ../options.php:57
+msgid "Enable slide-down animation"
+msgstr "Activer l'animation de glissement vers le bas"
+
+#: ../options.php:58
+msgid "Disable slide-down animation"
+msgstr "Désactiver l'animation de glissement vers le bas"
+
+#: ../options.php:63
+msgid "Slow"
+msgstr "Lente"
+
+#: ../options.php:64 ../options/options-sanitize.php:348
+msgid "Normal"
+msgstr "Normal"
+
+#: ../options.php:65
+msgid "Fast"
+msgstr "Rapide"
+
+#: ../options.php:76 ../options.php:122 ../options.php:125 ../options.php:128
+#: ../options.php:131
+msgid "Show"
+msgstr "Afficher"
+
+#: ../options.php:77 ../options.php:122 ../options.php:125 ../options.php:128
+#: ../options.php:131
+msgid "Hide"
+msgstr "Cacher"
+
+#: ../options.php:82
+msgid "Fade"
+msgstr "Fondu"
+
+#: ../options.php:83
+msgid "Slide"
+msgstr "Slide"
+
+#: ../options.php:88
+msgid "Horizontal"
+msgstr "Horizontal"
+
+#: ../options.php:89
+msgid "Vertical"
+msgstr "Vertical"
+
+#: ../options.php:138
+msgid "Left Sidebar"
+msgstr "Colonne latérale gauche"
+
+#: ../options.php:138
+msgid "Right Sidebar"
+msgstr "Colonne latérale droite"
+
+#: ../options.php:171
+msgid "Select a page:"
+msgstr "Choisir une page :"
+
+#: ../options.php:181 ../options.php:671
+msgid "General"
+msgstr "Général"
+
+#: ../options.php:184
+msgid "Display search box?"
+msgstr "Afficher le champ de recherche ?"
+
+#: ../options.php:185
+msgid "Display search box in the header?"
+msgstr "Afficher le champ de recherche dans l'en-tête ?"
+
+#: ../options.php:191 ../options.php:192
+msgid "Display breadcrumbs?"
+msgstr "Afficher le fil d'Ariane ?"
+
+#: ../options.php:198
+msgid "Category slug for portfolio page"
+msgstr "Slug de catégorie pour le portefolio"
+
+#: ../options.php:199
+msgid "Enter category slug, from which you like to fill portfolio page"
+msgstr ""
+"Entrer le slug de catégorie duquel vous aimeriez remplir la page de "
+"portefolio"
+
+#: ../options.php:204
+msgid "Display Author Bio in sidebar"
+msgstr "Montrer la bio sur le côté"
+
+#: ../options.php:205
+msgid "Show/hide author bio in sidebar"
+msgstr "Montrer / cacher la bio sur le côté"
+
+#: ../options.php:211
+msgid "Author Bio Title"
+msgstr "Titre de la bio"
+
+#: ../options.php:212
+msgid "Enter Author Bio Title"
+msgstr "Entrer le titre de la bio de l'auteur"
+
+#: ../options.php:216
+msgid "Welcome to my site"
+msgstr "Bienvenue sur mon site"
+
+#: ../options.php:218
+msgid "Author Bio image"
+msgstr "Image de la bio"
+
+#: ../options.php:219
+msgid "Upload Author Bio image"
+msgstr "Importer une image pour la bio de l'auteur"
+
+#: ../options.php:224
+msgid "Author Bio Message"
+msgstr "Bio de l'auteur"
+
+#: ../options.php:225
+msgid "Enter Author Bio Message (HTML tags allowed)"
+msgstr "Entrer la bio de l'auteur (tags HTML admis)"
+
+#: ../options.php:229
+msgid ""
+"Hello, and welcome to my site! I hope you like the place and decide to stay."
+msgstr "Bonjour et bienvenue sur mon site ! J'espère que vous allez l'aimer."
+
+#: ../options.php:231
+msgid "Author Twitter URL"
+msgstr "URL du Twitter de l'auteur"
+
+#: ../options.php:232
+msgid "Enter Author Twitter URL"
+msgstr "Entrer l'URL du Twitter de l'auteur"
+
+#: ../options.php:238
+msgid "Author Facebook URL"
+msgstr "URL du Facebook de l'auteur"
+
+#: ../options.php:239
+msgid "Enter Author Facebook URL"
+msgstr "Entrer l'URL du Facebook de l'auteur"
+
+#: ../options.php:245
+msgid "Author Patreon URL"
+msgstr "URL du Patreon de l'auteur"
+
+#: ../options.php:246
+msgid "Enter Author Patreon URL"
+msgstr "Entrer l'URL du Patreon de l'auteur"
+
+#: ../options.php:252
+msgid "Author LinkedIn URL"
+msgstr "URL du LinkedIn de l'auteur"
+
+#: ../options.php:253
+msgid "Enter Author LinkedIn URL"
+msgstr "Entrer l'URL du LinkedIn de l'auteur"
+
+#: ../options.php:259
+msgid "Author RSS URL"
+msgstr "URL du RSS de l'auteur"
+
+#: ../options.php:260
+msgid "Enter Author RSS URL"
+msgstr "Entrer l'URL du RSS de l'auteur"
+
+#: ../options.php:269 ../options.php:871
+msgid "Logo & Favicon"
+msgstr "Logo & Favicon"
+
+#: ../options.php:272
+msgid "What kind of logo?"
+msgstr "Type de logo ?"
+
+#: ../options.php:273
+msgid ""
+"Select whether you want your main logo to be an image or text. If you select "
+"'image' you can put in the image url in the next option, and if you select "
+"'text' your Site Title will show instead."
+msgstr ""
+"Choisir si vous voulez que votre logo principal soit une image ou un texte. "
+"Si vous sélectionnez \"image\", vous pouvez insérer l'URL de l'image dans "
+"l'option suivante, et si vous sélectionnez \"texte\", le titre de votre site "
+"s'affichera à la place."
+
+#: ../options.php:279
+msgid "Logo Image Path"
+msgstr "Chemin de l'image du logo"
+
+#: ../options.php:280
+msgid "Upload logo image"
+msgstr "Importer logo"
+
+#: ../options.php:284
+msgid "Favicon"
+msgstr "Favicon"
+
+#: ../options.php:285
+msgid "Click Upload or Enter the direct path to your favicon."
+msgstr ""
+"Cliquer sur Importer ou entrer le chemin direct vers le favicon souhaité."
+
+#: ../options.php:290
+msgid "Color scheme"
+msgstr "Jeu de couleurs"
+
+#: ../options.php:294
+msgid ""
+"Color of links, borders on content boxes, social icons, meta icons, post "
+"type labels"
+msgstr ""
+"Couleur des liens, des bords des contenus, des icônes sociaux, des icônes "
+"méta, des labels de type d'article"
+
+#: ../options.php:300
+msgid "Color of links hovers"
+msgstr "Couleur des liens survolés"
+
+#: ../options.php:306
+msgid "Default list bullet"
+msgstr "Puce de liste par défaut"
+
+#: ../options.php:307
+msgid ""
+"Upload image for list bullet (Note. Use small image for bullet, not larger "
+"than 10*10px, also reccomended to leave some empty space at image before "
+"bullet(5-8px))"
+msgstr ""
+"Importer une image pour la liste à puces (Remarque. Utilisez une petite "
+"image pour une balle ne dépassant pas 10x10 pixels, il est également "
+"recommandé de laisser un espace vide à l’image avant la puce (5-8 pixels)."
+
+#: ../options.php:312
+msgid "Navigation"
+msgstr "Navigation"
+
+#: ../options.php:315
+msgid "Delay"
+msgstr "Délai"
+
+#: ../options.php:316
+msgid "miliseconds delay on mouseout."
+msgstr "délai de sortie de la souris, en millisecondes."
+
+#: ../options.php:322
+msgid "Fade-in animation"
+msgstr "Animation de fondu"
+
+#: ../options.php:323
+msgid "Fade-in animation."
+msgstr "Animation de fondu."
+
+#: ../options.php:329
+msgid "Slide-down animation"
+msgstr "Animation du glissement vers le bas"
+
+#: ../options.php:330
+msgid "Slide-down animation."
+msgstr "Animation du glissement vers le bas."
+
+#: ../options.php:336
+msgid "Speed"
+msgstr "Vitesse"
+
+#: ../options.php:337
+msgid "Animation speed."
+msgstr "Vitesse d'animation."
+
+#: ../options.php:344
+msgid "Arrows markup"
+msgstr "Flèche de marquage"
+
+#: ../options.php:345
+msgid "Do you want to generate arrow mark-up?"
+msgstr "Générer une flèche de marquage ?"
+
+#: ../options.php:352 ../options.php:992
+msgid "Slider (visualisation)"
+msgstr "Slider (visualisation)"
+
+#: ../options.php:355
+msgid "Show slider"
+msgstr "Afficher le slider"
+
+#: ../options.php:356
+msgid "Show / Hide slider on home page"
+msgstr "Cacher / montrer le slider sur la page d'accueil"
+
+#: ../options.php:363
+msgid "Sliding effect"
+msgstr "Effet de transition"
+
+#: ../options.php:364
+msgid "Select your animation type"
+msgstr "Choisir le type de transition"
+
+#: ../options.php:371
+msgid "Sliding direction"
+msgstr "Direction de la transition"
+
+#: ../options.php:372
+msgid "Select the sliding direction"
+msgstr "Choisir la direction de la transition"
+
+#: ../options.php:379
+msgid "Slideshow"
+msgstr "Diaporama"
+
+#: ../options.php:380
+msgid "Animate slider automatically?"
+msgstr "Animer le slider automatiquement ?"
+
+#: ../options.php:387
+msgid "Paging control"
+msgstr "Contrôle de pagination"
+
+#: ../options.php:388
+msgid "Create navigation for paging control of each slide?"
+msgstr "Créer la navigation des pages de chaque côté ?"
+
+#: ../options.php:395
+msgid "Previous/Next navigation"
+msgstr "Navigation (précédent/suivant)"
+
+#: ../options.php:396
+msgid "Create controls for previous/next navigation?"
+msgstr "Créer des contrôles pour la navigation entre les pages ?"
+
+#: ../options.php:406 ../options.php:1085
+msgid "Slider (content)"
+msgstr "Slider (contenu)"
+
+#: ../options.php:409
+msgid "How many slides to show?"
+msgstr "Combien de diapos à afficher ?"
+
+#: ../options.php:410
+msgid "This is how many slides will be displayed."
+msgstr "Combien de diapos seront visibles."
+
+#: ../options.php:417
+msgid "Which category to pull from?"
+msgstr "De quelle catégorie les prendre ?"
+
+#: ../options.php:418
+msgid "Select the category you'd like to pull slides from."
+msgstr "Choisir la catégorie où vous aimeriez les diapos."
+
+#: ../options.php:424
+msgid "Slide as link to the post"
+msgstr "Diapo comme lien pour l'article"
+
+#: ../options.php:425
+msgid "Add/remove permalink to slides"
+msgstr "Ajouter/enlever les permaliens des diapos"
+
+#: ../options.php:432
+msgid "Show/Hide slide caption"
+msgstr "Montrer/Cacher les légendes des diapos"
+
+#: ../options.php:433
+msgid "Show/Hide slide caption."
+msgstr "Montrer/Cacher les légendes des diapos."
+
+#: ../options.php:440
+msgid "Show/Hide slide caption title"
+msgstr "Montrer/Cacher le titre des légendes des diapos"
+
+#: ../options.php:441
+msgid "Show/Hide slide caption title."
+msgstr "Montrer/Cacher le titre des légendes des diapos."
+
+#: ../options.php:448
+msgid "Show/Hide slide caption excerpt"
+msgstr "Montrer/Cacher le résumé des légendes des diapos"
+
+#: ../options.php:449
+msgid "Show/Hide slide caption excerpt."
+msgstr "Montrer/Cacher le résumé des légendes des diapos."
+
+#: ../options.php:456
+msgid "Slide caption excerpt length"
+msgstr "Longueur du résumé des légendes des diapos"
+
+#: ../options.php:457
+msgid "How many words are displayed in the excerpt?"
+msgstr "Combien de mots à afficher dans le résumé ?"
+
+#: ../options.php:463 ../options.php:464
+msgid "Show/Hide slide caption button"
+msgstr "Cacher ou montrer le bouton des légendes des diapos"
+
+#: ../options.php:471 ../options.php:472
+msgid "Slide caption button text"
+msgstr "Texte du bouton des légendes des diapos"
+
+#: ../options.php:480 ../options.php:1218
+msgid "Blog"
+msgstr "Blog"
+
+#: ../options.php:483
+msgid "Sidebar position"
+msgstr "Position de la sidebar"
+
+#: ../options.php:484
+msgid "Choose sidebar position."
+msgstr "Choisir la position de la sidebar."
+
+#: ../options.php:490
+msgid "Show featured image on Blog page"
+msgstr "Montrer l'image d'en-tête sur les articles"
+
+#: ../options.php:491
+msgid "Show or hide featured image on Blog page"
+msgstr "Cacher ou montrer l'image d'en-tête dans les articles de blog"
+
+#: ../options.php:498
+msgid "Show featured image on Single post page"
+msgstr "Montrer l'image d'en-tête sur les simple pages"
+
+#: ../options.php:499
+msgid "Show or hide featured image on Single post page"
+msgstr "Cacher ou montrer l'image d'en-tête sur les pages simples"
+
+#: ../options.php:506
+msgid "Enable Meta for blog posts?"
+msgstr "Activer les infos méta pour les articles ?"
+
+#: ../options.php:507
+msgid "Enable or Disable meta information for blog posts."
+msgstr "Activer ou désactiver les informations méta pour les articles de blog."
+
+#: ../options.php:513
+msgid "Enable excerpt for blog posts?"
+msgstr "Activer les résumés des articles ?"
+
+#: ../options.php:514
+msgid "Enable or Disable excerpt for blog posts."
+msgstr "Activer ou désactiver les résumés pour les articles de blog."
+
+#: ../options.php:520
+msgid "Enable read more button for blog posts?"
+msgstr "Activer le bouton 'Lire la suite' pour les articles ?"
+
+#: ../options.php:521
+msgid "Enable or Disable read more button for blog posts."
+msgstr ""
+"Activer ou désactiver le bouton 'Lire la suite' pour les articles de blog."
+
+#: ../options.php:527
+msgid "'Read more' button text"
+msgstr "Texte du bouton 'Lire la suite'"
+
+#: ../options.php:528
+msgid "Enter 'read more' button text."
+msgstr "Entrer le texte des boutons 'lire la suite'."
+
+#: ../options.php:530
+msgid "Read More"
+msgstr "Lire la suite"
+
+#: ../options.php:534
+msgid "Show author bio on single post page?"
+msgstr "Montrer la bio sur les pages simples ?"
+
+#: ../options.php:535
+msgid "Show or hide author bio on single post page."
+msgstr "Cacher ou montrer la bio de l'auteur sur les simples pages."
+
+#: ../options.php:542
+msgid "Related Posts Title"
+msgstr "Titre des articles en rapport"
+
+#: ../options.php:543
+msgid "Enter Your Title used on Single Post page for related posts."
+msgstr ""
+"Entrez votre titre utilisé sur les simples pages pour les articles liés."
+
+#: ../options.php:545
+msgid "Related posts"
+msgstr "Articles en rapport"
+
+#: ../options.php:548 ../options.php:1354
+msgid "Portfolio"
+msgstr "Portefolio"
+
+#: ../options.php:551
+msgid "Posts per page"
+msgstr "Articles par page"
+
+#: ../options.php:552
+msgid "Enter number of post per page on portfolio page template"
+msgstr ""
+"Entrer le nombre d'articles par page sur les modèles de pages portefolio"
+
+#: ../options.php:558
+msgid "Show thumbnail"
+msgstr "Montrer les miniatures"
+
+#: ../options.php:559
+msgid "Show or hide post thumbnail on portfolio pages."
+msgstr "Cacher ou montrer les miniatures sur les pages portefolio."
+
+#: ../options.php:565
+msgid "Show title"
+msgstr "Afficher le titre"
+
+#: ../options.php:566
+msgid "Show or hide post title on portfolio pages."
+msgstr "Cacher ou montrer les titres sur les pages portefolio."
+
+#: ../options.php:572
+msgid "Show excerpt"
+msgstr "Montrer le résumé"
+
+#: ../options.php:573
+msgid "Show or hide post excerpt on portfolio pages."
+msgstr "Cacher ou montrer les résumés sur les pages portefolio."
+
+#: ../options.php:579
+msgid "Show 'Read more' link"
+msgstr "Montrer les liens 'Lire la suite'"
+
+#: ../options.php:580
+msgid "Show or hide 'Read more' on portfolio pages."
+msgstr "Cacher ou montrer 'Lire la suite' sur les pages portefolio."
+
+#: ../options.php:586 ../options.php:1432
+msgid "Footer"
+msgstr "Pied de page"
+
+#: ../options.php:589
+msgid "Footer copyright text"
+msgstr "Texte du droit d'auteur dans le pied de page"
+
+#: ../options.php:590
+msgid "Enter text used in the right side of the footer. HTML tags are allowed."
+msgstr ""
+"Entrer le texte qui ira du côté gauche du pied de page. Les tags HTML sont "
+"admis."
+
+#: ../options.php:595
+msgid "Display Footer menu?"
+msgstr "Afficher le pied de page ?"
+
+#: ../options.php:596
+msgid "Do you want to display footer menu?"
+msgstr "Afficher le pied de page ?"
+
+#: ../options.php:603
+msgid "Fix background"
+msgstr "Fixer l'arrière-plan"
+
+#: ../options.php:604
+msgid "Make the background fixed during scrolling."
+msgstr "Fixer l'arrière-plan en place lors du défilement."
+
+#: ../options/options-framework.php:66
+#, php-format
+msgid ""
+"Your current theme does not have support for the Options Framework plugin.  "
+"<a href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide "
+"Notice</a>"
+msgstr ""
+"Votre thème actuel ne prend pas en charge le plug-in Options Framework. <a "
+"href=\"%1$s\" target=\"_blank\">En savoir plus</a> | <a href=\"%2$s"
+"\">Masquer la notification</a>"
+
+#: ../options/options-framework.php:255 ../options/options-framework.php:256
+#: ../options/options-framework.php:485
+msgid "Theme Options"
+msgstr "Options du thème"
+
+#: ../options/options-framework.php:301
+msgid "Clear"
+msgstr "Effacer"
+
+#: ../options/options-framework.php:302
+msgid "Default"
+msgstr "Valeur par défaut"
+
+#: ../options/options-framework.php:303
+msgid "Select Color"
+msgstr "Sélectionner une couleur"
+
+#: ../options/options-framework.php:348
+msgid "Save Options"
+msgstr "Sauvegarder les options"
+
+#: ../options/options-framework.php:349
+msgid "Restore Defaults"
+msgstr "Restaurer les paramètres par défaut"
+
+#: ../options/options-framework.php:349
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+"Cliquez OK pour restaurer les paramètres par défaut. Tous les paramètres "
+"personnalisés seront perdus!"
+
+#: ../options/options-framework.php:381
+msgid "Default options restored."
+msgstr "Les paramètres par défaut ont été restaurés."
+
+#: ../options/options-framework.php:435
+msgid "Options saved."
+msgstr "Options enregistrées."
+
+#: ../options/options-media-uploader.php:46
+msgid "No file chosen"
+msgstr "Aucun fichier choisi"
+
+#: ../options/options-media-uploader.php:49
+#: ../options/options-media-uploader.php:106
+msgid "Upload"
+msgstr "Envoyer"
+
+#: ../options/options-media-uploader.php:51
+#: ../options/options-media-uploader.php:107
+msgid "Remove"
+msgstr "Retirer"
+
+#: ../options/options-media-uploader.php:54
+msgid "Upgrade your version of WordPress for full media support."
+msgstr "Upgrade your version of WordPress for full media support."
+
+#: ../options/options-media-uploader.php:78
+msgid "View File"
+msgstr "Voir le fichier"
+
+#: ../options/options-sanitize.php:236
+msgid "No Repeat"
+msgstr "Pas de répétition"
+
+#: ../options/options-sanitize.php:237
+msgid "Repeat Horizontally"
+msgstr "Répéter horizontalement"
+
+#: ../options/options-sanitize.php:238
+msgid "Repeat Vertically"
+msgstr "Répéter verticalement"
+
+#: ../options/options-sanitize.php:239
+msgid "Repeat All"
+msgstr "Répéter dans toutes les directions"
+
+#: ../options/options-sanitize.php:252
+msgid "Top Left"
+msgstr "Haut gauche"
+
+#: ../options/options-sanitize.php:253
+msgid "Top Center"
+msgstr "En haut au centre"
+
+#: ../options/options-sanitize.php:254
+msgid "Top Right"
+msgstr "En haut à droite"
+
+#: ../options/options-sanitize.php:255
+msgid "Middle Left"
+msgstr "Au milieu à gauche"
+
+#: ../options/options-sanitize.php:256
+msgid "Middle Center"
+msgstr "Au milieu à centre"
+
+#: ../options/options-sanitize.php:257
+msgid "Middle Right"
+msgstr "Au milieu à droite"
+
+#: ../options/options-sanitize.php:258
+msgid "Bottom Left"
+msgstr "Bas gauche"
+
+#: ../options/options-sanitize.php:259
+msgid "Bottom Center"
+msgstr "En bas au centre"
+
+#: ../options/options-sanitize.php:260
+msgid "Bottom Right"
+msgstr "Bas droite"
+
+#: ../options/options-sanitize.php:273
+msgid "Scroll Normally"
+msgstr "Défilement normal"
+
+#: ../options/options-sanitize.php:274
+msgid "Fixed in Place"
+msgstr "Fixe"
+
+#: ../options/options-sanitize.php:349
+msgid "Italic"
+msgstr "Italique"
+
+#: ../options/options-sanitize.php:350
+msgid "Bold"
+msgstr "Gras"
+
+#: ../options/options-sanitize.php:351
+msgid "Bold Italic"
+msgstr "Italique gras"
+
+#: ../post-formats/aside.php:6 ../post-formats/audio.php:5
+#: ../post-formats/chat.php:5 ../post-formats/gallery.php:11
+#: ../post-formats/image.php:6 ../post-formats/link.php:6
+#: ../post-formats/quote.php:4 ../post-formats/standard.php:9
+#: ../post-formats/status.php:6 ../post-formats/video.php:13
+msgid "Featured"
+msgstr "Mis en avant"
+
+#: ../post-formats/aside.php:7 ../post-formats/audio.php:23
+#: ../post-formats/gallery.php:54 ../post-formats/image.php:31
+#: ../post-formats/link.php:35 ../post-formats/quote.php:15
+#: ../post-formats/status.php:7 ../post-formats/video.php:26
+msgid "Continue reading"
+msgstr "Continuer à lire"
+
+#: ../post-formats/aside.php:13 ../post-formats/audio.php:32
+#: ../post-formats/chat.php:27 ../post-formats/gallery.php:65
+#: ../post-formats/image.php:43 ../post-formats/link.php:41
+#: ../post-formats/quote.php:21 ../post-formats/standard.php:61
+#: ../post-formats/status.php:14 ../post-formats/video.php:36
+msgid "Tags: "
+msgstr "Mots-clés : "
+
+#: ../post-formats/audio.php:7 ../post-formats/chat.php:7
+#: ../post-formats/gallery.php:15 ../post-formats/image.php:20
+#: ../post-formats/link.php:13 ../post-formats/link.php:23
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54 ../post-formats/post-thumb.php:4
+#: ../post-formats/standard.php:13 ../post-formats/video.php:15
+msgid "Permalink to:"
+msgstr "Permalien vers :"
+
+#: ../post-formats/author-bio.php:15
+msgid "About"
+msgstr "À propos"
 
 #: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
 #: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
@@ -1024,3 +1124,92 @@ msgstr "% commentaires"
 #: ../post-formats/post-meta.php:65
 msgid "Comments are closed"
 msgstr "Commentaires verrouillés"
+
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54
+msgid "Permalink"
+msgstr "Permaliens"
+
+#: ../post-formats/post-nav.php:9
+msgid "&laquo; Older Entries"
+msgstr "&laquo; Entrées anciennes"
+
+#: ../post-formats/post-nav.php:12
+msgid "Newer Entries &raquo;"
+msgstr "Nouvelles entrées &raquo;"
+
+#: ../post-formats/related-posts.php:26
+msgid "Related Posts"
+msgstr "Articles en rapport"
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Résultats de recherche pour %s"
+
+#: ../sidebar.php:24
+msgid "Meta"
+msgstr "Méta"
+
+#~ msgid "Author Tumblr URL"
+#~ msgstr "Entrer l'URL du Tumblr de l'auteur"
+
+#~ msgid "Enter Author Tumblr URL"
+#~ msgstr "URL du Tumblr de l'auteur"
+
+#~ msgid ""
+#~ "Duena is a Bootstrap template designed specifically for personal blogs. "
+#~ "Being Bootstrap-powered the template provides lots of opportunities for "
+#~ "editing and tuning. Bootstrap is web developer's 'mana' with all those "
+#~ "HTML elements, components and other cool stuff. Even though Bootstrap "
+#~ "templates are mostly flat, the gradient on the background creates depth "
+#~ "effect that makes content blocks float in the air. Red and its hues "
+#~ "prevail in the theme design giving it some warmth and passion. There is "
+#~ "no need to describe theme's responsiveness; for sure the template fits "
+#~ "perfectly into all browsers of tablets, phones and PCs. And lastly, the "
+#~ "template comes stuffed with lots of amazing features that will make your "
+#~ "blog stand out. Feel free to try Duena template!"
+#~ msgstr ""
+#~ "Duena est un modèle bootstrap conçu spécifiquement pour les blogs "
+#~ "personnels. Etant bootstrap-alimenté, le modèle fournit beaucoup "
+#~ "d’opportunités pour l’édition et les réglages. Bootstrap est le 'mana' du "
+#~ "développeur Web avec tous ces éléments HTML, composants et autres trucs "
+#~ "cool. Même si les modèles bootstrap sont généralement plats, le dégradé "
+#~ "sur l’arrière-plan crée un effet de profondeur qui rend les blocs de "
+#~ "contenu flottant dans l’air. Le rouge et ses teintes prévalent dans la "
+#~ "conception du thème lui donnant un peu de chaleur et de passion, mais il "
+#~ "est possible de changer les couleurs à volonté facilement. Il n’est pas "
+#~ "nécessaire de décrire la réactivité du thème ; le modèle s’adaptant "
+#~ "parfaitement à tous les navigateurs de tablettes, téléphones et PC. Et "
+#~ "enfin, le modèle est livré bourré de fonctionnalités étonnantes qui "
+#~ "démarqueront votre blog. Essayez le modèle de duena!"
+
+#~ msgid "Duena"
+#~ msgstr "Duena"
+
+#~ msgid "Portfolio Page"
+#~ msgstr "Page de portfolio"
+
+#~ msgid "Fullwidth Page"
+#~ msgstr "Pleine page"
+
+#~ msgctxt "submit button"
+#~ msgid "Search"
+#~ msgstr "Rechercher"
+
+#~ msgctxt "placeholder"
+#~ msgid "Search &hellip;"
+#~ msgstr "Recherche &hellip;"
+
+#~ msgctxt "assistive text"
+#~ msgid "Search"
+#~ msgstr "Rechercher"
+
+#~ msgctxt "comments title"
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "Une réflexion au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+#~ msgstr[1] "%1$s réflexions au sujet de &laquo;&nbsp;%2$s&nbsp;&raquo;"
+
+#~ msgid "Duena Studio"
+#~ msgstr "Duena Studio"

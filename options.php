@@ -242,9 +242,9 @@ if(!function_exists('optionsframework_options')) {
 							"class" => "hidden",
 							"std"   => "#");
 
-		$options['g_author_bio_social_tumblr'] = array( "name" => __( "Author Tumblr URL", "duena" ),
-							"desc"  => __( "Enter Author Tumblr URL", "duena" ),
-							"id"    => "g_author_bio_social_tumblr",
+		$options['g_author_bio_social_patreon'] = array( "name" => __( "Author Patreon URL", "duena" ),
+							"desc"  => __( "Enter Author Patreon URL", "duena" ),
+							"id"    => "g_author_bio_social_patreon",
 							"type"  => "text",
 							"class" => "hidden",
 							"std"   => "#");
@@ -791,16 +791,16 @@ if(!function_exists('duena_register')) {
 				'priority' => 19
 		) );
 
-		/* g_author_bio_social_tumblr */
-		$wp_customize->add_setting( 'duena[g_author_bio_social_tumblr]', array(
-				'default' => $options['g_author_bio_social_tumblr']['std'],
+		/* g_author_bio_social_patreon */
+		$wp_customize->add_setting( 'duena[g_author_bio_social_patreon]', array(
+				'default' => $options['g_author_bio_social_patreon']['std'],
 				'type' => 'option'
 		) );
-		$wp_customize->add_control( 'duena_g_author_bio_social_tumblr', array(
-				'label' => $options['g_author_bio_social_tumblr']['name'],
+		$wp_customize->add_control( 'duena_g_author_bio_social_patreon', array(
+				'label' => $options['g_author_bio_social_patreon']['name'],
 				'section' => 'duena_header',
-				'settings' => 'duena[g_author_bio_social_tumblr]',
-				'type' => $options['g_author_bio_social_tumblr']['type'],
+				'settings' => 'duena[g_author_bio_social_patreon]',
+				'type' => $options['g_author_bio_social_patreon']['type'],
 				'priority' => 20
 		) );
 

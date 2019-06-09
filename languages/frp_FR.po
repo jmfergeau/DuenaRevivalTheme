@@ -7,7 +7,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: GlotPress/2.4.0-alpha\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;esc_attr_e;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
 "Language: frp_FR\n"
 "Project-Id-Version: Themes - Duena\n"
 
@@ -485,12 +489,12 @@ msgstr ""
 msgid "Author LinkedIn URL"
 msgstr ""
 
-#: options.php:246
-msgid "Enter Author Google+ URL"
+#: ../options.php:245
+msgid "Author Tumblr URL"
 msgstr ""
 
-#: options.php:245
-msgid "Author Google+ URL"
+#: ../options.php:246
+msgid "Enter Author Tumblr URL"
 msgstr ""
 
 #: options.php:239

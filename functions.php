@@ -427,8 +427,8 @@ if ( ! function_exists ( 'duena_show_author_bio' ) ) {
 			if ( '' != of_get_option('g_author_bio_social_facebook') ) {
 				echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fab fa-facebook-f'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_tumblr') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_tumblr') )."'><i class='fab fa-tumblr'></i></a>\n";
+			if ( '' != of_get_option('g_author_bio_social_patreon') ) {
+				echo "<a href='".esc_url( of_get_option('g_author_bio_social_patreon') )."'><i class='fab fa-patreon'></i></a>\n";
 			}
 			if ( '' != of_get_option('g_author_bio_social_linked') ) {
 				echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fab fa-linkedin-in'></i></a>\n";

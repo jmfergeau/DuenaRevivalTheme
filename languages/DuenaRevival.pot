@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duena\n"
-"POT-Creation-Date: 2019-06-09 11:18+0200\n"
+"POT-Creation-Date: 2019-06-09 21:27+0200\n"
 "PO-Revision-Date: 2019-06-08 21:05+0200\n"
 "Last-Translator: Max le Fou <buttbadger@gmail.com>\n"
 "Language-Team: Max le Fou <buttbadger@gmail.com>\n"
@@ -478,11 +478,11 @@ msgid "Enter Author Facebook URL"
 msgstr ""
 
 #: ../options.php:245
-msgid "Author Tumblr URL"
+msgid "Author Patreon URL"
 msgstr ""
 
 #: ../options.php:246
-msgid "Enter Author Tumblr URL"
+msgid "Enter Author Patreon URL"
 msgstr ""
 
 #: ../options.php:252

@@ -2,7 +2,9 @@ v2.1.1
 - Fix: Some strings that were untranslatable are now translatable
 - Fix: A CSS glitch was hiding the post-label-type box in some conditions
 - Fix: Patched a CSS glitch for lists
-- Feature: Added all the translation files available previously for Duena and updated them.
+- Tweak: Replaced Tumblr logo and entry by Patreon since it makes more sense for a blog type wp theme
+- Language: French translation done at 100%
+- Feature: Added all the translation files available previously for Duena, made them compatible with POEditor and updated them.
 
 v2.1.0 (Revival started here)
 - Fix: The main colors are now customizable in the colors section of theme customization
