@@ -564,7 +564,7 @@ function duena_customize_colors() {
 	  background: <?php echo $primary_color; ?>;
 	}
 	.post_type_label {
-	  background: <?php echo $primary_color; ?> url(<?php echo get_template_directory_uri(); ?>/images/post-format-icons.png) no-repeat 0 -240px;
+	  background-color: <?php echo $primary_color; ?>;
 	}
 	.post_meta i {
 	  color: <?php echo $primary_color; ?>;

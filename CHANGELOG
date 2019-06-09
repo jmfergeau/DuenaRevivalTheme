@@ -1,3 +1,8 @@
+v2.1.1
+- Fix: Some strings that were untranslatable are now translatable
+- Fix: A CSS glitch was hiding the post-label-type box in some conditions
+- Feature: Added all the translation files available previously for Duena and updated them.
+
 v2.1.0 (Revival started here)
 - Fix: The main colors are now customizable in the colors section of theme customization
 - Tweak: Added support of child themes for the function duena_show_author_bio

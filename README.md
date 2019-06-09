@@ -1,4 +1,4 @@
-Duena Revival Wordpress Theme v.2.1.0
+Duena Revival Wordpress Theme v.2.1.1
 ==========
 
 [![Licence](https://img.shields.io/badge/license-GNU%20GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
@@ -17,6 +17,5 @@ Original theme URL - http://www.cherryframework.com/free-themes/duena-free-wordp
 Original demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 
 ## What more to do
-- Gutenberg-ready formatting
 - Making compatible the new menu feature in customization
 - Maybe more...

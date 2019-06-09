@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Duena\n"
-"POT-Creation-Date: 2019-06-08 21:05+0200\n"
+"POT-Creation-Date: 2019-06-09 11:18+0200\n"
 "PO-Revision-Date: 2019-06-08 21:05+0200\n"
 "Last-Translator: Max le Fou <buttbadger@gmail.com>\n"
 "Language-Team: Max le Fou <buttbadger@gmail.com>\n"
@@ -1049,6 +1050,31 @@ msgstr ""
 
 #: ../post-formats/author-bio.php:15
 msgid "About"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "No comments"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "One comment"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "Comments are closed"
 msgstr ""
 
 #: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42

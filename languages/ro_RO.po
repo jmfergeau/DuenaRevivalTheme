@@ -1021,3 +1021,32 @@ msgstr ""
 #. Theme URI of the plugin/theme
 msgid "http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/"
 msgstr ""
+
+#: ../functions.php:305
+msgid "Home"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "No comments"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "One comment"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+#, php-format
+msgid "% comments"
+msgstr ""
+
+#: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
+#: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
+#: ../post-formats/post-meta.php:65
+msgid "Comments are closed"
+msgstr ""
