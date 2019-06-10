@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Themes - Duena\n"
 "POT-Creation-Date: 2019-06-09 22:10+0200\n"
-"PO-Revision-Date: 2019-06-09 22:11+0200\n"
+"PO-Revision-Date: 2019-06-10 13:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -1086,7 +1086,7 @@ msgstr "Mots-clés : "
 
 #: ../post-formats/author-bio.php:15
 msgid "About"
-msgstr "À propos"
+msgstr "À propos de"
 
 #: ../post-formats/post-meta.php:12 ../post-formats/post-meta.php:21
 #: ../post-formats/post-meta.php:44 ../post-formats/post-meta.php:56
