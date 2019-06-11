@@ -693,3 +693,15 @@ add_theme_support( 'editor-font-sizes', array(
         'slug' => 'larger'
     )
 ) );
+
+/**
+ * WP Gitlab Updater (2.2.0)
+ */
+require_once( get_template_directory() . '/wp-gitlab-updater/theme-updater.php' );
+
+new Moenus\GitLabUpdater\ThemeUpdater( [
+    'slug' => 'duena', /** Change this into the name of the folder you've put the theme if necessary */
+    'access_token' => 'RsQi57nD4mVEFJr5QMZu', /** gitlab+deploy-token-73608 */
+    'gitlab_url' => 'https://gitlab.com',
+    'repo' => 'maxlefou/DuenaRevivalTheme',
+] );

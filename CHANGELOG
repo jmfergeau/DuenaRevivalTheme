@@ -1,3 +1,7 @@
+v2.2.0
+- Feature: Use of WordPress Gitlab Updater to keep the theme updated automatically
+- Language: French - Some corrections
+
 v2.1.1
 - Fix: Some strings that were untranslatable are now translatable
 - Fix: A CSS glitch was hiding the post-label-type box in some conditions
