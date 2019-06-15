@@ -4,7 +4,7 @@ Theme URI: https://gitlab.com/maxlefou/DuenaRevivalTheme
 Author: Duena Studio, Max le Fou
 Author URI: https://gitlab.com/maxlefou
 Description: Duena Revival is a project that aims to maintain and update the Wordpress theme Duena. Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template!
-Version: 2.2.0
+Version: 2.2.1
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
@@ -2864,4 +2864,76 @@ p.wp-block-cover-text {
 .has-larger-font-size {
     font-size: 25px;
     line-height: 1.25;
+}
+
+/* Dark mode support (2.2.1) */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+  .post-title a,
+  .post_meta .post_comment a {
+    color: #e6e6e6 !important;
+  }
+
+  .wp-block-image figcaption,
+  .wp-block-video figcaption,
+  .wp-block-audio figcaption {
+    color: #808080 !important;
+  }
+
+  #top-search .input-search,
+  .hentry,
+  .author-info,
+  .single-post-nav,
+  .single-post-nav a,
+  .breadcrumb,
+  .comments-area,
+  .author_bio_sidebar .content_box,
+  .widget,
+  .site-info,
+  .page_wrap,
+  .page_nav_wrap {
+    color: #f2f2f2;
+    background: #3a3a3a;
+  }
+
+  .page_nav_wrap .post_nav ul li a,
+  .page_nav_wrap .post_nav ul li span {
+    color: #f2f2f2;
+  }
+
+  .single-post-nav a:hover {
+    background: #4d4d4d;
+  }
+
+  .breadcrumb > li {
+    text-shadow: 0 5px 7px rgba(1, 1, 1, 0.30);
+  }
+
+  #top-search #submit {
+    background: url(images/top-search-submit-dark.png) no-repeat 0 0;
+  }
+
+  #commentform textarea,
+  #commentform input[type="text"]
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  .comment-list .comment-body {
+    color: #f2f2f2;
+    background: #4d4d4d;
+    border: 1px solid #666666;
+  }
+
+  code {
+    color: #f6f6f6;
+    background: #4d4d4d;
+  }
+
+  pre {
+    color: #f2f2f2;
+    background: #4d4d4d;
+    border: 1px solid #666666;
+  }
 }
