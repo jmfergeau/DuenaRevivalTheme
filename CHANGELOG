@@ -1,5 +1,6 @@
 v2.2.1
 - Fix: CSS was keeping the secondary color value empty in some conditions
+- Fix: Updater now works
 - Tweak: cleaned and compressed the generated css for custom colors
 - Tweak: FontAwesome updated to version 5.9.0
 - Feature: support of dark mode
