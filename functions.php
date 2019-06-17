@@ -701,7 +701,7 @@ require_once( get_template_directory() . '/wp-gitlab-updater/theme-updater.php' 
 
 new Moenus\GitLabUpdater\ThemeUpdater( [
     'slug' => 'duena',
-    'access_token' => 'RsQi57nD4mVEFJr5QMZu', /** gitlab+deploy-token-73608 */
+    'access_token' => 'ZaQ2ovPMJ-btAHsR-NNS',
     'gitlab_url' => 'https://gitlab.com',
     'repo' => 'maxlefou/DuenaRevivalTheme',
 ] );
