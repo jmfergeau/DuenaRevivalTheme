@@ -1,11 +1,20 @@
 .breadcrumb {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
+  margin-left: 0;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include border-radius($border-radius);
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+}
+
+.breadcrumb > li {
+  padding: 0;
 }
 
 .breadcrumb-item {

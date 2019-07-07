@@ -303,7 +303,7 @@ function duena_get_link_url() {
 if (! function_exists( 'duena_breadcrumb' )) {
 	function duena_breadcrumb() {
 	  $showOnHome = 0; // 1 - show "breadcrumbs" on home page, 0 - hide
-	  $delimiter = '<li class="divider">/</li>'; // divider
+	  $delimiter = '<li class="breadcrumb-item">&nbsp;&nbsp;/&nbsp;&nbsp;</li>'; // divider
 	  $home = __( 'Home', 'duena'); // text for link "Home"
 	  $showCurrent = 1; // 1 - show title current post/page, 0 - hide
 	  $before = '<li class="active">'; // open tag for active breadcrumb
@@ -314,11 +314,11 @@ if (! function_exists( 'duena_breadcrumb' )) {
 
  	 if (is_front_page()) {
 
-    	if ($showOnHome == 1) echo '<ul class="breadcrumb breadcrumb__t"><li><a href="' . $homeLink . '">' . $home . '</a><li></ul>';
+    	if ($showOnHome == 1) echo '<ul class="breadcrumb"><li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a><li></ul>';
 
   	} else {
 
-    	echo '<ul class="breadcrumb breadcrumb__t"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
+    	echo '<ul class="breadcrumb"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
 
 	if ( is_home() ) {
 		echo $before . 'Blog' . $after;

@@ -2,6 +2,7 @@ Duena Revival Wordpress Theme v.2.2.1
 ==========
 
 [![Licence](https://img.shields.io/badge/license-GNU%20GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
+[![Bootstrap](https://img.shields.io/badge/bootstrap-4.0.0-blue.svg)](https://getbootstrap.com)
 [![Version](https://img.shields.io/badge/wordpress-5.x-blue.svg)](https://wordpress.org)
 
 

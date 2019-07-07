@@ -47,9 +47,7 @@ h6 {
   letter-spacing: -1px;
 }
 /* Lists */
-ul {
-  margin-left: -30px;
-}
+
 #main ul {
   overflow: hidden;
 }
@@ -2866,6 +2864,7 @@ p.wp-block-cover-text {
     line-height: 1.25;
 }
 
+
 /* Dark mode support (2.2.1) */
 @media (prefers-color-scheme: dark) {
   h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
@@ -2891,6 +2890,7 @@ p.wp-block-cover-text {
   .widget,
   .site-info,
   .page_wrap,
+  .page-title, 
   .page_nav_wrap {
     color: #f2f2f2;
     background: #3a3a3a;

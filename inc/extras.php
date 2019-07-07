@@ -309,38 +309,59 @@ function duena_portfolio_show() {
  * Get colors
  */
 function duena_get_user_colors() {
-	$primary_color = of_get_option( 'cs_primary_color', '#FF5B5B' );
-	$secondary_color = of_get_option( 'cs_secondary_color', '#71A08B' );
+	$primary_color = get_option( 'cs_primary_color', '#FF5B5B' );
+	$secondary_color = get_option( 'cs_secondary_color', '#71A08B' );
+
+	// This is where the top page pic changes
+	if ( $primary_color == '#FF5B5B') {
+		$pagetoppic = 'url('.get_template_directory_uri().'/images/page-top-bg.jpg) no-repeat center 0 #FF5B5B';
+	} else {
+		$pagetoppic = $primary_color.' no-repeat center 0';
+	}
+
 	$colors = "
+	.page-wrapper:before { background: " . $pagetoppic . "; }
+
 	a, .text-primary, .btn-link, a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .post-title a:hover,
 	.page-links a:hover, .page-links > span, .post-footer i, .post_meta i, .page_nav_wrap .post_nav ul li a:hover, .page_nav_wrap .post_nav ul li .current,
 	.author_bio_sidebar .social_box a, .author_bio_sidebar .author_bio_message h3, .author_bio_sidebar .author_bio_message h4, .author_bio_sidebar .author_bio_message h5,
 	.author_bio_sidebar .author_bio_message h6, .error404-num, .searchform .screen-reader-text, .has-user-primary-color {
 		color: " . $primary_color . ";
 	}
-	.btn-inverse:active, .btn-inverse.active, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .nav-pills > li.active > a,
-	.nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover,
+
+	.featured_badge, .post-footer a, .tagcloud a, .author_bio_sidebar .social_box, #toTop, button, html input[type='button'], input[type='reset'],
+	input[type='submit'], .wp-block-file .wp-block-file__button, .wp-block-button__link, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active {
+		background: " . $primary_color . ";
+	}
+
+	.btn-primary, .btn-inverse:active, .btn-inverse.active, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .nav-pills > li.active > a,
+	.nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover,
+	.pagination > .active > span:hover, .author_bio_sidebar .social_box, .flex-direction-nav a,
 	.pagination > .active > a:focus, .pagination > .active > span:focus, .label-primary, .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, a.list-group-item.active,
 	a.list-group-item.active:hover, a.list-group-item.active:focus, .panel-primary > .panel-heading, .post_type_label, .has-user-primary-background-color {
 		background-color: " . $primary_color . ";
 	}
+
 	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
 	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus,
 	.pagination > .active > span:focus, a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active, .progress-bar, a.list-group-item.active, a.list-group-item.active:hover,
 	a.list-group-item.active:focus, .panel-primary, .panel-primary > .panel-heading {
 		border-color: " . $primary_color . ";
 	}
+
 	a:hover, a:focus, .btn-link:hover, .btn-link:focus, .footer-menu li.current_page_item a, .footer-menu li.current-menu-item a, .has-user-secondary-color {
 		color: " . $secondary_color . ";
 	}
 
-	.btn.btn-primary:hover,
-	input[type='submit']:hover,
-	input[type='reset']:hover,
-	.slider-caption .btn.btn-primary:hover,
-	.has-user-secondary-background-color {
+	.btn-primary:hover, input[type='submit']:hover, input[type='reset']:hover, .slider-caption .btn.btn-primary:hover, .has-user-secondary-background-color {
 		background-color: " . $secondary_color . ";
 	}
+
+	.navbar_inner > div > ul > li > a, .navbar_inner > ul > li > a {
+		border-bottom: 0 solid " . $primary_color . ";
+	}
+
+	.navbar_inner > ul ul, .btn-inverse.disabled, .btn-inverse[disabled] { background-color: " . $primary_color . "; *background-color: " . $primary_color . "; }
 
 	textarea:focus,
 	input[type='text']:focus,
@@ -361,6 +382,37 @@ function duena_get_user_colors() {
 		border-color: " . $primary_color . ";
 		box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px " . $primary_color . ";
 	}
+
+	.breadcrumb, #slider-wrapper .flexslider, .author-info, .comments-area, .comment-list .bypostauthor .comment-body, .widget {
+    border-top: 6px solid " . $primary_color . ";
+	}
+
+	.navbar_inner > div > ul > li > a:hover, .navbar_inner > div > ul > li.sfHover > a, .navbar_inner > div > ul > li.current-menu-item > a, .navbar_inner > div > ul > li.current_page_item > a,
+	.navbar_inner > ul > li > a:hover, .navbar_inner > ul > li.sfHover > a, .navbar_inner > ul > li.current-menu-item > a, .navbar_inner > ul > li.current_page_item > a, .site-info {
+	border-bottom: 6px solid " . $primary_color . "; }
+
+	.panel-primary > .panel-heading + .panel-collapse .panel-body { border-top-color: " . $primary_color . "; }
+	.panel-primary > .panel-footer + .panel-collapse .panel-body { border-bottom-color: " . $primary_color . "; }
+	.navbar_inner > ul > li > a { border-bottom: 0 solid " . $primary_color . "; }
+	.flex-direction-nav a { background-color: " . $primary_color . "; }
+
+	a:hover, a:focus, .btn-link:hover, .btn-link:focus, .footer-menu li.current_page_item a, .footer-menu li.current-menu-item a, .has-user-secondary-color {
+	color: " . $secondary_color . "; }
+
+
+	@media (min-width: 1200px) and (max-width: 1350px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (min-width: 980px) and (max-width: 1100px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (max-width: 979px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (min-width: 768px) and (max-width: 979px) { .navbar_inner > div > ul > li > a, .navbar_inner > ul > li > a { border-bottom: 0 solid " . $primary_color . "; }}
+
+	@media (min-width: 768px) and (max-width: 979px) { .navbar_inner > div > ul > li > a:hover, .navbar_inner > div > ul > li.sfHover > a, .navbar_inner > div > ul > li.current-menu-item > a,
+	.navbar_inner > div > ul > li.current_page_item > a, .navbar_inner > ul > li > a:hover, .navbar_inner > ul > li.sfHover > a, .navbar_inner > ul > li.current-menu-item > a,
+	.navbar_inner > ul > li.current_page_item > a { color: " . $primary_color . "; border-bottom: 0 solid " . $primary_color . "; }}
+
+	@media (min-width: 1200px) and (max-width: 1350px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (min-width: 980px) and (max-width: 1100px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (max-width: 979px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (max-width: 480px) { .error404-num { color: " . $primary_color . "; }}
 	";
 
 
