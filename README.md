@@ -17,5 +17,6 @@ Original theme URL - http://www.cherryframework.com/free-themes/duena-free-wordp
 Original demo URL - http://www.tmbhtest.com/themes/duena (dead url)
 
 ## What more to do
+- Portage to Bootstrap 4
 - Making compatible the new menu feature in customization
 - Maybe more...
