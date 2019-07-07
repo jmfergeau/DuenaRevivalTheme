@@ -48,7 +48,7 @@ h6 {
 }
 /* Lists */
 ul {
-  margin: 0;
+  margin-left: -30px;
 }
 #main ul {
   overflow: hidden;
@@ -2907,6 +2907,7 @@ p.wp-block-cover-text {
 
   .breadcrumb > li {
     text-shadow: 0 5px 7px rgba(1, 1, 1, 0.30);
+    background: none;
   }
 
   #top-search #submit {

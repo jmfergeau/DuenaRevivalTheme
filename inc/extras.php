@@ -79,12 +79,12 @@ function duena_gallery_sl() {
 	<?php
 		global $post;
         $args = array(
-            'post_type' => 'attachment', 
-            'post_mime_type' => 'image', 
-            'numberposts' => 20, 
-            'post_status' => null, 
-            'post_parent' => $post->ID, 
-            'orderby' => 'menu_order', 
+            'post_type' => 'attachment',
+            'post_mime_type' => 'image',
+            'numberposts' => 20,
+            'post_status' => null,
+            'post_parent' => $post->ID,
+            'orderby' => 'menu_order',
             'order' => 'asc'
         );
         $attachments = get_posts( $args );
@@ -132,7 +132,7 @@ function duena_gallery_sl() {
 				removalDelay: 500, //delay removal by X to allow out-animation
 				callbacks: {
 				    beforeOpen: function() {
-				      // just a hack that adds mfp-anim class to markup 
+				      // just a hack that adds mfp-anim class to markup
 				       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
 				       this.st.mainClass = this.st.el.attr('data-effect');
 				    }
@@ -164,12 +164,12 @@ function duena_post_format_image() {
 		$cur_url = wp_get_attachment_url( $post_thumbnail_id, false );
 	} else {
 		$args = array(
-            'post_type' => 'attachment', 
-            'post_mime_type' => 'image', 
-            'numberposts' => 1, 
-            'post_status' => null, 
-            'post_parent' => $post->ID, 
-            'orderby' => 'menu_order', 
+            'post_type' => 'attachment',
+            'post_mime_type' => 'image',
+            'numberposts' => 1,
+            'post_status' => null,
+            'post_parent' => $post->ID,
+            'orderby' => 'menu_order',
             'order' => 'asc'
         );
         $attachments = get_posts( $args );
@@ -216,7 +216,7 @@ function duena_portfolio_show() {
 		case 2:
 			$item_class .= ' col-md-6';
 			break;
-		
+
 		case 3:
 			$item_class .= ' col-md-4';
 			break;
@@ -232,18 +232,18 @@ function duena_portfolio_show() {
 			$portf_query->the_post(); ?>
 			<div class="<?php echo esc_attr( $item_class ); ?>">
 				<div class="hentry">
-				<?php 
-					$show_thumb = of_get_option( 'portfolio_show_thumbnail', 'true' ); 					
+				<?php
+					$show_thumb = of_get_option( 'portfolio_show_thumbnail', 'true' );
 					if ( 'true' == $show_thumb ) {
 				?>
 					<figure class="featured-thumbnail thumbnail">
 						<a href="<?php echo get_permalink(); ?>">
-							<?php 
+							<?php
 								switch ($columns) {
 									case 2:
 										$thumb_size = 'portfolio-large-th';
 										break;
-									
+
 									case 3:
 										$thumb_size = 'post-thumbnail';
 										break;
@@ -252,14 +252,14 @@ function duena_portfolio_show() {
 										$thumb_size = 'portfolio-small-th';
 										break;
 								}
-								the_post_thumbnail( $thumb_size ); 
+								the_post_thumbnail( $thumb_size );
 							?>
 						</a>
 					</figure>
 				<?php } ?>
 					<div class="post_content">
-					<?php 
-						$show_title = of_get_option( 'portfolio_show_title', 'true' ); 					
+					<?php
+						$show_title = of_get_option( 'portfolio_show_title', 'true' );
 						if ( 'true' == $show_title ) {
 					?>
 						<h5>
@@ -267,13 +267,13 @@ function duena_portfolio_show() {
 								<?php the_title(); ?>
 							</a>
 						</h5>
-					<?php 
+					<?php
 						}
-						$show_excerpt = of_get_option( 'portfolio_show_excerpt', 'true' ); 					
+						$show_excerpt = of_get_option( 'portfolio_show_excerpt', 'true' );
 						if ( 'true' == $show_excerpt ) {
 					?>
 						<div class="excerpt">
-						<?php 
+						<?php
 							$excerpt = get_the_excerpt();
 							if (has_excerpt()) {
 								the_excerpt();
@@ -282,9 +282,9 @@ function duena_portfolio_show() {
 							}
 						?>
 						</div>
-					<?php 
+					<?php
 						}
-						$show_link = of_get_option( 'portfolio_show_link', 'true' ); 					
+						$show_link = of_get_option( 'portfolio_show_link', 'true' );
 						if ( 'true' == $show_link ) {
 					?>
 						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
@@ -312,59 +312,33 @@ function duena_get_user_colors() {
 	$primary_color = of_get_option( 'cs_primary_color', '#FF5B5B' );
 	$secondary_color = of_get_option( 'cs_secondary_color', '#71A08B' );
 	$colors = "
-    a,
-    .searchform .screen-reader-text,
-    .post_meta i,
-    .author_bio_sidebar .social_box a,
-    .post-title a:hover,
-    .post-footer i,
-    .page_nav_wrap .post_nav ul li .current,
-    .page_nav_wrap .post_nav ul li a:hover {
+	a, .text-primary, .btn-link, a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .post-title a:hover,
+	.page-links a:hover, .page-links > span, .post-footer i, .post_meta i, .page_nav_wrap .post_nav ul li a:hover, .page_nav_wrap .post_nav ul li .current,
+	.author_bio_sidebar .social_box a, .author_bio_sidebar .author_bio_message h3, .author_bio_sidebar .author_bio_message h4, .author_bio_sidebar .author_bio_message h5,
+	.author_bio_sidebar .author_bio_message h6, .error404-num, .searchform .screen-reader-text, .has-user-primary-color {
 		color: " . $primary_color . ";
 	}
-	.post_type_label,
-	.flex-direction-nav a,
-	#content .featured_badge,
-	.author_bio_sidebar .social_box,
-	.flex-control-paging li a.flex-active,
-	.flex-control-paging li a:hover,
-	#toTop,
-	.post-footer a,
-	.navbar_inner > div > ul ul, 
-	.navbar_inner > ul ul,
-	.btn.btn-primary,
-	input[type='submit'],
-	input[type='reset'] {
+	.btn-inverse:active, .btn-inverse.active, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .nav-pills > li.active > a,
+	.nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover,
+	.pagination > .active > a:focus, .pagination > .active > span:focus, .label-primary, .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, a.list-group-item.active,
+	a.list-group-item.active:hover, a.list-group-item.active:focus, .panel-primary > .panel-heading, .post_type_label, .has-user-primary-background-color {
 		background-color: " . $primary_color . ";
 	}
-	.site-info,
-	.widget,
-	#slider-wrapper .flexslider,
-	.navbar_inner > div > ul > li > a,
-	.navbar_inner > div > ul > li > a:hover, 
-	.navbar_inner > div > ul > li.sfHover > a, 
-	.navbar_inner > div > ul > li.current-menu-item > a, 
-	.navbar_inner > div > ul > li.current_page_item > a,
-	.navbar_inner > ul > li > a,
-	.navbar_inner > ul > li > a:hover, 
-	.navbar_inner > ul > li.sfHover > a, 
-	.navbar_inner > ul > li.current-menu-item > a, 
-	.navbar_inner > ul > li.current_page_item > a,
-	.breadcrumb,
-	#comments,
-	.post-footer a,
-	.author-info {
+	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
+	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus,
+	.pagination > .active > span:focus, a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active, .progress-bar, a.list-group-item.active, a.list-group-item.active:hover,
+	a.list-group-item.active:focus, .panel-primary, .panel-primary > .panel-heading {
 		border-color: " . $primary_color . ";
 	}
-	a:hover,
-	a:focus {
+	a:hover, a:focus, .btn-link:hover, .btn-link:focus, .footer-menu li.current_page_item a, .footer-menu li.current-menu-item a, .has-user-secondary-color {
 		color: " . $secondary_color . ";
 	}
 
 	.btn.btn-primary:hover,
 	input[type='submit']:hover,
 	input[type='reset']:hover,
-	.slider-caption .btn.btn-primary:hover {
+	.slider-caption .btn.btn-primary:hover,
+	.has-user-secondary-background-color {
 		background-color: " . $secondary_color . ";
 	}
 
@@ -440,15 +414,15 @@ function duena_show_porfolio_metabox( $post ) {
 			echo '<td>';
 
 				// Pull all the categories into an array
-				$all_categories = array();  
+				$all_categories = array();
 				$all_categories_obj = get_categories();
 				foreach ($all_categories_obj as $category) {
 						$all_categories[$category->cat_ID] = $category->cat_name;
 				}
-				
+
 				$all_cats_array = array('from_all' => __( 'Select from all', 'duena' ) ) + $all_categories;
 
-				$curr_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true ); 
+				$curr_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true );
 				if ( '' == $curr_cat ) {
 					$curr_cat = 'from_all';
 				}
@@ -494,7 +468,7 @@ function duena_save_portfolio_meta( $post_id ) {
 
 	}
 
-	
+
 }
 add_action('save_post', 'duena_save_portfolio_meta');
 ?>
