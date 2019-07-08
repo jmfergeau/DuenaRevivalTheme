@@ -192,7 +192,7 @@ function duena_post_format_image() {
 function duena_portfolio_show() {
 	wp_reset_query();
 	global $post;
-	$post_num = of_get_option( 'portfolio_per_page', '12' );
+	$post_num = get_option( 'portfolio_per_page', '12' );
 	$post_num = intval($post_num);
 	if ( 0 == $post_num ) {
 		$post_num = 12;
@@ -233,7 +233,7 @@ function duena_portfolio_show() {
 			<div class="<?php echo esc_attr( $item_class ); ?>">
 				<div class="hentry">
 				<?php
-					$show_thumb = of_get_option( 'portfolio_show_thumbnail', 'true' );
+					$show_thumb = get_option( 'portfolio_show_thumbnail', 'true' );
 					if ( 'true' == $show_thumb ) {
 				?>
 					<figure class="featured-thumbnail thumbnail">
@@ -259,7 +259,7 @@ function duena_portfolio_show() {
 				<?php } ?>
 					<div class="post_content">
 					<?php
-						$show_title = of_get_option( 'portfolio_show_title', 'true' );
+						$show_title = get_option( 'portfolio_show_title', 'true' );
 						if ( 'true' == $show_title ) {
 					?>
 						<h5>
@@ -269,7 +269,7 @@ function duena_portfolio_show() {
 						</h5>
 					<?php
 						}
-						$show_excerpt = of_get_option( 'portfolio_show_excerpt', 'true' );
+						$show_excerpt = get_option( 'portfolio_show_excerpt', 'true' );
 						if ( 'true' == $show_excerpt ) {
 					?>
 						<div class="excerpt">
@@ -284,7 +284,7 @@ function duena_portfolio_show() {
 						</div>
 					<?php
 						}
-						$show_link = of_get_option( 'portfolio_show_link', 'true' );
+						$show_link = get_option( 'portfolio_show_link', 'true' );
 						if ( 'true' == $show_link ) {
 					?>
 						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
@@ -413,10 +413,13 @@ function duena_get_user_colors() {
 	@media (min-width: 980px) and (max-width: 1100px) { #content .featured_badge { background: " . $primary_color . "; }}
 	@media (max-width: 979px) { #content .featured_badge { background: " . $primary_color . "; }}
 	@media (max-width: 480px) { .error404-num { color: " . $primary_color . "; }}
+
+	@media (prefers-color-scheme: dark) {
+		.single-post-nav a:hover { background: " . $primary_color . " !important; }
 	";
 
 
-	$list_bullet = of_get_option( 'cs_list_bullet' );
+	$list_bullet = get_option( 'cs_list_bullet' );
 	if ( '' != $list_bullet ) {
 		$colors .= "
 		ul li {

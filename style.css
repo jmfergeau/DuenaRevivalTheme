@@ -102,7 +102,7 @@ margin-bottom:10px;
   right: 0;
   top: 0;
   height: 6px;
-  background: url(images/page-top-bg.jpg) no-repeat center 0 #ff5b5b;
+  background: url(images/page-top-bg.jpg) no-repeat center 0 #FF5B5B;
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -195,7 +195,7 @@ margin-bottom:10px;
 /* = Slider
 ----------------------------------------------- */
 #slider-wrapper .flexslider {
-  border-top: 6px solid #ff5b5b;
+  border-top: 6px solid #FF5B5B;
   margin: 0 0 30px 0;
 }
 /* = Top search
@@ -308,7 +308,7 @@ margin-bottom:10px;
   top: -999em;
   min-width: 200px;
   left: 0;
-  background: #ff5b5b;
+  background: #FF5B5B;
   padding: 10px 0;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
@@ -426,7 +426,7 @@ margin-bottom:10px;
   font-weight: bold;
   padding: 0 15px;
   font-family: 'BenchNine', sans-serif;
-  border-bottom: 0 solid #ff5b5b;
+  border-bottom: 0 solid #FF5B5B;
 }
 /* Large Desktop */
 @media (min-width: 1200px) {
@@ -452,7 +452,7 @@ margin-bottom:10px;
     line-height: 26px;
     height: 26px;
     padding: 0;
-    border-bottom: 0 solid #ff5b5b;
+    border-bottom: 0 solid #FF5B5B;
   }
 }
 .navbar_inner > div > ul > li > a:hover,
@@ -466,7 +466,7 @@ margin-bottom:10px;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
-  border-bottom: 6px solid #ff5b5b;
+  border-bottom: 6px solid #FF5B5B;
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
@@ -478,8 +478,8 @@ margin-bottom:10px;
   .navbar_inner > ul > li.sfHover > a,
   .navbar_inner > ul > li.current-menu-item > a,
   .navbar_inner > ul > li.current_page_item > a {
-    color: #ff5b5b;
-    border-bottom: 0 solid #ff5b5b;
+    color: #FF5B5B;
+    border-bottom: 0 solid #FF5B5B;
   }
 }
 .navbar_inner > div > ul li li,
@@ -632,6 +632,19 @@ margin-bottom:10px;
 #primary.left {
   float: right;
 }
+#primary.right {
+  float: left; /* not sure it does anything */
+}
+#secondary.left {
+  float: left;
+}
+#secondary.right {
+  float: right; /* not sure it does anything */
+}
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+}
 #primary .page-header {
   border: none;
   padding: 0;
@@ -654,6 +667,9 @@ margin-bottom:10px;
   .post-header {
     padding: 0 35px 0 35px;
   }
+  .row {
+    display: inline;
+  }
 }
 .post-title {
   margin: 0;
@@ -668,7 +684,7 @@ margin-bottom:10px;
   color: #434242;
 }
 .post-title a:hover {
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 /* Sticky Post */
 .single .sticky.post_content {
@@ -686,7 +702,7 @@ margin-bottom:10px;
   height: 35px;
   line-height: 35px;
   padding: 0 35px;
-  background: #ff5b5b;
+  background: #FF5B5B;
   color: #ffffff;
   font-size: 22px;
   font-family: 'BenchNine', sans-serif;
@@ -705,6 +721,9 @@ margin-bottom:10px;
 }
 /* Medium Desktop */
 @media (min-width: 1200px) and (max-width: 1350px) {
+  .row {
+    display: inline;
+  }
   .featured_badge + .post-title {
     padding-top: 0;
   }
@@ -720,7 +739,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #ff5b5b;
+    background: #FF5B5B;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -753,8 +772,16 @@ margin-bottom:10px;
     display: none;
   }
 }
+@media (min-width: 1100px) and (max-width: 1200px) {
+  .row {
+    display: inline;
+  }
+}
 /* Small Desktop */
 @media (min-width: 980px) and (max-width: 1100px) {
+  .row {
+    display: inline;
+  }
   .featured_badge + .post-title {
     padding-top: 0;
   }
@@ -770,7 +797,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #ff5b5b;
+    background: #FF5B5B;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -805,6 +832,9 @@ margin-bottom:10px;
 }
 /* All Devices */
 @media (max-width: 979px) {
+  .row {
+    display: inline;
+  }
   .featured_badge + .post-title {
     padding-top: 0;
   }
@@ -820,7 +850,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #ff5b5b;
+    background: #FF5B5B;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -970,12 +1000,12 @@ margin-bottom:10px;
 }
 .page-links a:hover {
   text-decoration: none;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 .page-links > span {
   display: inline-block;
   text-decoration: none;
-  color: #ff5b5b;
+  color: #FF5B5B;
   font-family: 'BenchNine', sans-serif;
   line-height: 20px;
   font-size: 22px;
@@ -1028,7 +1058,7 @@ margin-bottom:10px;
 }
 .post-footer i {
   font-size: 14px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 /* post tags */
 .post-footer a {
@@ -1039,7 +1069,7 @@ margin-bottom:10px;
   height: 18px;
   padding: 0 10px;
   border-radius: 10px;
-  background: #ff5b5b;
+  background: #FF5B5B;
   border: 1px solid #f40000;
   color: #ffffff;
 }
@@ -1069,7 +1099,7 @@ margin-bottom:10px;
   height: 18px;
   padding: 0 10px;
   border-radius: 10px;
-  background: #ff5b5b;
+  background: #FF5B5B;
   border: 1px solid #f40000;
   color: #ffffff;
 }
@@ -1086,7 +1116,7 @@ margin-bottom:10px;
   left: -69px;
   width: 69px;
   height: 60px;
-  background-color: #ff5b5b;
+  background-color: #FF5B5B;
   background: url(images/post-format-icons.png) no-repeat 0 -240px;
   border-radius: 30px 0 0 30px;
 }
@@ -1133,7 +1163,7 @@ margin-bottom:10px;
 }
 .post_meta i {
   font-size: 14px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 .post_meta span {
   display: inline-block;
@@ -1471,7 +1501,7 @@ margin-bottom:10px;
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
   margin: 0 0 30px 0;
-  border-top: 6px solid #ff5b5b;
+  border-top: 6px solid #FF5B5B;
 }
 .author-info.author-page .author-description {
   padding: 10px 0 0 0;
@@ -1538,11 +1568,11 @@ margin-bottom:10px;
   text-decoration: none;
 }
 .page_nav_wrap .post_nav ul li a:hover {
-  color: #ff5b5b;
+  color: #FF5B5B;
   text-decoration: none;
 }
 .page_nav_wrap .post_nav ul li .current {
-  color: #ff5b5b;
+  color: #FF5B5B;
   text-decoration: none;
   cursor: default;
 }
@@ -1627,14 +1657,14 @@ padding:10px 20px 20px;
   margin: 0 0 30px 0;
 }
 .author_bio_sidebar .social_box {
-  background: #ff5b5b;
+  background: #FF5B5B;
   padding: 3px 5px;
   text-align: center;
   font-size: 0;
   list-style: 0;
 }
 .author_bio_sidebar .social_box a {
-  color: #ff5b5b;
+  color: #FF5B5B;
   font-size: 26px;
   height: 42px;
   line-height: 40px;
@@ -1665,22 +1695,22 @@ padding:10px 20px 20px;
 .author_bio_sidebar .author_bio_message h3 {
   font-size: 32px;
   line-height: 32px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 .author_bio_sidebar .author_bio_message h4 {
   font-size: 30px;
   line-height: 32px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 .author_bio_sidebar .author_bio_message h5 {
   font-size: 24px;
   line-height: 30px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 .author_bio_sidebar .author_bio_message h6 {
   font-size: 18px;
   line-height: 30px;
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 /* Large Desktop */
 @media (min-width: 1200px) {
@@ -1724,7 +1754,7 @@ padding:10px 20px 20px;
 .error404-num {
   font-size: 200px;
   line-height: 150px;
-  color: #ff5b5b;
+  color: #FF5B5B;
   padding: 20px 0 10px 0;
 }
 /* Landscape phones and down */
@@ -1732,7 +1762,7 @@ padding:10px 20px 20px;
   .error404-num {
     font-size: 100px;
     line-height: 80px;
-    color: #ff5b5b;
+    color: #FF5B5B;
     padding: 20px 0 10px 0;
   }
   .page404 .hentry .searchform {
@@ -2126,11 +2156,10 @@ object {
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
   padding: 20px;
-  border-top: 6px solid #ff5b5b;
+  border-top: 6px solid #FF5B5B;
   margin: 0 0 30px 0;
 }
 .comment-list {
-  margin: 0;
   list-style: none;
 }
 .comment-list > li {
@@ -2191,7 +2220,7 @@ object {
   padding: 0 0 5px 0;
 }
 .comment-list .bypostauthor .comment-body {
-  border-top: 6px solid #ff5b5b;
+  border-top: 6px solid #FF5B5B;
 }
 #cancel-comment-reply-link {
   font-family: Arial, Helvetica, sans-serif;
@@ -2234,7 +2263,7 @@ object {
 .widget {
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
-  border-top: 6px solid #ff5b5b;
+  border-top: 6px solid #FF5B5B;
   padding: 15px 15px 15px;
   margin: 0 0 30px 0;
   overflow: hidden;
@@ -2302,7 +2331,7 @@ object {
 .searchform .screen-reader-text {
   padding: 0 0 0 15px;
   font-style: italic;
-  color: #ff5b5b;
+  color: #FF5B5B;
   font-size: 15px;
   font-weight: bold;
 }
@@ -2353,7 +2382,7 @@ object {
   padding: 15px 60px 15px 15px;
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
-  border-bottom: 6px solid #ff5b5b;
+  border-bottom: 6px solid #FF5B5B;
   position: relative;
 }
 /* Large desktop */
@@ -2406,7 +2435,7 @@ object {
   line-height: 32px;
   border-radius: 16px;
   color: #ffffff;
-  background: #ff5b5b;
+  background: #FF5B5B;
   -webkit-transition: all 200ms linear;
   -moz-transition: all 200ms linear;
   -o-transition: all 200ms linear;
@@ -2473,7 +2502,7 @@ input[type="reset"],
 input[type="submit"] {
   border: none;
   border-radius: 0;
-  background: #ff5b5b;
+  background: #FF5B5B;
   color: #ffffff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -2804,7 +2833,7 @@ p.wp-block-cover-text {
 
 .wp-block-file
 .wp-block-file__button {
-    background: #ff5b5b;
+    background: #FF5B5B;
     border-radius: 2em;
     color: #fff;
     font-size: 13px;
@@ -2812,7 +2841,7 @@ p.wp-block-cover-text {
 }
 
 .wp-block-button__link {
-    background-color: #ff5b5b;
+    background-color: #FF5B5B;
     border: none;
     border-radius: 23px;
     box-shadow: none;
@@ -2834,11 +2863,11 @@ p.wp-block-cover-text {
 }
 
 .has-user-primary-color {
-  color: #ff5b5b;
+  color: #FF5B5B;
 }
 
 .has-user-primary-background-color {
-  background-color: #ff5b5b;
+  background-color: #FF5B5B;
 }
 
 .has-user-secondary-color {
@@ -2890,10 +2919,10 @@ p.wp-block-cover-text {
   .widget,
   .site-info,
   .page_wrap,
-  .page-title, 
+  .page-title,
   .page_nav_wrap {
-    color: #f2f2f2;
-    background: #3a3a3a;
+    color: #f2f2f2 !important;
+    background: #3a3a3a !important;
   }
 
   .page_nav_wrap .post_nav ul li a,
