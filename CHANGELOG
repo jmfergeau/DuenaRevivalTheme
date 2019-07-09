@@ -1,3 +1,12 @@
+v3.0.0
+- Fix: System of customization of colors is cleaned
+- Fix: Some elements were missing their dark mode support
+- Fix: The sidebar doesn't glitch anymore when positioned at left
+- Tweak: Bootstrap updated to version 4.0.0
+- Tweak: Flexslider updated to version 2.7.2
+- Feature: Some more background customization
+- Feature: Gutenberg and dark supports for calendar
+
 v2.2.1
 - Fix: CSS was keeping the secondary color value empty in some conditions
 - Fix: Updater now works

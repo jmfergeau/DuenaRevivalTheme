@@ -309,11 +309,12 @@ function duena_portfolio_show() {
  * Get colors
  */
 function duena_get_user_colors() {
-	$primary_color = get_option( 'cs_primary_color', '#FF5B5B' );
-	$secondary_color = get_option( 'cs_secondary_color', '#71A08B' );
+	$primary_color = get_option( 'cs_primary_color', '#ff5b5b' );
+	$secondary_color = get_option( 'cs_secondary_color', '#71a08b' );
+	$background_color = get_option( 'cs_background_color', '#210f1d' );
 
 	// This is where the top page pic changes
-	if ( $primary_color == '#FF5B5B') {
+	if ( $primary_color == '#ff5b5b') {
 		$pagetoppic = 'url('.get_template_directory_uri().'/images/page-top-bg.jpg) no-repeat center 0 #FF5B5B';
 	} else {
 		$pagetoppic = $primary_color.' no-repeat center 0';

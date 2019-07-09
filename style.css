@@ -22,6 +22,7 @@ Duena Revival WordPress theme is licensed under the GPL.
 ----------------------------------------------- */
 body {
   background-image: url(images/main-bg.jpg);
+  background-color: #210f1d;
   background-repeat: no-repeat;
   background-position: center 0;
 }
@@ -2880,6 +2881,11 @@ p.wp-block-cover-text {
   background: #262626;
   text-decoration: none !important;
 }
+
+.wp-block-calendar tbody {
+  background: #f5f5f5;
+}
+
 pre {
     display: block;
     padding: 8px;
@@ -2985,6 +2991,20 @@ pre {
     color: #f2f2f2;
     background: #4d4d4d;
     border: 1px solid #666666;
+  }
+
+  .wp-block-calendar caption {
+    color: #f2f2f2 !important;
+  }
+  .wp-block-calendar th {
+    background: #666666;
+  }
+  .wp-block-calendar tbody {
+    color: #f6f6f6;
+    background: #4d4d4d;
+  }
+  .wp-block-calendar td {
+    color: #f6f6f6;
   }
 
   code {

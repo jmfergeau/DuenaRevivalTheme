@@ -57,8 +57,8 @@ if ( ! function_exists( 'duena_setup' ) ) :
 function duena_setup() {
 
 	$defaults = array(
-		'default-color'          => '',
-		'default-image'          => '',
+		'default-color'          => '#210f1d',
+		'default-image'          => get_template_directory_uri() . '/images/main-bg.jpg',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
