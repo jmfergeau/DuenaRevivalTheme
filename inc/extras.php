@@ -79,12 +79,12 @@ function duena_gallery_sl() {
 	<?php
 		global $post;
         $args = array(
-            'post_type' => 'attachment', 
-            'post_mime_type' => 'image', 
-            'numberposts' => 20, 
-            'post_status' => null, 
-            'post_parent' => $post->ID, 
-            'orderby' => 'menu_order', 
+            'post_type' => 'attachment',
+            'post_mime_type' => 'image',
+            'numberposts' => 20,
+            'post_status' => null,
+            'post_parent' => $post->ID,
+            'orderby' => 'menu_order',
             'order' => 'asc'
         );
         $attachments = get_posts( $args );
@@ -132,7 +132,7 @@ function duena_gallery_sl() {
 				removalDelay: 500, //delay removal by X to allow out-animation
 				callbacks: {
 				    beforeOpen: function() {
-				      // just a hack that adds mfp-anim class to markup 
+				      // just a hack that adds mfp-anim class to markup
 				       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
 				       this.st.mainClass = this.st.el.attr('data-effect');
 				    }
@@ -164,12 +164,12 @@ function duena_post_format_image() {
 		$cur_url = wp_get_attachment_url( $post_thumbnail_id, false );
 	} else {
 		$args = array(
-            'post_type' => 'attachment', 
-            'post_mime_type' => 'image', 
-            'numberposts' => 1, 
-            'post_status' => null, 
-            'post_parent' => $post->ID, 
-            'orderby' => 'menu_order', 
+            'post_type' => 'attachment',
+            'post_mime_type' => 'image',
+            'numberposts' => 1,
+            'post_status' => null,
+            'post_parent' => $post->ID,
+            'orderby' => 'menu_order',
             'order' => 'asc'
         );
         $attachments = get_posts( $args );
@@ -192,7 +192,7 @@ function duena_post_format_image() {
 function duena_portfolio_show() {
 	wp_reset_query();
 	global $post;
-	$post_num = of_get_option( 'portfolio_per_page', '12' );
+	$post_num = get_option( 'portfolio_per_page', '12' );
 	$post_num = intval($post_num);
 	if ( 0 == $post_num ) {
 		$post_num = 12;
@@ -216,7 +216,7 @@ function duena_portfolio_show() {
 		case 2:
 			$item_class .= ' col-md-6';
 			break;
-		
+
 		case 3:
 			$item_class .= ' col-md-4';
 			break;
@@ -232,18 +232,18 @@ function duena_portfolio_show() {
 			$portf_query->the_post(); ?>
 			<div class="<?php echo esc_attr( $item_class ); ?>">
 				<div class="hentry">
-				<?php 
-					$show_thumb = of_get_option( 'portfolio_show_thumbnail', 'true' ); 					
+				<?php
+					$show_thumb = get_option( 'portfolio_show_thumbnail', 'true' );
 					if ( 'true' == $show_thumb ) {
 				?>
 					<figure class="featured-thumbnail thumbnail">
 						<a href="<?php echo get_permalink(); ?>">
-							<?php 
+							<?php
 								switch ($columns) {
 									case 2:
 										$thumb_size = 'portfolio-large-th';
 										break;
-									
+
 									case 3:
 										$thumb_size = 'post-thumbnail';
 										break;
@@ -252,14 +252,14 @@ function duena_portfolio_show() {
 										$thumb_size = 'portfolio-small-th';
 										break;
 								}
-								the_post_thumbnail( $thumb_size ); 
+								the_post_thumbnail( $thumb_size );
 							?>
 						</a>
 					</figure>
 				<?php } ?>
 					<div class="post_content">
-					<?php 
-						$show_title = of_get_option( 'portfolio_show_title', 'true' ); 					
+					<?php
+						$show_title = get_option( 'portfolio_show_title', 'true' );
 						if ( 'true' == $show_title ) {
 					?>
 						<h5>
@@ -267,13 +267,13 @@ function duena_portfolio_show() {
 								<?php the_title(); ?>
 							</a>
 						</h5>
-					<?php 
+					<?php
 						}
-						$show_excerpt = of_get_option( 'portfolio_show_excerpt', 'true' ); 					
+						$show_excerpt = get_option( 'portfolio_show_excerpt', 'true' );
 						if ( 'true' == $show_excerpt ) {
 					?>
 						<div class="excerpt">
-						<?php 
+						<?php
 							$excerpt = get_the_excerpt();
 							if (has_excerpt()) {
 								the_excerpt();
@@ -282,9 +282,9 @@ function duena_portfolio_show() {
 							}
 						?>
 						</div>
-					<?php 
+					<?php
 						}
-						$show_link = of_get_option( 'portfolio_show_link', 'true' ); 					
+						$show_link = get_option( 'portfolio_show_link', 'true' );
 						if ( 'true' == $show_link ) {
 					?>
 						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
@@ -309,64 +309,60 @@ function duena_portfolio_show() {
  * Get colors
  */
 function duena_get_user_colors() {
-	$primary_color = of_get_option( 'cs_primary_color', '#FF5B5B' );
-	$secondary_color = of_get_option( 'cs_secondary_color', '#71A08B' );
+	$primary_color = get_option( 'cs_primary_color', '#ff5b5b' );
+	$secondary_color = get_option( 'cs_secondary_color', '#71a08b' );
+	$background_color = get_option( 'cs_background_color', '#210f1d' );
+
+	// This is where the top page pic changes
+	if ( $primary_color == '#ff5b5b') {
+		$pagetoppic = 'url('.get_template_directory_uri().'/images/page-top-bg.jpg) no-repeat center 0 #FF5B5B';
+	} else {
+		$pagetoppic = $primary_color.' no-repeat center 0';
+	}
+
 	$colors = "
-    a,
-    .searchform .screen-reader-text,
-    .post_meta i,
-    .author_bio_sidebar .social_box a,
-    .post-title a:hover,
-    .post-footer i,
-    .page_nav_wrap .post_nav ul li .current,
-    .page_nav_wrap .post_nav ul li a:hover {
+	.page-wrapper:before { background: " . $pagetoppic . "; }
+
+	a, .text-primary, .btn-link, a.list-group-item.active > .badge, .nav-pills > .active > a > .badge, .post-title a:hover,
+	.page-links a:hover, .page-links > span, .post-footer i, .post_meta i, .page_nav_wrap .post_nav ul li a:hover, .page_nav_wrap .post_nav ul li .current,
+	.author_bio_sidebar .social_box a, .author_bio_sidebar .author_bio_message h3, .author_bio_sidebar .author_bio_message h4, .author_bio_sidebar .author_bio_message h5,
+	.author_bio_sidebar .author_bio_message h6, .error404-num, .searchform .screen-reader-text, .has-user-primary-color {
 		color: " . $primary_color . ";
 	}
-	.post_type_label,
-	.flex-direction-nav a,
-	#content .featured_badge,
-	.author_bio_sidebar .social_box,
-	.flex-control-paging li a.flex-active,
-	.flex-control-paging li a:hover,
-	#toTop,
-	.post-footer a,
-	.navbar_inner > div > ul ul, 
-	.navbar_inner > ul ul,
-	.btn.btn-primary,
-	input[type='submit'],
-	input[type='reset'] {
+
+	.featured_badge, .post-footer a, .tagcloud a, .author_bio_sidebar .social_box, #toTop, button, html input[type='button'], input[type='reset'],
+	input[type='submit'], .wp-block-file .wp-block-file__button, .wp-block-button__link, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active {
+		background: " . $primary_color . ";
+	}
+
+	.btn-primary, .btn-inverse:active, .btn-inverse.active, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .nav-pills > li.active > a,
+	.nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus, .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover,
+	.pagination > .active > span:hover, .author_bio_sidebar .social_box, .flex-direction-nav a,
+	.pagination > .active > a:focus, .pagination > .active > span:focus, .label-primary, .btn-inverse:hover, .btn-inverse:active, .btn-inverse.active, a.list-group-item.active,
+	a.list-group-item.active:hover, a.list-group-item.active:focus, .panel-primary > .panel-heading, .post_type_label, .has-user-primary-background-color {
 		background-color: " . $primary_color . ";
 	}
-	.site-info,
-	.widget,
-	#slider-wrapper .flexslider,
-	.navbar_inner > div > ul > li > a,
-	.navbar_inner > div > ul > li > a:hover, 
-	.navbar_inner > div > ul > li.sfHover > a, 
-	.navbar_inner > div > ul > li.current-menu-item > a, 
-	.navbar_inner > div > ul > li.current_page_item > a,
-	.navbar_inner > ul > li > a,
-	.navbar_inner > ul > li > a:hover, 
-	.navbar_inner > ul > li.sfHover > a, 
-	.navbar_inner > ul > li.current-menu-item > a, 
-	.navbar_inner > ul > li.current_page_item > a,
-	.breadcrumb,
-	#comments,
-	.post-footer a,
-	.author-info {
+
+	.nav .open > a, .nav .open > a:hover, .nav .open > a:focus,
+	.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus,
+	.pagination > .active > span:focus, a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active, .progress-bar, a.list-group-item.active, a.list-group-item.active:hover,
+	a.list-group-item.active:focus, .panel-primary, .panel-primary > .panel-heading {
 		border-color: " . $primary_color . ";
 	}
-	a:hover,
-	a:focus {
+
+	a:hover, a:focus, .btn-link:hover, .btn-link:focus, .footer-menu li.current_page_item a, .footer-menu li.current-menu-item a, .has-user-secondary-color {
 		color: " . $secondary_color . ";
 	}
 
-	.btn.btn-primary:hover,
-	input[type='submit']:hover,
-	input[type='reset']:hover,
-	.slider-caption .btn.btn-primary:hover {
+	.btn-primary:hover, input[type='submit']:hover, input[type='reset']:hover, .slider-caption .btn.btn-primary:hover, .has-user-secondary-background-color {
 		background-color: " . $secondary_color . ";
 	}
+
+	.navbar_inner > div > ul > li > a, .navbar_inner > ul > li > a {
+		border-bottom: 0 solid " . $primary_color . ";
+	}
+
+	.navbar_inner > ul ul, .btn-inverse.disabled, .btn-inverse[disabled] { background-color: " . $primary_color . "; *background-color: " . $primary_color . "; }
 
 	textarea:focus,
 	input[type='text']:focus,
@@ -387,10 +383,44 @@ function duena_get_user_colors() {
 		border-color: " . $primary_color . ";
 		box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 2px " . $primary_color . ";
 	}
+
+	.breadcrumb, #slider-wrapper .flexslider, .author-info, .comments-area, .comment-list .bypostauthor .comment-body, .widget {
+    border-top: 6px solid " . $primary_color . ";
+	}
+
+	.navbar_inner > div > ul > li > a:hover, .navbar_inner > div > ul > li.sfHover > a, .navbar_inner > div > ul > li.current-menu-item > a, .navbar_inner > div > ul > li.current_page_item > a,
+	.navbar_inner > ul > li > a:hover, .navbar_inner > ul > li.sfHover > a, .navbar_inner > ul > li.current-menu-item > a, .navbar_inner > ul > li.current_page_item > a, .site-info {
+	border-bottom: 6px solid " . $primary_color . "; }
+
+	.panel-primary > .panel-heading + .panel-collapse .panel-body { border-top-color: " . $primary_color . "; }
+	.panel-primary > .panel-footer + .panel-collapse .panel-body { border-bottom-color: " . $primary_color . "; }
+	.navbar_inner > ul > li > a { border-bottom: 0 solid " . $primary_color . "; }
+	.flex-direction-nav a { background-color: " . $primary_color . "; }
+
+	a:hover, a:focus, .btn-link:hover, .btn-link:focus, .footer-menu li.current_page_item a, .footer-menu li.current-menu-item a, .has-user-secondary-color {
+	color: " . $secondary_color . "; }
+
+
+	@media (min-width: 1200px) and (max-width: 1350px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (min-width: 980px) and (max-width: 1100px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (max-width: 979px) { #primary .post_date time { color: " . $secondary_color . "; }}
+	@media (min-width: 768px) and (max-width: 979px) { .navbar_inner > div > ul > li > a, .navbar_inner > ul > li > a { border-bottom: 0 solid " . $primary_color . "; }}
+
+	@media (min-width: 768px) and (max-width: 979px) { .navbar_inner > div > ul > li > a:hover, .navbar_inner > div > ul > li.sfHover > a, .navbar_inner > div > ul > li.current-menu-item > a,
+	.navbar_inner > div > ul > li.current_page_item > a, .navbar_inner > ul > li > a:hover, .navbar_inner > ul > li.sfHover > a, .navbar_inner > ul > li.current-menu-item > a,
+	.navbar_inner > ul > li.current_page_item > a { color: " . $primary_color . "; border-bottom: 0 solid " . $primary_color . "; }}
+
+	@media (min-width: 1200px) and (max-width: 1350px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (min-width: 980px) and (max-width: 1100px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (max-width: 979px) { #content .featured_badge { background: " . $primary_color . "; }}
+	@media (max-width: 480px) { .error404-num { color: " . $primary_color . "; }}
+
+	@media (prefers-color-scheme: dark) {
+		.single-post-nav a:hover { background: " . $primary_color . " !important; }
 	";
 
 
-	$list_bullet = of_get_option( 'cs_list_bullet' );
+	$list_bullet = get_option( 'cs_list_bullet' );
 	if ( '' != $list_bullet ) {
 		$colors .= "
 		ul li {
@@ -440,15 +470,15 @@ function duena_show_porfolio_metabox( $post ) {
 			echo '<td>';
 
 				// Pull all the categories into an array
-				$all_categories = array();  
+				$all_categories = array();
 				$all_categories_obj = get_categories();
 				foreach ($all_categories_obj as $category) {
 						$all_categories[$category->cat_ID] = $category->cat_name;
 				}
-				
+
 				$all_cats_array = array('from_all' => __( 'Select from all', 'duena' ) ) + $all_categories;
 
-				$curr_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true ); 
+				$curr_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true );
 				if ( '' == $curr_cat ) {
 					$curr_cat = 'from_all';
 				}
@@ -494,7 +524,7 @@ function duena_save_portfolio_meta( $post_id ) {
 
 	}
 
-	
+
 }
 add_action('save_post', 'duena_save_portfolio_meta');
 ?>

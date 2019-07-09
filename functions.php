@@ -57,8 +57,8 @@ if ( ! function_exists( 'duena_setup' ) ) :
 function duena_setup() {
 
 	$defaults = array(
-		'default-color'          => '',
-		'default-image'          => '',
+		'default-color'          => '#210f1d',
+		'default-image'          => get_template_directory_uri() . '/images/main-bg.jpg',
 		'wp-head-callback'       => '_custom_background_cb',
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
@@ -165,7 +165,7 @@ function duena_styles() {
 	global $wp_styles;
 
 	// Bootstrap styles
-	wp_register_style( 'duena-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css');
+	wp_register_style( 'duena-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
 	wp_enqueue_style( 'duena-bootstrap' );
 
 	// Slider styles
@@ -195,6 +195,8 @@ function duena_styles() {
 
 function duena_scripts() {
 
+	wp_enqueue_script( 'duena-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.0.0', true );
+
 	wp_enqueue_script( 'duena-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'duena-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -213,13 +215,13 @@ function duena_scripts() {
 	wp_enqueue_script('sf_Touchscreen', get_template_directory_uri() . '/js/sfmenu-touch.js', array('jquery'), '1.0', true);
 
 	// Slider
-	wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '2.1', true);
+	wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '2.1', true);
 
 	// PopUp
 	wp_enqueue_script('magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.js', array('jquery'), '0.8.9', true);
 
 	// Bootstrap JS
-	wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
 
 	// Custom Script File
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
@@ -301,7 +303,7 @@ function duena_get_link_url() {
 if (! function_exists( 'duena_breadcrumb' )) {
 	function duena_breadcrumb() {
 	  $showOnHome = 0; // 1 - show "breadcrumbs" on home page, 0 - hide
-	  $delimiter = '<li class="divider">/</li>'; // divider
+	  $delimiter = '<li class="breadcrumb-item">&nbsp;&nbsp;/&nbsp;&nbsp;</li>'; // divider
 	  $home = __( 'Home', 'duena'); // text for link "Home"
 	  $showCurrent = 1; // 1 - show title current post/page, 0 - hide
 	  $before = '<li class="active">'; // open tag for active breadcrumb
@@ -312,11 +314,11 @@ if (! function_exists( 'duena_breadcrumb' )) {
 
  	 if (is_front_page()) {
 
-    	if ($showOnHome == 1) echo '<ul class="breadcrumb breadcrumb__t"><li><a href="' . $homeLink . '">' . $home . '</a><li></ul>';
+    	if ($showOnHome == 1) echo '<ul class="breadcrumb"><li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a><li></ul>';
 
   	} else {
 
-    	echo '<ul class="breadcrumb breadcrumb__t"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
+    	echo '<ul class="breadcrumb"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
 
 	if ( is_home() ) {
 		echo $before . 'Blog' . $after;
