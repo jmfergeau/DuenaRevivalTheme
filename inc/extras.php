@@ -331,7 +331,7 @@ function duena_get_user_colors() {
 	}
 
 	.featured_badge, .post-footer a, .tagcloud a, .author_bio_sidebar .social_box, #toTop, button, html input[type='button'], input[type='reset'],
-	input[type='submit'], .wp-block-file .wp-block-file__button, .wp-block-button__link, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active {
+	input[type='submit'], .wp-block-file .wp-block-file__button, .wp-block-button__link, .flex-control-paging li a:hover, .flex-control-paging li a.flex-active, #content .featured_badge {
 		background: " . $primary_color . ";
 	}
 
@@ -354,7 +354,7 @@ function duena_get_user_colors() {
 		color: " . $secondary_color . ";
 	}
 
-	.btn-primary:hover, input[type='submit']:hover, input[type='reset']:hover, .slider-caption .btn.btn-primary:hover, .has-user-secondary-background-color {
+	.btn-primary:hover, input[type='submit']:hover, input[type='reset']:hover, .slider-caption .btn.btn-primary:hover, .post-footer a:hover, .has-user-secondary-background-color {
 		background-color: " . $secondary_color . ";
 	}
 

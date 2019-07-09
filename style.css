@@ -48,7 +48,6 @@ h6 {
   letter-spacing: -1px;
 }
 /* Lists */
-
 #main ul {
   overflow: hidden;
 }
@@ -1075,13 +1074,12 @@ margin-bottom:10px;
   padding: 0 10px;
   border-radius: 10px;
   background: #FF5B5B;
-  border: 1px solid #f40000;
+  border: 0;
   color: #ffffff;
 }
 .post-footer a:hover {
   color: #ffffff;
-  background: #444;
-  border: 1px solid #111111;
+  background: #71a08b;
   text-decoration: none;
 }
 .post-footer a:active {
@@ -1696,6 +1694,9 @@ padding:10px 20px 20px;
 .author_bio_sidebar .author_bio_img {
   max-width: 100%;
   margin: 0 0 20px 0;
+}
+.author_bio_img > img {
+  max-width: 100%;
 }
 .author_bio_sidebar .author_bio_message h3 {
   font-size: 32px;
@@ -2937,6 +2938,10 @@ pre {
   .post-title a,
   .post_meta .post_comment a {
     color: #e6e6e6 !important;
+  }
+
+  .wp-block-separator hr {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
 
   .wp-block-image figcaption,
