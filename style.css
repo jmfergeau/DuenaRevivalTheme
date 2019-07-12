@@ -4,7 +4,7 @@ Theme URI: https://gitlab.com/maxlefou/DuenaRevivalTheme
 Author: Duena Studio, Max le Fou
 Author URI: https://gitlab.com/maxlefou
 Description: Duena Revival is a project that aims to maintain and update the Wordpress theme Duena. Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template!
-Version: 3.0.0
+Version: 3.1.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
@@ -31,7 +31,7 @@ button,
 input,
 select,
 textarea {
-  color: #8B8686;
+  color: #4d4d4d;
   font-family: sans-serif;
   font-size: 12px;
   line-height: 20px;
@@ -102,7 +102,7 @@ margin-bottom:10px;
   right: 0;
   top: 0;
   height: 6px;
-  background: url(images/page-top-bg.jpg) no-repeat center 0 #FF5B5B;
+  background: url(images/page-top-bg.jpg) no-repeat center 0 #ff5b5b;
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -195,7 +195,7 @@ margin-bottom:10px;
 /* = Slider
 ----------------------------------------------- */
 #slider-wrapper .flexslider {
-  border-top: 6px solid #FF5B5B;
+  border-top: 6px solid #ff5b5b;
   margin: 0 0 30px 0;
 }
 /* = Top search
@@ -308,7 +308,7 @@ margin-bottom:10px;
   top: -999em;
   min-width: 200px;
   left: 0;
-  background: #FF5B5B;
+  background: #ff5b5b;
   padding: 10px 0;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
@@ -426,7 +426,7 @@ margin-bottom:10px;
   font-weight: bold;
   padding: 0 15px;
   font-family: 'BenchNine', sans-serif;
-  border-bottom: 0 solid #FF5B5B;
+  border-bottom: 0 solid #ff5b5b;
 }
 /* Large Desktop */
 @media (min-width: 1200px) {
@@ -452,7 +452,7 @@ margin-bottom:10px;
     line-height: 26px;
     height: 26px;
     padding: 0;
-    border-bottom: 0 solid #FF5B5B;
+    border-bottom: 0 solid #ff5b5b;
   }
 }
 .navbar_inner > div > ul > li > a:hover,
@@ -466,7 +466,7 @@ margin-bottom:10px;
   color: #ffffff;
   outline: 0;
   text-decoration: none;
-  border-bottom: 6px solid #FF5B5B;
+  border-bottom: 6px solid #ff5b5b;
 }
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
@@ -478,8 +478,8 @@ margin-bottom:10px;
   .navbar_inner > ul > li.sfHover > a,
   .navbar_inner > ul > li.current-menu-item > a,
   .navbar_inner > ul > li.current_page_item > a {
-    color: #FF5B5B;
-    border-bottom: 0 solid #FF5B5B;
+    color: #ff5b5b;
+    border-bottom: 0 solid #ff5b5b;
   }
 }
 .navbar_inner > div > ul li li,
@@ -677,7 +677,7 @@ margin-bottom:10px;
   color: #434242;
 }
 .post-title a:hover {
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 /* Sticky Post */
 .single .sticky.post_content {
@@ -695,7 +695,7 @@ margin-bottom:10px;
   height: 35px;
   line-height: 35px;
   padding: 0 35px;
-  background: #FF5B5B;
+  background: #ff5b5b;
   color: #ffffff;
   font-size: 22px;
   font-family: 'BenchNine', sans-serif;
@@ -729,7 +729,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #FF5B5B;
+    background: #ff5b5b;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -784,7 +784,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #FF5B5B;
+    background: #ff5b5b;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -835,7 +835,7 @@ margin-bottom:10px;
     width: 69px;
     height: 60px;
     text-align: center;
-    background: #FF5B5B;
+    background: #ff5b5b;
     border-radius: 30px 0 0 30px;
     font-weight: bold;
     color: #ffffff;
@@ -1004,12 +1004,12 @@ margin-bottom:10px;
 }
 .page-links a:hover {
   text-decoration: none;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .page-links > span {
   display: inline-block;
   text-decoration: none;
-  color: #FF5B5B;
+  color: #ff5b5b;
   font-family: 'BenchNine', sans-serif;
   line-height: 20px;
   font-size: 22px;
@@ -1062,7 +1062,7 @@ margin-bottom:10px;
 }
 .post-footer i {
   font-size: 14px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 /* post tags */
 .post-footer a {
@@ -1073,7 +1073,7 @@ margin-bottom:10px;
   height: 18px;
   padding: 0 10px;
   border-radius: 10px;
-  background: #FF5B5B;
+  background: #ff5b5b;
   border: 0;
   color: #ffffff;
 }
@@ -1102,7 +1102,7 @@ margin-bottom:10px;
   height: 18px;
   padding: 0 10px;
   border-radius: 10px;
-  background: #FF5B5B;
+  background: #ff5b5b;
   border: 1px solid #f40000;
   color: #ffffff;
 }
@@ -1119,7 +1119,7 @@ margin-bottom:10px;
   left: -69px;
   width: 69px;
   height: 60px;
-  background-color: #FF5B5B;
+  background-color: #ff5b5b;
   background: url(images/post-format-icons.png) no-repeat 0 -240px;
   border-radius: 30px 0 0 30px;
 }
@@ -1166,7 +1166,7 @@ margin-bottom:10px;
 }
 .post_meta i {
   font-size: 14px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .post_meta span {
   display: inline-block;
@@ -1504,7 +1504,7 @@ margin-bottom:10px;
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
   margin: 0 0 30px 0;
-  border-top: 6px solid #FF5B5B;
+  border-top: 6px solid #ff5b5b;
 }
 .author-info.author-page .author-description {
   padding: 10px 0 0 0;
@@ -1571,11 +1571,11 @@ margin-bottom:10px;
   text-decoration: none;
 }
 .page_nav_wrap .post_nav ul li a:hover {
-  color: #FF5B5B;
+  color: #ff5b5b;
   text-decoration: none;
 }
 .page_nav_wrap .post_nav ul li .current {
-  color: #FF5B5B;
+  color: #ff5b5b;
   text-decoration: none;
   cursor: default;
 }
@@ -1660,14 +1660,14 @@ padding:10px 20px 20px;
   margin: 0 0 30px 0;
 }
 .author_bio_sidebar .social_box {
-  background: #FF5B5B;
+  background: #ff5b5b;
   padding: 3px 5px;
   text-align: center;
   font-size: 0;
   list-style: 0;
 }
 .author_bio_sidebar .social_box a {
-  color: #FF5B5B;
+  color: #ff5b5b;
   font-size: 26px;
   height: 42px;
   line-height: 40px;
@@ -1701,22 +1701,22 @@ padding:10px 20px 20px;
 .author_bio_sidebar .author_bio_message h3 {
   font-size: 32px;
   line-height: 32px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .author_bio_sidebar .author_bio_message h4 {
   font-size: 30px;
   line-height: 32px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .author_bio_sidebar .author_bio_message h5 {
   font-size: 24px;
   line-height: 30px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .author_bio_sidebar .author_bio_message h6 {
   font-size: 18px;
   line-height: 30px;
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 /* Large Desktop */
 @media (min-width: 1200px) {
@@ -1760,7 +1760,7 @@ padding:10px 20px 20px;
 .error404-num {
   font-size: 200px;
   line-height: 150px;
-  color: #FF5B5B;
+  color: #ff5b5b;
   padding: 20px 0 10px 0;
 }
 /* Landscape phones and down */
@@ -1768,7 +1768,7 @@ padding:10px 20px 20px;
   .error404-num {
     font-size: 100px;
     line-height: 80px;
-    color: #FF5B5B;
+    color: #ff5b5b;
     padding: 20px 0 10px 0;
   }
   .page404 .hentry .searchform {
@@ -2106,10 +2106,10 @@ figure.quote {
 figcaption.quote-caption {
   display: block;
   margin: -10px 0 0 0;
-  color: #8b8686;
+  color: #262626;
 }
 figcaption.quote-caption a {
-  color: #8b8686;
+  color: #262626;
 }
 /* = Video
 ----------------------------------------------- */
@@ -2162,7 +2162,7 @@ object {
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
   padding: 20px;
-  border-top: 6px solid #FF5B5B;
+  border-top: 6px solid #ff5b5b;
   margin: 0 0 30px 0;
 }
 .comment-list {
@@ -2226,7 +2226,7 @@ object {
   padding: 0 0 5px 0;
 }
 .comment-list .bypostauthor .comment-body {
-  border-top: 6px solid #FF5B5B;
+  border-top: 6px solid #ff5b5b;
 }
 #cancel-comment-reply-link {
   font-family: Arial, Helvetica, sans-serif;
@@ -2269,7 +2269,7 @@ object {
 .widget {
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
-  border-top: 6px solid #FF5B5B;
+  border-top: 6px solid #ff5b5b;
   padding: 15px 15px 15px;
   margin: 0 0 30px 0;
   overflow: hidden;
@@ -2337,7 +2337,7 @@ object {
 .searchform .screen-reader-text {
   padding: 0 0 0 15px;
   font-style: italic;
-  color: #FF5B5B;
+  color: #ff5b5b;
   font-size: 15px;
   font-weight: bold;
 }
@@ -2388,7 +2388,7 @@ object {
   padding: 15px 60px 15px 15px;
   background: #ffffff;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.22);
-  border-bottom: 6px solid #FF5B5B;
+  border-bottom: 6px solid #ff5b5b;
   position: relative;
 }
 /* Large desktop */
@@ -2441,7 +2441,7 @@ object {
   line-height: 32px;
   border-radius: 16px;
   color: #ffffff;
-  background: #FF5B5B;
+  background: #ff5b5b;
   -webkit-transition: all 200ms linear;
   -moz-transition: all 200ms linear;
   -o-transition: all 200ms linear;
@@ -2508,7 +2508,7 @@ input[type="reset"],
 input[type="submit"] {
   border: none;
   border-radius: 0;
-  background: #FF5B5B;
+  background: #ff5b5b;
   color: #ffffff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -2854,7 +2854,7 @@ p.wp-block-cover-text {
 
 .wp-block-file
 .wp-block-file__button {
-    background: #FF5B5B;
+    background: #ff5b5b;
     border-radius: 2em;
     color: #fff;
     font-size: 13px;
@@ -2862,7 +2862,7 @@ p.wp-block-cover-text {
 }
 
 .wp-block-button__link {
-    background-color: #FF5B5B;
+    background-color: #ff5b5b;
     border: none;
     border-radius: 23px;
     box-shadow: none;
@@ -2902,10 +2902,10 @@ pre {
 }
 
 .has-user-primary-color {
-  color: #FF5B5B;
+  color: #ff5b5b;
 }
 .has-user-primary-background-color {
-  background-color: #FF5B5B;
+  background-color: #ff5b5b;
 }
 
 .has-user-secondary-color {

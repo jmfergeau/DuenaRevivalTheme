@@ -1,3 +1,7 @@
+v3.1.0
+- Fix: Minor CSS corrections, mostly in clear mode
+- Tweak: Bootstrap updated to version 4.3.1
+
 v3.0.0
 - Fix: System of customization of colors is cleaned
 - Fix: Some elements were missing their dark mode support

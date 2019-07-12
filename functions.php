@@ -195,7 +195,7 @@ function duena_styles() {
 
 function duena_scripts() {
 
-	wp_enqueue_script( 'duena-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.0.0', true );
+	wp_enqueue_script( 'duena-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.3.1', true );
 
 	wp_enqueue_script( 'duena-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
