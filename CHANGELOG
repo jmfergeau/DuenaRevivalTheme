@@ -1,3 +1,7 @@
+v3.1.1
+- Fix: Minor CSS corrections
+- Language: added missing translations
+
 v3.1.0
 - Fix: Minor CSS corrections, mostly in clear mode
 - Tweak: Bootstrap updated to version 4.3.1
