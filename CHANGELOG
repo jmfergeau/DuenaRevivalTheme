@@ -1,5 +1,6 @@
 v3.1.1
 - Fix: Minor CSS corrections
+- Tweak: style.css can now be generated using sass (careful to not remove the comment blocks in generated css!!!)
 - Language: added missing translations
 
 v3.1.0
