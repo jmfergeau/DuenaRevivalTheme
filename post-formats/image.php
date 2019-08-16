@@ -17,7 +17,7 @@
 				<?php endif; ?>
 				<header class="post-header <?php if( is_singular() && is_sticky() ) echo esc_attr( $stickyclass ); ?>">
 					<?php if(!is_singular()) : ?>
-					<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+					<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 					<?php else :?>
 					<h1 class="post-title"><?php the_title(); ?></h1>
 					<?php endif; ?>

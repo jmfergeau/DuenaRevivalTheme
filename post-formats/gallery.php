@@ -12,7 +12,7 @@
 
 		<?php if(!is_singular()) : ?>
 
-		<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+		<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
 		<?php else :?>
 

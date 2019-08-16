@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Themes - Duena\n"
 "POT-Creation-Date: 2019-06-09 22:10+0200\n"
-"PO-Revision-Date: 2019-06-10 13:55+0200\n"
+"PO-Revision-Date: 2019-08-16 18:51+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,8 +13,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Poedit 2.2.3\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:1,2,4c;_ex:1,2c;"
-"esc_attr_x:1,2c\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_nx:1,2,4c;_ex:1,2c;esc_attr_x:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
@@ -28,20 +27,12 @@ msgid "Page Not Found"
 msgstr "Page non trouvée"
 
 #: ../404.php:18
-msgid ""
-"The page you are looking for might have been removed, had its name changed, "
-"or is temporarily unavailable."
-msgstr ""
-"La page que vous cherchez a pu être supprimée, renommée ou est "
-"temporairement inaccessible."
+msgid "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+msgstr "La page que vous cherchez a pu être supprimée, renommée ou est temporairement inaccessible."
 
 #: ../404.php:19
-msgid ""
-"Please try using our search box below to look for information on the "
-"internet."
-msgstr ""
-"Essayez notre outil de recherche ci-dessous pour chercher des informations "
-"sur Internet."
+msgid "Please try using our search box below to look for information on the internet."
+msgstr "Essayez notre outil de recherche ci-dessous pour chercher des informations sur Internet."
 
 #: ../archive.php:21
 #, php-format
@@ -104,12 +95,8 @@ msgstr "À propos de : %s"
 
 #: ../author.php:61 ../index.php:34 ../no-results.php:28
 #: ../post-formats/index.php:30
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. "
-"Essayez en lançant une recherche."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Il semblerait que nous ne soyons pas en mesure de trouver votre contenu. Essayez en lançant une recherche."
 
 #: ../comments.php:32
 #, php-format
@@ -137,12 +124,8 @@ msgstr "Commentaires fermés."
 
 #: ../comments.php:72
 #, php-format
-msgid ""
-"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
-"and attributes: %s"
-msgstr ""
-"Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Markup "
-"Language\">HTML</abbr>&nbsp;: %s"
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "Vous pouvez utiliser ces balises et attributs <abbr title=\"HyperText Markup Language\">HTML</abbr>&nbsp;: %s"
 
 #: ../footer.php:23
 #, php-format
@@ -229,16 +212,8 @@ msgstr "XL"
 
 #: ../image.php:25
 #, php-format
-msgid ""
-"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
-"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
-"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
-"rel=\"gallery\">%8$s</a>"
-msgstr ""
-"Publié <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s"
-"\">%2$s</time></span> sur <a href=\"%3$s\" title=\"Lien vers image taille "
-"réelle\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Retour vers %7$s"
-"\" rel=\"gallery\">%8$s</a>"
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "Publié <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> sur <a href=\"%3$s\" title=\"Lien vers image taille réelle\">%4$s &times; %5$s</a> dans <a href=\"%6$s\" title=\"Retour vers %7$s\" rel=\"gallery\">%8$s</a>"
 
 #: ../image.php:36 ../image.php:112
 msgid "Edit"
@@ -263,34 +238,17 @@ msgstr "Pages&nbsp;:"
 
 #: ../image.php:104
 #, php-format
-msgid ""
-"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
-"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
-"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
-msgstr ""
-"<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire"
-"\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link"
-"\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de "
-"Trackback</a>."
+msgid "<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "<a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">Poster un commentaire</a> ou faire un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
 
 #: ../image.php:106
 #, php-format
-msgid ""
-"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
-"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
-"\">Trackback URL</a>."
-msgstr ""
-"Commentaires clos, mais vous pouvez laisser un trackback: <a class="
-"\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback"
-"\">URL de Trackback</a>."
+msgid "Comments are closed, but you can leave a trackback: <a class=\"trackback-link\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr "Commentaires clos, mais vous pouvez laisser un trackback: <a class=\"trackback-link\" href=\"%s\" title=\"URL de Trackback\" rel=\"trackback\">URL de Trackback</a>."
 
 #: ../image.php:108
-msgid ""
-"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
-"\" title=\"Post a comment\">post a comment</a>."
-msgstr ""
-"Trackbacks clos, mais vous pouvez <a class=\"comment-link\" href=\"#respond"
-"\" title=\"Poster un commentaire\">poster un commentaire</a>."
+msgid "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">post a comment</a>."
+msgstr "Trackbacks clos, mais vous pouvez <a class=\"comment-link\" href=\"#respond\" title=\"Poster un commentaire\">poster un commentaire</a>."
 
 #: ../image.php:110
 msgid "Both comments and trackbacks are currently closed."
@@ -328,18 +286,12 @@ msgstr "Rien de trouvé"
 
 #: ../no-results.php:19
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-"Prêt à publier votre premier article ? <a href=\"%1$s\">Lancez-vous</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Prêt à publier votre premier article ? <a href=\"%1$s\">Lancez-vous</a>."
 
 #: ../no-results.php:23
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer avec "
-"des mots différents."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Désolé, mais rien ne correspond à votre recherche. Veuillez réessayer avec des mots différents."
 
 #: ../options.php:33
 msgid "Image Logo"
@@ -449,9 +401,7 @@ msgstr "Slug de catégorie pour le portefolio"
 
 #: ../options.php:199
 msgid "Enter category slug, from which you like to fill portfolio page"
-msgstr ""
-"Entrer le slug de catégorie duquel vous aimeriez remplir la page de "
-"portefolio"
+msgstr "Entrer le slug de catégorie duquel vous aimeriez remplir la page de portefolio"
 
 #: ../options.php:204
 msgid "Display Author Bio in sidebar"
@@ -490,8 +440,7 @@ msgid "Enter Author Bio Message (HTML tags allowed)"
 msgstr "Entrer la bio de l'auteur (tags HTML admis)"
 
 #: ../options.php:229
-msgid ""
-"Hello, and welcome to my site! I hope you like the place and decide to stay."
+msgid "Hello, and welcome to my site! I hope you like the place and decide to stay."
 msgstr "Bonjour et bienvenue sur mon site ! J'espère que vous allez l'aimer."
 
 #: ../options.php:231
@@ -543,15 +492,8 @@ msgid "What kind of logo?"
 msgstr "Type de logo ?"
 
 #: ../options.php:273
-msgid ""
-"Select whether you want your main logo to be an image or text. If you select "
-"'image' you can put in the image url in the next option, and if you select "
-"'text' your Site Title will show instead."
-msgstr ""
-"Choisir si vous voulez que votre logo principal soit une image ou un texte. "
-"Si vous sélectionnez \"image\", vous pouvez insérer l'URL de l'image dans "
-"l'option suivante, et si vous sélectionnez \"texte\", le titre de votre site "
-"s'affichera à la place."
+msgid "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead."
+msgstr "Choisir si vous voulez que votre logo principal soit une image ou un texte. Si vous sélectionnez \"image\", vous pouvez insérer l'URL de l'image dans l'option suivante, et si vous sélectionnez \"texte\", le titre de votre site s'affichera à la place."
 
 #: ../options.php:279
 msgid "Logo Image Path"
@@ -567,20 +509,15 @@ msgstr "Favicon"
 
 #: ../options.php:285
 msgid "Click Upload or Enter the direct path to your favicon."
-msgstr ""
-"Cliquer sur Importer ou entrer le chemin direct vers le favicon souhaité."
+msgstr "Cliquer sur Importer ou entrer le chemin direct vers le favicon souhaité."
 
 #: ../options.php:290
 msgid "Color scheme"
 msgstr "Jeu de couleurs"
 
 #: ../options.php:294
-msgid ""
-"Color of links, borders on content boxes, social icons, meta icons, post "
-"type labels"
-msgstr ""
-"Couleur des liens, des bords des contenus, des icônes sociaux, des icônes "
-"méta, des labels de type d'article"
+msgid "Color of links, borders on content boxes, social icons, meta icons, post type labels"
+msgstr "Couleur des liens, des bords des contenus, des icônes sociaux, des icônes méta, des labels de type d'article"
 
 #: ../options.php:300
 msgid "Color of links hovers"
@@ -591,14 +528,8 @@ msgid "Default list bullet"
 msgstr "Puce de liste par défaut"
 
 #: ../options.php:307
-msgid ""
-"Upload image for list bullet (Note. Use small image for bullet, not larger "
-"than 10*10px, also reccomended to leave some empty space at image before "
-"bullet(5-8px))"
-msgstr ""
-"Importer une image pour la liste à puces (Remarque. Utilisez une petite "
-"image pour une balle ne dépassant pas 10x10 pixels, il est également "
-"recommandé de laisser un espace vide à l’image avant la puce (5-8 pixels)."
+msgid "Upload image for list bullet (Note. Use small image for bullet, not larger than 10*10px, also reccomended to leave some empty space at image before bullet(5-8px))"
+msgstr "Importer une image pour la liste à puces (Remarque. Utilisez une petite image pour une balle ne dépassant pas 10x10 pixels, il est également recommandé de laisser un espace vide à l’image avant la puce (5-8 pixels)."
 
 #: ../options.php:312
 msgid "Navigation"
@@ -814,8 +745,7 @@ msgstr "Activer le bouton 'Lire la suite' pour les articles ?"
 
 #: ../options.php:521
 msgid "Enable or Disable read more button for blog posts."
-msgstr ""
-"Activer ou désactiver le bouton 'Lire la suite' pour les articles de blog."
+msgstr "Activer ou désactiver le bouton 'Lire la suite' pour les articles de blog."
 
 #: ../options.php:527
 msgid "'Read more' button text"
@@ -843,8 +773,7 @@ msgstr "Titre des articles en rapport"
 
 #: ../options.php:543
 msgid "Enter Your Title used on Single Post page for related posts."
-msgstr ""
-"Entrez votre titre utilisé sur les simples pages pour les articles liés."
+msgstr "Entrez votre titre utilisé sur les simples pages pour les articles liés."
 
 #: ../options.php:545
 msgid "Related posts"
@@ -860,8 +789,7 @@ msgstr "Articles par page"
 
 #: ../options.php:552
 msgid "Enter number of post per page on portfolio page template"
-msgstr ""
-"Entrer le nombre d'articles par page sur les modèles de pages portefolio"
+msgstr "Entrer le nombre d'articles par page sur les modèles de pages portefolio"
 
 #: ../options.php:558
 msgid "Show thumbnail"
@@ -905,9 +833,7 @@ msgstr "Texte du droit d'auteur dans le pied de page"
 
 #: ../options.php:590
 msgid "Enter text used in the right side of the footer. HTML tags are allowed."
-msgstr ""
-"Entrer le texte qui ira du côté gauche du pied de page. Les tags HTML sont "
-"admis."
+msgstr "Entrer le texte qui ira du côté gauche du pied de page. Les tags HTML sont admis."
 
 #: ../options.php:595
 msgid "Display Footer menu?"
@@ -927,14 +853,8 @@ msgstr "Fixer l'arrière-plan en place lors du défilement."
 
 #: ../options/options-framework.php:66
 #, php-format
-msgid ""
-"Your current theme does not have support for the Options Framework plugin.  "
-"<a href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide "
-"Notice</a>"
-msgstr ""
-"Votre thème actuel ne prend pas en charge le plug-in Options Framework. <a "
-"href=\"%1$s\" target=\"_blank\">En savoir plus</a> | <a href=\"%2$s"
-"\">Masquer la notification</a>"
+msgid "Your current theme does not have support for the Options Framework plugin.  <a href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide Notice</a>"
+msgstr "Votre thème actuel ne prend pas en charge le plug-in Options Framework. <a href=\"%1$s\" target=\"_blank\">En savoir plus</a> | <a href=\"%2$s\">Masquer la notification</a>"
 
 #: ../options/options-framework.php:255 ../options/options-framework.php:256
 #: ../options/options-framework.php:485
@@ -955,9 +875,7 @@ msgstr "Sélectionner une couleur"
 
 #: ../options/options-framework.php:349
 msgid "Click OK to reset. Any theme settings will be lost!"
-msgstr ""
-"Cliquez OK pour restaurer les paramètres par défaut. Tous les paramètres "
-"personnalisés seront perdus!"
+msgstr "Cliquez OK pour restaurer les paramètres par défaut. Tous les paramètres personnalisés seront perdus!"
 
 #: ../options/options-framework.php:381
 msgid "Default options restored."
@@ -1154,6 +1072,11 @@ msgstr "Rechercher"
 msgid "Meta"
 msgstr "Méta"
 
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54
+msgid "Permalink to:"
+msgstr "Permalien vers :"
+
 #~ msgid "A Semantic Personal Publishing Platform"
 #~ msgstr "Une plate-forme sémantique de publication personnelle"
 
@@ -1163,41 +1086,14 @@ msgstr "Méta"
 #~ msgid "Restore Defaults"
 #~ msgstr "Restaurer les paramètres par défaut"
 
-#~ msgid "Permalink to:"
-#~ msgstr "Permalien vers :"
-
 #~ msgid "Author Tumblr URL"
 #~ msgstr "Entrer l'URL du Tumblr de l'auteur"
 
 #~ msgid "Enter Author Tumblr URL"
 #~ msgstr "URL du Tumblr de l'auteur"
 
-#~ msgid ""
-#~ "Duena is a Bootstrap template designed specifically for personal blogs. "
-#~ "Being Bootstrap-powered the template provides lots of opportunities for "
-#~ "editing and tuning. Bootstrap is web developer's 'mana' with all those "
-#~ "HTML elements, components and other cool stuff. Even though Bootstrap "
-#~ "templates are mostly flat, the gradient on the background creates depth "
-#~ "effect that makes content blocks float in the air. Red and its hues "
-#~ "prevail in the theme design giving it some warmth and passion. There is "
-#~ "no need to describe theme's responsiveness; for sure the template fits "
-#~ "perfectly into all browsers of tablets, phones and PCs. And lastly, the "
-#~ "template comes stuffed with lots of amazing features that will make your "
-#~ "blog stand out. Feel free to try Duena template!"
-#~ msgstr ""
-#~ "Duena est un modèle bootstrap conçu spécifiquement pour les blogs "
-#~ "personnels. Etant bootstrap-alimenté, le modèle fournit beaucoup "
-#~ "d’opportunités pour l’édition et les réglages. Bootstrap est le 'mana' du "
-#~ "développeur Web avec tous ces éléments HTML, composants et autres trucs "
-#~ "cool. Même si les modèles bootstrap sont généralement plats, le dégradé "
-#~ "sur l’arrière-plan crée un effet de profondeur qui rend les blocs de "
-#~ "contenu flottant dans l’air. Le rouge et ses teintes prévalent dans la "
-#~ "conception du thème lui donnant un peu de chaleur et de passion, mais il "
-#~ "est possible de changer les couleurs à volonté facilement. Il n’est pas "
-#~ "nécessaire de décrire la réactivité du thème ; le modèle s’adaptant "
-#~ "parfaitement à tous les navigateurs de tablettes, téléphones et PC. Et "
-#~ "enfin, le modèle est livré bourré de fonctionnalités étonnantes qui "
-#~ "démarqueront votre blog. Essayez le modèle de duena!"
+#~ msgid "Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template!"
+#~ msgstr "Duena est un modèle bootstrap conçu spécifiquement pour les blogs personnels. Etant bootstrap-alimenté, le modèle fournit beaucoup d’opportunités pour l’édition et les réglages. Bootstrap est le 'mana' du développeur Web avec tous ces éléments HTML, composants et autres trucs cool. Même si les modèles bootstrap sont généralement plats, le dégradé sur l’arrière-plan crée un effet de profondeur qui rend les blocs de contenu flottant dans l’air. Le rouge et ses teintes prévalent dans la conception du thème lui donnant un peu de chaleur et de passion, mais il est possible de changer les couleurs à volonté facilement. Il n’est pas nécessaire de décrire la réactivité du thème ; le modèle s’adaptant parfaitement à tous les navigateurs de tablettes, téléphones et PC. Et enfin, le modèle est livré bourré de fonctionnalités étonnantes qui démarqueront votre blog. Essayez le modèle de duena!"
 
 #~ msgid "Duena"
 #~ msgstr "Duena"
