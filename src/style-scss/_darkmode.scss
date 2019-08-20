@@ -1,0 +1,91 @@
+/* Dark mode support (2.2.1) */
+@media (prefers-color-scheme: dark) {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+  .post-title a,
+  .post_meta .post_comment a {
+    color: $lesserwhite !important;
+  }
+
+  .wp-block-separator hr {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+
+  .wp-block-image figcaption,
+  .wp-block-video figcaption,
+  .wp-block-audio figcaption {
+    color: $grey5 !important;
+  }
+
+  #top-search .input-search,
+  .hentry,
+  .author-info,
+  .single-post-nav,
+  .single-post-nav a,
+  .breadcrumb,
+  .comments-area,
+  .author_bio_sidebar .content_box,
+  .widget,
+  .site-info,
+  .page_wrap,
+  .page-title,
+  .page_nav_wrap {
+    color: $lesserwhite !important;
+    background: $grey2 !important;
+  }
+
+  .page_nav_wrap .post_nav ul li a,
+  .page_nav_wrap .post_nav ul li span {
+    color: $lesserwhite;
+  }
+
+  .single-post-nav a:hover {
+    background: $grey1;
+  }
+
+  .breadcrumb > li {
+    text-shadow: 0 5px 7px rgba(1, 1, 1, 0.30);
+    background: none;
+  }
+
+  #top-search #submit {
+    background: url(images/top-search-submit-dark.png) no-repeat 0 0;
+  }
+
+  #commentform textarea,
+  #commentform input[type="text"]
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus,
+  input[type="search"]:focus,
+  textarea:focus,
+  .comment-list .comment-body {
+    color: $lesserwhite;
+    background: $grey1;
+    border: 1px solid $grey5;
+  }
+
+  .wp-block-calendar caption {
+    color: $lesserwhite !important;
+  }
+  .wp-block-calendar th {
+    background: $grey5;
+  }
+  .wp-block-calendar tbody {
+    color: $lesswhite;
+    background: $grey1;
+  }
+  .wp-block-calendar td {
+    color: $lesswhite;
+  }
+
+  code {
+    color: $lesswhite;
+    background: $grey1;
+  }
+
+  pre {
+    color: $lesserwhite;
+    background: $grey1;
+    border: 1px solid $grey5;
+  }
+}

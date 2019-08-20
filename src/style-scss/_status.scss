@@ -1,0 +1,37 @@
+/* = Status
+----------------------------------------------- */
+.format-status .post_content {
+  font-size: 18px;
+  line-height: 22px;
+  font-style: italic;
+  color: #999999;
+  min-height: none;
+  padding: 30px 20px 21px;
+}
+.single .format-status .post_content {
+  padding: 25px 20px 25px;
+}
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .format-status .post_content {
+    padding: 34px 35px 21px;
+  }
+  .single .format-status .post_content {
+    padding: 25px 35px 25px;
+  }
+}
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+.wp-audio-shortcode {
+  margin: 0 0 20px 0;
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .wp-audio-shortcode.mejs-container {
+    width: 100% !important;
+  }
+}

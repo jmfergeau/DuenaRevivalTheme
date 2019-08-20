@@ -233,10 +233,10 @@ add_filter( 'of_font_face', 'of_sanitize_font_face' );
  */
 function of_recognized_background_repeat() {
 	$default = array(
-		'no-repeat' => __('No Repeat', 'optionsframework'),
-		'repeat-x'  => __('Repeat Horizontally', 'optionsframework'),
-		'repeat-y'  => __('Repeat Vertically', 'optionsframework'),
-		'repeat'    => __('Repeat All', 'optionsframework'),
+		'no-repeat' => __('No Repeat', 'duena-revival'),
+		'repeat-x'  => __('Repeat Horizontally', 'duena-revival'),
+		'repeat-y'  => __('Repeat Vertically', 'duena-revival'),
+		'repeat'    => __('Repeat All', 'duena-revival'),
 		);
 	return apply_filters( 'of_recognized_background_repeat', $default );
 }
@@ -249,15 +249,15 @@ function of_recognized_background_repeat() {
  */
 function of_recognized_background_position() {
 	$default = array(
-		'top left'      => __('Top Left', 'optionsframework'),
-		'top center'    => __('Top Center', 'optionsframework'),
-		'top right'     => __('Top Right', 'optionsframework'),
-		'center left'   => __('Middle Left', 'optionsframework'),
-		'center center' => __('Middle Center', 'optionsframework'),
-		'center right'  => __('Middle Right', 'optionsframework'),
-		'bottom left'   => __('Bottom Left', 'optionsframework'),
-		'bottom center' => __('Bottom Center', 'optionsframework'),
-		'bottom right'  => __('Bottom Right', 'optionsframework')
+		'top left'      => __('Top Left', 'duena-revival'),
+		'top center'    => __('Top Center', 'duena-revival'),
+		'top right'     => __('Top Right', 'duena-revival'),
+		'center left'   => __('Middle Left', 'duena-revival'),
+		'center center' => __('Middle Center', 'duena-revival'),
+		'center right'  => __('Middle Right', 'duena-revival'),
+		'bottom left'   => __('Bottom Left', 'duena-revival'),
+		'bottom center' => __('Bottom Center', 'duena-revival'),
+		'bottom right'  => __('Bottom Right', 'duena-revival')
 		);
 	return apply_filters( 'of_recognized_background_position', $default );
 }
@@ -270,8 +270,8 @@ function of_recognized_background_position() {
  */
 function of_recognized_background_attachment() {
 	$default = array(
-		'scroll' => __('Scroll Normally', 'optionsframework'),
-		'fixed'  => __('Fixed in Place', 'optionsframework')
+		'scroll' => __('Scroll Normally', 'duena-revival'),
+		'fixed'  => __('Fixed in Place', 'duena-revival')
 		);
 	return apply_filters( 'of_recognized_background_attachment', $default );
 }
@@ -345,10 +345,10 @@ function of_recognized_font_faces() {
  */
 function of_recognized_font_styles() {
 	$default = array(
-		'normal'      => __( 'Normal', 'optionsframework' ),
-		'italic'      => __( 'Italic', 'optionsframework' ),
-		'bold'        => __( 'Bold', 'optionsframework' ),
-		'bold italic' => __( 'Bold Italic', 'optionsframework' )
+		'normal'      => __( 'Normal', 'duena-revival' ),
+		'italic'      => __( 'Italic', 'duena-revival' ),
+		'bold'        => __( 'Bold', 'duena-revival' ),
+		'bold italic' => __( 'Bold Italic', 'duena-revival' )
 		);
 	return apply_filters( 'of_recognized_font_styles', $default );
 }

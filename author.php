@@ -4,7 +4,7 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package duena
+ * @package duena-revival
  */
 
 get_header(); ?>
@@ -21,7 +21,7 @@ get_header(); ?>
 						 * what author we're dealing with (if that is the case).
 						*/
 						the_post();
-						printf( __( 'About: %s', 'duena' ), get_the_author() );
+						printf( __( 'About: %s', 'duena-revival' ), get_the_author() );
 						/* Since we called the_post() above, we need to
 						 * rewind the loop back to the beginning that way
 						 * we can run the loop properly, in full.
@@ -42,25 +42,25 @@ get_header(); ?>
 				</div><!-- .author-description -->
 			</div><!-- .author-info -->
 			<h2 class="page-title">
-				<?php printf( __( 'Author Archives: %s', 'duena' ), get_the_author() );	?>
+				<?php printf( __( 'Author Archives: %s', 'duena-revival' ), get_the_author() );	?>
 			</h2>
 			<?php rewind_posts(); ?>
 			<?php /* Start the Loop */ ?>
-			<?php while (have_posts()) : the_post(); 			
+			<?php while (have_posts()) : the_post();
 
 				// The following determines what the post format is and shows the correct file accordingly
 				$format = get_post_format();
-				get_template_part( 'post-formats/' . $format );					
+				get_template_part( 'post-formats/' . $format );
 				if($format == '')
-				get_template_part( 'post-formats/standard' );					
+				get_template_part( 'post-formats/standard' );
 			endwhile; ?>
 
 		<?php else : ?>
 
 			<div class="no-results">
-				<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'duena' ); ?></p>
+				<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'duena-revival' ); ?></p>
     			<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
-  			</div><!--no-results-->	
+  			</div><!--no-results-->
 
 		<?php endif; ?>
 		<?php get_template_part('post-formats/post-nav'); ?>

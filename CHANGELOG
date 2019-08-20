@@ -1,3 +1,8 @@
+v3.3.0
+- Fix: Minor corrections to fit the theme with latest WP standards. (although it didn't prevented it to work before anyway)
+- Tweak: [SRC] Made separated scss for style.scss.
+- Tweak: changed theme slug to duena-revival instead of just duena. You can now have both Duena and Duena Revival in the same wordpress install. Which is useless but now possible.
+
 v3.2.0
 - Fix: Minor CSS corrections
 - Tweak: style.css and some other css can now be generated using sass

@@ -15,7 +15,7 @@ if ( ! function_exists( 'optionsframework_uploader' ) ) :
 function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 
 	$optionsframework_settings = get_option( 'optionsframework' );
-	
+
 	// Gets the unique option id
 	$option_name = $optionsframework_settings['id'];
 
@@ -25,42 +25,42 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 	$int = '';
 	$value = '';
 	$name = '';
-	
+
 	$id = strip_tags( strtolower( $_id ) );
-	
+
 	// If a value is passed and we don't have a stored value, use the value that's passed through.
 	if ( $_value != '' && $value == '' ) {
 		$value = $_value;
 	}
-	
+
 	if ($_name != '') {
 		$name = $_name;
 	}
 	else {
 		$name = $option_name.'['.$id.']';
 	}
-	
+
 	if ( $value ) {
 		$class = ' has-file';
 	}
-	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'optionsframework') .'" />' . "\n";
+	$output .= '<input id="' . $id . '" class="upload' . $class . '" type="text" name="'.$name.'" value="' . $value . '" placeholder="' . __('No file chosen', 'duena-revival') .'" />' . "\n";
 	if ( function_exists( 'wp_enqueue_media' ) ) {
 		if ( ( $value == '' ) ) {
-			$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'optionsframework' ) . '" />' . "\n";
+			$output .= '<input id="upload-' . $id . '" class="upload-button button" type="button" value="' . __( 'Upload', 'duena-revival' ) . '" />' . "\n";
 		} else {
-			$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'optionsframework' ) . '" />' . "\n";
+			$output .= '<input id="remove-' . $id . '" class="remove-file button" type="button" value="' . __( 'Remove', 'duena-revival' ) . '" />' . "\n";
 		}
 	} else {
-		$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'optionsframework' ) . '</i></p>';
+		$output .= '<p><i>' . __( 'Upgrade your version of WordPress for full media support.', 'duena-revival' ) . '</i></p>';
 	}
-	
+
 	if ( $_desc != '' ) {
 		$output .= '<span class="of-metabox-desc">' . $_desc . '</span>' . "\n";
 	}
-	
+
 	$output .= '<div class="screenshot" id="' . $id . '-image">' . "\n";
-	
-	if ( $value != '' ) { 
+
+	if ( $value != '' ) {
 		$remove = '<a class="remove-image">Remove</a>';
 		$image = preg_match( '/(^.*\.jpg|jpeg|png|gif|ico*)/i', $value );
 		if ( $image ) {
@@ -71,13 +71,13 @@ function optionsframework_uploader( $_id, $_value, $_desc = '', $_name = '' ) {
 				$title = $parts[$i];
 			}
 
-			// No output preview if it's not an image.			
+			// No output preview if it's not an image.
 			$output .= '';
-		
-			// Standard generic output if it's not an image.	
-			$title = __( 'View File', 'optionsframework' );
+
+			// Standard generic output if it's not an image.
+			$title = __( 'View File', 'duena-revival' );
 			$output .= '<div class="no-image"><span class="file_link"><a href="' . $value . '" target="_blank" rel="external">'.$title.'</a></span></div>';
-		}	
+		}
 	}
 	$output .= '</div>' . "\n";
 	return $output;
@@ -88,23 +88,23 @@ endif;
 /**
  * Enqueue scripts for file uploader
  */
- 
+
 if ( ! function_exists( 'optionsframework_media_scripts' ) ) :
 
 function optionsframework_media_scripts( $hook ) {
-	
+
 	$menu = optionsframework_menu_settings();
-	
+
 	if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
         return;
-        
+
 	if ( function_exists( 'wp_enqueue_media' ) )
 		wp_enqueue_media();
 	wp_register_script( 'of-media-uploader', OPTIONS_FRAMEWORK_URL .'js/media-uploader.js', array( 'jquery' ) );
 	wp_enqueue_script( 'of-media-uploader' );
 	wp_localize_script( 'of-media-uploader', 'optionsframework_l10n', array(
-		'upload' => __( 'Upload', 'optionsframework' ),
-		'remove' => __( 'Remove', 'optionsframework' )
+		'upload' => __( 'Upload', 'duena-revival' ),
+		'remove' => __( 'Remove', 'duena-revival' )
 	) );
 }
 

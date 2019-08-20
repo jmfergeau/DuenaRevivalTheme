@@ -1,0 +1,324 @@
+/* = Main navigation
+----------------------------------------------- */
+.main-nav {
+  clear: both;
+  margin: 0 0 30px 0;
+}
+.main-nav .navbar_inner {
+  background: $grey3;
+  box-shadow: 0 5px 7px rgba(0, 0, 0, 0.33);
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+.main-nav .navbar_inner :after {
+  clear: both;
+  content: "";
+  width: 100%;
+  display: block;
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .sf-menu {
+    text-align: center;
+  }
+}
+/* Essential styles for dropdown menu */
+.sf-menu,
+.sf-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sf-menu {
+  line-height: 1.0;
+}
+.navbar_inner > div > ul ul,
+.navbar_inner > ul ul {
+  position: absolute;
+  top: -999em;
+  min-width: 200px;
+  left: 0;
+  background: $primary-def;
+  padding: 10px 0;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.navbar_inner > div > ul li:hover,
+.navbar_inner > ul li:hover {
+  visibility: inherit;
+  /* fixes IE7 'sticky bug' */
+
+}
+.navbar_inner > div > ul li,
+.navbar_inner > ul li {
+  position: relative;
+  background: none;
+  text-transform: none;
+  font-weight: normal;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+.navbar_inner > div > ul > li,
+.navbar_inner > ul > li {
+  float: left;
+  border: none;
+  margin: 0;
+  height: 52px;
+  border-left: 1px solid $grey2;
+}
+.navbar_inner > div > ul > li:first-child,
+.navbar_inner > ul > li:first-child {
+  border-left: none;
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar_inner > div > ul > li,
+  .navbar_inner > ul > li {
+    float: none;
+    display: inline-block;
+    border: none;
+  }
+}
+.navbar_inner > div > ul a,
+.navbar_inner > ul a {
+  display: block;
+  position: relative;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+.navbar_inner > div > ul li:hover ul,
+.navbar_inner > div > ul li.sfHover ul,
+.navbar_inner > ul li:hover ul,
+.navbar_inner > ul li.sfHover ul {
+  left: 0;
+  top: 52px;
+  /* match top ul list item height */
+
+  z-index: 99;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar_inner > div > ul li:hover ul,
+  .navbar_inner > div > ul li.sfHover ul,
+  .navbar_inner > ul li:hover ul,
+  .navbar_inner > ul li.sfHover ul {
+    top: 26px;
+  }
+}
+.navbar_inner > div > ul li:hover li ul,
+.navbar_inner > div > ul li.sfHover li ul,
+.navbar_inner > ul li:hover li ul,
+.navbar_inner > ul li.sfHover li ul {
+  top: -999em;
+}
+.navbar_inner > div > ul li li:hover ul,
+.navbar_inner > div > ul li li.sfHover ul,
+.navbar_inner > ul li li:hover ul,
+.navbar_inner > ul li li.sfHover ul {
+  left: 101%;
+  /* match ul width */
+
+  top: -10px;
+}
+.navbar_inner > div > ul li li:hover li ul,
+.navbar_inner > div > ul li li.sfHover li ul,
+.navbar_inner > ul li li:hover li ul,
+.navbar_inner > ul li li.sfHover li ul {
+  top: -999em;
+}
+/* Our skin for dropdown menu */
+.navbar_inner > div > ul,
+.navbar_inner > ul {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .navbar_inner > div > ul,
+  .navbar_inner > ul {
+    display: none;
+  }
+}
+.navbar_inner > div > ul > li > a,
+.navbar_inner > ul > li > a {
+  color: $yellowish-white;
+  font-size: 18px;
+  line-height: 52px;
+  height: 52px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  background: none;
+  font-weight: bold;
+  padding: 0 15px;
+  font-family: $font2;
+  border-bottom: 0 solid $primary-def;
+}
+/* Large Desktop */
+@media (min-width: 1200px) {
+  .navbar_inner > div > ul > li > a,
+  .navbar_inner > ul > li > a {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar_inner > div > ul,
+  .navbar_inner > ul {
+    padding: 10px 0 0 0;
+  }
+  .navbar_inner > div > ul > li,
+  .navbar_inner > ul > li {
+    margin: 0 15px 10px;
+    line-height: 26px;
+    height: 26px;
+  }
+  .navbar_inner > div > ul > li > a,
+  .navbar_inner > ul > li > a {
+    font-size: 18px;
+    line-height: 26px;
+    height: 26px;
+    padding: 0;
+    border-bottom: 0 solid $primary-def;
+  }
+}
+.navbar_inner > div > ul > li > a:hover,
+.navbar_inner > div > ul > li.sfHover > a,
+.navbar_inner > div > ul > li.current-menu-item > a,
+.navbar_inner > div > ul > li.current_page_item > a,
+.navbar_inner > ul > li > a:hover,
+.navbar_inner > ul > li.sfHover > a,
+.navbar_inner > ul > li.current-menu-item > a,
+.navbar_inner > ul > li.current_page_item > a {
+  color: $white;
+  outline: 0;
+  text-decoration: none;
+  border-bottom: 6px solid $primary-def;
+}
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+  .navbar_inner > div > ul > li > a:hover,
+  .navbar_inner > div > ul > li.sfHover > a,
+  .navbar_inner > div > ul > li.current-menu-item > a,
+  .navbar_inner > div > ul > li.current_page_item > a,
+  .navbar_inner > ul > li > a:hover,
+  .navbar_inner > ul > li.sfHover > a,
+  .navbar_inner > ul > li.current-menu-item > a,
+  .navbar_inner > ul > li.current_page_item > a {
+    color: $primary-def;
+    border-bottom: 0 solid $primary-def;
+  }
+}
+.navbar_inner > div > ul li li,
+.navbar_inner > ul li li {
+  margin: 0;
+}
+.navbar_inner > div > ul li li a,
+.navbar_inner > ul li li a {
+  font-family: $font2;
+  color: $yellowish-white;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+  padding: 6px 5px;
+  text-transform: none;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  display: block;
+  background: rgba(0,0,0,0);
+}
+.navbar_inner > div > ul li li > a:hover,
+.navbar_inner > div > ul li li.sfHover > a,
+.navbar_inner > div > ul li li > a:focus,
+.navbar_inner > div > ul li li.current-menu-item > a,
+.navbar_inner > ul li li > a:hover,
+.navbar_inner > ul li li.sfHover > a,
+.navbar_inner > ul li li > a:focus,
+.navbar_inner > ul li li.current-menu-item > a {
+  color: $yellowish-white;
+  background: rgba(0,0,0,.2);
+  outline: 0;
+}
+/*** arrows **/
+.sf-sub-indicator {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background: url(images/arrows-ffffff.png) no-repeat 0 0;
+  margin: -5px 0 0 0;
+  overflow: hidden;
+  text-indent: -100px;
+}
+.navbar_inner > div > ul > li > a > .sf-sub-indicator,
+.navbar_inner > ul > li > a > .sf-sub-indicator {
+  position: relative;
+  top: auto;
+  right: auto;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 0 0 5px;
+  text-indent: -999em;
+  overflow: hidden;
+  background: url(images/arrows-ffffff.png) no-repeat 0 -100px;
+  /* 8-bit indexed alpha png. IE6 gets solid image only */
+
+}
+.navbar_inner > div > ul > li > a:hover > .sf-sub-indicator,
+.navbar_inner > div > ul > li.sfHover > a > .sf-sub-indicator,
+.navbar_inner > div > ul > li.current-menu-item > a > .sf-sub-indicator,
+.navbar_inner > ul > li > a:hover > .sf-sub-indicator,
+.navbar_inner > ul > li.sfHover > a > .sf-sub-indicator,
+.navbar_inner > ul > li.current-menu-item > a > .sf-sub-indicator {
+  background-position: -10px -100px;
+  /* arrow hovers for modern browsers*/
+
+}
+.navbar_inner > div > ul li li > a:hover > .sf-sub-indicator,
+.navbar_inner > div > ul li li.sfHover > a > .sf-sub-indicator,
+.navbar_inner > div > ul li li.current-menu-item a > .sf-sub-indicator,
+.navbar_inner > ul li li > a:hover > .sf-sub-indicator,
+.navbar_inner > ul li li.sfHover > a > .sf-sub-indicator,
+.navbar_inner > ul li li.current-menu-item a > .sf-sub-indicator {
+  background-position: -10px 0;
+  /* arrow hovers for modern browsers*/
+
+}
+/*** shadows for all but IE6 ***/
+/* Navigation select styling */
+.select-menu {
+  background-color: $grey3;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  cursor: pointer;
+  display: none !important;
+  color: $white;
+  border: none;
+  border: 1px solid $grey3;
+  margin: 5px 0;
+}
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+  .select-menu {
+    display: block !important;
+  }
+}
+.select-menu option {
+  padding: 5px 8px;
+  cursor: pointer;
+}
+.select-menu option:first-child {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.select-menu option.main_item {
+  font-weight: bold;
+}

@@ -2,7 +2,7 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package duena
+ * @package duena-revival
  */
 ?>
 	<div id="secondary" class="widget-area col-md-4 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>" role="complementary">
@@ -14,14 +14,14 @@
 			</aside>
 
 			<aside id="archives" class="widget">
-				<h1 class="widget-title"><?php _e( 'Archives', 'duena' ); ?></h1>
+				<h1 class="widget-title"><?php _e( 'Archives', 'duena-revival' ); ?></h1>
 				<ul>
 					<?php wp_get_archives( array( 'type' => 'monthly' ) ); ?>
 				</ul>
 			</aside>
 
 			<aside id="meta" class="widget">
-				<h1 class="widget-title"><?php _e( 'Meta', 'duena' ); ?></h1>
+				<h1 class="widget-title"><?php _e( 'Meta', 'duena-revival' ); ?></h1>
 				<ul>
 					<?php wp_register(); ?>
 					<li><?php wp_loginout(); ?></li>
