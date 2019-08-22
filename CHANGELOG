@@ -1,5 +1,7 @@
-v3.3.0
+v4.0.0
 - Fix: Minor corrections to fit the theme with latest WP standards. (although it didn't prevented it to work before anyway)
+- Tweak: Iris color picker updated to version 1.0.7
+- Tweak: Magnific popup updated to version 1.1.0
 - Tweak: [SRC] Made separated scss for style.scss.
 - Tweak: changed theme slug to duena-revival instead of just duena. You can now have both Duena and Duena Revival in the same wordpress install. Which is useless but now possible.
 
