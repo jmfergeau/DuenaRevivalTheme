@@ -1,8 +1,8 @@
 <?php
 /**
- * duena-revival functions and definitions
+ * duena functions and definitions
  *
- * @package duena-revival
+ * @package duena
  */
 
 /**
@@ -12,8 +12,8 @@ if ( ! isset( $content_width ) )
 	$content_width = 900; /* pixels */
 
 // The excerpt based on words
-if ( !function_exists('duena_revival_string_limit_words') ) {
-	function duena_revival_string_limit_words($string, $word_limit) {
+if ( !function_exists('duena_string_limit_words') ) {
+	function duena_string_limit_words($string, $word_limit) {
 	  $words = explode(' ', $string, ($word_limit + 1));
 	    if(count($words) > $word_limit) array_pop($words);
 	    $res = implode(' ', $words);
@@ -46,7 +46,7 @@ if ( !function_exists( 'optionsframework_init' ) ) {
  */
 require( get_template_directory() . '/inc/jetpack.php' );
 
-if ( ! function_exists( 'duena_revival_setup' ) ) :
+if ( ! function_exists( 'duena_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -54,7 +54,7 @@ if ( ! function_exists( 'duena_revival_setup' ) ) :
  * before the init hook. The init hook is too late for some features, such as indicating
  * support post thumbnails.
  */
-function duena_revival_setup() {
+function duena_setup() {
 
 	$defaults = array(
 		'default-color'          => '#210f1d',
@@ -79,10 +79,10 @@ function duena_revival_setup() {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
-	 * If you're building a theme based on duena-revival, use a find and replace
-	 * to change 'duena-revival' to the name of your theme in all the template files
+	 * If you're building a theme based on duena, use a find and replace
+	 * to change 'duena' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'duena-revival', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'duena', get_template_directory() . '/languages' );
 
 
 	/**
@@ -100,8 +100,8 @@ function duena_revival_setup() {
 	 * This theme uses wp_nav_menu() in two locations.
 	 */
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'duena-revival' ),
-		'footer' => __( 'Footer Menu', 'duena-revival' )
+		'primary' => __( 'Primary Menu', 'duena' ),
+		'footer' => __( 'Footer Menu', 'duena' )
 	) );
 
 	/*
@@ -136,17 +136,17 @@ function duena_revival_setup() {
 	}
 
 }
-endif; // duena-revival_setup
-add_action( 'after_setup_theme', 'duena_revival_setup' );
+endif; // duena_setup
+add_action( 'after_setup_theme', 'duena_setup' );
 
 
 
 /**
  * Register widgetized area and update sidebar with default widgets
  */
-function duena_revival_widgets_init() {
+function duena_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'duena-revival' ),
+		'name'          => __( 'Sidebar', 'duena' ),
 		'id'            => 'sidebar-1',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -154,19 +154,19 @@ function duena_revival_widgets_init() {
 		'after_title'   => '</h3>',
 	) );
 }
-add_action( 'widgets_init', 'duena_revival_widgets_init' );
+add_action( 'widgets_init', 'duena_widgets_init' );
 
 
 
 /**
  * Enqueue scripts and styles
  */
-function duena_revival_styles() {
+function duena_styles() {
 	global $wp_styles;
 
 	// Bootstrap styles
-	wp_register_style( 'duena-revival-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_style( 'duena-revival-bootstrap' );
+	wp_register_style( 'duena-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
+	wp_enqueue_style( 'duena-bootstrap' );
 
 	// Slider styles
 	wp_register_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css');
@@ -181,32 +181,32 @@ function duena_revival_styles() {
 	wp_enqueue_style( 'font-awesome' );
 
 	// Main stylesheet
-	wp_enqueue_style( 'duena-revival-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'duena-style', get_stylesheet_uri() );
 
 	// Add inline styles from theme options
-	$duena_revival_user_css = duena_revival_get_user_colors();
-    wp_add_inline_style( 'duena-revival-style', $duena_revival_user_css );
+	$duena_user_css = duena_get_user_colors();
+    wp_add_inline_style( 'duena-style', $duena_user_css );
 
     // Loads the Internet Explorer specific stylesheet.
-	wp_enqueue_style( 'duena_revival_ie', get_template_directory_uri() . '/css/ie.css' );
-	$wp_styles->add_data( 'duena_revival_ie', 'conditional', 'lt IE 9' );
+	wp_enqueue_style( 'duena_ie', get_template_directory_uri() . '/css/ie.css' );
+	$wp_styles->add_data( 'duena_ie', 'conditional', 'lt IE 9' );
 
 }
 
-function duena_revival_scripts() {
+function duena_scripts() {
 
-	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.3.1', true );
+	wp_enqueue_script( 'duena-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.3.1', true );
 
-	wp_enqueue_script( 'duena-revival-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'duena-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'duena-revival-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'duena-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'duena-revival-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+		wp_enqueue_script( 'duena-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 
 	// Menu scripts
@@ -227,31 +227,31 @@ function duena_revival_scripts() {
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
 
 }
-add_action( 'wp_enqueue_scripts', 'duena_revival_scripts', 10 );
-add_action( 'wp_enqueue_scripts', 'duena_revival_styles', 10 );
+add_action( 'wp_enqueue_scripts', 'duena_scripts', 10 );
+add_action( 'wp_enqueue_scripts', 'duena_styles', 10 );
 
 
 /**
  * Include additional assests for admin area
  */
-function duena_revival_admin_assets() {
+function duena_admin_assets() {
 	$screen = get_current_screen();
 	if ( isset( $screen ) && 'page' == $screen->post_type ) {
 		// scripts
-		wp_enqueue_script( 'duena-revival-admin-script', get_template_directory_uri() . '/js/admin-scripts.js', array('jquery'), '1.0', true );
+		wp_enqueue_script( 'duena-admin-script', get_template_directory_uri() . '/js/admin-scripts.js', array('jquery'), '1.0', true );
 		// styles
-		wp_enqueue_style( 'duena-revival-admin-style', get_template_directory_uri() . '/css/admin-style.css', '', '1.0' );
+		wp_enqueue_style( 'duena-admin-style', get_template_directory_uri() . '/css/admin-style.css', '', '1.0' );
 	}
 }
-add_action( 'admin_enqueue_scripts', 'duena_revival_admin_assets' );
+add_action( 'admin_enqueue_scripts', 'duena_admin_assets' );
 
 /**
  * Adding class 'active' to current menu item
  */
 
-add_filter( 'nav_menu_css_class', 'duena_revival_active_item_classes', 10, 2 );
+add_filter( 'nav_menu_css_class', 'duena_active_item_classes', 10, 2 );
 
-function duena_revival_active_item_classes($classes = array(), $menu_item = false){
+function duena_active_item_classes($classes = array(), $menu_item = false){
 
     if(in_array('current-menu-item', $menu_item->classes)){
         $classes[] = 'active';
@@ -263,24 +263,24 @@ function duena_revival_active_item_classes($classes = array(), $menu_item = fals
 /**
  * Load localization
  */
-load_theme_textdomain( 'duena-revival', get_template_directory() . '/languages' );
+load_theme_textdomain( 'duena', get_template_directory() . '/languages' );
 
 /*-----------------------------------------------------------------------------------*/
 /*	Custom Gallery
 /*-----------------------------------------------------------------------------------*/
-if ( ! function_exists( 'duena_revival_featured_gallery' ) ) :
+if ( ! function_exists( 'duena_featured_gallery' ) ) :
 
-function duena_revival_featured_gallery() {
+function duena_featured_gallery() {
 	$pattern = get_shortcode_regex();
 
 	if ( preg_match( "/$pattern/s", get_the_content(), $match ) && 'gallery' == $match[2] ) {
-		add_filter( 'shortcode_atts_gallery', 'duena_revival_gallery_atts' );
+		add_filter( 'shortcode_atts_gallery', 'duena_gallery_atts' );
 		echo do_shortcode_tag( $match );
 	}
 }
 endif;
 
-function duena_revival_gallery_atts( $atts ) {
+function duena_gallery_atts( $atts ) {
 	$atts['size'] = 'large';
 	return $atts;
 }
@@ -289,7 +289,7 @@ function duena_revival_gallery_atts( $atts ) {
 /*	Get link URL for link post type
 /*-----------------------------------------------------------------------------------*/
 
-function duena_revival_get_link_url() {
+function duena_get_link_url() {
 	$has_url = get_the_post_format_url();
 
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
@@ -300,11 +300,11 @@ function duena_revival_get_link_url() {
 /*-----------------------------------------------------------------------------------*/
 /*	Breabcrumbs
 /*-----------------------------------------------------------------------------------*/
-if (! function_exists( 'duena_revival_breadcrumb' )) {
-	function duena_revival_breadcrumb() {
+if (! function_exists( 'duena_breadcrumb' )) {
+	function duena_breadcrumb() {
 	  $showOnHome = 0; // 1 - show "breadcrumbs" on home page, 0 - hide
 	  $delimiter = '<li class="breadcrumb-item">&nbsp;&nbsp;/&nbsp;&nbsp;</li>'; // divider
-	  $home = __( 'Home', 'duena-revival'); // text for link "Home"
+	  $home = __( 'Home', 'duena'); // text for link "Home"
 	  $showCurrent = 1; // 1 - show title current post/page, 0 - hide
 	  $before = '<li class="active">'; // open tag for active breadcrumb
 	  $after = '</li>'; // close tag for active breadcrumb
@@ -414,10 +414,10 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
 /*-----------------------------------------------------------------------------------*/
 /*	Author Bio
 /*-----------------------------------------------------------------------------------*/
-add_action( 'before_sidebar', 'duena_revival_show_author_bio', 10 );
+add_action( 'before_sidebar', 'duena_show_author_bio', 10 );
 
-if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
-	function duena_revival_show_author_bio() {
+if ( ! function_exists ( 'duena_show_author_bio' ) ) {
+	function duena_show_author_bio() {
 		if ( 'no' != of_get_option('g_author_bio') ) {
 		?>
 		<div class="author_bio_sidebar">
@@ -470,7 +470,7 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 /*-----------------------------------------------------------------------------------*/
 /*	Pagination (based on Twenty Fourteen pagination function)
 /*-----------------------------------------------------------------------------------*/
-function duena_revival_pagination() {
+function duena_pagination() {
 
 	global $wp_query, $wp_rewrite;
 
@@ -501,8 +501,8 @@ function duena_revival_pagination() {
 		'current'   => $paged,
 		'mid_size'  => 1,
 		'add_args'  => array_map( 'urlencode', $query_args ),
-		'prev_text' => __( '&larr; Previous', 'duena-revival' ),
-		'next_text' => __( 'Next &rarr;', 'duena-revival' ),
+		'prev_text' => __( '&larr; Previous', 'duena' ),
+		'next_text' => __( 'Next &rarr;', 'duena' ),
 		'type'      => 'list'
 	) );
 
@@ -521,7 +521,7 @@ function duena_revival_pagination() {
 /*-----------------------------------------------------------------------------------*/
 /* Custom Comments Structure
 /*-----------------------------------------------------------------------------------*/
-function duena_revival_comment($comment, $args, $depth) {
+function duena_comment($comment, $args, $depth) {
      $GLOBALS['comment'] = $comment;
 
 ?>
@@ -530,10 +530,10 @@ function duena_revival_comment($comment, $args, $depth) {
       		<div class="clearfix">
       			<div class="comment-author vcard">
   	         		<?php echo get_avatar( $comment->comment_author_email, 65 ); ?>
-  	  				<?php printf(__('<span class="author fn">%1$s</span>', 'duena-revival' ), get_comment_author_link() ) ?>
+  	  				<?php printf(__('<span class="author fn">%1$s</span>' ), get_comment_author_link()) ?>
   	      		</div>
   		      	<?php if ($comment->comment_approved == '0') : ?>
-  		        	<em><?php _e('Your comment is awaiting moderation.', 'duena-revival') ?></em>
+  		        	<em><?php _e('Your comment is awaiting moderation.', 'cherry') ?></em>
   		      	<?php endif; ?>
   		     	<div class="extra-wrap">
   		     		<?php comment_text() ?>
@@ -543,7 +543,7 @@ function duena_revival_comment($comment, $args, $depth) {
 			  	<div class="reply">
 			    	<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 			   	</div>
-		   		<div class="comment-meta commentmetadata"><?php printf(__('%1$s', 'duena-revival' ), get_comment_date('F j, Y')) ?></div>
+		   		<div class="comment-meta commentmetadata"><?php printf(__('%1$s', 'cherry' ), get_comment_date('F j, Y')) ?></div>
 		 	</div>
     	</div>
 <?php }
@@ -578,8 +578,8 @@ if (!function_exists('img_html_to_post_id')) {
 	}
 }
 
-if (!function_exists('duena_revival_footer_js')) {
-	function duena_revival_footer_js() {
+if (!function_exists('duena_footer_js')) {
+	function duena_footer_js() {
 
 			$sf_delay = esc_attr( of_get_option('sf_delay') );
 			$sf_f_animation = esc_attr( of_get_option('sf_f_animation') );
@@ -631,7 +631,7 @@ if (!function_exists('duena_revival_footer_js')) {
 		<?php
 	}
 
-	add_action( 'wp_footer', 'duena_revival_footer_js', 20, 1 );
+	add_action( 'wp_footer', 'duena_footer_js', 20, 1 );
 }
 
 // CAN'T BELIEVE I HAD TO ADD THIS...
@@ -644,60 +644,53 @@ function wpb_image_editor_default_to_gd( $editors ) {
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 
 /* Gutenberg support (2.1.0) */
-function duena_revival_setup_theme_supported_features() {
-		// WP Y U NEED DIS TWICE
-		$primary_color = get_option( 'cs_primary_color', '#ff5b5b' );
-		$secondary_color = get_option( 'cs_secondary_color', '#71a08b' );
-		$background_color = get_option( 'cs_background_color', '#210f1d' );
-
+function duena_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
         array(
-            'name' => __( 'Primary color', 'duena-revival' ),
+            'name' => __( 'Primary color', 'themeLangDomain' ),
             'slug' => 'user-primary',
             'color' => $primary_color,
         ),
         array(
-            'name' => __( 'Secondary color', 'duena-revival' ),
+            'name' => __( 'Secondary color', 'themeLangDomain' ),
             'slug' => 'user-secondary',
             'color' => $secondary_color,
         ),
         array(
-            'name' => __( 'very light gray', 'duena-revival' ),
+            'name' => __( 'very light gray', 'themeLangDomain' ),
             'slug' => 'very-light-gray',
             'color' => '#eee',
         ),
         array(
-            'name' => __( 'very dark gray', 'duena-revival' ),
+            'name' => __( 'very dark gray', 'themeLangDomain' ),
             'slug' => 'very-dark-gray',
             'color' => '#444',
         ),
     ) );
 }
 
-add_action( 'after_setup_theme', 'duena_revival_setup_theme_supported_features' );
+add_action( 'after_setup_theme', 'duena_setup_theme_supported_features' );
 
 add_theme_support( 'align-wide' );
 add_theme_support( 'responsive-embeds' );
-add_theme_support( 'editor-styles' );
-add_theme_support( 'title-tag' );
-add_theme_support( 'custom-header' );
+add_theme_support('editor-styles');
 
 add_theme_support( 'editor-font-sizes', array(
     array(
-        'name' => __( 'small', 'duena-revival' ),
-        'shortName' => __( 'S', 'duena-revival' ),
+        'name' => __( 'small', 'themeLangDomain' ),
+        'shortName' => __( 'S', 'themeLangDomain' ),
         'size' => 10,
         'slug' => 'small'
     ),
     array(
-        'name' => __( 'large', 'duena-revival' ),
-        'shortName' => __( 'L', 'duena-revival' ),
+        'name' => __( 'large', 'themeLangDomain' ),
+        'shortName' => __( 'L', 'themeLangDomain' ),
         'size' => 20,
         'slug' => 'large'
     ),
     array(
-        'name' => __( 'larger', 'duena-revival' ),
-        'shortName' => __( 'XL', 'duena-revival' ),
+        'name' => __( 'larger', 'themeLangDomain' ),
+        'shortName' => __( 'XL', 'themeLangDomain' ),
         'size' => 25,
         'slug' => 'larger'
     )

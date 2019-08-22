@@ -63,7 +63,7 @@ function optionsframework_admin_notice() {
 		$user_id = $current_user->ID;
 		if ( ! get_user_meta($user_id, 'optionsframework_ignore_notice') ) {
 			echo '<div class="updated optionsframework_setup_nag"><p>';
-			printf( __('Your current theme does not have support for the Options Framework plugin.  <a href="%1$s" target="_blank">Learn More</a> | <a href="%2$s">Hide Notice</a>', 'duena-revival'), 'http://wptheming.com/options-framework-plugin', '?optionsframework_nag_ignore=0');
+			printf( __('Your current theme does not have support for the Options Framework plugin.  <a href="%1$s" target="_blank">Learn More</a> | <a href="%2$s">Hide Notice</a>', 'duena'), 'http://wptheming.com/options-framework-plugin', '?optionsframework_nag_ignore=0');
 			echo "</p></div>";
 		}
 	}
@@ -252,20 +252,20 @@ function optionsframework_setdefaults() {
 function optionsframework_menu_settings() {
 
 	$menu = array(
-		'page_title' => __( 'Theme Options', 'duena-revival'),
-		'menu_title' => __('Theme Options', 'duena-revival'),
+		'page_title' => __( 'Theme Options', 'duena'),
+		'menu_title' => __('Theme Options', 'duena'),
 		'capability' => 'edit_theme_options',
 		'menu_slug' => 'options-framework',
 		'callback' => 'optionsframework_page'
 	);
-
+	
 	return apply_filters( 'optionsframework_menu', $menu );
 }
 
 /* Add a subpage called "Theme Options" to the appearance menu. */
 
 function optionsframework_add_page() {
-
+	
 	$menu = optionsframework_menu_settings();
 	$of_page = add_theme_page( $menu['page_title'], $menu['menu_title'], $menu['capability'], $menu['menu_slug'], $menu['callback'] );
 
@@ -289,7 +289,7 @@ function optionsframework_load_styles() {
 function optionsframework_load_scripts( $hook ) {
 
 	$menu = optionsframework_menu_settings();
-
+	
 	if ( 'appearance_page_' . $menu['menu_slug'] != $hook )
         return;
 
@@ -298,13 +298,13 @@ function optionsframework_load_scripts( $hook ) {
 		wp_register_script( 'iris', OPTIONS_FRAMEWORK_URL . 'js/iris.min.js', array( 'jquery-ui-draggable', 'jquery-ui-slider', 'jquery-touch-punch' ), false, 1 );
 		wp_register_script( 'wp-color-picker', OPTIONS_FRAMEWORK_URL . 'js/color-picker.min.js', array( 'jquery', 'iris' ) );
 		$colorpicker_l10n = array(
-			'clear' => __( 'Clear', 'duena-revival' ),
-			'defaultString' => __( 'Default', 'duena-revival' ),
-			'pick' => __( 'Select Color', 'duena-revival' )
+			'clear' => __( 'Clear', 'duena' ),
+			'defaultString' => __( 'Default', 'duena' ),
+			'pick' => __( 'Select Color', 'duena' )
 		);
 		wp_localize_script( 'wp-color-picker', 'wpColorPickerL10n', $colorpicker_l10n );
 	}
-
+	
 	// Enqueue custom option panel JS
 	wp_enqueue_script( 'options-custom', OPTIONS_FRAMEWORK_URL . 'js/options-custom.js', array( 'jquery','wp-color-picker' ) );
 
@@ -334,7 +334,7 @@ function optionsframework_page() {
 	settings_errors(); ?>
 
 	<div id="optionsframework-wrap" class="wrap">
-    <?php //screen_icon( 'themes' ); // Apparently deprecated ?>
+    <?php screen_icon( 'themes' ); ?>
     <h2 class="nav-tab-wrapper">
         <?php echo optionsframework_tabs(); ?>
     </h2>
@@ -345,8 +345,8 @@ function optionsframework_page() {
 			<?php settings_fields( 'optionsframework' ); ?>
 			<?php optionsframework_fields(); /* Settings */ ?>
 			<div id="optionsframework-submit">
-				<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options', 'duena-revival' ); ?>" />
-				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'duena-revival' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'duena-revival' ) ); ?>' );" />
+				<input type="submit" class="button-primary" name="update" value="<?php esc_attr_e( 'Save Options', 'optionsframework' ); ?>" />
+				<input type="submit" class="reset-button button-secondary" name="reset" value="<?php esc_attr_e( 'Restore Defaults', 'optionsframework' ); ?>" onclick="return confirm( '<?php print esc_js( __( 'Click OK to reset. Any theme settings will be lost!', 'optionsframework' ) ); ?>' );" />
 				<div class="clear"></div>
 			</div>
 			</form>
@@ -354,7 +354,7 @@ function optionsframework_page() {
 	</div>
 	<?php do_action( 'optionsframework_after' ); ?>
 	</div> <!-- / .wrap -->
-
+	
 <?php
 }
 endif;
@@ -378,17 +378,17 @@ function optionsframework_validate( $input ) {
 	 */
 
 	if ( isset( $_POST['reset'] ) ) {
-		add_settings_error( 'options-framework', 'restore_defaults', __( 'Default options restored.', 'duena-revival' ), 'updated fade' );
+		add_settings_error( 'options-framework', 'restore_defaults', __( 'Default options restored.', 'optionsframework' ), 'updated fade' );
 		return of_get_default_values();
 	}
-
+	
 	/*
 	 * Update Settings
 	 *
 	 * This used to check for $_POST['update'], but has been updated
 	 * to be compatible with the theme customizer introduced in WordPress 3.4
 	 */
-
+	 
 	$clean = array();
 	$options =& _optionsframework_options();
 	foreach ( $options as $option ) {
@@ -420,19 +420,19 @@ function optionsframework_validate( $input ) {
 			$clean[$id] = apply_filters( 'of_sanitize_' . $option['type'], $input[$id], $option );
 		}
 	}
-
+	
 	// Hook to run after validation
 	do_action( 'optionsframework_after_validate', $clean );
-
+	
 	return $clean;
 }
 
 /**
  * Display message when options have been saved
  */
-
+ 
 function optionsframework_save_options_notice() {
-	add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'duena-revival' ), 'updated fade' );
+	add_settings_error( 'options-framework', 'save_options', __( 'Options saved.', 'optionsframework' ), 'updated fade' );
 }
 
 add_action( 'optionsframework_after_validate', 'optionsframework_save_options_notice' );
@@ -482,7 +482,7 @@ function optionsframework_adminbar() {
 	$wp_admin_bar->add_menu( array(
 			'parent' => 'appearance',
 			'id' => 'of_theme_options',
-			'title' => __( 'Theme Options', 'duena-revival' ),
+			'title' => __( 'Theme Options', 'optionsframework' ),
 			'href' => admin_url( 'themes.php?page=options-framework' )
 		));
 }
@@ -512,7 +512,7 @@ if ( ! function_exists( 'of_get_option' ) ) :
 
 		return $default;
 	}
-
+	
 endif;
 
 /**

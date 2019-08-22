@@ -6,7 +6,7 @@ $tags = wp_get_post_tags($post->ID);
 if ($tags) {
 
 	$tag_ids = array();
-
+			
 	foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
 		$args=array(
 			'tag__in' => $tag_ids,
@@ -23,7 +23,7 @@ if ($tags) {
 			<?php
 				$related_title = esc_attr( of_get_option('blog_related') );
 			?>
-			<h2 class="related-posts_h"><?php if ( '' != $related_title ) { echo $related_title; } else { _e('Related Posts','duena-revival'); }?></h2>
+			<h2 class="related-posts_h"><?php if ( '' != $related_title ) { echo $related_title; } else { _e('Related Posts','duena'); }?></h2>
 
 			<ul class="related-posts_list clearfix">
 

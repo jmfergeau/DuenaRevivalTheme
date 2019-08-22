@@ -7,7 +7,7 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package duena-revival
+ * @package duena
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="page_wrap">
 						<h1 class="entry-title"><?php the_title(); ?></h1>
-						<?php the_content(); ?>
+						<?php the_content(); ?>		
 					</div>
 					<?php
 						// If comments are open or we have at least one comment, load up the comment template
