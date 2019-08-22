@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duena\n"
-"POT-Creation-Date: 2019-08-16 18:52+0200\n"
+"POT-Creation-Date: 2019-06-09 22:10+0200\n"
 "PO-Revision-Date: 2019-06-08 21:05+0200\n"
 "Last-Translator: Max le Fou <buttbadger@gmail.com>\n"
 "Language-Team: Max le Fou <buttbadger@gmail.com>\n"
@@ -1068,11 +1068,6 @@ msgstr ""
 #: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
 #: ../post-formats/post-meta.php:54
 msgid "Permalink"
-msgstr ""
-
-#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
-#: ../post-formats/post-meta.php:54
-msgid "Permalink to:"
 msgstr ""
 
 #: ../post-formats/post-nav.php:9

@@ -1,4 +1,4 @@
-Duena Revival Wordpress Theme v.3.2.0
+Duena Revival Wordpress Theme v.3.1.1
 ==========
 
 [![Licence](https://img.shields.io/badge/license-GNU%20GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
@@ -18,3 +18,4 @@ Demo URL - http://duena.maxlefou.com<br>
 Sources of the original Duena (might be obsolete) - https://github.com/DuenaStudio/DuenaTheme<br>
 Original theme URL - http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/ (dead url)<br>
 Original demo URL - http://www.tmbhtest.com/themes/duena (dead url)
+

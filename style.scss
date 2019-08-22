@@ -1,10 +1,10 @@
-/*!
+/*
 Theme Name: Duena Revival
 Theme URI: https://gitlab.com/maxlefou/DuenaRevivalTheme
 Author: Duena Studio, Max le Fou
 Author URI: https://gitlab.com/maxlefou
 Description: Duena Revival is a project that aims to maintain and update the Wordpress theme Duena. Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template!
-Version: 3.2.0
+Version: 3.1.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
@@ -14,10 +14,26 @@ Duena WordPress theme, Copyright (C) 2013 Duena Studio
 Duena Revival project is initiated by Max le Fou
 Duena Revival WordPress theme is licensed under the GPL.
 */
-@charset "UTF-8";
-@import "variables";
+
 @import url(//fonts.googleapis.com/css?family=Damion);
 @import url(//fonts.googleapis.com/css?family=BenchNine:700);
+
+$font1: 'Damion', cursive;
+$font2: 'BenchNine', sans-serif;
+$font3: 'Font Awesome 5 Free';
+$font4: 'Georgia', serif;
+
+$primary-def: #ff5b5b;
+$secondary-def: #71A08B;
+$white: #fff;
+$lesswhite: #f6f6f6;
+$lesserwhite: #f2f2f2;
+$yellowish-white: #fff8ed;
+$grey1: #4d4d4d;
+$grey2: #3a3a3a;
+$grey3: #262626;
+$grey4: #ebeae7;
+$grey5: #666666;
 
 /* =Global
 ----------------------------------------------- */
