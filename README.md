@@ -1,4 +1,4 @@
-Duena Revival Wordpress Theme v.4.0.0
+Duena Revival Wordpress Theme v.3.3.0
 ==========
 
 [![Licence](https://img.shields.io/badge/license-GNU%20GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
