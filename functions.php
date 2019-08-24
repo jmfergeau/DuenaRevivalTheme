@@ -30,14 +30,17 @@ if ( !function_exists('duena_revival_string_limit_words') ) {
  * Load Files.
  */
 
+// Includes sanitizing stuff
+include_once( get_template_directory() . '/inc/sanitize.php');
+
 //Loading options.php for theme customizer
-include_once( get_template_directory() . '/options.php');
+//include_once( get_template_directory() . '/options.php');
 
 //Loads the Options Panel
-if ( !function_exists( 'optionsframework_init' ) ) {
-	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
-	include_once( get_template_directory() . '/options/options-framework.php' );
-}
+// if ( !function_exists( 'optionsframework_init' ) ) {
+// 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
+// 	include_once( get_template_directory() . '/options/options-framework.php' );
+// }
 
 
 
@@ -418,7 +421,7 @@ add_action( 'before_sidebar', 'duena_revival_show_author_bio', 10 );
 
 if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 	function duena_revival_show_author_bio() {
-		if ( 'no' != of_get_option('g_author_bio') ) {
+		if ( false != get_option('g_author_bio') ) {
 		?>
 		<div class="author_bio_sidebar">
 			<div class="social_box">
@@ -709,7 +712,7 @@ add_theme_support( 'editor-font-sizes', array(
 require_once( get_template_directory() . '/wp-gitlab-updater/theme-updater.php' );
 
 new Moenus\GitLabUpdater\ThemeUpdater( [
-    'slug' => 'duena',
+    'slug' => 'duena-revival',
     'access_token' => 'ZaQ2ovPMJ-btAHsR-NNS',
     'gitlab_url' => 'https://gitlab.com',
     'repo' => 'maxlefou/DuenaRevivalTheme',

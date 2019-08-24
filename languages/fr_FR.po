@@ -484,8 +484,8 @@ msgid "Enter Author RSS URL"
 msgstr "Entrer l'URL du RSS de l'auteur"
 
 #: ../options.php:269 ../options.php:871
-msgid "Logo & Favicon"
-msgstr "Logo & Favicon"
+msgid "Title or logo"
+msgstr "Titre ou logo"
 
 #: ../options.php:272
 msgid "What kind of logo?"

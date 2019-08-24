@@ -5,7 +5,7 @@
  * @package duena-revival
  */
 ?>
-	<div id="secondary" class="widget-area col-md-4 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>" role="complementary">
+	<div id="secondary" class="widget-area col-md-4 <?php echo esc_attr( get_option('blog_sidebar_pos') ) ?>" role="complementary">
 		<?php do_action( 'before_sidebar' ); ?>
 		<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 

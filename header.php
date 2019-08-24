@@ -32,7 +32,7 @@
 	<header id="header" role="banner">
 		<div class="container clearfix">
 			<div class="logo">
-			<?php if (( of_get_option('logo_type') == 'image_logo') && ( of_get_option('logo_url') != '')) { ?>
+			<?php if (( get_option('logo_type') == 'image_logo') && ( get_option('logo_url') != '')) { ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url( of_get_option('logo_url') ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
 			<?php } else { ?>
 				<?php if ( is_front_page() || is_home() || is_404() ) { ?>
@@ -43,7 +43,7 @@
 			<?php } ?>
 				<p class="site-description"><?php bloginfo( 'description' ); ?></p>
 			</div>
-			<?php if ( of_get_option('g_search_box_id') == 'yes') { ?>
+			<?php if ( get_theme_mod('duena_revival_g_search_box_id') == '') { ?>
 	          <div id="top-search">
 	            <form method="get" action="<?php echo home_url(); ?>/">
 	              <input type="text" name="s"  class="input-search" /><input type="submit" value="" id="submit">
@@ -66,7 +66,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-	<?php if( (is_front_page()) && (of_get_option('sl_show') != 'no') ) { ?>
+	<?php if( (is_front_page()) && ( get_option('sl_show') != 'no') ) { ?>
 	<section id="slider-wrapper">
 		<div class="container">
 	    	<?php get_template_part( 'slider' ); ?>
@@ -75,7 +75,7 @@
   	<?php } ?>
 	<div id="main" class="site-main">
 		<div class="container">
-			<?php if ( of_get_option('g_breadcrumbs_id') != 'no') { ?>
+			<?php if ( get_option('g_breadcrumbs_id') != false) { ?>
 				<?php duena_revival_breadcrumb(); ?>
 			<?php } ?>
 			<div class="row">
