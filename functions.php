@@ -30,9 +30,6 @@ if ( !function_exists('duena_revival_string_limit_words') ) {
  * Load Files.
  */
 
-// Includes sanitizing stuff
-include_once( get_template_directory() . '/inc/sanitize.php');
-
 //Loading options.php for theme customizer
 //include_once( get_template_directory() . '/options.php');
 
@@ -73,6 +70,11 @@ function duena_revival_setup() {
 	 * Custom functions that act independently of the theme templates
 	 */
 	require( get_template_directory() . '/inc/extras.php' );
+
+	/**
+	* Includes sanitizing stuff
+	*/
+	require( get_template_directory() . '/inc/sanitize.php');
 
 	/**
 	 * Customizer additions
@@ -234,19 +236,24 @@ add_action( 'wp_enqueue_scripts', 'duena_revival_scripts', 10 );
 add_action( 'wp_enqueue_scripts', 'duena_revival_styles', 10 );
 
 
-/**
- * Include additional assests for admin area
- */
-function duena_revival_admin_assets() {
-	$screen = get_current_screen();
-	if ( isset( $screen ) && 'page' == $screen->post_type ) {
-		// scripts
-		wp_enqueue_script( 'duena-revival-admin-script', get_template_directory_uri() . '/js/admin-scripts.js', array('jquery'), '1.0', true );
-		// styles
-		wp_enqueue_style( 'duena-revival-admin-style', get_template_directory_uri() . '/css/admin-style.css', '', '1.0' );
-	}
-}
-add_action( 'admin_enqueue_scripts', 'duena_revival_admin_assets' );
+function mk_add_theme_options_custom_menu()
+{ echo '<li><a href="#mk_options_custom_menu"> <svg width="18px" height="30px" viewBox="0 0 18 30" enable-background="new 0 0 18 30" xml:space="preserve"> <path d="M11.557,3.532l-1.151,9.345L10.266,14h1.133h4.578L6.443,26.467l1.152-9.345L7.734,16H6.602H2.023 L11.557,3.532z M0,17h6.602L5,30l13-17h-6.602L13,0L0,17z"/> </svg> <span> ' . __("Custom menu", "mk_framework") . '</span></a></li>'; }
+add_action('mk_jupiter_theme_options_main_menu', 'mk_add_theme_options_custom_menu');
+// ---------------------------------------------------
+function mk_add_custom_sub_menu( $options )
+{ $options = mk_theme_options_add_sub_menu( $options, 0, 'mk_options_custom_settings', 'Custom Settings' ); return $options; }
+add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_sub_menu');
+// ----------------------------------------------------
+function mk_add_custom_sub_menu_settings_page( $options )
+{ $options = mk_theme_options_add_sub_menu_settings_page( $options, 0, "mk_options_custom_settings", "Custom Settings", "some descripiton" ); return $options; }
+add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_sub_menu_settings_page');
+// ----------------------------------------------------
+function mk_add_custom_settings( $options )
+{ $settings = array( "name" => __("Portfolio Archive Layout 2", "mk_framework") , "desc" => __("This option allows you to define the layout of Portfolio Archive page as full width without sidebar, left sidebar or right sidebar.", "mk_framework") , "id" => "archive_portfolio_layout_2", "default" => "right", "options" => array( "left" => __("Left Sidebar", "mk_framework") , "right" => __("Right Sidebar", "mk_framework") , "full" => __("Full Layout", "mk_framework") ) , "type" => "dropdown" ); $options = mk_theme_options_add_settings( $options, 0, 9, $settings ); return $options; }
+add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_settings');
+//------------------------------------
+
+
 
 /**
  * Adding class 'active' to current menu item
@@ -421,44 +428,44 @@ add_action( 'before_sidebar', 'duena_revival_show_author_bio', 10 );
 
 if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 	function duena_revival_show_author_bio() {
-		if ( false != get_option('g_author_bio') ) {
+		if ( false != get_theme_mod('g_author_bio', true) ) {
 		?>
 		<div class="author_bio_sidebar">
 			<div class="social_box">
 		<?php // Here, you can change the icons in your child themes by just editing the i tag. Refer to https://fontawesome.com/icons to find the icons choices
-			if ( '' != of_get_option('g_author_bio_social_twitter') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='fab fa-twitter'></i></a>\n";
+			if ( '' != get_theme_mod('g_author_bio_social_twitter', '#') ) {
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter', '#') )."'><i class='fab fa-twitter'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_facebook') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fab fa-facebook-f'></i></a>\n";
+			if ( '' != get_theme_mod('g_author_bio_social_facebook', '#') ) {
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook', '#') )."'><i class='fab fa-facebook-f'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_patreon') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_patreon') )."'><i class='fab fa-patreon'></i></a>\n";
+			if ( '' != get_theme_mod('g_author_bio_social_patreon', '#') ) {
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon', '#') )."'><i class='fab fa-patreon'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_linked') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fab fa-linkedin-in'></i></a>\n";
+			if ( '' != get_theme_mod('g_author_bio_social_linked', '#') ) {
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linked', '#') )."'><i class='fab fa-linkedin-in'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_rss') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_rss') )."'><i class='fa fa-rss'></i></a>\n";
+			if ( '' != get_theme_mod('g_author_bio_social_rss', '#') ) {
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss', '#') )."'><i class='fa fa-rss'></i></a>\n";
 			}
 		?>
 			</div>
-			<?php if (( '' != of_get_option('g_author_bio_title') ) || ('' != of_get_option('g_author_bio_img')) || ('' != of_get_option('g_author_bio_message')) ) { ?>
+			<?php if (( '' != get_theme_mod('g_author_bio_title') ) || ('' != get_theme_mod('g_author_bio_img')) || ('' != get_theme_mod('g_author_bio_message')) ) { ?>
 			<div class="content_box">
 			<?php
-				if ( '' != of_get_option('g_author_bio_title') ) {
-					echo "<h2>".of_get_option('g_author_bio_title')."</h2>\n";
+				if ( '' != get_theme_mod('g_author_bio_title') ) {
+					echo "<h2>".get_theme_mod('g_author_bio_title')."</h2>\n";
 				}
-				if ( '' != of_get_option('g_author_bio_img') ) {
-					if ( '' != of_get_option('g_author_bio_title') ) {
-						$img_alt = of_get_option('g_author_bio_title');
+				if ( '' != get_theme_mod('g_author_bio_img') ) {
+					if ( '' != get_theme_mod('g_author_bio_title') ) {
+						$img_alt = get_theme_mod('g_author_bio_title');
 					} else {
 						$img_alt = get_bloginfo( 'name' );
 					}
-					echo "<figure class='author_bio_img'><img src='".esc_url( of_get_option('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
+					echo "<figure class='author_bio_img'><img src='".esc_url( get_theme_mod('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
 				}
-				if ( '' != of_get_option('g_author_bio_message') ) {
-					echo "<div class='author_bio_message'>".of_get_option('g_author_bio_message')."</div>\n";
+				if ( '' != get_theme_mod('g_author_bio_message') ) {
+					echo "<div class='author_bio_message'>".get_theme_mod('g_author_bio_message')."</div>\n";
 				}
 			?>
 			</div>
@@ -584,11 +591,11 @@ if (!function_exists('img_html_to_post_id')) {
 if (!function_exists('duena_revival_footer_js')) {
 	function duena_revival_footer_js() {
 
-			$sf_delay = esc_attr( of_get_option('sf_delay') );
-			$sf_f_animation = esc_attr( of_get_option('sf_f_animation') );
-			$sf_sl_animation = esc_attr( of_get_option('sf_sl_animation') );
-			$sf_speed = esc_attr( of_get_option('sf_speed') );
-			$sf_arrows = esc_attr( of_get_option('sf_arrows') );
+			$sf_delay = esc_attr( get_theme_mod('sf_delay') );
+			$sf_f_animation = esc_attr( get_theme_mod('sf_f_animation') );
+			$sf_sl_animation = esc_attr( get_theme_mod('sf_sl_animation') );
+			$sf_speed = esc_attr( get_theme_mod('sf_speed') );
+			$sf_arrows = esc_attr( get_theme_mod('sf_arrows') );
 			if ('' == $sf_delay) {$sf_delay = 1000;}
 			if ('' == $sf_f_animation) {$sf_f_animation = 'show';}
 			if ('' == $sf_sl_animation) {$sf_sl_animation = 'show';}
@@ -649,9 +656,9 @@ add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 /* Gutenberg support (2.1.0) */
 function duena_revival_setup_theme_supported_features() {
 		// WP Y U NEED DIS TWICE
-		$primary_color = get_option( 'cs_primary_color', '#ff5b5b' );
-		$secondary_color = get_option( 'cs_secondary_color', '#71a08b' );
-		$background_color = get_option( 'cs_background_color', '#210f1d' );
+		$primary_color = get_theme_mod( 'cs_primary_color', '#ff5b5b' );
+		$secondary_color = get_theme_mod( 'cs_secondary_color', '#71a08b' );
+		$background_color = get_theme_mod( 'cs_background_color', '#210f1d' );
 
     add_theme_support( 'editor-color-palette', array(
         array(

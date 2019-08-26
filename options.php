@@ -6,17 +6,17 @@
  *
  */
 
-if(!function_exists('optionsframework_option_name')) {
-	function optionsframework_option_name() {
-		// This gets the theme name from the stylesheet (lowercase and without spaces)
-		$themename = 'duena-revival';
-
-		$optionsframework_settings = get_option('optionsframework');
-		$optionsframework_settings['id'] = $themename;
-		update_option('optionsframework', $optionsframework_settings);
-
-	}
-}
+// if(!function_exists('optionsframework_option_name')) {
+// 	function optionsframework_option_name() {
+// 		// This gets the theme name from the stylesheet (lowercase and without spaces)
+// 		$themename = 'duena-revival';
+//
+// 		$optionsframework_settings = get_option('optionsframework');
+// 		$optionsframework_settings['id'] = $themename;
+// 		update_option('optionsframework', $optionsframework_settings);
+//
+// 	}
+// }
 
 /**
  * Defines an array of options that will be used to generate the settings page and be saved in the database.

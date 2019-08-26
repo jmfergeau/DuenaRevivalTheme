@@ -1,6 +1,6 @@
 
     <?php
-        $sl_num = of_get_option('sl_num');
+        $sl_num = get_theme_mod('sl_num');
         if ( "" != $sl_num ) {
             $sl_num = (int)$sl_num;
         } else {
@@ -11,7 +11,7 @@
             'posts_per_page'      => $sl_num,
             'ignore_sticky_posts' => 1
         );
-        $sl_category = of_get_option( 'sl_category', 'from_all' );
+        $sl_category = get_theme_mod( 'sl_category', 'from_all' );
 
         if ( 'from_all' != $sl_category ) {
             $sl_args['cat'] = intval( $sl_category );
@@ -34,24 +34,24 @@
     <?php if(has_post_thumbnail( $post->ID )){
     ?>
         <li>
-            <?php if ( 'false' != of_get_option('sl_as_link') ) { ?>
+            <?php if ( 'false' != get_theme_mod('sl_as_link') ) { ?>
             <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>">
             <?php } ?>
                 <img src="<?php echo esc_url( $sl_image_url[0] ); ?>" alt="<?php the_title(); ?>" />
-            <?php if ( 'false' != of_get_option('sl_as_link') ) { ?>
+            <?php if ( 'false' != get_theme_mod('sl_as_link') ) { ?>
             </a>
             <?php } ?>
             <?php
-                if ( 'show' == of_get_option('sl_caption')) {
+                if ( 'show' == get_theme_mod('sl_caption')) {
             ?>
                 <div class="slider-caption">
                     <?php
-                        if ( 'hide' != of_get_option('sl_capt_title')) { ?>
+                        if ( 'hide' != get_theme_mod('sl_capt_title')) { ?>
                         <h4><?php the_title(); ?></h4>
                     <?php
                         }
-                        if ( ( 'hide' != of_get_option('sl_capt_exc')) && ( '0' != esc_attr(of_get_option('sl_capt_exc_length')) ) ) {
-                             $exc_length = (int)esc_attr(of_get_option('sl_capt_exc_length'));
+                        if ( ( 'hide' != get_theme_mod('sl_capt_exc')) && ( '0' != esc_attr(get_theme_mod('sl_capt_exc_length')) ) ) {
+                             $exc_length = (int)esc_attr(get_theme_mod('sl_capt_exc_length'));
                              if ($exc_length <= 0) $exc_length = 20;
                     ?>
                     <div class="sl-capt-content"><?php
@@ -61,9 +61,9 @@
                     <?php
                         }
                     ?>
-                    <?php if ( 'hide' != of_get_option('sl_capt_btn') ) {
-                        if ( '' != esc_attr(of_get_option('sl_capt_btn_txt')) ) {
-                            $btn_txt = esc_attr(of_get_option('sl_capt_btn_txt'));
+                    <?php if ( 'hide' != get_theme_mod('sl_capt_btn') ) {
+                        if ( '' != esc_attr(get_theme_mod('sl_capt_btn_txt')) ) {
+                            $btn_txt = esc_attr(get_theme_mod('sl_capt_btn_txt'));
                         } else {
                             $btn_txt = __( 'Read more', 'duena-revival' );
                         }
@@ -85,11 +85,11 @@
 /* <![CDATA[ */
     jQuery(window).load(function() {
         jQuery('.flexslider').flexslider({
-            animation: "<?php if (of_get_option('sl_effect') != '') { echo of_get_option('sl_effect'); } else { echo 'fade'; }; ?>",
-            direction: "<?php if (of_get_option('sl_direction') != '') { echo of_get_option('sl_direction'); } else { echo 'horizontal'; }; ?>",
-            slideshow: <?php if (of_get_option('sl_slideshow') != '') { echo of_get_option('sl_slideshow'); } else { echo 'true'; }; ?>,
-            controlNav: <?php if (of_get_option('sl_control') != '') { echo of_get_option('sl_control'); } else { echo 'true'; }; ?>,
-            directionNav: <?php if (of_get_option('sl_direction_nav') != '') { echo of_get_option('sl_direction_nav'); } else { echo 'true'; }; ?>
+            animation: "<?php if (get_theme_mod('sl_effect') != '') { echo get_theme_mod('sl_effect'); } else { echo 'fade'; }; ?>",
+            direction: "<?php if (get_theme_mod('sl_direction') != '') { echo get_theme_mod('sl_direction'); } else { echo 'horizontal'; }; ?>",
+            slideshow: <?php if (get_theme_mod('sl_slideshow') != '') { echo get_theme_mod('sl_slideshow'); } else { echo 'true'; }; ?>,
+            controlNav: <?php if (get_theme_mod('sl_control') != '') { echo get_theme_mod('sl_control'); } else { echo 'true'; }; ?>,
+            directionNav: <?php if (get_theme_mod('sl_direction_nav') != '') { echo get_theme_mod('sl_direction_nav'); } else { echo 'true'; }; ?>
         });
     });
 /* ]]> */

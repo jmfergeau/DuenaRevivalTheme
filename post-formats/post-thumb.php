@@ -1,6 +1,6 @@
 <?php if(!is_singular()) : ?>
 	<?php if ( has_post_thumbnail() ) {	?>
-		<?php if ( ( '' == of_get_option('post_image_size') ) || ('normal' == of_get_option('post_image_size')) ) {	?>
+		<?php if ( ( '' == get_theme_mod('post_image_size') ) || ('normal' == get_theme_mod('post_image_size')) ) {	?>
 			<figure class="featured-thumbnail thumbnail"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></figure>
 		<?php } ?>
 	<?php }	?>
@@ -13,7 +13,7 @@
 		}
 
 		if ( has_post_thumbnail() && ( 1 != $hide_th  ) ) {	?>
-		<?php if ( ( '' == of_get_option('single_image_size') ) || ('normal' == of_get_option('single_image_size')) ) {	?>
+		<?php if ( ( '' == get_theme_mod('single_image_size') ) || ('normal' == get_theme_mod('single_image_size')) ) {	?>
 			<figure class="featured-thumbnail thumbnail"><?php the_post_thumbnail(); ?></figure>
 		<?php } ?>
 	<?php }	?>
