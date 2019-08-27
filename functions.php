@@ -235,26 +235,6 @@ function duena_revival_scripts() {
 add_action( 'wp_enqueue_scripts', 'duena_revival_scripts', 10 );
 add_action( 'wp_enqueue_scripts', 'duena_revival_styles', 10 );
 
-
-function mk_add_theme_options_custom_menu()
-{ echo '<li><a href="#mk_options_custom_menu"> <svg width="18px" height="30px" viewBox="0 0 18 30" enable-background="new 0 0 18 30" xml:space="preserve"> <path d="M11.557,3.532l-1.151,9.345L10.266,14h1.133h4.578L6.443,26.467l1.152-9.345L7.734,16H6.602H2.023 L11.557,3.532z M0,17h6.602L5,30l13-17h-6.602L13,0L0,17z"/> </svg> <span> ' . __("Custom menu", "mk_framework") . '</span></a></li>'; }
-add_action('mk_jupiter_theme_options_main_menu', 'mk_add_theme_options_custom_menu');
-// ---------------------------------------------------
-function mk_add_custom_sub_menu( $options )
-{ $options = mk_theme_options_add_sub_menu( $options, 0, 'mk_options_custom_settings', 'Custom Settings' ); return $options; }
-add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_sub_menu');
-// ----------------------------------------------------
-function mk_add_custom_sub_menu_settings_page( $options )
-{ $options = mk_theme_options_add_sub_menu_settings_page( $options, 0, "mk_options_custom_settings", "Custom Settings", "some descripiton" ); return $options; }
-add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_sub_menu_settings_page');
-// ----------------------------------------------------
-function mk_add_custom_settings( $options )
-{ $settings = array( "name" => __("Portfolio Archive Layout 2", "mk_framework") , "desc" => __("This option allows you to define the layout of Portfolio Archive page as full width without sidebar, left sidebar or right sidebar.", "mk_framework") , "id" => "archive_portfolio_layout_2", "default" => "right", "options" => array( "left" => __("Left Sidebar", "mk_framework") , "right" => __("Right Sidebar", "mk_framework") , "full" => __("Full Layout", "mk_framework") ) , "type" => "dropdown" ); $options = mk_theme_options_add_settings( $options, 0, 9, $settings ); return $options; }
-add_filter('mk_jupiter_theme_options_settings', 'mk_add_custom_settings');
-//------------------------------------
-
-
-
 /**
  * Adding class 'active' to current menu item
  */
@@ -655,21 +635,16 @@ add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 
 /* Gutenberg support (2.1.0) */
 function duena_revival_setup_theme_supported_features() {
-		// WP Y U NEED DIS TWICE
-		$primary_color = get_theme_mod( 'cs_primary_color', '#ff5b5b' );
-		$secondary_color = get_theme_mod( 'cs_secondary_color', '#71a08b' );
-		$background_color = get_theme_mod( 'cs_background_color', '#210f1d' );
-
     add_theme_support( 'editor-color-palette', array(
         array(
             'name' => __( 'Primary color', 'duena-revival' ),
             'slug' => 'user-primary',
-            'color' => $primary_color,
+            'color' => get_theme_mod( 'cs_primary_color', '#ff5b5b' ),
         ),
         array(
             'name' => __( 'Secondary color', 'duena-revival' ),
             'slug' => 'user-secondary',
-            'color' => $secondary_color,
+            'color' => get_theme_mod( 'cs_secondary_color', '#71a08b' ),
         ),
         array(
             'name' => __( 'very light gray', 'duena-revival' ),

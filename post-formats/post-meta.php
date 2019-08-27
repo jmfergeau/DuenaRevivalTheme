@@ -1,7 +1,7 @@
 
 <?php $format = get_post_format(); ?>
 <span class="post_type_label <?php echo esc_attr( $format ); ?>"></span>
-<?php if ( 'false' != get_theme_mod('post_meta')) { ?>
+<?php if ( false != get_theme_mod('post_meta')) { ?>
 <span class="post_date"><time datetime="<?php the_time('Y-m-d\TH:i:s'); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time></span>
 	<!-- Post Meta -->
 	<?php

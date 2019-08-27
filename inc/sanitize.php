@@ -3,15 +3,6 @@
   Custom sanitization. Because Wordpress needs us to do it.
   */
 
-function duena_revival_yesno_sanitization( $input ) {
-   if ( true === $input ) {
-      return 'yes';
-   } else {
-      return 'no';
-   }
-};
-add_filter( 'duena_revival_yesno_sanitization', 'duena_revival_yesno_sanitization' );
-
 /**
  * Sanitization for checkbox input
  *
@@ -34,16 +25,17 @@ add_filter( 'duena_revival_sanitize_checkbox', 'duena_revival_sanitize_checkbox'
  * @param string $input
  * @returns string $output
  */
-function duena_revival_sanitize_choices( $input, $option ) {
-  global $wp_customize;
+function duena_revival_sanitize_choices( $input, $setting ){
 
-    $control = $wp_customize->get_control( $setting->id );
+    //input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+    $input = sanitize_key($input);
 
-    if ( array_key_exists( $input, $control->choices ) ) {
-        return $input;
-    } else {
-        return $setting->default;
-    }
+    //get the list of possible choices
+    $choices = $setting->manager->get_control( $setting->id )->choices;
+
+    //return input if valid or return default option
+    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+
 };
 add_filter( 'duena_revival_sanitize_choices', 'duena_revival_sanitize_choices' );
 

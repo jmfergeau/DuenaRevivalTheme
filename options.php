@@ -11,7 +11,7 @@
 // 		// This gets the theme name from the stylesheet (lowercase and without spaces)
 // 		$themename = 'duena-revival';
 //
-// 		$optionsframework_settings = get_option('optionsframework');
+// 		$optionsframework_settings = get_theme_mod('optionsframework');
 // 		$optionsframework_settings['id'] = $themename;
 // 		update_option('optionsframework', $optionsframework_settings);
 //

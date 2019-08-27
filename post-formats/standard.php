@@ -24,7 +24,7 @@
 
 				<!-- Post Content -->
 				<div class="post_content">
-					<?php if ( 'false' != get_theme_mod('post_excerpt')) { ?>
+					<?php if ( false != get_theme_mod('post_excerpt')) { ?>
 						<div class="excerpt">
 						<?php
 							$excerpt = get_the_excerpt();
@@ -37,7 +37,7 @@
 						</div>
 					<?php } ?>
 					<?php
-						if ( 'false' != get_theme_mod('post_button')) {
+						if ( false != get_theme_mod('post_button')) {
 							$button_text = get_theme_mod( 'post_button_txt' );
 							if ( '' == $button_text ) $button_text = __( 'Read more', 'duena-revival' );
 					?>

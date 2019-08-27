@@ -16,7 +16,6 @@ function duena_revival_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-
 	/*-----------------------------------------------------------------------------------*/
 	/*	General
 	/*-----------------------------------------------------------------------------------*/
@@ -26,304 +25,192 @@ function duena_revival_customize_register( $wp_customize ) {
 	));
 
 	/* Search Box */
-	$options['g_search_box_id'] = array( "name" => __( "Display search box?", "duena-revival" ),
-						"desc"    => __( "Display search box in the header?", "duena-revival" ),
-						"id"      => "g_search_box_id",
-						"type"    => "checkbox",
-						"std"     => 1);
-	$wp_customize->add_setting( 'duena_revival[g_search_box_id]', array(
-			'default' => 1,
-			'sanitize_callback' => 'duena_revival_sanitize_checkbox',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_search_box_id', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_search_box_id', array(
-			'label' => $options['g_search_box_id']['name'],
-			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_search_box_id]',
-			'type' => $options['g_search_box_id']['type'],
-			'priority' => 11
+	$wp_customize->add_control( 'g_search_box_id', array(
+			'label' 			=> __( "Display search box?", "duena-revival" ),
+			'section' 		=> 'duena_revival_header',
+			'settings'		=> 'g_search_box_id',
+			'type' 				=> "checkbox",
+			'priority' 		=> 11
 	) );
 
 	/* Breadcrumbs */
-	$options['g_breadcrumbs_id'] = array( "name" => __( "Display breadcrumbs?", "duena-revival" ),
-						"desc"    => __( "Display breadcrumbs?", "duena-revival" ),
-						"id"      => "g_breadcrumbs_id",
-						"type"    => "checkbox",
-						"std"     => 1);
-	$wp_customize->add_setting( 'duena_revival[g_breadcrumbs_id]', array(
-			'default' => $options['g_breadcrumbs_id']['std'],
-			'sanitize_callback' => 'duena_revival_sanitize_checkbox',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_breadcrumbs_id', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_breadcrumbs_id', array(
-			'label' => $options['g_breadcrumbs_id']['name'],
-			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_breadcrumbs_id]',
-			'type' => $options['g_breadcrumbs_id']['type'],
-			'priority' => 12
+	$wp_customize->add_control( 'g_breadcrumbs_id', array(
+			'label' 		=> __( "Display breadcrumbs?", "duena-revival" ),
+			'section' 	=> 'duena_revival_header',
+			'settings' 	=> 'g_breadcrumbs_id',
+			'type' 			=> 'checkbox',
+			'priority' 	=> 12
 	) );
 
 	/* Portfolio cat */
-	$options['g_portfolio_cat'] = array( "name" => __( "Category slug for portfolio page", "duena-revival" ),
-						"desc" => __( "Enter category slug, from which you like to fill portfolio page", "duena-revival" ),
-						"id"   => "g_portfolio_cat",
-						"type" => "text",
-						"std"  => "");
-	$wp_customize->add_setting( 'duena_revival[g_portfolio_cat]', array(
-			'default' => $options['g_portfolio_cat']['std'],
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_portfolio_cat', array(
+			'default' => '',
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_portfolio_cat', array(
-			'label' => $options['g_portfolio_cat']['name'],
+	$wp_customize->add_control( 'g_portfolio_cat', array(
+			'label' => __( "Category slug for portfolio page", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_portfolio_cat]',
-			'type' => $options['g_portfolio_cat']['type'],
+			'settings' => 'g_portfolio_cat',
 			'priority' => 13
 	) );
 
 	/* g_author_bio */
-	$options['g_author_bio'] = array( "name" => __( "Display Author Bio in sidebar", "duena-revival" ),
-						"desc"    => __( "Show/hide author bio in sidebar", "duena-revival" ),
-						"id"      => "g_author_bio",
-						"type"    => "checkbox",
-						"std"     => 1);
-	$wp_customize->add_setting( 'duena_revival[g_author_bio]', array(
-			'default' => $options['g_author_bio']['std'],
-			'sanitize_callback' => 'duena_revival_sanitize_checkbox',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio', array(
-			'label' => $options['g_author_bio']['name'],
+	$wp_customize->add_control( 'g_author_bio', array(
+			'label' => __( "Display Author Bio in sidebar", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio]',
-			'type' => $options['g_author_bio']['type'],
+			'settings' => 'g_author_bio',
+			'type' => 'checkbox',
 			'priority' => 14
 	) );
 
 	/* g_author_bio_title */
-	$options['g_author_bio_title'] = array( "name" => __( "Author Bio Title", "duena-revival" ),
-						"desc"  => __( "Enter Author Bio Title", "duena-revival" ),
-						"id"    => "g_author_bio_title",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => __( "Welcome to my site", "duena-revival" ));
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_title]', array(
-			'default' => $options['g_author_bio_title']['std'],
-			'sanitize_callback' => 'wp_filter_nohtml_kses',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_title', array(
+			'default' => __( "Welcome to my site", "duena-revival" ),
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_title', array(
-			'label' => $options['g_author_bio_title']['name'],
+	$wp_customize->add_control( 'g_author_bio_title', array(
+			'label' => __( "Author Bio Title", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_title]',
-			'type' => $options['g_author_bio_title']['type'],
+			'settings' => 'g_author_bio_title',
+			// "class" => "hidden", ???
 			'priority' => 15
 	) );
 
 	/* g_author_bio_img */
-	$options['g_author_bio_img'] = array( "name" => __( "Author Bio image", "duena-revival" ),
-						"desc"  => __( "Upload Author Bio image", "duena-revival" ),
-						"id"    => "g_author_bio_img",
-						"class" => "hidden",
-						"type"  => "upload");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_img]', array(
-			'type' => 'option',
+	$wp_customize->add_setting( 'g_author_bio_img', array(
 			'sanitize_callback' => 'duena_revival_sanitize_image'
 	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'g_author_bio_img', array(
-		'label' => $options['g_author_bio_img']['name'],
+		'label' => __( "Author Bio image", "duena-revival" ),
 		'section' => 'duena_revival_header',
-		'settings' => 'duena_revival[g_author_bio_img]',
+		'settings' => 'g_author_bio_img',
+		'type'  => 'upload',
+		// "class" => "hidden", ???
 		'priority' => 16
-	) ) );
+	)));
 
 	/* g_author_bio_message */
-	$options['g_author_bio_message'] = array( "name" => __( "Author Bio Message", "duena-revival" ),
-						"desc"  => __( "Enter Author Bio Message (HTML tags allowed)", "duena-revival" ),
-						"id"    => "g_author_bio_message",
-						"type"  => "textarea",
-						"class" => "hidden",
-						"std"   => __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ));
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_message]', array(
-			'default' => $options['g_author_bio_message']['std'],
-			'sanitize_callback' => 'sanitize_text_field',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_message', array(
+			'default' => __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ),
+			'sanitize_callback' => 'sanitize_text_field'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_message', array(
-			'label' => $options['g_author_bio_message']['name'],
+	$wp_customize->add_control( 'g_author_bio_message', array(
+			'label' => __( "Author Bio Message", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_message]',
-			'type' => 'text',
+			'settings' => 'g_author_bio_message',
 			'priority' => 17
 	) );
 
 	/* g_author_bio_social_twitter */
-	$options['g_author_bio_social_twitter'] = array( "name" => __( "Author Twitter URL", "duena-revival" ),
-						"desc"  => __( "Enter Author Twitter URL", "duena-revival" ),
-						"id"    => "g_author_bio_social_twitter",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => "#");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_social_twitter]', array(
-			'default' => $options['g_author_bio_social_twitter']['std'],
-			'sanitize_callback' => 'esc_url_raw',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_social_twitter', array(
+			'default' => '#',
+			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_social_twitter', array(
-			'label' => $options['g_author_bio_social_twitter']['name'],
+	$wp_customize->add_control( 'g_author_bio_social_twitter', array(
+			'label' => __( "Author Twitter URL", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_social_twitter]',
-			'type' => $options['g_author_bio_social_twitter']['type'],
+			'settings' => 'g_author_bio_social_twitter',
 			'priority' => 18
 	) );
 
 	/* g_author_bio_social_facebook */
-	$options['g_author_bio_social_facebook'] = array( "name" => __( "Author Facebook URL", "duena-revival" ),
-						"desc"  => __( "Enter Author Facebook URL", "duena-revival" ),
-						"id"    => "g_author_bio_social_facebook",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => "#");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_social_facebook]', array(
-			'default' => $options['g_author_bio_social_facebook']['std'],
-			'sanitize_callback' => 'esc_url_raw',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_social_facebook', array(
+			'default' => '#',
+			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_social_facebook', array(
-			'label' => $options['g_author_bio_social_facebook']['name'],
+	$wp_customize->add_control( 'g_author_bio_social_facebook', array(
+			'label' => __( "Author Facebook URL", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_social_facebook]',
-			'type' => $options['g_author_bio_social_facebook']['type'],
+			'settings' => 'g_author_bio_social_facebook',
 			'priority' => 19
 	) );
 
 	/* g_author_bio_social_patreon */
-	$options['g_author_bio_social_patreon'] = array( "name" => __( "Author Patreon URL", "duena-revival" ),
-						"desc"  => __( "Enter Author Patreon URL", "duena-revival" ),
-						"id"    => "g_author_bio_social_patreon",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => "#");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_social_patreon]', array(
-			'default' => $options['g_author_bio_social_patreon']['std'],
-			'sanitize_callback' => 'esc_url_raw',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_social_patreon', array(
+			'default' => '#',
+			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_social_patreon', array(
-			'label' => $options['g_author_bio_social_patreon']['name'],
+	$wp_customize->add_control( 'g_author_bio_social_patreon', array(
+			'label' => __( "Author Patreon URL", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_social_patreon]',
-			'type' => $options['g_author_bio_social_patreon']['type'],
+			'settings' => 'g_author_bio_social_patreon',
 			'priority' => 20
 	) );
 
 	/* g_author_bio_social_linked */
-	$options['g_author_bio_social_linked'] = array( "name" => __( "Author LinkedIn URL", "duena-revival" ),
-						"desc"  => __( "Enter Author LinkedIn URL", "duena-revival" ),
-						"id"    => "g_author_bio_social_linked",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => "#");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_social_linked]', array(
-			'default' => $options['g_author_bio_social_linked']['std'],
-			'sanitize_callback' => 'esc_url_raw',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_social_linked', array(
+			'default' => '#',
+			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_social_linked', array(
-			'label' => $options['g_author_bio_social_linked']['name'],
+	$wp_customize->add_control( 'g_author_bio_social_linked', array(
+			'label' => __( "Author LinkedIn URL", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_social_linked]',
-			'type' => $options['g_author_bio_social_linked']['type'],
+			'settings' => 'g_author_bio_social_linked',
 			'priority' => 21
 	) );
 
 	/* g_author_bio_social_rss */
-	$options['g_author_bio_social_rss'] = array( "name" => __( "Author RSS URL", "duena-revival" ),
-						"desc"  => __( "Enter Author RSS URL", "duena-revival" ),
-						"id"    => "g_author_bio_social_rss",
-						"type"  => "text",
-						"class" => "hidden",
-						"std"   => "#");
-	$wp_customize->add_setting( 'duena_revival[g_author_bio_social_rss]', array(
-			'default' => $options['g_author_bio_social_rss']['std'],
-			'sanitize_callback' => 'esc_url_raw',
-			'type' => 'option'
+	$wp_customize->add_setting( 'g_author_bio_social_rss', array(
+			'default' => '#',
+			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'duena_revival_g_author_bio_social_rss', array(
-			'label' => $options['g_author_bio_social_rss']['name'],
+	$wp_customize->add_control( 'g_author_bio_social_rss', array(
+			'label' => __( "Author RSS URL", "duena-revival" ),
 			'section' => 'duena_revival_header',
-			'settings' => 'duena_revival[g_author_bio_social_rss]',
-			'type' => $options['g_author_bio_social_rss']['type'],
+			'settings' => 'g_author_bio_social_rss',
 			'priority' => 22
 	) );
 
 	/*-----------------------------------------------------------------------------------*/
 	/*  Color scheme (2.1.0) That orange color changer #ff5b5b
 	/*-----------------------------------------------------------------------------------*/
-	$options['cs_primary_color'] = array( "name" => __( "Primary color", "duena-revival" ),
-						"desc" => __( "Color of links, borders on content boxes, social icons, meta icons, post type labels", "duena-revival" ),
-						"id"   => "cs_primary_color",
-						"std"  => "#FF5B5B",
-						"type" => "color");
-
-	$options['cs_secondary_color'] = array( "name" => __( "Secondary color", "duena-revival" ),
-						"desc" => __( "Color of links hovers", "duena-revival" ),
-						"id"   => "cs_secondary_color",
-						"std"  => "#71A08B",
-						"type" => "color");
 	$wp_customize->add_setting( 'cs_primary_color', array(
-		'default'=>'#ff5b5b',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'type' => 'option',
-		'capability' =>  'edit_theme_options'
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-				$wp_customize, 'cs_primary_color', array(
-					'label' => $options['cs_primary_color']['name'],
-					'section' => 'colors',
-					'settings' => 'cs_primary_color')
-		)
-	);
+			'default'						=>'#ff5b5b',
+			'sanitize_callback' => 'sanitize_hex_color'
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cs_primary_color', array(
+			'label' 			=> __( "Primary color", "duena-revival" ),
+			'description' => __( "Color of links, borders on content boxes, social icons, meta icons, post type labels", "duena-revival" ),
+			'section' 		=> 'colors',
+			'settings' 		=> 'cs_primary_color'
+	)));
 
 	$wp_customize->add_setting( 'cs_secondary_color', array(
-		'default'=>'#71A08B',
-		'sanitize_callback' => 'sanitize_hex_color',
-		'type' => 'option',
-		'capability' =>  'edit_theme_options'
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-				$wp_customize, 'cs_secondary_color', array(
-					'label' => $options['cs_secondary_color']['name'],
+			'default' => '#71A08B',
+			'sanitize_callback' => 'sanitize_hex_color'
+	));
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cs_secondary_color', array(
+					'label' => __( "Secondary color", "duena-revival" ),
+					'description' => __( "Color of links hovers", "duena-revival" ),
 					'section' => 'colors',
-					'settings' => 'cs_secondary_color')
-		)
-	);
+					'settings' => 'cs_secondary_color'
+	)));
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Logo - NOTE: This has moved to the title_tagline section
 	/*-----------------------------------------------------------------------------------*/
-
 	/* Logo Type */
-	$options['logo_type'] = array( "name" => __( "What kind of logo?", "duena-revival" ),
-						"desc"    => __( "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead.", "duena-revival" ),
-						"id"      => "logo_type",
-						"std"     => "text_logo",
-						"type"    => "radio");
-	$wp_customize->add_setting( 'duena_revival[logo_type]', array(
-			'default' => $options['logo_type']['std'],
-			'sanitize_callback' => 'duena_revival_sanitize_choices',
-			'type' => 'option'
+	$wp_customize->add_setting( 'logo_type', array(
+			'default' => 'text_logo',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_logo_type', array(
-			'label' => $options['logo_type']['name'],
+	$wp_customize->add_control( 'logo_type', array(
+			'label' => __( "What kind of logo?", "duena-revival" ),
 			'section' => 'title_tagline',
-			'settings' => 'duena_revival[logo_type]',
-			'type' => $options['logo_type']['type'],
+			'settings' => 'logo_type',
+			'type' => 'radio',
 			'choices' => array(
 					"image_logo" => __( "Image Logo", 'duena-revival'),
 					"text_logo"  => __( "Text Logo", 'duena-revival')
@@ -336,14 +223,14 @@ function duena_revival_customize_register( $wp_customize ) {
 						"desc" => __( "Upload logo image", "duena-revival" ),
 						"id"   => "logo_url",
 						"type" => "upload");
-	$wp_customize->add_setting( 'duena_revival[logo_url]', array(
-		'sanitize_callback' => 'duena_revival_sanitize_image',
-		'type' => 'option'
+	$wp_customize->add_setting( 'logo_url', array(
+		'sanitize_callback' => 'duena_revival_sanitize_image'
 	) );
 	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'logo_url', array(
-		'label' => $options['logo_url']['name'],
+		'label' => __( "Logo Image Path", "duena-revival" ),
 		'section' => 'title_tagline',
-		'settings' => 'duena_revival[logo_url]',
+		'settings' => 'logo_url',
+		'type'  => 'upload',
 		'priority' => 12
 	) ) );
 
@@ -356,339 +243,487 @@ function duena_revival_customize_register( $wp_customize ) {
 	) );
 
 	/* Blog sidebar position */
-	$post_sidebar_array = array(
-		"left" => __( "Left Sidebar", 'duena-revival'),
-		"right" => __( "Right Sidebar", 'duena-revival')
-	);
-	$options['blog_sidebar_pos'] = array( "name" => __( "Sidebar position", "duena-revival" ),
-						"desc"    => __( "Choose sidebar position.", "duena-revival" ),
-						"id"      => "blog_sidebar_pos",
-						"std"     => "right",
-						"type"    => "radio",
-						"options" => $post_sidebar_array);
-	$wp_customize->add_setting( 'duena_revival[blog_sidebar_pos]', array(
-			'default' => $options['blog_sidebar_pos']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'blog_sidebar_pos', array(
+			'default' => 'right',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_blog_sidebar_pos', array(
-			'label' => $options['blog_sidebar_pos']['name'],
+	$wp_customize->add_control( 'blog_sidebar_pos', array(
+			'label' => __( "Sidebar position", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[blog_sidebar_pos]',
-			'type' => $options['blog_sidebar_pos']['type'],
-			'choices' => $options['blog_sidebar_pos']['options'],
+			'settings' => 'blog_sidebar_pos',
+			'type' => 'radio',
+			'choices' => array(
+				"left" => __( "Left Sidebar", 'duena-revival'),
+				"right" => __( "Right Sidebar", 'duena-revival')
+			),
 			'priority' => 11
 	) );
 
 	/* Blog image size */
-	$post_image_array = array(
-		"normal" => __( "Yes", 'duena-revival'),
-		"noimg" => __( "No", 'duena-revival')
-	);
-	$options['post_image_size'] = array( "name" => __( "Show featured image on Blog page", "duena-revival" ),
-						"desc"    => __( "Show or hide featured image on Blog page", "duena-revival" ),
-						"id"      => "post_image_size",
-						"type"    => "select",
-						"std"     => "normal",
-						"class"   => "small", //mini, tiny, small
-						"options" => $post_image_array);
-	$wp_customize->add_setting( 'duena_revival[post_image_size]', array(
-			'default' => $options['post_image_size']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_image_size', array(
+			'default' => 'normal',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_image_size', array(
-			'label' => $options['post_image_size']['name'],
+	$wp_customize->add_control( 'post_image_size', array(
+			'label' => __( "Show featured image on Blog page", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_image_size]',
-			'type' => $options['post_image_size']['type'],
-			'choices' => $options['post_image_size']['options'],
+			'settings' => 'post_image_size',
+			'type' => 'select',
+			// "class"   => "small", //mini, tiny, small ???
+			'choices' => array(
+				"normal" => __( "Yes", 'duena-revival'),
+				"noimg" => __( "No", 'duena-revival')
+			),
 			'priority' => 12
 	) );
 
 	/* Single post image size */
-	$single_image_array = array(
-		"normal" => __( "Yes", 'duena-revival'),
-		"noimg" => __( "No", 'duena-revival')
-	);
-	$options['single_image_size'] = array( "name" => __( "Show featured image on Single post page", "duena-revival" ),
-						"desc"    => __( "Show or hide featured image on Single post page", "duena-revival" ),
-						"id"      => "single_image_size",
-						"type"    => "select",
-						"std"     => "normal",
-						"class"   => "small", //mini, tiny, small
-						"options" => $single_image_array);
-	$wp_customize->add_setting( 'duena_revival[single_image_size]', array(
-			'default' => $options['single_image_size']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'single_image_size', array(
+			'default' => 'normal',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_single_image_size', array(
-			'label' => $options['single_image_size']['name'],
+	$wp_customize->add_control( 'single_image_size', array(
+			'label' => __( "Show featured image on Single post page", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[single_image_size]',
-			'type' => $options['single_image_size']['type'],
-			'choices' => $options['single_image_size']['options'],
+			'settings' => 'single_image_size',
+			'type' => 'select',
+			'choices' => array(
+				"normal" => __( "Yes", 'duena-revival'),
+				"noimg" => __( "No", 'duena-revival')
+			),
 			'priority' => 13
 	) );
 
 	/* Post Meta */
-	$post_opt_array = array(
-		"true" => __( "Yes", 'duena-revival'),
-		"false" => __( "No", 'duena-revival')
-	);
-	$options['post_meta'] = array( "name" => __( "Enable Meta for blog posts?", "duena-revival" ),
-						"desc"    => __( "Enable or Disable meta information for blog posts.", "duena-revival" ),
-						"id"      => "post_meta",
-						"std"     => "true",
-						"type"    => "radio",
-						"options" => $post_opt_array);
-	$wp_customize->add_setting( 'duena_revival[post_meta]', array(
-			'default' => $options['post_meta']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_meta', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_meta', array(
-			'label' => $options['post_meta']['name'],
+	$wp_customize->add_control( 'post_meta', array(
+			'label' => __( "Enable Meta for blog posts?", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_meta]',
-			'type' => $options['post_meta']['type'],
-			'choices' => $options['post_meta']['options'],
+			'settings' => 'post_meta',
+			'type' => 'checkbox',
 			'priority' => 14
 	) );
 
 	/* Post Excerpt */
-	$options['post_excerpt'] = array( "name" => __( "Enable excerpt for blog posts?", "duena-revival" ),
-						"desc"    => __( "Enable or Disable excerpt for blog posts.", "duena-revival" ),
-						"id"      => "post_excerpt",
-						"std"     => "true",
-						"type"    => "radio",
-						"options" => $post_opt_array);
-	$wp_customize->add_setting( 'duena_revival[post_excerpt]', array(
-			'default' => $options['post_excerpt']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_excerpt', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_excerpt', array(
-			'label' => $options['post_excerpt']['name'],
+	$wp_customize->add_control( 'post_excerpt', array(
+			'label' => __( "Enable excerpt for blog posts?", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_excerpt]',
-			'type' => $options['post_excerpt']['type'],
-			'choices' => $options['post_excerpt']['options'],
+			'settings' => 'post_excerpt',
+			'type' => 'checkbox',
 			'priority' => 15
 	) );
 
 	/* Post Button */
-	$options['post_button'] = array( "name" => __( "Enable read more button for blog posts?", "duena-revival" ),
-						"desc"    => __( "Enable or Disable read more button for blog posts.", "duena-revival" ),
-						"id"      => "post_button",
-						"std"     => "true",
-						"type"    => "radio",
-						"options" => $post_opt_array);
-	$wp_customize->add_setting( 'duena_revival[post_button]', array(
-			'default' => $options['post_button']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_button', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_button', array(
-			'label' => $options['post_button']['name'],
+	$wp_customize->add_control( 'post_button', array(
+			'label' => __( "Enable read more button for blog posts?", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_button]',
-			'type' => $options['post_button']['type'],
-			'choices' => $options['post_button']['options'],
+			'settings' => 'post_button',
+			'type' => 'checkbox',
 			'priority' => 16
 	) );
 
 	/* Post Button Text */
-	$options['post_button_txt'] = array( "name" => __( "'Read more' button text", "duena-revival" ),
-						"desc"  => __( "Enter 'read more' button text.", "duena-revival" ),
-						"id"    => "post_button_txt",
-						"std"   => __( "Read More", "duena-revival" ),
-						"type"  => "text",
-						"class" => "tiny");
-	$wp_customize->add_setting( 'duena_revival[post_button_txt]', array(
-			'default' => $options['post_button_txt']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_button_txt', array(
+			'default' => __( "Read More", "duena-revival" ),
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_button_txt', array(
-			'label' => $options['post_button_txt']['name'],
+	$wp_customize->add_control( 'post_button_txt', array(
+			'label' => __( "'Read more' button text", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_button_txt]',
-			'type' => $options['post_button_txt']['type'],
+			'settings' => 'post_button_txt',
 			'priority' => 17
 	) );
 
 
 	/* Post author */
-	$options['post_author'] = array( "name" => __( "Show author bio on single post page?", "duena-revival" ),
-						"desc"    => __( "Show or hide author bio on single post page.", "duena-revival" ),
-						"id"      => "post_author",
-						"std"     => "true",
-						"type"    => "radio",
-						"options" => $post_opt_array);
-	$wp_customize->add_setting( 'duena_revival[post_author]', array(
-			'default' => $options['post_author']['std'],
-			'type' => 'option'
+	$wp_customize->add_setting( 'post_author', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_post_author', array(
-			'label' => $options['post_author']['name'],
+	$wp_customize->add_control( 'post_author', array(
+			'label' => __( "Show author bio on single post page?", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[post_author]',
-			'type' => $options['post_author']['type'],
-			'choices' => $options['post_author']['options'],
+			'settings' => 'post_author',
+			'type' => 'checkbox',
 			'priority' => 19
 	) );
 
 
 	/* Related title */
-	$options['blog_related'] = array( "name" => __( "Related Posts Title", "duena-revival" ),
-						"desc" => __( "Enter Your Title used on Single Post page for related posts.", "duena-revival" ),
-						"id"   => "blog_related",
-						"std"  => __( 'Related posts', 'duena-revival' ),
-						"type" => "text");
 	$wp_customize->add_setting( 'duena_revival[blog_related]', array(
-			'default' => $options['blog_related']['std'],
-			'type' => 'option'
+			'default' => __( 'Related posts', 'duena-revival' ),
+			'sanitize_callback' => 'wp_filter_nohtml_kses'
 	) );
-	$wp_customize->add_control( 'duena_revival_blog_related', array(
-			'label' => $options['blog_related']['name'],
+	$wp_customize->add_control( 'blog_related', array(
+			'label' => __( "Related Posts Title", "duena-revival" ),
 			'section' => 'duena_revival_blog',
-			'settings' => 'duena_revival[blog_related]',
-			'type' => $options['blog_related']['type'],
+			'settings' => 'blog_related',
 			'priority' => 20
 	) );
 
 	/*-----------------------------------------------------------------------------------*/
 	/*  Slider (visualisation)
 	/*-----------------------------------------------------------------------------------*/
-
 	$wp_customize->add_section( 'duena_revival_slider_visual', array(
 			'title' => __( 'Slider (visualisation)', 'duena-revival' ),
 			'priority' => 202
 	) );
 
 	/* Slider Show */
-	$options['sl_show'] = array( "name" => __( "Show slider", "duena-revival" ),
-						"desc"    => __( "Show / Hide slider on home page", "duena-revival" ),
-						"id"      => "sl_show",
-						"std"     => 1,
-						"type"    => "checkbox",
-						"class"   => "tiny"); //mini, tiny, small
-	$wp_customize->add_setting( 'duena_revival[sl_show]', array(
-					'default' => $options['sl_show']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_show', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_show', array(
-					'label' => $options['sl_show']['name'],
-					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_show]',
-					'type' => $options['sl_show']['type'],
-					'priority' => 11
+	$wp_customize->add_control( 'sl_show', array(
+			'label' => __( "Show slider", "duena-revival" ),
+			'section' => 'duena_revival_slider_visual',
+			'settings' => 'sl_show',
+			'type' => 'checkbox',
+			'priority' => 11
 	) );
 
 	/* Slider Effect */
-	$sl_effect_array = array(
-		"fade" => __( "Fade", 'duena-revival'),
-		"slide" => __( "Slide", 'duena-revival')
-	);
-	$options['sl_effect'] = array( "name" => __( "Sliding effect", "duena-revival" ),
-				"desc"    => __( "Select your animation type", "duena-revival" ),
-				"id"      => "sl_effect",
-				"std"     => "fade",
-				"type"    => "select",
-				"class"   => "tiny", //mini, tiny, small
-				"options" => $sl_effect_array);
-	$wp_customize->add_setting( 'duena_revival[sl_effect]', array(
-					'default' => $options['sl_effect']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_effect', array(
+			'default' => 'fade',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_effect', array(
-					'label' => $options['sl_effect']['name'],
-					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_effect]',
-					'type' => $options['sl_effect']['type'],
-					'choices' => $options['sl_effect']['options'],
-					'priority' => 12
+	$wp_customize->add_control( 'sl_effect', array(
+			'label' => __( "Sliding effect", "duena-revival" ),
+			'section' => 'duena_revival_slider_visual',
+			'settings' => 'sl_effect',
+			'type' => 'select',
+			'choices' => array(
+						"fade" => __( "Fade", 'duena-revival'),
+						"slide" => __( "Slide", 'duena-revival')
+			),
+			'priority' => 12
 	) );
 
 	/* Slider Direction */
-	$sl_direction_array = array(
-		'horizontal' => __( 'Horizontal', 'duena-revival'),
-		'vertical' => __( 'Vertical', 'duena-revival')
-	);
-	$options['sl_direction'] = array( "name" => __( "Sliding direction", "duena-revival" ),
-				"desc"    => __( "Select the sliding direction", "duena-revival" ),
-				"id"      => "sl_direction",
-				"std"     => "horizontal",
-				"type"    => "select",
-				"class"   => "tiny", //mini, tiny, small
-				"options" => $sl_direction_array);
-	$wp_customize->add_setting( 'duena_revival[sl_direction]', array(
-					'default' => $options['sl_direction']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_direction', array(
+			'default' => 'horizontal',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_direction', array(
-					'label' => $options['sl_direction']['name'],
-					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_direction]',
-					'type' => $options['sl_direction']['type'],
-					'choices' => $options['sl_direction']['options'],
-					'priority' => 13
+	$wp_customize->add_control( 'sl_direction', array(
+			'label' => __( "Sliding direction", "duena-revival" ),
+			'section' => 'duena_revival_slider_visual',
+			'settings' => 'sl_direction',
+			'type' => 'select',
+			'choices' => array(
+						'horizontal' => __( 'Horizontal', 'duena-revival'),
+						'vertical' => __( 'Vertical', 'duena-revival')
+			),
+			'priority' => 13
 	) );
 
 	/* Slider Slideshow */
-	$options['sl_slideshow'] = array( "name" => __( "Slideshow", "duena-revival" ),
-				"desc"    => __( "Animate slider automatically?", "duena-revival" ),
-				"id"      => "sl_slideshow",
-				"std"     => "true",
-				"type"    => "checkbox",
-				"class"   => "tiny"); //mini, tiny, small
-	$wp_customize->add_setting( 'duena_revival[sl_slideshow]', array(
-					'default' => $options['sl_slideshow']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_slideshow', array(
+					'default' => '1',
+					'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_slideshow', array(
-					'label' => $options['sl_slideshow']['name'],
+	$wp_customize->add_control( 'sl_slideshow', array(
+					'label' => __( "Slideshow", "duena-revival" ),
 					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_slideshow]',
-					'type' => $options['sl_slideshow']['type'],
+					'settings' => 'sl_slideshow',
+					'type' => 'checkbox',
 					'priority' => 14
 	) );
 
 	/* Slider Controls */
-	$options['sl_control'] = array( "name" => __( "Paging control", "duena-revival" ),
-				"desc"    => __( "Create navigation for paging control of each slide?", "duena-revival" ),
-				"id"      => "sl_control",
-				"std"     => "true",
-				"type"    => "checkbox",
-				"class"   => "tiny"); //mini, tiny, small
-	$wp_customize->add_setting( 'duena_revival[sl_control]', array(
-					'default' => $options['sl_control']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_control', array(
+					'default' => '1',
+					'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_control', array(
-					'label' => $options['sl_control']['name'],
+	$wp_customize->add_control( 'sl_control', array(
+					'label' => __( "Paging control", "duena-revival" ),
 					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_control]',
-					'type' => $options['sl_control']['type'],
+					'settings' => 'sl_control',
+					'type' => 'checkbox',
 					'priority' => 15
 	) );
 
 	/* Slider Effect */
-	$options['sl_direction_nav'] = array( "name" => __( "Previous/Next navigation", "duena-revival" ),
-				"desc"    => __( "Create controls for previous/next navigation?", "duena-revival" ),
-				"id"      => "sl_direction_nav",
-				"std"     => "true",
-				"type"    => "checkbox",
-				"class"   => "tiny"); //mini, tiny, small
-	$wp_customize->add_setting( 'duena_revival[sl_direction_nav]', array(
-					'default' => $options['sl_direction_nav']['std'],
-					'type' => 'option'
+	$wp_customize->add_setting( 'sl_direction_nav', array(
+					'default' => '1',
+					'sanitize_callback' => 'duena_revival_sanitize_checkbox'
 	) );
-	$wp_customize->add_control( 'duena_revival_sl_direction_nav', array(
-					'label' => $options['sl_direction_nav']['name'],
+	$wp_customize->add_control( 'sl_direction_nav', array(
+					'label' => __( "Previous/Next navigation", "duena-revival" ),
 					'section' => 'duena_revival_slider_visual',
-					'settings' => 'duena_revival[sl_direction_nav]',
-					'type' => $options['sl_direction_nav']['type'],
+					'settings' => 'sl_direction_nav',
+					'type' => 'checkbox',
 					'priority' => 16
 	) );
 
+	/*-----------------------------------------------------------------------------------*/
+	/*  Slider (content)
+	/*-----------------------------------------------------------------------------------*/
+	$wp_customize->add_section( 'duena_revival_slider_content', array(
+			'title' => __( 'Slider (content)', 'duena-revival' ),
+			'priority' => 203
+	) );
+
+	/* Slider Number */
+	$wp_customize->add_setting( 'sl_num', array(
+					'default' => '4',
+					'sanitize_callback' => 'absint'
+	) );
+	$wp_customize->add_control( 'sl_num', array(
+					'label' => __( "How many slides to show?", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_num',
+					'type' => 'number',
+					'priority' => 11
+	) );
+
+	/* Slider Category */
+	// Pull all the categories into an array
+	$options_categories = array();
+	$options_categories_obj = get_categories();
+	foreach ($options_categories_obj as $category) {
+		$options_categories[$category->cat_ID] = $category->cat_name;
+	};
+	$all_cats_array = array('from_all' => __( 'Select from all', 'duena-revival' ) ) + $options_categories;
+	$wp_customize->add_setting( 'sl_category', array(
+					'default' => '',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_category', array(
+					'label' => __( "Which category to pull from?", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_category',
+					'type' => 'select',
+					'choices' => $all_cats_array,
+					'priority' => 12
+	) );
+
+	/* Slider Link */
+	$wp_customize->add_setting( 'sl_as_link', array(
+					'default' => 'true',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_as_link', array(
+					'label' => __( "Slide as link to the post", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_as_link',
+					'type' => 'select',
+					'choices' => array(
+						"true" => __( "Yes", 'duena-revival'),
+						"false" => __( "No", 'duena-revival')
+					),
+					'priority' => 13
+	) );
+
+	/* Slider Caption */
+	$wp_customize->add_setting( 'sl_caption', array(
+					'default' => 'hide',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_caption', array(
+					'label' => __( "Show/Hide slide caption", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_caption',
+					'type' => 'select',
+					'choices' => array(
+						'show' => __( 'Show', 'duena-revival'),
+						'hide' => __( 'Hide', 'duena-revival')
+					),
+					'priority' => 14
+	) );
+
+	/* Slider Caption Title */
+	$wp_customize->add_setting( 'sl_capt_title', array(
+					'default' => 'show',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_capt_title', array(
+					'label' => __( "Show/Hide slide caption title", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_capt_title',
+					'type' => 'select',
+					'choices' => array(
+						'show' => __( 'Show', 'duena-revival'),
+						'hide' => __( 'Hide', 'duena-revival')
+					),
+					'priority' => 15
+	) );
+
+	/* Slider Captiopn Excerpt */
+	$wp_customize->add_setting( 'sl_capt_exc', array(
+					'default' => 'show',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_capt_exc', array(
+					'label' => __( "Show/Hide slide caption excerpt", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_capt_exc',
+					'type' => 'select',
+					'choices' => array(
+						'show' => __( 'Show', 'duena-revival'),
+						'hide' => __( 'Hide', 'duena-revival')
+					),
+					'priority' => 16
+	) );
+
+	/* Slider Caption Excerpt Length */
+	$wp_customize->add_setting( 'sl_capt_exc_length', array(
+					'default' => '20',
+					'sanitize_callback' => 'absint'
+	) );
+	$wp_customize->add_control( 'sl_capt_exc_length', array(
+					'label' => __( "Slide caption excerpt length", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_capt_exc_length',
+					'type' => 'number',
+					'priority' => 17
+	) );
+
+	/* Slider Caption Button */
+	$wp_customize->add_setting( 'sl_capt_btn', array(
+					'default' => 'show',
+					'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'sl_capt_btn', array(
+					'label' => __( "Show/Hide slide caption button", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_capt_btn',
+					'type' => 'select',
+					'choices' => array(
+						'show' => __( 'Show', 'duena-revival'),
+						'hide' => __( 'Hide', 'duena-revival')
+					),
+					'priority' => 18
+	) );
+
+	/* Slider Caption Button Text */
+	$wp_customize->add_setting( 'sl_capt_btn_txt', array(
+					'default' => __( 'Read more', 'duena-revival' ),
+					'sanitize_callback' => 'wp_filter_nohtml_kses'
+	) );
+	$wp_customize->add_control( 'sl_capt_btn_txt', array(
+					'label' => __( "Slide caption button text", "duena-revival" ),
+					'section' => 'duena_revival_slider_content',
+					'settings' => 'sl_capt_btn_txt',
+					'priority' => 19
+	) );
 
 
+	/*-----------------------------------------------------------------------------------*/
+	/*	Portfolio
+	/*-----------------------------------------------------------------------------------*/
+	$wp_customize->add_section( 'duena_revival_portfolio', array(
+			'title' => __( 'Portfolio', 'duena-revival' ),
+			'priority' => 205
+	) );
+
+	/* Per page */
+	$wp_customize->add_setting( 'portfolio_per_page', array(
+			'default' => '12',
+			'sanitize_callback' => 'absint'
+	) );
+	$wp_customize->add_control( 'portfolio_per_page', array(
+			'label' => __( "Posts per page", "duena-revival" ),
+			'section' => 'duena_revival_portfolio',
+			'settings' => 'portfolio_per_page',
+			'type' => 'number',
+			'priority' => 11
+	) );
+
+	/* Thumb */
+	$wp_customize->add_setting( 'portfolio_show_thumbnail', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'portfolio_show_thumbnail', array(
+			'label' => __( "Show thumbnail", "duena-revival" ),
+			'section' => 'duena_revival_portfolio',
+			'settings' => 'portfolio_show_thumbnail',
+			'type' => 'checkbox',
+			'priority' => 12
+	) );
+
+	/* Title */
+	$wp_customize->add_setting( 'portfolio_show_title', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'portfolio_show_title', array(
+			'label' => __( "Show title", "duena-revival" ),
+			'section' => 'duena_revival_portfolio',
+			'settings' => 'portfolio_show_title',
+			'type' => 'checkbox',
+			'priority' => 13
+	) );
+
+	/* Excerpt */
+	$wp_customize->add_setting( 'portfolio_show_excerpt', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'portfolio_show_excerpt', array(
+			'label' => __( "Show excerpt", "duena-revival" ),
+			'section' => 'duena_revival_portfolio',
+			'settings' => 'portfolio_show_excerpt',
+			'type' => 'checkbox',
+			'priority' => 14
+	) );
+
+	/* Link */
+	$wp_customize->add_setting( 'portfolio_show_link', array(
+			'default' => '1',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'portfolio_show_link', array(
+			'label' => __( "Show 'Read more' link", "duena-revival" ),
+			'section' => 'duena_revival_portfolio',
+			'settings' => 'portfolio_show_link',
+			'type' => 'checkbox',
+			'priority' => 15
+	) );
+
+	/*-----------------------------------------------------------------------------------*/
+	/*	Footer
+	/*-----------------------------------------------------------------------------------*/
+	$wp_customize->add_section( 'duena_revival_footer', array(
+		'title' => __( 'Footer', 'duena-revival' ),
+		'priority' => 206
+	) );
+
+	/* Footer Copyright Text */
+	$wp_customize->add_setting( 'footer_text', array(
+			'default' => '',
+			'sanitize_callback' => 'sanitize_text_field'
+	) );
+	$wp_customize->add_control( 'footer_text', array(
+			'label' => __( "Footer copyright text", "duena-revival" ),
+			'description' => __( "Enter text used in the right side of the footer. HTML tags are allowed.", "duena-revival" ),
+			'section' => 'duena_revival_footer',
+			'settings' => 'footer_text'
+	) );
+
+
+	/* Display Footer Menu */
+	$wp_customize->add_setting( 'footer_menu', array(
+			'default' => '0',
+			'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'footer_menu', array(
+			'label' => __( "Display Footer menu?", "duena-revival" ),
+			'section' => 'duena_revival_footer',
+			'settings' => 'footer_menu',
+			'type' => 'checkbox'
+	) );
 
 }
 add_action( 'customize_register', 'duena_revival_customize_register' );

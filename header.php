@@ -66,7 +66,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-	<?php if( (is_front_page()) && ( get_theme_mod('sl_show') != 'no') ) { ?>
+	<?php if( (is_front_page()) && ( get_theme_mod('sl_show') != false) ) { ?>
 	<section id="slider-wrapper">
 		<div class="container">
 	    	<?php get_template_part( 'slider' ); ?>
