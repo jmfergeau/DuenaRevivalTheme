@@ -20,6 +20,29 @@ function duena_revival_sanitize_checkbox( $input ) {
 add_filter( 'duena_revival_sanitize_checkbox', 'duena_revival_sanitize_checkbox' );
 
 /**
+ * Sanitization for textfield with html allowed
+ *
+ * @param string $input
+ * @returns string $output
+ */
+function duena_revival_sanitize_text_with_html( $input ) {
+	$allowed_html = array(
+  	'a' => array(
+    	'href' => true,
+  	),
+		'img' => array(
+    	'src' => true,
+  	),
+		'br' => true,
+		'button' => true,
+	);
+
+	$output = wp_kses( $input, $allowed_html );
+	return $output;
+};
+add_filter( 'duena_revival_sanitize_text_with_html', 'duena_revival_sanitize_text_with_html' );
+
+/**
  * Sanitization for radio buttons input
  *
  * @param string $input

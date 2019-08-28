@@ -832,8 +832,8 @@ msgid "Footer copyright text"
 msgstr "Texte du droit d'auteur dans le pied de page"
 
 #: ../options.php:590
-msgid "Enter text used in the right side of the footer. HTML tags are allowed."
-msgstr "Entrer le texte qui ira du côté gauche du pied de page. Les tags HTML sont admis."
+msgid "HTML tags are allowed."
+msgstr "Les tags HTML sont permis."
 
 #: ../options.php:595
 msgid "Display Footer menu?"

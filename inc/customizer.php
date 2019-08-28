@@ -104,10 +104,11 @@ function duena_revival_customize_register( $wp_customize ) {
 	/* g_author_bio_message */
 	$wp_customize->add_setting( 'g_author_bio_message', array(
 			'default' => __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ),
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'duena_revival_sanitize_text_with_html'
 	) );
 	$wp_customize->add_control( 'g_author_bio_message', array(
 			'label' => __( "Author Bio Message", "duena-revival" ),
+			'description' => __( "HTML tags are allowed.", "duena-revival" ),
 			'section' => 'duena_revival_header',
 			'settings' => 'g_author_bio_message',
 			'priority' => 17
@@ -844,11 +845,11 @@ function duena_revival_customize_register( $wp_customize ) {
 	/* Footer Copyright Text */
 	$wp_customize->add_setting( 'footer_text', array(
 			'default' => '',
-			'sanitize_callback' => 'sanitize_text_field'
+			'sanitize_callback' => 'duena_revival_sanitize_text_with_html'
 	) );
 	$wp_customize->add_control( 'footer_text', array(
 			'label' => __( "Footer copyright text", "duena-revival" ),
-			'description' => __( "Enter text used in the right side of the footer. HTML tags are allowed.", "duena-revival" ),
+			'description' => __( "HTML tags are allowed.", "duena-revival" ),
 			'section' => 'duena_revival_footer',
 			'settings' => 'footer_text'
 	) );

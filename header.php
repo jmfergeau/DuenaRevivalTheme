@@ -10,7 +10,6 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<?php // wp_title( '|', true, 'right' ); // Apparently deprecated wtf ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no" />
 <meta name="theme-color" content="<?php echo get_theme_mod( 'cs_primary_color', '#ff5b5b' ); ?>" />
@@ -66,7 +65,7 @@
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
-	<?php if( (is_front_page()) && ( get_theme_mod('sl_show') != '1') ) { ?>
+	<?php if( (is_front_page()) && ( get_theme_mod('sl_show') != '0') ) { ?>
 	<section id="slider-wrapper">
 		<div class="container">
 	    	<?php get_template_part( 'slider' ); ?>
