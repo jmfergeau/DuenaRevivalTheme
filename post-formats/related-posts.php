@@ -21,7 +21,7 @@ if ($tags) {
 	if ($related_query->have_posts()) {	?>
 	<div class="related-posts">
 			<?php
-				$related_title = esc_attr( get_theme_mod('blog_related') );
+				$related_title = esc_attr( get_theme_mod('blog_related', __( 'Related posts', 'duena-revival' )) );
 			?>
 			<h2 class="related-posts_h"><?php if ( '' != $related_title ) { echo $related_title; } else { _e('Related Posts','duena-revival'); }?></h2>
 

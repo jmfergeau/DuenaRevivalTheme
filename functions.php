@@ -413,45 +413,45 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 		<div class="author_bio_sidebar">
 			<div class="social_box">
 		<?php
-			$datdamnb1 = ''; $datdamnb2 = ''; $datdamnb3 = ''; $datdamnb4 = ''; $datdamnb5 = ''; // ...php is an idiot
+		$datdamnb1 = 's'; $datdamnb2 = 's'; $datdamnb3 = 's'; $datdamnb4 = 's'; $datdamnb5 = 's'; // ...php and fontawesome are idiots
 			if ( 'none' != get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ) {
-				if ((get_theme_mod('g_author_bio_social_twitter_icon') != 'rss') && (get_theme_mod('g_author_bio_social_twitter_icon') != 'envelope')) { $datdamnb1 = 'b'; };
+				if ((get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') != 'rss') && (get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') != 'envelope')) { $datdamnb1 = 'b'; };
 				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter_text', '#') )."'><i class='fa". $datdamnb1 ." fa-". get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ) {
-				if ((get_theme_mod('g_author_bio_social_facebook_icon') != 'rss') && (get_theme_mod('g_author_bio_social_facebook_icon') != 'envelope')) { $datdamnb2 = 'b'; };
+				if ((get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') != 'rss') && (get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') != 'envelope')) { $datdamnb2 = 'b'; };
 				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook_text', '#') )."'><i class='fa". $datdamnb2 ." fa-". get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ) {
-				if ((get_theme_mod('g_author_bio_social_patreon_icon') != 'rss') && (get_theme_mod('g_author_bio_social_patreon_icon') != 'envelope')) { $datdamnb3 = 'b'; };
+				if ((get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') != 'rss') && (get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') != 'envelope')) { $datdamnb3 = 'b'; };
 				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon_text', '#') )."'><i class='fa". $datdamnb3 ." fa-". get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ) {
-				if ((get_theme_mod('g_author_bio_social_linkedin_icon') != 'rss') && (get_theme_mod('g_author_bio_social_linkedin_icon') != 'envelope')) { $datdamnb4 = 'b'; };
+				if ((get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') != 'rss') && (get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') != 'envelope')) { $datdamnb4 = 'b'; };
 				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linkedin_text', '#') )."'><i class='fa". $datdamnb4 ." fa-". get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_rss_icon', 'rss') ) {
-				if ((get_theme_mod('g_author_bio_social_rss_icon') != 'rss') && (get_theme_mod('g_author_bio_social_rss_icon') != 'envelope')) { $datdamnb5 = 'b'; };
+				if ((get_theme_mod('g_author_bio_social_rss_icon', 'rss') != 'rss') && (get_theme_mod('g_author_bio_social_rss_icon', 'rss') != 'envelope')) { $datdamnb5 = 'b'; };
 				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss_text', '#') )."'><i class='fa". $datdamnb5 ." fa-". get_theme_mod('g_author_bio_social_rss_icon', 'rss') ."'></i></a>\n";
 			}
 		?>
 			</div>
-			<?php if (( '' != get_theme_mod('g_author_bio_title') ) || ('' != get_theme_mod('g_author_bio_img')) || ('' != get_theme_mod('g_author_bio_message')) ) { ?>
+			<?php if (( '' != get_theme_mod('g_author_bio_title', __( "Welcome to my site", "duena-revival" ))) || ('' != get_theme_mod('g_author_bio_img')) || ('' != get_theme_mod('g_author_bio_message', __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ))) ) { ?>
 			<div class="content_box">
 			<?php
-				if ( '' != get_theme_mod('g_author_bio_title') ) {
-					echo "<h2>".get_theme_mod('g_author_bio_title')."</h2>\n";
+				if ( '' != get_theme_mod('g_author_bio_title', __( "Welcome to my site", "duena-revival" )) ) {
+					echo "<h2>".get_theme_mod('g_author_bio_title', __( "Welcome to my site", "duena-revival" ))."</h2>\n";
 				}
 				if ( '' != get_theme_mod('g_author_bio_img') ) {
-					if ( '' != get_theme_mod('g_author_bio_title') ) {
-						$img_alt = get_theme_mod('g_author_bio_title');
+					if ( '' != get_theme_mod('g_author_bio_title', __( "Welcome to my site", "duena-revival" )) ) {
+						$img_alt = get_theme_mod('g_author_bio_title', __( "Welcome to my site", "duena-revival" ));
 					} else {
 						$img_alt = get_bloginfo( 'name' );
 					}
 					echo "<figure class='author_bio_img'><img src='".esc_url( get_theme_mod('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
 				}
-				if ( '' != get_theme_mod('g_author_bio_message') ) {
-					echo "<div class='author_bio_message'>".get_theme_mod('g_author_bio_message')."</div>\n";
+				if ( '' != get_theme_mod('g_author_bio_message', __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" )) ) {
+					echo "<div class='author_bio_message'>".get_theme_mod('g_author_bio_message', __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ))."</div>\n";
 				}
 			?>
 			</div>

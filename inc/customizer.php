@@ -318,7 +318,7 @@ function duena_revival_customize_register( $wp_customize ) {
 	/*  Color scheme (2.1.0) That orange color changer #ff5b5b
 	/*-----------------------------------------------------------------------------------*/
 	$wp_customize->add_setting( 'cs_primary_color', array(
-			'default'						=>'#ff5b5b',
+			'default'						=> '#ff5b5b',
 			'sanitize_callback' => 'sanitize_hex_color'
 	));
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'cs_primary_color', array(

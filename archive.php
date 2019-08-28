@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="col-md-8 <?php echo esc_attr( get_theme_mod('blog_sidebar_pos') ) ?>">
+	<div id="primary" class="col-md-8 <?php echo esc_attr( get_theme_mod('blog_sidebar_pos', 'right') ) ?>">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>

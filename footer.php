@@ -23,7 +23,7 @@
 						<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'duena-revival' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'duena-revival' ), 'WordPress' ); ?></a>
 					<?php } ?>
 				</div>
-				<?php if (true == get_theme_mod('footer_menu')) {
+				<?php if (true == get_theme_mod('footer_menu', false)) {
 					wp_nav_menu( array(
 						'container'       => 'ul',
 		                'menu_class'      => 'footer-menu',
