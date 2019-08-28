@@ -233,8 +233,8 @@ function duena_portfolio_show() {
 			<div class="<?php echo esc_attr( $item_class ); ?>">
 				<div class="hentry">
 				<?php
-					$show_thumb = get_option( 'portfolio_show_thumbnail', 'true' );
-					if ( 'true' == $show_thumb ) {
+					$show_thumb = get_option( 'portfolio_show_thumbnail', true );
+					if ( true == $show_thumb ) {
 				?>
 					<figure class="featured-thumbnail thumbnail">
 						<a href="<?php echo get_permalink(); ?>">
@@ -259,8 +259,8 @@ function duena_portfolio_show() {
 				<?php } ?>
 					<div class="post_content">
 					<?php
-						$show_title = get_option( 'portfolio_show_title', 'true' );
-						if ( 'true' == $show_title ) {
+						$show_title = get_option( 'portfolio_show_title', true );
+						if ( true == $show_title ) {
 					?>
 						<h5>
 							<a href="<?php echo get_permalink(); ?>">
@@ -269,8 +269,8 @@ function duena_portfolio_show() {
 						</h5>
 					<?php
 						}
-						$show_excerpt = get_option( 'portfolio_show_excerpt', 'true' );
-						if ( 'true' == $show_excerpt ) {
+						$show_excerpt = get_option( 'portfolio_show_excerpt', true );
+						if ( true == $show_excerpt ) {
 					?>
 						<div class="excerpt">
 						<?php
@@ -308,10 +308,10 @@ function duena_portfolio_show() {
 /**
  * Get colors
  */
-function duena_get_user_colors() {
-	$primary_color = get_option( 'cs_primary_color', '#ff5b5b' );
-	$secondary_color = get_option( 'cs_secondary_color', '#71a08b' );
-	$background_color = get_option( 'cs_background_color', '#210f1d' );
+function duena_revival_get_user_colors() {
+	$primary_color = get_theme_mod( 'cs_primary_color', '#ff5b5b' );
+	$secondary_color = get_theme_mod( 'cs_secondary_color', '#71a08b' );
+	$background_color = get_theme_mod( 'cs_background_color', '#210f1d' );
 
 	// This is where the top page pic changes
 	if ( $primary_color == '#ff5b5b') {

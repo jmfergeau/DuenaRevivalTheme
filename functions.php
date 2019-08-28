@@ -31,13 +31,13 @@ if ( !function_exists('duena_string_limit_words') ) {
  */
 
 //Loading options.php for theme customizer
-include_once( get_template_directory() . '/options.php');
+//include_once( get_template_directory() . '/options.php');
 
 //Loads the Options Panel
-if ( !function_exists( 'optionsframework_init' ) ) {
-	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
-	include_once( get_template_directory() . '/options/options-framework.php' );
-}
+// if ( !function_exists( 'optionsframework_init' ) ) {
+// 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
+// 	include_once( get_template_directory() . '/options/options-framework.php' );
+// }
 
 
 
@@ -70,6 +70,11 @@ function duena_setup() {
 	 * Custom functions that act independently of the theme templates
 	 */
 	require( get_template_directory() . '/inc/extras.php' );
+
+	/**
+	* Includes sanitizing stuff
+	*/
+	require( get_template_directory() . '/inc/sanitize.php');
 
 	/**
 	 * Customizer additions
@@ -177,7 +182,7 @@ function duena_styles() {
 	wp_enqueue_style( 'magnific' );
 
 	// FontAwesome stylesheet
-	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.9.0/css/all.css', '', '5.9.0');
+	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.10.2/css/all.css', '', '5.10.2');
 	wp_enqueue_style( 'font-awesome' );
 
 	// Main stylesheet
@@ -229,21 +234,6 @@ function duena_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'duena_scripts', 10 );
 add_action( 'wp_enqueue_scripts', 'duena_styles', 10 );
-
-
-/**
- * Include additional assests for admin area
- */
-function duena_admin_assets() {
-	$screen = get_current_screen();
-	if ( isset( $screen ) && 'page' == $screen->post_type ) {
-		// scripts
-		wp_enqueue_script( 'duena-admin-script', get_template_directory_uri() . '/js/admin-scripts.js', array('jquery'), '1.0', true );
-		// styles
-		wp_enqueue_style( 'duena-admin-style', get_template_directory_uri() . '/css/admin-style.css', '', '1.0' );
-	}
-}
-add_action( 'admin_enqueue_scripts', 'duena_admin_assets' );
 
 /**
  * Adding class 'active' to current menu item
@@ -416,46 +406,52 @@ if (! function_exists( 'duena_breadcrumb' )) {
 /*-----------------------------------------------------------------------------------*/
 add_action( 'before_sidebar', 'duena_show_author_bio', 10 );
 
-if ( ! function_exists ( 'duena_show_author_bio' ) ) {
-	function duena_show_author_bio() {
-		if ( 'no' != of_get_option('g_author_bio') ) {
+if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
+	function duena_revival_show_author_bio() {
+		if ( false != get_theme_mod('g_author_bio', true) ) {
 		?>
 		<div class="author_bio_sidebar">
 			<div class="social_box">
-		<?php // Here, you can change the icons in your child themes by just editing the i tag. Refer to https://fontawesome.com/icons to find the icons choices
-			if ( '' != of_get_option('g_author_bio_social_twitter') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='fab fa-twitter'></i></a>\n";
+		<?php
+			$datdamnb1 = ''; $datdamnb2 = ''; $datdamnb3 = ''; $datdamnb4 = ''; $datdamnb5 = ''; // ...php is an idiot
+			if ( 'none' != get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ) {
+				if ((get_theme_mod('g_author_bio_social_twitter_icon') != 'rss') && (get_theme_mod('g_author_bio_social_twitter_icon') != 'envelope')) { $datdamnb1 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter_text', '#') )."'><i class='fa". $datdamnb1 ." fa-". get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ."'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_facebook') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fab fa-facebook-f'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ) {
+				if ((get_theme_mod('g_author_bio_social_facebook_icon') != 'rss') && (get_theme_mod('g_author_bio_social_facebook_icon') != 'envelope')) { $datdamnb2 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook_text', '#') )."'><i class='fa". $datdamnb2 ." fa-". get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ."'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_patreon') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_patreon') )."'><i class='fab fa-patreon'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ) {
+				if ((get_theme_mod('g_author_bio_social_patreon_icon') != 'rss') && (get_theme_mod('g_author_bio_social_patreon_icon') != 'envelope')) { $datdamnb3 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon_text', '#') )."'><i class='fa". $datdamnb3 ." fa-". get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ."'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_linked') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fab fa-linkedin-in'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ) {
+				if ((get_theme_mod('g_author_bio_social_linkedin_icon') != 'rss') && (get_theme_mod('g_author_bio_social_linkedin_icon') != 'envelope')) { $datdamnb4 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linkedin_text', '#') )."'><i class='fa". $datdamnb4 ." fa-". get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ."'></i></a>\n";
 			}
-			if ( '' != of_get_option('g_author_bio_social_rss') ) {
-				echo "<a href='".esc_url( of_get_option('g_author_bio_social_rss') )."'><i class='fa fa-rss'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_rss_icon', 'rss') ) {
+				if ((get_theme_mod('g_author_bio_social_rss_icon') != 'rss') && (get_theme_mod('g_author_bio_social_rss_icon') != 'envelope')) { $datdamnb5 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss_text', '#') )."'><i class='fa". $datdamnb5 ." fa-". get_theme_mod('g_author_bio_social_rss_icon', 'rss') ."'></i></a>\n";
 			}
 		?>
 			</div>
-			<?php if (( '' != of_get_option('g_author_bio_title') ) || ('' != of_get_option('g_author_bio_img')) || ('' != of_get_option('g_author_bio_message')) ) { ?>
+			<?php if (( '' != get_theme_mod('g_author_bio_title') ) || ('' != get_theme_mod('g_author_bio_img')) || ('' != get_theme_mod('g_author_bio_message')) ) { ?>
 			<div class="content_box">
 			<?php
-				if ( '' != of_get_option('g_author_bio_title') ) {
-					echo "<h2>".of_get_option('g_author_bio_title')."</h2>\n";
+				if ( '' != get_theme_mod('g_author_bio_title') ) {
+					echo "<h2>".get_theme_mod('g_author_bio_title')."</h2>\n";
 				}
-				if ( '' != of_get_option('g_author_bio_img') ) {
-					if ( '' != of_get_option('g_author_bio_title') ) {
-						$img_alt = of_get_option('g_author_bio_title');
+				if ( '' != get_theme_mod('g_author_bio_img') ) {
+					if ( '' != get_theme_mod('g_author_bio_title') ) {
+						$img_alt = get_theme_mod('g_author_bio_title');
 					} else {
 						$img_alt = get_bloginfo( 'name' );
 					}
-					echo "<figure class='author_bio_img'><img src='".esc_url( of_get_option('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
+					echo "<figure class='author_bio_img'><img src='".esc_url( get_theme_mod('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
 				}
-				if ( '' != of_get_option('g_author_bio_message') ) {
-					echo "<div class='author_bio_message'>".of_get_option('g_author_bio_message')."</div>\n";
+				if ( '' != get_theme_mod('g_author_bio_message') ) {
+					echo "<div class='author_bio_message'>".get_theme_mod('g_author_bio_message')."</div>\n";
 				}
 			?>
 			</div>
@@ -581,11 +577,11 @@ if (!function_exists('img_html_to_post_id')) {
 if (!function_exists('duena_footer_js')) {
 	function duena_footer_js() {
 
-			$sf_delay = esc_attr( of_get_option('sf_delay') );
-			$sf_f_animation = esc_attr( of_get_option('sf_f_animation') );
-			$sf_sl_animation = esc_attr( of_get_option('sf_sl_animation') );
-			$sf_speed = esc_attr( of_get_option('sf_speed') );
-			$sf_arrows = esc_attr( of_get_option('sf_arrows') );
+			$sf_delay = esc_attr( get_theme_mod('sf_delay') );
+			$sf_f_animation = esc_attr( get_theme_mod('sf_f_animation') );
+			$sf_sl_animation = esc_attr( get_theme_mod('sf_sl_animation') );
+			$sf_speed = esc_attr( get_theme_mod('sf_speed') );
+			$sf_arrows = esc_attr( get_theme_mod('sf_arrows') );
 			if ('' == $sf_delay) {$sf_delay = 1000;}
 			if ('' == $sf_f_animation) {$sf_f_animation = 'show';}
 			if ('' == $sf_sl_animation) {$sf_sl_animation = 'show';}
@@ -644,17 +640,17 @@ function wpb_image_editor_default_to_gd( $editors ) {
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 
 /* Gutenberg support (2.1.0) */
-function duena_setup_theme_supported_features() {
+function duena_revival_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
         array(
             'name' => __( 'Primary color', 'themeLangDomain' ),
             'slug' => 'user-primary',
-            'color' => $primary_color,
+            'color' => get_theme_mod( 'cs_primary_color', '#ff5b5b' ),
         ),
         array(
             'name' => __( 'Secondary color', 'themeLangDomain' ),
             'slug' => 'user-secondary',
-            'color' => $secondary_color,
+            'color' => get_theme_mod( 'cs_secondary_color', '#71a08b' ),
         ),
         array(
             'name' => __( 'very light gray', 'themeLangDomain' ),
@@ -702,7 +698,7 @@ add_theme_support( 'editor-font-sizes', array(
 require_once( get_template_directory() . '/wp-gitlab-updater/theme-updater.php' );
 
 new Moenus\GitLabUpdater\ThemeUpdater( [
-    'slug' => 'duena',
+    'slug' => 'duena-revival',
     'access_token' => 'ZaQ2ovPMJ-btAHsR-NNS',
     'gitlab_url' => 'https://gitlab.com',
     'repo' => 'maxlefou/DuenaRevivalTheme',

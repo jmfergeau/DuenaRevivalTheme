@@ -27,7 +27,7 @@
 	<?php if(!is_singular()) : ?>
 
 		<div class="post_content">
-			<?php if ( 'false' != of_get_option('post_excerpt')) { ?>
+			<?php if ( false != get_theme_mod('post_excerpt')) { ?>
 				<div class="excerpt">
 				<?php
 					$excerpt = get_the_excerpt();
@@ -39,8 +39,8 @@
 				?>
 				</div>
 			<?php } ?>
-			<?php if ( 'false' != of_get_option('post_button')) { ?>
-				<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
+			<?php if ( false != get_theme_mod('post_button')) { ?>
+				<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena-revival'); ?></a>
 			<?php } ?>
 		</div>
 

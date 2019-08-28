@@ -15,22 +15,22 @@
 		<div class="container">
 			<div class="site-info col-md-12">
 				<div class="footer-text">
-					<?php 
-					$footer_text = esc_attr(of_get_option('footer_text'));
+					<?php
+					$footer_text = esc_attr(get_theme_mod('footer_text'));
 					if ('' != $footer_text) {
 						echo stripslashes(htmlspecialchars_decode($footer_text));
 					} else { ?>
 						<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'duena' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'duena' ), 'WordPress' ); ?></a>
 					<?php } ?>
 				</div>
-				<?php if ('true' == of_get_option('footer_menu')) {
-					wp_nav_menu( array( 
-						'container'       => 'ul', 
-		                'menu_class'      => 'footer-menu', 
+				<?php if (true == get_theme_mod('footer_menu')) {
+					wp_nav_menu( array(
+						'container'       => 'ul',
+		                'menu_class'      => 'footer-menu',
 		                'menu_id'         => 'footer-nav',
 		                'depth'           => 0,
-		                'theme_location' => 'footer' 
-					) ); 
+		                'theme_location' => 'footer'
+					) );
 				}
 				?>
 				<div class="clear"></div>

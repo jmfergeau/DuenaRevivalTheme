@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Themes - Duena\n"
 "POT-Creation-Date: 2019-06-09 22:10+0200\n"
-"PO-Revision-Date: 2019-06-10 13:55+0200\n"
+"PO-Revision-Date: 2019-08-27 23:12+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -455,7 +455,7 @@ msgstr ""
 
 #: ../options.php:204
 msgid "Display Author Bio in sidebar"
-msgstr "Montrer la bio sur le côté"
+msgstr "Montrer la bio dans la sidebar"
 
 #: ../options.php:205
 msgid "Show/hide author bio in sidebar"
@@ -535,8 +535,8 @@ msgid "Enter Author RSS URL"
 msgstr "Entrer l'URL du RSS de l'auteur"
 
 #: ../options.php:269 ../options.php:871
-msgid "Logo & Favicon"
-msgstr "Logo & Favicon"
+msgid "Title or logo"
+msgstr "Titre ou logo"
 
 #: ../options.php:272
 msgid "What kind of logo?"
@@ -911,7 +911,7 @@ msgstr ""
 
 #: ../options.php:595
 msgid "Display Footer menu?"
-msgstr "Afficher le pied de page ?"
+msgstr "Afficher le menu du pied de page ?"
 
 #: ../options.php:596
 msgid "Do you want to display footer menu?"
@@ -1153,6 +1153,29 @@ msgstr "Rechercher"
 #: ../sidebar.php:24
 msgid "Meta"
 msgstr "Méta"
+
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54
+msgid "Permalink to:"
+msgstr "Permalien vers :"
+
+msgid "Icon for spot #"
+msgstr "Icône pour l'emplacement n°"
+
+msgid "URL for spot #"
+msgstr "URL pour l'emplacement n°"
+
+msgid "Default is"
+msgstr "Par défaut:"
+
+msgid "Disable"
+msgstr "Désactivé"
+
+msgid "Generic git repository"
+msgstr "Dépot git générique"
+
+msgid "RSS feed"
+msgstr "Fil RSS"
 
 #~ msgid "A Semantic Personal Publishing Platform"
 #~ msgstr "Une plate-forme sémantique de publication personnelle"

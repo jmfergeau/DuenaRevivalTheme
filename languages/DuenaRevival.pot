@@ -507,7 +507,7 @@ msgid "Enter Author RSS URL"
 msgstr ""
 
 #: ../options.php:269 ../options.php:871
-msgid "Logo & Favicon"
+msgid "Title or logo"
 msgstr ""
 
 #: ../options.php:272
@@ -1105,3 +1105,21 @@ msgstr ""
 #: ../sidebar.php:24
 msgid "Meta"
 msgstr ""
+
+msgid "Icon for spot #"
+msgstr ""
+
+msgid "URL for spot #"
+msgstr ""
+
+msgid "Default is"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Generic git repository"
+msgstr "Dépot git générique"
+
+msgid "RSS feed"
+msgstr "Fil RSS"

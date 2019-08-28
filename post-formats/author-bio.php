@@ -6,7 +6,7 @@
  *
  */
 ?>
-<?php if ( 'false' != esc_attr( of_get_option('post_author') ) ) { ?>
+<?php if ( false != esc_attr( get_theme_mod('post_author') ) ) { ?>
 <div class="author-info">
 	<figure class="thumbnail">
 		<?php echo get_avatar( get_the_author_meta( 'user_email' ), 80, '' ,get_the_author_meta( 'nickname' ) ); ?>
