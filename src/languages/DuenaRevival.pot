@@ -863,7 +863,7 @@ msgid "Footer copyright text"
 msgstr ""
 
 #: ../options.php:590
-msgid "Enter text used in the right side of the footer. HTML tags are allowed."
+msgid "HTML tags are allowed."
 msgstr ""
 
 #: ../options.php:595
