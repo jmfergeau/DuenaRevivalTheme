@@ -2,6 +2,9 @@ v4.0.0
 - Fix: Major corrections to fit the theme with latest WP standards. (although it didn't prevented it to work before anyway)
 - Fix: The portfolio pages are now displayed correctly
 - Tweak: FontAwesome updated to version 5.10.2
+- Tweak: Superfish updated to 1.7.10
+- Tweak: jQuery Mobile Menu updated to 1.1
+- Tweak: Magnific Popup updated to 1.1.0
 - Tweak: Got rid of Options Framework, being outdated, non developed anymore, causing issues, you name it...
 - Tweak: [SRC] Made separated scss for style.scss.
 - Tweak: changed theme slug to duena-revival instead of just duena. You can now have both Duena and Duena Revival in the same wordpress install. Which is useless but now possible. Though, update might not work anymore and you might need to install manually this version.
