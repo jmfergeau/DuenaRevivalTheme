@@ -1,25 +1,22 @@
 <?php
 /**
- * The Header for our theme.
+ * duena-revival header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package duena
+ * @package duena-revival
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<?php // wp_title( '|', true, 'right' ); // Apparently deprecated wtf ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no" />
 <meta name="theme-color" content="<?php echo get_theme_mod( 'cs_primary_color' ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php if( '' != of_get_option('favicon') ){ ?>
-<link rel="icon" href="<?php echo esc_url( of_get_option('favicon', "" ) ); ?>" type="image/x-icon" />
 
-<?php } ?>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->

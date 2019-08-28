@@ -12,8 +12,10 @@ v4.0.0
 
 v3.2.0
 - Fix: Minor CSS corrections
-- Tweak: style.css can now be generated using sass (careful to not remove the comment blocks in generated css!!!)
-- Language: added missing translations
+- Tweak: style.css and some other css can now be generated using sass
+- Tweak: Added bash script to compile scss. Needs npm to install sass. Check sass-compile.sh for more info.
+- Feature: Scss and other source files are now in a folder called src. This folder can be safely deleted in production.
+- Language: Made translatable some lines that were ignored by wp.
 
 v3.1.0
 - Fix: Minor CSS corrections, mostly in clear mode

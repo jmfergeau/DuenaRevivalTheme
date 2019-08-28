@@ -56,7 +56,7 @@
                     ?>
                     <div class="sl-capt-content"><?php
                         $excerpt = get_the_excerpt();
-                        echo duena_string_limit_words($excerpt,$exc_length);
+                        echo duena_revival_string_limit_words($excerpt,$exc_length);
                     ?></div>
                     <?php
                         }
@@ -65,7 +65,7 @@
                         if ( '' != esc_attr(get_theme_mod('sl_capt_btn_txt')) ) {
                             $btn_txt = esc_attr(get_theme_mod('sl_capt_btn_txt'));
                         } else {
-                            $btn_txt = __( 'Read more', 'duena' );
+                            $btn_txt = __( 'Read more', 'duena-revival' );
                         }
                     ?>
                     <a href="<?php the_permalink(); ?>" class="btn btn-primary" title="<?php the_title(); ?>"><?php echo $btn_txt; ?></a>

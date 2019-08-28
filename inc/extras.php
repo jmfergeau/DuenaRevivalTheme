@@ -4,22 +4,22 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package duena
+ * @package duena-revival
  */
 
 /**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  */
-function duena_page_menu_args( $args ) {
+function duena_revival_page_menu_args( $args ) {
 	$args['show_home'] = true;
 	return $args;
 }
-add_filter( 'wp_page_menu_args', 'duena_page_menu_args' );
+add_filter( 'wp_page_menu_args', 'duena_revival_page_menu_args' );
 
 /**
  * Adds custom classes to the array of body classes.
  */
-function duena_body_classes( $classes ) {
+function duena_revival_body_classes( $classes ) {
 	// Adds a class of group-blog to blogs with more than 1 published author
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
@@ -27,12 +27,12 @@ function duena_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'duena_body_classes' );
+add_filter( 'body_class', 'duena_revival_body_classes' );
 
 /**
  * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
  */
-function duena_enhanced_image_navigation( $url, $id ) {
+function duena_revival_enhanced_image_navigation( $url, $id ) {
 	if ( ! is_attachment() && ! wp_attachment_is_image( $id ) )
 		return $url;
 
@@ -42,12 +42,12 @@ function duena_enhanced_image_navigation( $url, $id ) {
 
 	return $url;
 }
-add_filter( 'attachment_link', 'duena_enhanced_image_navigation', 10, 2 );
+add_filter( 'attachment_link', 'duena_revival_enhanced_image_navigation', 10, 2 );
 
 /**
  * Filters wp_title to print a neat <title> tag based on what is being viewed.
  */
-function duena_wp_title( $title, $sep ) {
+function duena_revival_wp_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() )
@@ -63,16 +63,16 @@ function duena_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary:
 	if ( $paged >= 2 || $page >= 2 )
-		$title .= " $sep " . sprintf( __( 'Page %s', 'duena' ), max( $paged, $page ) );
+		$title .= " $sep " . sprintf( __( 'Page %s', 'duena-revival' ), max( $paged, $page ) );
 
 	return $title;
 }
-add_filter( 'wp_title', 'duena_wp_title', 10, 2 );
+add_filter( 'wp_title', 'duena_revival_wp_title', 10, 2 );
 
 /**
  * Show gallery on blog page
  */
-function duena_gallery_sl() {
+function duena_revival_gallery_sl() {
 	global $post;
 	?>
 	<div class="gallery_slider gallery-<?php echo $post->ID; ?>">
@@ -149,7 +149,7 @@ function duena_gallery_sl() {
 /**
  * Image post format custom output
  */
-function duena_post_format_image() {
+function duena_revival_post_format_image() {
 	global $post;
 	if ( function_exists('get_post_format_meta') ) {
 		$meta = get_post_format_meta( $post->ID );
@@ -189,7 +189,7 @@ function duena_post_format_image() {
 /**
  * Show loop on portfolio page template
  */
-function duena_portfolio_show() {
+function duena_revival_portfolio_show() {
 	wp_reset_query();
 	global $post;
 	$post_num = get_option( 'portfolio_per_page', '12' );
@@ -201,14 +201,14 @@ function duena_portfolio_show() {
 		'posts_per_page'      => $post_num,
 		'ignore_sticky_posts' => 1
 	);
-	$from_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true );
+	$from_cat = get_post_meta( $post->ID, 'duena_revival_portfolio_meta_cats', true );
 	if ( '' != $from_cat && 'from_all' != $from_cat ) {
 		$args['cat'] = $from_cat;
 	}
 
 	$count_portf = 0;
 	$item_class = 'portf_item';
-	$columns =  intval(get_post_meta( $post->ID, 'duena_portfolio_meta_cols', true ));
+	$columns =  intval(get_post_meta( $post->ID, 'duena_revival_portfolio_meta_cols', true ));
 	if ( '' == $columns || 0 == $columns ) {
 		$columns = 3;
 	}
@@ -278,7 +278,7 @@ function duena_portfolio_show() {
 							if (has_excerpt()) {
 								the_excerpt();
 							} else {
-								echo apply_filters( 'the_excerpt', duena_string_limit_words($excerpt,20) );
+								echo apply_filters( 'the_excerpt', duena_revival_string_limit_words($excerpt,20) );
 							}
 						?>
 						</div>
@@ -287,7 +287,7 @@ function duena_portfolio_show() {
 						$show_link = get_option( 'portfolio_show_link', 'true' );
 						if ( 'true' == $show_link ) {
 					?>
-						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
+						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena-revival'); ?></a>
 					<?php } ?>
 					</div>
 				</div>
@@ -435,26 +435,26 @@ function duena_revival_get_user_colors() {
 /**
  * Add Portfolio page template custom fields
  */
-function duena_add_portfolio_meta_box() {
-	add_meta_box( 'duena-portfolio-page', __( 'Page Options', 'duena' ), 'duena_show_porfolio_metabox', 'page', 'normal', 'high' );
+function duena_revival_add_portfolio_meta_box() {
+	add_meta_box( 'duena-revival-portfolio-page', __( 'Page Options', 'duena-revival' ), 'duena_revival_show_porfolio_metabox', 'page', 'normal', 'high' );
 }
-add_action('admin_menu', 'duena_add_portfolio_meta_box');
+add_action('admin_menu', 'duena_revival_add_portfolio_meta_box');
 
-function duena_show_porfolio_metabox( $post ) {
-	echo '<input type="hidden" name="duena_portfolio_meta_box_nonce" value="' . wp_create_nonce( basename(__FILE__) ) . '" />';
+function duena_revival_show_porfolio_metabox( $post ) {
+	echo '<input type="hidden" name="duena_revival_portfolio_meta_box_nonce" value="' . wp_create_nonce( basename(__FILE__) ) . '" />';
 	echo '<table class="form-table">';
 		echo '<tr>';
 			echo '<td>';
-				_e( 'Select columns number', 'duena' );
+				_e( 'Select columns number', 'duena-revival' );
 			echo '</td>';
 			echo '<td>';
 
-				$curr_cols = intval(get_post_meta( $post->ID, 'duena_portfolio_meta_cols', true ));
+				$curr_cols = intval(get_post_meta( $post->ID, 'duena_revival_portfolio_meta_cols', true ));
 				if ( '' == $curr_cols || 0 == $curr_cols ) {
 					$curr_cols = 3;
 				}
 
-				echo '<select name="duena_portfolio_meta_cols">';
+				echo '<select name="duena_revival_portfolio_meta_cols">';
 					echo '<optgroup>';
 						echo '<option value="2" ' . selected( $curr_cols, 2, false ) . '>2</option>';
 						echo '<option value="3" ' . selected( $curr_cols, 3, false ) . '>3</option>';
@@ -465,7 +465,7 @@ function duena_show_porfolio_metabox( $post ) {
 		echo '</tr>';
 		echo '<tr>';
 			echo '<td>';
-				_e( 'Select category to pull posts from', 'duena' );
+				_e( 'Select category to pull posts from', 'duena-revival' );
 			echo '</td>';
 			echo '<td>';
 
@@ -476,14 +476,14 @@ function duena_show_porfolio_metabox( $post ) {
 						$all_categories[$category->cat_ID] = $category->cat_name;
 				}
 
-				$all_cats_array = array('from_all' => __( 'Select from all', 'duena' ) ) + $all_categories;
+				$all_cats_array = array('from_all' => __( 'Select from all', 'duena-revival' ) ) + $all_categories;
 
-				$curr_cat = get_post_meta( $post->ID, 'duena_portfolio_meta_cats', true );
+				$curr_cat = get_post_meta( $post->ID, 'duena_revival_portfolio_meta_cats', true );
 				if ( '' == $curr_cat ) {
 					$curr_cat = 'from_all';
 				}
 
-				echo '<select name="duena_portfolio_meta_cats">';
+				echo '<select name="duena_revival_portfolio_meta_cats">';
 					echo '<optgroup>';
 					foreach ($all_cats_array as $cat_id => $cat_name) {
 						echo '<option value="' . $cat_id . '" ' . selected( $curr_cat, $cat_id, false ) . '>' . $cat_name . '</option>';
@@ -498,10 +498,10 @@ function duena_show_porfolio_metabox( $post ) {
 /**
  * Save Portfolio page template custom fields
  */
-function duena_save_portfolio_meta( $post_id ) {
+function duena_revival_save_portfolio_meta( $post_id ) {
 
 	// verify nonce
-	if (!isset($_POST['duena_portfolio_meta_box_nonce']) || !wp_verify_nonce($_POST['duena_portfolio_meta_box_nonce'], basename(__FILE__))) {
+	if (!isset($_POST['duena_revival_portfolio_meta_box_nonce']) || !wp_verify_nonce($_POST['duena_revival_portfolio_meta_box_nonce'], basename(__FILE__))) {
 		return $post_id;
 	}
 	// check autosave
@@ -513,7 +513,7 @@ function duena_save_portfolio_meta( $post_id ) {
 		return $post_id;
 	}
 
-	$saved_data = array( 'duena_portfolio_meta_cols', 'duena_portfolio_meta_cats' );
+	$saved_data = array( 'duena_revival_portfolio_meta_cols', 'duena_revival_portfolio_meta_cats' );
 
 	foreach ( $saved_data as $single_field ) {
 		$currnet_data = get_post_meta( $post_id, $single_field, true );
@@ -526,5 +526,5 @@ function duena_save_portfolio_meta( $post_id ) {
 
 
 }
-add_action('save_post', 'duena_save_portfolio_meta');
+add_action('save_post', 'duena_revival_save_portfolio_meta');
 ?>

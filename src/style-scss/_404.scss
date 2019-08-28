@@ -1,0 +1,29 @@
+/* =Page 404
+----------------------------------------------- */
+.page404 {
+  text-align: center;
+}
+.page404 .hentry {
+  padding: 20px 35px 20px;
+}
+.page404 .hentry .searchform {
+  margin: 0 50px;
+}
+.error404-num {
+  font-size: 200px;
+  line-height: 150px;
+  color: $primary-def;
+  padding: 20px 0 10px 0;
+}
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .error404-num {
+    font-size: 100px;
+    line-height: 80px;
+    color: $primary-def;
+    padding: 20px 0 10px 0;
+  }
+  .page404 .hentry .searchform {
+    margin: 0 10px;
+  }
+}

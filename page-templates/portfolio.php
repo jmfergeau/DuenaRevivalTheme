@@ -3,7 +3,7 @@
  *
  * Template Name: Portfolio Page
  *
- * @package duena
+ * @package duena-revival
  */
 
 get_header(); ?>
