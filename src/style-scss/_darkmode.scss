@@ -64,6 +64,12 @@
     border: 1px solid $grey5;
   }
 
+  .wp-block-search input[type="search"] {
+    color: $lesswhite;
+    background: $grey1;
+    border: none;
+  }
+
   .wp-block-calendar caption {
     color: $lesserwhite !important;
   }

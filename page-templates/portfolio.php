@@ -24,7 +24,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<div class="row">
+		<div class="row portf">
 			<?php duena_revival_portfolio_show(); ?>
 		</div>
 

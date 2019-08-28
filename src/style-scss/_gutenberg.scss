@@ -126,6 +126,26 @@ p.wp-block-cover-text {
   background: #f5f5f5;
 }
 
+.wp-block-search {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wp-block-search label {
+  font-family: "BenchNine",sans-serif;
+  font-size: 1.5rem;
+}
+
+.wp-block-search input[type="search"] {
+  display: flex;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  border-radius: 15px;
+  padding: 7px 35px 8px 15px;
+}
+
 pre {
     display: block;
     padding: 8px;
