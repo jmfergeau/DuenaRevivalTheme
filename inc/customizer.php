@@ -113,64 +113,205 @@ function duena_revival_customize_register( $wp_customize ) {
 			'priority' => 17
 	) );
 
-	/* g_author_bio_social_twitter */
-	$wp_customize->add_setting( 'g_author_bio_social_twitter', array(
+	/*-----------------------------------------------------------------------------------*/
+	/*	Author sidebar icons
+	/*-----------------------------------------------------------------------------------*/
+	/*
+	 * Preparing icons lists. First 5 are defaults.
+	 * You can add your own icons if there's any missing in the list. (really?)
+	 * To make them work, just respect the following rule:
+	 * 'FontAwesome-icon-code' => 'Human readable name for the icon',
+	 * ex: 'facebook-f' => 'Facebook',
+	 * To get the list of available icons, follow this link:
+	 * https://fontawesome.com/icons?d=gallery&s=brands
+	 */
+
+
+	$fa_icons_list = array(
+		'none' => __( "Disable", "duena-revival" ), 	// Disables the icon spot
+		'amazon' => 'Amazon',
+		'amazon-pay' => 'Amazon Pay',
+		'app-store' => 'Apple App Store',
+		'apple-pay' => 'Apple Pay',
+		'bandcamp' => 'Bandcamp',
+		'bitbucket' => 'BitBucket',
+		'btc' => 'Bitcoin',
+		'discord' => 'Discord',
+		'ebay' => 'Ebay',
+		'etsy' => 'Etsy',
+		'facebook-f' => 'Facebook',					// Spot 2 default
+		'flickr' => 'Flickr',
+		'git' => __( "Generic git repository", "duena-revival" ),
+		'github-alt' => 'GitHub',
+		'gitlab' => 'GitLab',
+		'google-play' => 'Google Play',
+		'instagram' => 'Instagram',
+		'itch-io' => 'Itch.io',
+		'itunes-note' => 'Itunes',
+		'kickstarter-k' => 'Kickstarter',
+		'lastfm' => 'Last.fm',
+		'linkedin-in' => 'LinkedIn',				// Spot 4 default
+		'mastodon' => 'Mastodon',
+		'patreon' => 'Patreon',							// Spot 3 default
+		'paypal' => 'PayPal',
+		'pinterest-p' => 'Pinterest',
+		'reddit-alien' => 'Reddit',
+		'salesforce' => 'SalesForce',
+		'skype' => 'Skype',
+		'slack-hash' => 'Slack',
+		'snapchat-ghost' => 'Snapchat',
+		'soundcloud' => 'Soundcloud',
+		'steam-symbol' => 'Steam',
+		'teamspeak' => 'TeamSpeak',
+		'telegram-plane' => 'Telegram',
+		'trello' => 'Trello',
+		'tumblr' => 'Tumblr',
+		'teamspeak' => 'TeamSpeak',
+		'twitter' => 'Twitter', 						// Spot 1 default
+		'uber' => 'Uber',
+		'viadeo' => 'Viadeo',
+		'vimeo-v' => 'Vimeo',
+		'whatsapp' => 'WhatsApp',
+		'wordpress-simple' => 'Wordpress',
+		'youtube' => 'YouTube',
+		// The icons below are not brands so they're separated.
+		'rss' => __( "RSS feed", "duena-revival" ),								// Spot 5 default
+		'envelope' => 'E-Mail'
+	);
+
+	/* g_author_bio_social_twitter_icon */
+	$wp_customize->add_setting( 'g_author_bio_social_twitter_icon', array(
+			'default' => 'twitter',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'g_author_bio_social_twitter_icon', array(
+			'label' => __( "Icon for spot #", "duena-revival" ) . '1',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['twitter']),
+			'section' => 'duena_revival_header',
+			'settings' => 'g_author_bio_social_twitter_icon',
+			'type' => 'select',
+			'choices' => $fa_icons_list,
+			'priority' => 18
+	) );
+	/* g_author_bio_social_twitter_text */
+	$wp_customize->add_setting( 'g_author_bio_social_twitter_text', array(
 			'default' => '#',
 			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'g_author_bio_social_twitter', array(
-			'label' => __( "Author Twitter URL", "duena-revival" ),
+	$wp_customize->add_control( 'g_author_bio_social_twitter_text', array(
+			'label' => __( "URL for spot #", "duena-revival" ) . '1',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['twitter']),
 			'section' => 'duena_revival_header',
-			'settings' => 'g_author_bio_social_twitter',
+			'settings' => 'g_author_bio_social_twitter_text',
 			'priority' => 18
 	) );
 
-	/* g_author_bio_social_facebook */
-	$wp_customize->add_setting( 'g_author_bio_social_facebook', array(
+	/* g_author_bio_social_facebook_icon */
+	$wp_customize->add_setting( 'g_author_bio_social_facebook_icon', array(
+			'default' => 'facebook-f',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'g_author_bio_social_facebook_icon', array(
+			'label' => __( "Icon for spot #", "duena-revival" ) . '2',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['facebook-f']),
+			'section' => 'duena_revival_header',
+			'settings' => 'g_author_bio_social_facebook_icon',
+			'type' => 'select',
+			'choices' => $fa_icons_list,
+			'priority' => 18
+	) );
+	/* g_author_bio_social_facebook_text */
+	$wp_customize->add_setting( 'g_author_bio_social_facebook_text', array(
 			'default' => '#',
 			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'g_author_bio_social_facebook', array(
-			'label' => __( "Author Facebook URL", "duena-revival" ),
+	$wp_customize->add_control( 'g_author_bio_social_facebook_text', array(
+			'label' => __( "URL for spot #", "duena-revival" ) . '2',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['facebook-f']),
 			'section' => 'duena_revival_header',
-			'settings' => 'g_author_bio_social_facebook',
-			'priority' => 19
+			'settings' => 'g_author_bio_social_facebook_text',
+			'priority' => 18
 	) );
 
-	/* g_author_bio_social_patreon */
-	$wp_customize->add_setting( 'g_author_bio_social_patreon', array(
+	/* g_author_bio_social_patreon_icon */
+	$wp_customize->add_setting( 'g_author_bio_social_patreon_icon', array(
+			'default' => 'patreon',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'g_author_bio_social_patreon_icon', array(
+			'label' => __( "Icon for spot #", "duena-revival" ) . '3',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['patreon']),
+			'section' => 'duena_revival_header',
+			'settings' => 'g_author_bio_social_patreon_icon',
+			'type' => 'select',
+			'choices' => $fa_icons_list,
+			'priority' => 18
+	) );
+	/* g_author_bio_social_patreon_text */
+	$wp_customize->add_setting( 'g_author_bio_social_patreon_text', array(
 			'default' => '#',
 			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'g_author_bio_social_patreon', array(
-			'label' => __( "Author Patreon URL", "duena-revival" ),
+	$wp_customize->add_control( 'g_author_bio_social_patreon_text', array(
+			'label' => __( "URL for spot #", "duena-revival" ) . '3',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['patreon']),
 			'section' => 'duena_revival_header',
-			'settings' => 'g_author_bio_social_patreon',
-			'priority' => 20
+			'settings' => 'g_author_bio_social_patreon_text',
+			'priority' => 18
 	) );
 
-	/* g_author_bio_social_linked */
-	$wp_customize->add_setting( 'g_author_bio_social_linked', array(
+	/* g_author_bio_social_linkedin_icon */
+	$wp_customize->add_setting( 'g_author_bio_social_linkedin_icon', array(
+			'default' => 'linkedin-in',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'g_author_bio_social_linkedin_icon', array(
+			'label' => __( "Icon for spot #", "duena-revival" ) . '4',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['linkedin-in']),
+			'section' => 'duena_revival_header',
+			'settings' => 'g_author_bio_social_linkedin_icon',
+			'type' => 'select',
+			'choices' => $fa_icons_list,
+			'priority' => 18
+	) );
+	/* g_author_bio_social_linkedin_text */
+	$wp_customize->add_setting( 'g_author_bio_social_linkedin_text', array(
 			'default' => '#',
 			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'g_author_bio_social_linked', array(
-			'label' => __( "Author LinkedIn URL", "duena-revival" ),
+	$wp_customize->add_control( 'g_author_bio_social_linkedin_text', array(
+			'label' => __( "URL for spot #", "duena-revival" ) . '4',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['linkedin-in']),
 			'section' => 'duena_revival_header',
-			'settings' => 'g_author_bio_social_linked',
-			'priority' => 21
+			'settings' => 'g_author_bio_social_linkedin_text',
+			'priority' => 18
 	) );
 
-	/* g_author_bio_social_rss */
-	$wp_customize->add_setting( 'g_author_bio_social_rss', array(
+	/* g_author_bio_social_rss_icon */
+	$wp_customize->add_setting( 'g_author_bio_social_rss_icon', array(
+			'default' => 'rss',
+			'sanitize_callback' => 'duena_revival_sanitize_choices'
+	) );
+	$wp_customize->add_control( 'g_author_bio_social_rss_icon', array(
+			'label' => __( "Icon for spot #", "duena-revival" ) . '5',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['rss']),
+			'section' => 'duena_revival_header',
+			'settings' => 'g_author_bio_social_rss_icon',
+			'type' => 'select',
+			'choices' => $fa_icons_list,
+			'priority' => 18
+	) );
+	/* g_author_bio_social_rss_text */
+	$wp_customize->add_setting( 'g_author_bio_social_rss_text', array(
 			'default' => '#',
 			'sanitize_callback' => 'esc_url_raw'
 	) );
-	$wp_customize->add_control( 'g_author_bio_social_rss', array(
-			'label' => __( "Author RSS URL", "duena-revival" ),
+	$wp_customize->add_control( 'g_author_bio_social_rss_text', array(
+			'label' => __( "URL for spot #", "duena-revival" ) . '5',
+			'description' => __( "Default is", "duena-revival" ) . " " . strval($fa_icons_list['rss']),
 			'section' => 'duena_revival_header',
-			'settings' => 'g_author_bio_social_rss',
-			'priority' => 22
+			'settings' => 'g_author_bio_social_rss_text',
+			'priority' => 18
 	) );
 
 	/*-----------------------------------------------------------------------------------*/

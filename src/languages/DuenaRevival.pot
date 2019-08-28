@@ -1110,3 +1110,21 @@ msgstr ""
 #: ../sidebar.php:24
 msgid "Meta"
 msgstr ""
+
+msgid "Icon for spot #"
+msgstr ""
+
+msgid "URL for spot #"
+msgstr ""
+
+msgid "Default is"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Generic git repository"
+msgstr "Dépot git générique"
+
+msgid "RSS feed"
+msgstr "Fil RSS"

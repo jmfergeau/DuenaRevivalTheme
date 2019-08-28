@@ -182,7 +182,7 @@ function duena_revival_styles() {
 	wp_enqueue_style( 'magnific' );
 
 	// FontAwesome stylesheet
-	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.9.0/css/all.css', '', '5.9.0');
+	wp_register_style( 'font-awesome', '//use.fontawesome.com/releases/v5.10.2/css/all.css', '', '5.10.2');
 	wp_enqueue_style( 'font-awesome' );
 
 	// Main stylesheet
@@ -412,21 +412,27 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 		?>
 		<div class="author_bio_sidebar">
 			<div class="social_box">
-		<?php // Here, you can change the icons in your child themes by just editing the i tag. Refer to https://fontawesome.com/icons to find the icons choices
-			if ( '' != get_theme_mod('g_author_bio_social_twitter', '#') ) {
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter', '#') )."'><i class='fab fa-twitter'></i></a>\n";
+		<?php
+			$datdamnb1 = ''; $datdamnb2 = ''; $datdamnb3 = ''; $datdamnb4 = ''; $datdamnb5 = ''; // ...php is an idiot
+			if ( 'none' != get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ) {
+				if ((get_theme_mod('g_author_bio_social_twitter_icon') != 'rss') && (get_theme_mod('g_author_bio_social_twitter_icon') != 'envelope')) { $datdamnb1 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter_text', '#') )."'><i class='fa". $datdamnb1 ." fa-". get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ."'></i></a>\n";
 			}
-			if ( '' != get_theme_mod('g_author_bio_social_facebook', '#') ) {
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook', '#') )."'><i class='fab fa-facebook-f'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ) {
+				if ((get_theme_mod('g_author_bio_social_facebook_icon') != 'rss') && (get_theme_mod('g_author_bio_social_facebook_icon') != 'envelope')) { $datdamnb2 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook_text', '#') )."'><i class='fa". $datdamnb2 ." fa-". get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ."'></i></a>\n";
 			}
-			if ( '' != get_theme_mod('g_author_bio_social_patreon', '#') ) {
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon', '#') )."'><i class='fab fa-patreon'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ) {
+				if ((get_theme_mod('g_author_bio_social_patreon_icon') != 'rss') && (get_theme_mod('g_author_bio_social_patreon_icon') != 'envelope')) { $datdamnb3 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon_text', '#') )."'><i class='fa". $datdamnb3 ." fa-". get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ."'></i></a>\n";
 			}
-			if ( '' != get_theme_mod('g_author_bio_social_linked', '#') ) {
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linked', '#') )."'><i class='fab fa-linkedin-in'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ) {
+				if ((get_theme_mod('g_author_bio_social_linkedin_icon') != 'rss') && (get_theme_mod('g_author_bio_social_linkedin_icon') != 'envelope')) { $datdamnb4 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linkedin_text', '#') )."'><i class='fa". $datdamnb4 ." fa-". get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ."'></i></a>\n";
 			}
-			if ( '' != get_theme_mod('g_author_bio_social_rss', '#') ) {
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss', '#') )."'><i class='fa fa-rss'></i></a>\n";
+			if ( 'none' != get_theme_mod('g_author_bio_social_rss_icon', 'rss') ) {
+				if ((get_theme_mod('g_author_bio_social_rss_icon') != 'rss') && (get_theme_mod('g_author_bio_social_rss_icon') != 'envelope')) { $datdamnb5 = 'b'; };
+				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss_text', '#') )."'><i class='fa". $datdamnb5 ." fa-". get_theme_mod('g_author_bio_social_rss_icon', 'rss') ."'></i></a>\n";
 			}
 		?>
 			</div>

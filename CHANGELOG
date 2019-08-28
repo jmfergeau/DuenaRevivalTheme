@@ -1,11 +1,13 @@
 v4.0.0
 - Fix: Major corrections to fit the theme with latest WP standards. (although it didn't prevented it to work before anyway)
 - Fix: The portfolio pages are now displayed correctly
+- Tweak: FontAwesome updated to version 5.10.2
 - Tweak: Got rid of Options Framework, being outdated, non developed anymore, causing issues, you name it...
 - Tweak: [SRC] Made separated scss for style.scss.
 - Tweak: changed theme slug to duena-revival instead of just duena. You can now have both Duena and Duena Revival in the same wordpress install. Which is useless but now possible. Though, update might not work anymore and you might need to install manually this version.
 - Feature: The custom options have been completely reworked. Some are now working differently and you might need to revise your theme settings if you updated the theme.
 - Feature: Gutenberg and dark supports for search widget
+- Feature: The icon bar in the author sidebar box is now entirely customizable! Tons of optional icons have been added too! They can even be disabled!
 - Language: French - Some corrections
 
 v3.2.0

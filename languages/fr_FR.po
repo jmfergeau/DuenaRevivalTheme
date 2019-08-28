@@ -1077,6 +1077,24 @@ msgstr "Méta"
 msgid "Permalink to:"
 msgstr "Permalien vers :"
 
+msgid "Icon for spot #"
+msgstr "Icône pour l'emplacement n°"
+
+msgid "URL for spot #"
+msgstr "URL pour l'emplacement n°"
+
+msgid "Default is"
+msgstr "Par défaut:"
+
+msgid "Disable"
+msgstr "Désactivé"
+
+msgid "Generic git repository"
+msgstr "Dépot git générique"
+
+msgid "RSS feed"
+msgstr "Fil RSS"
+
 #~ msgid "A Semantic Personal Publishing Platform"
 #~ msgstr "Une plate-forme sémantique de publication personnelle"
 
