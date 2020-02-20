@@ -1,0 +1,17 @@
+{
+    // To run these tasks you need to have sass installed.
+    // Install it with: npm install -g sass
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sass compile - bootstrap.css",
+            "type": "shell",
+            "command": "sass --source-map --style=compressed ${workspaceFolder}/src/bootstrap-scss/bootstrap.scss ${workspaceFolder}/bootstrap/css/bootstrap.min.css"
+        },
+        {
+            "label": "sass compile - style.css",
+            "type": "shell",
+            "command": "sass --source-map --style=compressed ${workspaceFolder}/src/style-scss/style.scss ${workspaceFolder}/style.css"
+        }
+    ]
+}
