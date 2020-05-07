@@ -18,6 +18,15 @@
     margin: 0 auto;
   }
 }
+.wp-block-cover,
+pre.wp-block-code,
+.wp-block-button,
+ul.wp-block-gallery,
+.wp-block-search,
+blockquote,
+.wp-block-table {
+  margin-bottom: $spacer;
+}
 .wp-block-gallery .blocks-gallery-image,
 .wp-block-gallery .blocks-gallery-item {
   font-family: sans-serif;
@@ -28,7 +37,6 @@
 ul.wp-block-gallery {
   margin-top: 0;
   margin-left: 0 !important;
-  margin-bottom: 1rem;
 }
 figure.wp-block-audio audio {
   width: 100%;
@@ -38,7 +46,6 @@ figure.wp-block-video video {
 }
 blockquote {
     padding: 8.5px 17px;
-    margin: 0 0 17px;
     border-left: 5px solid #eeeeee;
 }
 blockquote.wp-block-quote p {
@@ -88,7 +95,6 @@ p.wp-block-cover-text {
 
 .wp-block-table {
   width: 100% !important;
-  margin-bottom: 2em;
 }
 
 .wp-block-file
@@ -149,14 +155,13 @@ p.wp-block-cover-text {
 pre {
     display: block;
     padding: 8px;
-    margin: 0 0 8.5px;
     font-size: 11px;
     line-height: 1.428571429;
     word-break: break-all;
     word-wrap: break-word;
-    color: #333333;
-    background-color: #f5f5f5;
-    border: 1px solid #cccccc;
+    color: $grey2;
+    background-color: $lesswhite;
+    border: 1px solid $grey6;
     border-radius: 4px;
 }
 
