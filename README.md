@@ -3,7 +3,10 @@ Duena Revival Wordpress Theme v.4.0.0
 
 [![Licence](https://img.shields.io/badge/license-GNU%20GPLv3-green.svg)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 [![Bootstrap](https://img.shields.io/badge/bootstrap-4.3.1-blue.svg)](https://getbootstrap.com)
-[![Version](https://img.shields.io/badge/wordpress-5.x-blue.svg)](https://wordpress.org)
+[![Version](https://img.shields.io/badge/wordpress-5.4.x-blue.svg)](https://wordpress.org)
+
+## WARNING
+**This theme version might have issues with Wordpress 5.5.1 and higher.** The problem will be fixed in the next update. Though, in the meantime, **you can still use this theme without issues if you install [the plugin "Enable Jquery Migrate Helper"](https://wordpress.org/plugins/enable-jquery-migrate-helper/).**
 
 
 Duena revival is a project that aims to maintain the [Duena Wordpress theme](https://github.com/DuenaStudio/DuenaTheme) to the latest Wordpress standards, as well as adding missing features. Check the changelog file to see what is updated.
