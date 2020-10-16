@@ -877,7 +877,7 @@
 }
 .related-posts_item .featured-thumbnail a {
   display: block;
-  vertical-align: middle;
+  //vertical-align: middle;
   font-weight: bold;
 }
 .related-posts_item .featured-thumbnail a:hover {
@@ -903,6 +903,11 @@
 }
 .entry-attachment .attachment {
   padding: 0 0 15px 0;
+}
+
+.attachment img {
+  width: 100%;
+  height: auto;
 }
 
 /* Author bio */

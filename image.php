@@ -35,14 +35,12 @@ if ( ! isset( $content_width ) )
 						?>
 						<?php edit_post_link( __( 'Edit', 'duena-revival' ), '<span class="sep"> | </span> <span class="edit-link">', '</span>' ); ?>
 					</div><!-- .entry-meta -->
-					<ul class="pager">
-				        <li class="previous">
-				          <?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'duena-revival' ) ); ?>
-				        </li><!--.older-->
-				        <li class="next">
-				          <?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'duena-revival' ) ); ?>
-				        </li><!--.newer-->
-				    </ul><!-- image-navigation -->
+					<div class="wp-block-button alignleft">
+						<?php previous_image_link( false, __( '<span class="meta-nav">&larr;</span> Previous', 'duena-revival' ) ); ?>
+					</div>
+					<div class="wp-block-button alignright">
+					<?php next_image_link( false, __( 'Next <span class="meta-nav">&rarr;</span>', 'duena-revival' ) ); ?>
+					</div>
 				</header><!-- .entry-header -->
 
 				<div class="entry-content">
