@@ -1,94 +1,119 @@
 @import url(//fonts.googleapis.com/css?family=Damion);
 @import url(//fonts.googleapis.com/css?family=BenchNine:700);
+
 /* =Global
 ----------------------------------------------- */
+
 body {
-  background-image: url(images/main-bg.jpg);
-  background-color: #210f1d;
-  background-repeat: no-repeat;
-  background-position: center 0;
+    background-image: url(images/main-bg.jpg);
+    background-color: #210f1d;
+    background-repeat: no-repeat;
+    background-position: center 0;
 }
+
 body,
 button,
 input,
 select,
 textarea {
-  color: $grey1;
-  font-family: sans-serif;
-  font-size: 12px;
-  line-height: 20px;
+    color: $grey1;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 20px;
 }
+
+
 /* Headings */
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  clear: both;
-  font-family: $font2;
-  letter-spacing: -1px;
+    clear: both;
+    font-family: $font2;
+    letter-spacing: -1px;
 }
+
+
 /* Lists */
+
 #main ul {
-  overflow: hidden;
+    overflow: hidden;
 }
+
 ul li {
-  padding: 0 0 6px 10px;
-  background: url(images/list-bullet.svg) no-repeat 0 7px;
-  background-size: 3px 5px;
-  list-style: none;
-  margin: 0;
+    padding: 0 0 6px 10px;
+    background: url(images/list-bullet.svg) no-repeat 0 7px;
+    background-size: 3px 5px;
+    list-style: none;
+    margin: 0;
 }
+
 a {
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  transition: all 200ms linear;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+    text-decoration: none;
 }
+
 .progress .bar {
-  font-weight:bold;
+    font-weight: bold;
 }
+
+
 /* Alignment */
-/* Alignment */
+
 .alignleft {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-margin-bottom:10px;
+    display: inline;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
+
 .alignright {
-  display: inline;
-  float: right;
-  margin-left: 20px;
-margin-bottom:10px;
+    display: inline;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
+
 .aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto 10px;
+    clear: both;
+    display: block;
+    margin: 0 auto 10px;
 }
+
 .extra-wrap {
-  overflow: hidden;
+    overflow: hidden;
 }
+
+
 /* =PAGE WRAPPER
 ----------------------------------------------- */
+
 .page-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
+
 .page-wrapper:before {
-  position: absolute;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 6px;
-  background: url(images/page-top-bg.jpg) no-repeat center 0 $primary-def;
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 6px;
+    background: url(images/page-top-bg.jpg) no-repeat center 0 $primary-def;
 }
+
+
 /* Landscape phone to portrait tablet */
+
 @media (max-width: 767px) {
-  .page-wrapper:before {
-    display: none;
-  }
+    .page-wrapper:before {
+        display: none;
+    }
 }

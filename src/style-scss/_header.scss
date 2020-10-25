@@ -21,19 +21,13 @@
 }
 #header .logo .text-logo a {
   color: $white;
+  text-decoration: none;
   display: inline-block;
   padding: 0 15px 0 0;
 }
-#header .logo .text-logo a:hover {
-  text-decoration: none;
-  color: $white;
-}
-#header .logo .text-logo a:focus {
-  text-decoration: none;
-  color: $white;
-}
+#header .logo .text-logo a:hover,
+#header .logo .text-logo a:focus,
 #header .logo .text-logo a:active {
-  text-decoration: none;
   color: $white;
 }
 #header .logo .site-description {

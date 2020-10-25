@@ -55,10 +55,11 @@
 				<?php
 					wp_nav_menu( array(
 						'container'       => 'ul',
-		                'menu_class'      => 'sf-menu',
+		                #'menu_class'      => 'sf-menu',
 		                'menu_id'         => 'topnav',
 		                'depth'           => 0,
-		                'theme_location' => 'primary'
+						'theme_location' => 'primary',
+						'walker' => new CSS_Menu_Walker()
 					) );
 				?>
 				</div>

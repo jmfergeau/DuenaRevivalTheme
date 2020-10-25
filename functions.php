@@ -170,7 +170,7 @@ function duena_revival_styles() {
 	global $wp_styles;
 
 	// Bootstrap styles
-	wp_register_style( 'duena-revival-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.min.css');
+	wp_register_style( 'duena-revival-bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css');
 	wp_enqueue_style( 'duena-revival-bootstrap' );
 
 	// Slider styles
@@ -200,7 +200,7 @@ function duena_revival_styles() {
 
 function duena_revival_scripts() {
 
-	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/bootstrap/js/bootstrap.bundle.min.js', array(), '4.3.1', true );
+	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array(), '5.0.0', true );
 
 	wp_enqueue_script( 'duena-revival-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -215,9 +215,9 @@ function duena_revival_scripts() {
 	}
 
 	// Menu scripts
-	wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '1.7.10', true);
+	#wp_enqueue_script('superfish', get_template_directory_uri() . '/js/superfish.min.js', array('jquery'), '1.7.10', true);
 	wp_enqueue_script('mobilemenu', get_template_directory_uri() . '/js/jquery.mobilemenu.js', array('jquery'), '1.1', true);
-	wp_enqueue_script('sf_Touchscreen', get_template_directory_uri() . '/js/sfmenu-touch.js', array('jquery'), '1.0', true);
+	#wp_enqueue_script('sf_Touchscreen', get_template_directory_uri() . '/js/sfmenu-touch.js', array('jquery'), '1.0', true);
 
 	// Slider
 	wp_enqueue_script('flexslider', get_template_directory_uri() . '/js/jquery.flexslider-min.js', array('jquery'), '2.1', true);
@@ -663,6 +663,67 @@ function duena_revival_setup_theme_supported_features() {
             'color' => '#444',
         ),
     ) );
+}
+
+/* Replacement of superfish (5.0.0) */
+class CSS_Menu_Walker extends Walker {
+
+	var $db_fields = array('parent' => 'menu_item_parent', 'id' => 'db_id');
+	
+	function start_lvl(&$output, $depth = 0, $args = array()) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "\n$indent<ul>\n";
+	}
+	
+	function end_lvl(&$output, $depth = 0, $args = array()) {
+		$indent = str_repeat("\t", $depth);
+		$output .= "$indent</ul>\n";
+	}
+	
+	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+	
+		global $wp_query;
+		$indent = ($depth) ? str_repeat("\t", $depth) : '';
+		$class_names = $value = '';
+		$classes = empty($item->classes) ? array() : (array) $item->classes;
+		
+		/* Add active class */
+		if (in_array('current-menu-item', $classes)) {
+			$classes[] = 'active';
+			unset($classes['current-menu-item']);
+		}
+		
+		/* Check for children */
+		$children = get_posts(array('post_type' => 'nav_menu_item', 'nopaging' => true, 'numberposts' => 1, 'meta_key' => '_menu_item_menu_item_parent', 'meta_value' => $item->ID));
+		if (!empty($children)) {
+			$classes[] = 'has-sub';
+		}
+		
+		$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+		$class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+		
+		$id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args);
+		$id = $id ? ' id="' . esc_attr($id) . '"' : '';
+		
+		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+		
+		$attributes  = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
+		$attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target    ) .'"' : '';
+		$attributes .= ! empty($item->xfn)        ? ' rel="'    . esc_attr($item->xfn       ) .'"' : '';
+		$attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url       ) .'"' : '';
+		
+		$item_output = $args->before;
+		$item_output .= '<a'. $attributes .'><span>';
+		$item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+		$item_output .= '</span></a>';
+		$item_output .= $args->after;
+		
+		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+	}
+	
+	function end_el(&$output, $item, $depth = 0, $args = array()) {
+		$output .= "</li>\n";
+	}
 }
 
 add_action( 'after_setup_theme', 'duena_revival_setup_theme_supported_features' );
