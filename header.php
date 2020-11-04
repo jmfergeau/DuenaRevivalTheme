@@ -52,16 +52,31 @@
 	        <div class="clear"></div>
 			<nav id="site-navigation" class="main-nav" role="navigation">
 				<div class="navbar_inner">
-				<?php
+				<?php // MAIN DESKTOP MENU
 					wp_nav_menu( array(
 						'container'       => 'ul',
 		                #'menu_class'      => 'sf-menu',
 		                'menu_id'         => 'topnav',
 		                'depth'           => 0,
-						'theme_location' => 'primary',
-						'walker' => new CSS_Menu_Walker()
+						'theme_location'  => 'primary',
+						'walker' 		  => new CSS_Menu_Walker()
 					) );
 				?>
+				</div>
+				<div id="mobilenav" class="d-md-none d-sm-block pr-3 my-3 text-center" role="navigation">
+					<button class="btn btn-primary btn-large dropdown-toggle" type="button" id="MobiledropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Dropdown button
+					</button>
+					<div class="dropdown-menu" aria-labelledby="MobiledropdownMenuButton">
+						<?php // MOBILE MENU
+							wp_nav_menu(array(
+								'theme_location' => 'primary', 
+								'container' 	 => 'a', 
+								'menu_class' 	 => 'dropdown-item',
+								'walker' 		 => new CSS_Menu_Walker()
+							)); 
+						?>
+					</div>
 				</div>
 			</nav><!-- #site-navigation -->
 		</div>

@@ -200,7 +200,7 @@ function duena_revival_styles() {
 
 function duena_revival_scripts() {
 
-	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.min.js', array(), '5.0.0', true );
+	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
 
 	wp_enqueue_script( 'duena-revival-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -226,7 +226,7 @@ function duena_revival_scripts() {
 	wp_enqueue_script('magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'), '1.1.0', true);
 
 	// Bootstrap JS | What was its use? Geez dude...
-	//wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
+	wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
 
 	// Custom Script File
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
