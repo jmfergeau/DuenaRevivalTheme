@@ -226,7 +226,7 @@ function duena_revival_scripts() {
 	wp_enqueue_script('magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'), '1.1.0', true);
 
 	// Bootstrap JS | What was its use? Geez dude...
-	wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
+	//wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
 
 	// Custom Script File
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);

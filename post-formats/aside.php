@@ -3,7 +3,7 @@
 
     <!-- Post Content -->
     <div class="post_content <?php if( is_singular() && is_sticky() ) echo esc_attr( $stickyclass ); ?>">
-        <?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fas fa-thumbtack' style='font-weight: 900;'></i><strong>".__( 'Featured', 'duena-revival' )."</strong></span>"; ?>
+        <?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fas fa-thumbtack' style='font-weight: 900;'></i><strong>".__( 'Featured', 'duena-revival' )."</strong></span><br><br>"; ?>
         <?php the_content( __( 'Continue reading', 'duena-revival' ) ); ?>
         <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'duena-revival' ), 'after' => '</div>' ) ); ?>
     <!--// Post Content -->

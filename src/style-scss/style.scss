@@ -14,11 +14,13 @@ Duena WordPress theme, Copyright (C) 2013 Duena Studio
 Duena Revival project is initiated by Max le Fou
 Duena Revival WordPress theme is licensed under the GPL.
 */
+
 @charset "UTF-8";
 @import "variables";
 @import "global";
 @import "header";
 @import "nav";
+@import "breadcrumb";
 @import "page";
 @import "portfolio";
 @import "asides";

@@ -1,152 +1,186 @@
 /* = Link
 ----------------------------------------------- */
+
 .post-title.link {
-  padding-top: 20px;
+    padding-top: 20px;
 }
+
+
 /* = Aside
 ----------------------------------------------- */
+
 .single .format-aside .post_content {
-  padding-top: 10px;
+    padding-top: 10px;
 }
+
+
 /* = Misc
 ----------------------------------------------- */
+
 .alert {
-  overflow: hidden;
+    overflow: hidden;
 }
+
+
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
+
 .infinite-scroll .navigation-paging,
 .infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
+    /* Theme Footer (when set to scrolling) */
+    display: none;
+}
 
-  display: none;
-}
+
 /* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+
 .infinity-end.neverending .site-footer {
-  display: block;
+    display: block;
 }
+
+
 /* Clearing */
+
 .clear:before,
 .clear:after,
 [class*="content"]:before,
 [class*="content"]:after,
 [class*="site"]:before,
 [class*="site"]:after {
-  content: '';
-  display: table;
+    content: '';
+    display: table;
 }
+
 .clear:after,
 [class*="content"]:after,
 [class*="site"]:after {
-  clear: both;
+    clear: both;
 }
+
 .clearfix {
-  *zoom: 1;
+    *zoom: 1;
 }
+
 .clearfix:before,
 .clearfix:after {
-  display: table;
-  content: "";
-  line-height: 0;
+    display: table;
+    content: "";
+    line-height: 0;
 }
+
 .clearfix:after {
-  clear: both;
+    clear: both;
 }
+
 .hide-text {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
 }
+
 .input-block-level {
-  display: block;
-  width: 100%;
-  min-height: 30px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 30px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
+
+
 /* Portrait tablet to landscape and desktop */
+
 @media (min-width: 768px) and (max-width: 979px) {
-  h1,
-  .post-title,
-  .widget-title,
-  .content_box h2,
-  .author_bio_sidebar .author_bio_message h1 {
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h2,
-  .author_bio_sidebar .author_bio_message h2 {
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h3,
-  .author_bio_sidebar .author_bio_message h3 {
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h4,
-  .author_bio_sidebar .author_bio_message h4 {
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
-  h5,
-  .author_bio_sidebar .author_bio_message h5 {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
-  h6,
-  .author_bio_sidebar .author_bio_message h6 {
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
+    h1,
+    .post-title,
+    .widget-title,
+    .content_box h2,
+    .author_bio_sidebar .author_bio_message h1 {
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h2,
+    .author_bio_sidebar .author_bio_message h2 {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h3,
+    .author_bio_sidebar .author_bio_message h3 {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h4,
+    .author_bio_sidebar .author_bio_message h4 {
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+    h5,
+    .author_bio_sidebar .author_bio_message h5 {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+    h6,
+    .author_bio_sidebar .author_bio_message h6 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
 }
+
+
 /* Landscape phones and down */
+
 @media (max-width: 480px) {
-  h1,
-  .post-title,
-  .widget-title,
-  .content_box h2,
-  .author_bio_sidebar .author_bio_message h1 {
-    font-size: 30px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h2,
-  .author_bio_sidebar .author_bio_message h2 {
-    font-size: 26px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h3,
-  .author_bio_sidebar .author_bio_message h3 {
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: 0;
-  }
-  h4,
-  .author_bio_sidebar .author_bio_message h4 {
-    font-size: 20px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
-  h5,
-  .author_bio_sidebar .author_bio_message h5 {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
-  h6,
-  .author_bio_sidebar .author_bio_message h6 {
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: 0;
-  }
+    h1,
+    .post-title,
+    .widget-title,
+    .content_box h2,
+    .author_bio_sidebar .author_bio_message h1 {
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h2,
+    .author_bio_sidebar .author_bio_message h2 {
+        font-size: 26px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h3,
+    .author_bio_sidebar .author_bio_message h3 {
+        font-size: 22px;
+        line-height: 30px;
+        letter-spacing: 0;
+    }
+    h4,
+    .author_bio_sidebar .author_bio_message h4 {
+        font-size: 20px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+    h5,
+    .author_bio_sidebar .author_bio_message h5 {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+    h6,
+    .author_bio_sidebar .author_bio_message h6 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: 0;
+    }
+}
+
+
+/* Tweaks of Bootstrap 5 */
+
+a {
+    text-decoration: none;
 }
