@@ -63,21 +63,22 @@
 					) );
 				?>
 				</div>
-				<div id="mobilenav" class="d-md-none d-sm-block pr-3 my-3 text-center" role="navigation">
-					<button class="btn btn-primary btn-large dropdown-toggle" type="button" id="MobiledropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Dropdown button
+				<!-- <div id="mobilenav" class="d-md-none d-sm-block pr-3 my-3 text-center" role="navigation">
+					<button class="btn btn-primary btn-large dropdown-toggle" id="MobiledropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						<?php #echo __( 'Menu', 'duena-revival' ); ?>
 					</button>
+					<hr>
 					<div class="dropdown-menu" aria-labelledby="MobiledropdownMenuButton">
 						<?php // MOBILE MENU
-							wp_nav_menu(array(
-								'theme_location' => 'primary', 
-								'container' 	 => 'a', 
-								'menu_class' 	 => 'dropdown-item',
-								'walker' 		 => new CSS_Menu_Walker()
-							)); 
+							#wp_nav_menu(array(
+							#	'theme_location' => 'primary', 
+							#	'container' 	 => 'a', 
+							#	'menu_class' 	 => 'dropdown-item',
+							#	'walker' 		 => new CSS_Menu_Walker()
+							#)); 
 						?>
 					</div>
-				</div>
+				</div> -->
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
