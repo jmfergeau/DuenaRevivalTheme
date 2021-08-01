@@ -48,7 +48,7 @@
 			<nav id="site-navigation" class="main-nav" role="navigation">
 				<div class="navbar_inner">
 				<?php // MAIN DESKTOP MENU
-					if (has_nav_menu('topnav')):
+					if (has_nav_menu('primary')):
 						wp_nav_menu( array(
 							'container'       => 'ul',
 							#'menu_class'      => 'sf-menu',
