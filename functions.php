@@ -639,7 +639,9 @@ function wpb_image_editor_default_to_gd( $editors ) {
 }
 add_filter( 'wp_image_editors', 'wpb_image_editor_default_to_gd' );
 
-/* Gutenberg support (2.1.0) */
+/*-----------------------------------------------------------------------------------*/
+/* Gutenberg support (2.1.0)
+/*-----------------------------------------------------------------------------------*/
 function duena_revival_setup_theme_supported_features() {
     add_theme_support( 'editor-color-palette', array(
         array(
@@ -665,7 +667,9 @@ function duena_revival_setup_theme_supported_features() {
     ) );
 }
 
-/* Replacement of superfish (5.0.0) */
+/*-----------------------------------------------------------------------------------*/
+/* Replacement of superfish (5.0.0)
+/*-----------------------------------------------------------------------------------*/
 class CSS_Menu_Walker extends Walker {
 
 	var $db_fields = array('parent' => 'menu_item_parent', 'id' => 'db_id');

@@ -48,14 +48,16 @@
 			<nav id="site-navigation" class="main-nav" role="navigation">
 				<div class="navbar_inner">
 				<?php // MAIN DESKTOP MENU
-					wp_nav_menu( array(
-						'container'       => 'ul',
-		                #'menu_class'      => 'sf-menu',
-		                'menu_id'         => 'topnav',
-		                'depth'           => 0,
-						'theme_location'  => 'primary',
-						'walker' 		  => new CSS_Menu_Walker()
+					if (has_nav_menu('topnav')):
+						wp_nav_menu( array(
+							'container'       => 'ul',
+							#'menu_class'      => 'sf-menu',
+							'menu_id'         => 'topnav',
+							'depth'           => 0,
+							'theme_location'  => 'primary',
+							'walker' 		  => new CSS_Menu_Walker()
 					) );
+					endif;
 				?>
 				</div>
 				<!-- <div id="mobilenav" class="d-md-none d-sm-block pr-3 my-3 text-center" role="navigation">
