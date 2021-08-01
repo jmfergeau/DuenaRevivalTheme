@@ -12,20 +12,15 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=no" />
-<meta name="theme-color" content="<?php echo get_theme_mod( 'cs_primary_color', '#ff5b5b' ); ?>" />
+<meta name="theme-color" content="<?php echo esc_attr( get_theme_mod( 'cs_primary_color', '#ff5b5b' ) ); ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
-<!--[if (gt IE 9)|!(IE)]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.mobile.customized.min.js" type="text/javascript"></script>
-<![endif]-->
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>
+<?php wp_body_open(); ?>
 <div class="page-wrapper">
 	<?php do_action( 'before' ); ?>
 	<header id="header" role="banner">
@@ -44,7 +39,7 @@
 			</div>
 			<?php if ( get_theme_mod('g_search_box_id', '1') === '1') { ?>
 	          <div id="top-search">
-	            <form method="get" action="<?php echo home_url(); ?>/">
+	            <form method="get" action="<?php echo esc_url( home_url( '/' ) ); ?>/">
 	              <input type="text" name="s"  class="input-search" /><input type="submit" value="" id="submit">
 	            </form>
 	          </div>
