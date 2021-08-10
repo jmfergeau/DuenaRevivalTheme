@@ -100,6 +100,17 @@ function duena_revival_customize_register( $wp_customize ) {
 		// "class" => "hidden", ???
 		'priority' => 16
 	)));
+	$wp_customize->add_setting( 'g_author_bio_img_round', array(
+		'sanitize_callback' => 'duena_revival_sanitize_checkbox',
+		'default' => 'false'
+	) );
+	$wp_customize->add_control( 'g_author_bio_img_round', array(
+		'label' => __( "Rounded author Bio image", "duena-revival" ),
+		'section' => 'duena_revival_header',
+		'settings' => 'g_author_bio_img_round',
+		'type' => 'checkbox',
+		'priority' => 17
+	) );
 
 	/* g_author_bio_message */
 	$wp_customize->add_setting( 'g_author_bio_message', array(
@@ -111,7 +122,7 @@ function duena_revival_customize_register( $wp_customize ) {
 			'description' => __( "HTML tags are allowed.", "duena-revival" ),
 			'section' => 'duena_revival_header',
 			'settings' => 'g_author_bio_message',
-			'priority' => 17
+			'priority' => 18
 	) );
 
 	/*-----------------------------------------------------------------------------------*/

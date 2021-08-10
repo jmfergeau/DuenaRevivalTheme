@@ -1124,7 +1124,10 @@ msgid "Disable"
 msgstr ""
 
 msgid "Generic git repository"
-msgstr "Dépot git générique"
+msgstr ""
 
 msgid "RSS feed"
-msgstr "Fil RSS"
+msgstr ""
+
+msgid "Rounded author Bio image"
+msgstr ""

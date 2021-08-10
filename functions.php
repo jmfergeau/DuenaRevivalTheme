@@ -469,7 +469,13 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 					} else {
 						$img_alt = get_bloginfo( 'name' );
 					}
-					echo "<figure class='author_bio_img'><img src='".esc_url( get_theme_mod('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
+					echo "<figure class='author_bio_img'><img ";
+					if ( get_theme_mod('g_author_bio_img_round', false ) == true ) { // Makes the picture round from the options (5.0.0)
+						echo "style='border-radius: 5rem!important;'";
+					} else {
+						echo "class='rounded'";
+					}
+					echo " src='".esc_url( get_theme_mod('g_author_bio_img') )."' alt='".esc_attr( $img_alt )."'></figure>\n";
 				}
 				if ( '' != get_theme_mod('g_author_bio_message', __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" )) ) {
 					echo "<div class='author_bio_message'>".get_theme_mod('g_author_bio_message', __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena-revival" ))."</div>\n";

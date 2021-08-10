@@ -37,6 +37,13 @@ blockquote,
     list-style: none;
 }
 
+.blocks-gallery-grid .blocks-gallery-image figcaption,
+.blocks-gallery-grid .blocks-gallery-item figcaption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+    background: linear-gradient(0deg, rgb(0 0 0), rgba(0, 0, 0, .03) 70%, transparent);
+}
+
 ul.wp-block-gallery {
     margin-top: 0;
     margin-left: 0 !important;
