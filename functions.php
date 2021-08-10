@@ -65,6 +65,27 @@ function duena_revival_setup() {
 	);
 
 	add_theme_support( 'custom-background', $defaults );
+	/* Not sure why I must put this... */
+	add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'html5', 
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+			'script',
+			'style',
+			'navigation-widgets'
+		)
+	);
+	add_theme_support('custom-logo',
+		array(
+			'height'      => 480,
+			'width'       => 256,
+			'flex-height' => true
+		)
+	);
 
 	/**
 	 * Custom functions that act independently of the theme templates
