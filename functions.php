@@ -471,7 +471,7 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 					}
 					echo "<figure class='author_bio_img'><img ";
 					if ( get_theme_mod('g_author_bio_img_round', false ) == true ) { // Makes the picture round from the options (5.0.0)
-						echo "style='border-radius: 5rem!important;'";
+						echo "style='border-radius: 20rem!important;'";
 					} else {
 						echo "class='rounded'";
 					}
