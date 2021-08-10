@@ -314,7 +314,7 @@ function duena_revival_get_link_url() {
 if (! function_exists( 'duena_revival_breadcrumb' )) {
 	function duena_revival_breadcrumb() {
 	  $showOnHome = 0; // 1 - show "breadcrumbs" on home page, 0 - hide
-	  $delimiter = '<li class="breadcrumb-item">&nbsp;&nbsp;/&nbsp;&nbsp;</li>'; // divider
+	  $delimiter = '<li class="breadcrumb-item"><img src="' . get_template_directory_uri() . '/images/list-bullet.svg" width="4"></li>'; // divider
 	  $home = __( 'Home', 'duena-revival'); // text for link "Home"
 	  $showCurrent = 1; // 1 - show title current post/page, 0 - hide
 	  $before = '<li class="active">'; // open tag for active breadcrumb

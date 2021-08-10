@@ -107,7 +107,7 @@
     float: right;
     padding: 0;
     position: relative;
-    margin: 48px 0 0 0;
+    margin: 48px 0 12px 0;
 }
 
 #top-search .input-search {
@@ -147,7 +147,7 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
     #top-search {
-        margin: 38px 0 0 0;
+        margin: 0 0 12px 0;
     }
     #top-search .input-search {
         width: 251px;
@@ -159,10 +159,10 @@
 
 @media (max-width: 767px) {
     #top-search {
-        margin: 30px 0 0 0;
+        margin: 0 0 12px 0;
     }
     #top-search .input-search {
-        width: 241px;
+        width: 100%;
     }
 }
 
@@ -171,7 +171,7 @@
 
 @media (max-width: 480px) {
     #top-search {
-        margin: 0;
+        margin: 0 0 12px 0;
         float: none;
     }
     #top-search .input-search {
