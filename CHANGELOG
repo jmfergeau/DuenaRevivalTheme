@@ -1,6 +1,7 @@
 v5.0.0
-- Tweak: Updated to Bootstrap 5.0.2
-- Fix: Due to incompatibilites with WP 5.5 and higher, Superfish and jQuery Mobile Menu are removed for a non-JQuery homemade solution for menus.
+- Tweak: Updated to Bootstrap 5.1.0
+- Fix: Added compatibility for WP new features
+- Fix: Due to incompatibilites with WP 5.5 and higher, Superfish is removed for a non-JQuery homemade solution for menus.
 - Fix: Sticky aside posts are now displayed correctly.
 - Fix: Added requirements to latest WP standards.
 - Fix: Minor CSS corrections.
