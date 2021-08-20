@@ -19,7 +19,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div class="page-wrapper">
 	<?php do_action( 'before' ); ?>
@@ -60,22 +60,6 @@
 					endif;
 				?>
 				</div>
-				<!-- <div id="mobilenav" class="d-md-none d-sm-block pr-3 my-3 text-center" role="navigation">
-					<button class="btn btn-primary btn-large dropdown-toggle" id="MobiledropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<?php #echo __( 'Menu', 'duena-revival' ); ?>
-					</button>
-					<hr>
-					<div class="dropdown-menu" aria-labelledby="MobiledropdownMenuButton">
-						<?php // MOBILE MENU
-							#wp_nav_menu(array(
-							#	'theme_location' => 'primary', 
-							#	'container' 	 => 'a', 
-							#	'menu_class' 	 => 'dropdown-item',
-							#	'walker' 		 => new CSS_Menu_Walker()
-							#)); 
-						?>
-					</div>
-				</div> -->
 			</nav><!-- #site-navigation -->
 		</div>
 	</header><!-- #masthead -->
