@@ -10,17 +10,17 @@
 								<a href="<?php echo esc_url( duena_revival_get_link_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 							 <?php } else {
 							?>
-								<a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a>
+								<a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a>
 							<?php
 							 } ?>
 						</h1>
 						<?php } else { ?>
 						<h4 class="post-title link">
 							<?php if ( function_exists('get_the_post_format_url') ) { ?>
-								<a href="<?php echo esc_url( duena_revival_get_link_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+								<a tabindex="0" href="<?php echo esc_url( duena_revival_get_link_url() ); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a>
 							 <?php } else {
 							?>
-								<a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a>
+								<a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a>
 							<?php
 							 } ?>
 

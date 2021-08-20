@@ -12,7 +12,7 @@
 	<header class="post-header">
 		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fas fa-thumbtack' style='font-weight: 900;'></i><strong>".__( 'Featured', 'duena-revival' )."</strong></span>"; ?>
 		<?php if(!is_singular()) : ?>
-			<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+			<h3 class="post-title"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 		<?php else :?>
 			<h1 class="post-title"><?php the_title(); ?></h1>
 		<?php endif; ?>

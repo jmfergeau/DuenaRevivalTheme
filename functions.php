@@ -221,7 +221,7 @@ function duena_revival_styles() {
 
 function duena_revival_scripts() {
 
-	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array(), '5.0.0', true );
+	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array(), '5.1.0', true );
 
 	wp_enqueue_script( 'duena-revival-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -325,11 +325,11 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
 
  	 if (is_front_page()) {
 
-    	if ($showOnHome == 1) echo '<ul class="breadcrumb"><li class="breadcrumb-item"><a href="' . $homeLink . '">' . $home . '</a><li></ul>';
+    	if ($showOnHome == 1) echo '<ul class="breadcrumb"><li class="breadcrumb-item"><a tabindex="0" href="' . $homeLink . '">' . $home . '</a><li></ul>';
 
   	} else {
 
-    	echo '<ul class="breadcrumb"><li><a href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
+    	echo '<ul class="breadcrumb"><li><a tabindex="0" href="' . $homeLink . '">' . $home . '</a></li> ' . $delimiter . ' ';
 
 	if ( is_home() ) {
 		echo $before . 'Blog' . $after;
@@ -342,12 +342,12 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
       echo $before . 'Search for: "' . get_search_query() . '"' . $after;
 
     } elseif ( is_day() ) {
-      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
-      echo '<li><a href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a tabindex="0" href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a tabindex="0" href="' . get_month_link(get_the_time('Y'),get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
       echo $before . get_the_time('d') . $after;
 
     } elseif ( is_month() ) {
-      echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
+      echo '<li><a tabindex="0" href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
       echo $before . get_the_time('F') . $after;
 
     } elseif ( is_year() ) {
@@ -358,7 +358,7 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
       	$post_name = get_post_type();
         $post_type = get_post_type_object(get_post_type());
         $slug = $post_type->rewrite;
-        echo '<li><a href="' . $homeLink . '/' . $post_name . '/">' . $post_type->labels->singular_name . '</a></li>';
+        echo '<li><a tabindex="0" href="' . $homeLink . '/' . $post_name . '/">' . $post_type->labels->singular_name . '</a></li>';
         if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
       } else {
         $cat = get_the_category(); $cat = $cat[0];
@@ -376,7 +376,7 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
       $parent = get_post($post->post_parent);
       #$cat = get_the_category($parent->ID); $cat = $cat[0];
 	  #echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-      echo '<li><a href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li>';
+      echo '<li><a tabindex="0" href="' . get_permalink($parent) . '">' . $parent->post_title . '</a></li>';
       #if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
 
     } elseif ( is_page() && !$post->post_parent ) {
@@ -387,7 +387,7 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
       $breadcrumbs = array();
       while ($parent_id) {
         $page = get_page($parent_id);
-        $breadcrumbs[] = '<li><a href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
+        $breadcrumbs[] = '<li><a tabindex="0" href="' . get_permalink($page->ID) . '">' . get_the_title($page->ID) . '</a></li>';
         $parent_id  = $page->post_parent;
       }
       $breadcrumbs = array_reverse($breadcrumbs);
@@ -437,23 +437,23 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 		$datdamnb1 = 's'; $datdamnb2 = 's'; $datdamnb3 = 's'; $datdamnb4 = 's'; $datdamnb5 = 's'; // ...php and fontawesome are idiots
 			if ( 'none' != get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ) {
 				if ((get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') != 'rss') && (get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') != 'envelope')) { $datdamnb1 = 'b'; };
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_twitter_text', '#') )."'><i class='fa". $datdamnb1 ." fa-". get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ."'></i></a>\n";
+				echo "<a tabindex='0' href='".esc_url( get_theme_mod('g_author_bio_social_twitter_text', '#') )."'><i class='fa". $datdamnb1 ." fa-". get_theme_mod('g_author_bio_social_twitter_icon', 'twitter') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ) {
 				if ((get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') != 'rss') && (get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') != 'envelope')) { $datdamnb2 = 'b'; };
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_facebook_text', '#') )."'><i class='fa". $datdamnb2 ." fa-". get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ."'></i></a>\n";
+				echo "<a tabindex='0' href='".esc_url( get_theme_mod('g_author_bio_social_facebook_text', '#') )."'><i class='fa". $datdamnb2 ." fa-". get_theme_mod('g_author_bio_social_facebook_icon', 'facebook-f') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ) {
 				if ((get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') != 'rss') && (get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') != 'envelope')) { $datdamnb3 = 'b'; };
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_patreon_text', '#') )."'><i class='fa". $datdamnb3 ." fa-". get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ."'></i></a>\n";
+				echo "<a tabindex='0' href='".esc_url( get_theme_mod('g_author_bio_social_patreon_text', '#') )."'><i class='fa". $datdamnb3 ." fa-". get_theme_mod('g_author_bio_social_patreon_icon', 'patreon') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ) {
 				if ((get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') != 'rss') && (get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') != 'envelope')) { $datdamnb4 = 'b'; };
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_linkedin_text', '#') )."'><i class='fa". $datdamnb4 ." fa-". get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ."'></i></a>\n";
+				echo "<a tabindex='0' href='".esc_url( get_theme_mod('g_author_bio_social_linkedin_text', '#') )."'><i class='fa". $datdamnb4 ." fa-". get_theme_mod('g_author_bio_social_linkedin_icon', 'linkedin-in') ."'></i></a>\n";
 			}
 			if ( 'none' != get_theme_mod('g_author_bio_social_rss_icon', 'rss') ) {
 				if ((get_theme_mod('g_author_bio_social_rss_icon', 'rss') != 'rss') && (get_theme_mod('g_author_bio_social_rss_icon', 'rss') != 'envelope')) { $datdamnb5 = 'b'; };
-				echo "<a href='".esc_url( get_theme_mod('g_author_bio_social_rss_text', '#') )."'><i class='fa". $datdamnb5 ." fa-". get_theme_mod('g_author_bio_social_rss_icon', 'rss') ."'></i></a>\n";
+				echo "<a tabindex='0' href='".esc_url( get_theme_mod('g_author_bio_social_rss_text', '#') )."'><i class='fa". $datdamnb5 ." fa-". get_theme_mod('g_author_bio_social_rss_icon', 'rss') ."'></i></a>\n";
 			}
 		?>
 			</div>
@@ -736,7 +736,7 @@ class CSS_Menu_Walker extends Walker {
 		$id = apply_filters('nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args);
 		$id = $id ? ' id="' . esc_attr($id) . '"' : '';
 		
-		$output .= $indent . '<li' . $id . $value . $class_names .'>';
+		$output .= $indent . '<li ' . $id . $value . $class_names .'>';
 		
 		$attributes  = ! empty($item->attr_title) ? ' title="'  . esc_attr($item->attr_title) .'"' : '';
 		$attributes .= ! empty($item->target)     ? ' target="' . esc_attr($item->target    ) .'"' : '';
@@ -744,7 +744,7 @@ class CSS_Menu_Walker extends Walker {
 		$attributes .= ! empty($item->url)        ? ' href="'   . esc_attr($item->url       ) .'"' : '';
 		
 		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'><span>';
+		$item_output .= '<a tabindex="0"'. $attributes .'><span>';
 		$item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
 		$item_output .= '</span></a>';
 		$item_output .= $args->after;

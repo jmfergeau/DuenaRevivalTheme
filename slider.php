@@ -35,7 +35,7 @@
     ?>
         <li>
             <?php if ( 'false' != get_theme_mod('sl_as_link') ) { ?>
-            <a href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>">
+            <a tabindex="0" href="<?php echo get_permalink(); ?>" title="<?php echo get_the_title(); ?>">
             <?php } ?>
                 <img src="<?php echo esc_url( $sl_image_url[0] ); ?>" alt="<?php the_title(); ?>" />
             <?php if ( 'false' != get_theme_mod('sl_as_link') ) { ?>

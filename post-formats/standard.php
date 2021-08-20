@@ -10,7 +10,7 @@
 					// Dear FontAwesome WHY MUST I PUT THAT FONT WEIGHT STUFF MYSELF HERE ?!!!!! ?>
 					<?php if(!is_singular()) : ?>
 
-					<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+					<h3 class="post-title"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
 					<?php else :?>
 
@@ -41,7 +41,7 @@
 							$button_text = get_theme_mod( 'post_button_txt', __( "Read More", "duena-revival" ) );
 							if ( '' == $button_text ) $button_text = __( 'Read more', 'duena-revival' );
 					?>
-						<a href="<?php the_permalink() ?>" class="more_link"><?php echo $button_text; ?></a>
+						<a tabindex="0" href="<?php the_permalink() ?>" class="more_link"><?php echo $button_text; ?></a>
 					<?php } ?>
 				</div>
 

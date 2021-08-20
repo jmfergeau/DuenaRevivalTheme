@@ -38,11 +38,11 @@ if ($tags) {
 								$temp_dir = get_template_directory_uri(); // your mom, wp
 							?>
 							<figure class="thumbnail featured-thumbnail">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $img_url[0] ); ?>" alt="<?php the_title(); ?>" /></a>
+								<a tabindex="0" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $img_url[0] ); ?>" alt="<?php the_title(); ?>" /></a>
 							</figure>
 						<?php } else { ?>
 							<figure class="thumbnail featured-thumbnail">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $temp_dir ); ?>/images/empty_thumb.gif" alt="<?php the_title(); ?>" /></a>
+								<a tabindex="0" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $temp_dir ); ?>/images/empty_thumb.gif" alt="<?php the_title(); ?>" /></a>
 							</figure>
 						<?php } ?>
 						<a href="<?php the_permalink() ?>" > <?php the_title();?> </a>

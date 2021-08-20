@@ -1,7 +1,7 @@
 <?php if(!is_singular()) : ?>
 	<?php if ( has_post_thumbnail() ) {	?>
 		<?php if ( ( '' == get_theme_mod('post_image_size', 'normal') ) || ('normal' == get_theme_mod('post_image_size', 'normal')) ) {	?>
-			<figure class="featured-thumbnail thumbnail"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></figure>
+			<figure class="featured-thumbnail thumbnail"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></figure>
 		<?php } ?>
 	<?php }	?>
 <?php else :?>

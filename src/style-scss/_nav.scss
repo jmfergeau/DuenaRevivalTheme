@@ -91,9 +91,9 @@
 }
 
 .navbar_inner>div>ul li:hover ul,
-.navbar_inner>div>ul li.sfHover ul,
+.navbar_inner>div>ul li:focus-within>ul,
 .navbar_inner>ul li:hover ul,
-.navbar_inner>ul li.sfHover ul {
+.navbar_inner>ul li:focus-within>ul {
     left: 0;
     top: 52px;
     /* match top ul list item height */
@@ -102,33 +102,33 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
     .navbar_inner>div>ul li:hover ul,
-    .navbar_inner>div>ul li.sfHover ul,
+    .navbar_inner>div>ul li:focus-within>ul,
     .navbar_inner>ul li:hover ul,
-    .navbar_inner>ul li.sfHover ul {
+    .navbar_inner>ul li:focus-within>ul {
         top: 26px;
     }
 }
 
 .navbar_inner>div>ul li:hover li ul,
-.navbar_inner>div>ul li.sfHover li ul,
+.navbar_inner>div>ul li:focus-within>li ul,
 .navbar_inner>ul li:hover li ul,
-.navbar_inner>ul li.sfHover li ul {
+.navbar_inner>ul li:focus-within>li ul {
     top: -999em;
 }
 
 .navbar_inner>div>ul li li:hover ul,
-.navbar_inner>div>ul li li.sfHover ul,
+.navbar_inner>div>ul li li:focus-within>ul,
 .navbar_inner>ul li li:hover ul,
-.navbar_inner>ul li li.sfHover ul {
+.navbar_inner>ul li li:focus-within>ul {
     left: 101%;
     /* match ul width */
     top: -10px;
 }
 
 .navbar_inner>div>ul li li:hover li ul,
-.navbar_inner>div>ul li li.sfHover li ul,
+.navbar_inner>div>ul li li:focus-within>li ul,
 .navbar_inner>ul li li:hover li ul,
-.navbar_inner>ul li li.sfHover li ul {
+.navbar_inner>ul li li:focus-within>li ul {
     top: -999em;
 }
 
@@ -202,11 +202,11 @@
 }
 
 .navbar_inner>div>ul>li>a:hover,
-.navbar_inner>div>ul>li.sfHover>a,
+.navbar_inner>div>ul>li:focus-within>a,
 .navbar_inner>div>ul>li.current-menu-item>a,
 .navbar_inner>div>ul>li.current_page_item>a,
 .navbar_inner>ul>li>a:hover,
-.navbar_inner>ul>li.sfHover>a,
+.navbar_inner>ul>li:focus-within>a,
 .navbar_inner>ul>li.current-menu-item>a,
 .navbar_inner>ul>li.current_page_item>a {
     color: $white;
@@ -220,11 +220,11 @@
 
 @media (min-width: 768px) and (max-width: 979px) {
     .navbar_inner>div>ul>li>a:hover,
-    .navbar_inner>div>ul>li.sfHover>a,
+    .navbar_inner>div>ul>li:focus-within>a,
     .navbar_inner>div>ul>li.current-menu-item>a,
     .navbar_inner>div>ul>li.current_page_item>a,
     .navbar_inner>ul>li>a:hover,
-    .navbar_inner>ul>li.sfHover>a,
+    .navbar_inner>ul>li:focus-within>a,
     .navbar_inner>ul>li.current-menu-item>a,
     .navbar_inner>ul>li.current_page_item>a {
         color: $primary-def;
@@ -255,11 +255,11 @@
 }
 
 .navbar_inner>div>ul li li>a:hover,
-.navbar_inner>div>ul li li.sfHover>a,
+.navbar_inner>div>ul li li:focus-within>a,
 .navbar_inner>div>ul li li>a:focus,
 .navbar_inner>div>ul li li.current-menu-item>a,
 .navbar_inner>ul li li>a:hover,
-.navbar_inner>ul li li.sfHover>a,
+.navbar_inner>ul li li:focus-within>a,
 .navbar_inner>ul li li>a:focus,
 .navbar_inner>ul li li.current-menu-item>a {
     color: $yellowish-white;

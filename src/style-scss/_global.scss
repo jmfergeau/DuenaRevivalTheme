@@ -39,6 +39,11 @@ h6 {
 
 /* Lists */
 
+ol,
+ul {
+    padding-left: 1rem;
+}
+
 #main ul {
     overflow: hidden;
 }

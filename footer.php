@@ -20,7 +20,7 @@
 					if ('' != $footer_text) {
 						echo stripslashes(htmlspecialchars_decode($footer_text));
 					} else { ?>
-						<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'duena-revival' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'duena-revival' ), 'WordPress' ); ?></a>
+						<a tabindex="0" href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'duena-revival' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'duena-revival' ), 'WordPress' ); ?></a>
 					<?php } ?>
 				</div>
 				<?php if (true == get_theme_mod('footer_menu', false)) {

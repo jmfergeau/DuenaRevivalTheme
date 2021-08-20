@@ -12,7 +12,7 @@
 
 		<?php if(!is_singular()) : ?>
 
-		<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
+		<h3 class="post-title"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 
 		<?php else :?>
 
@@ -40,7 +40,7 @@
 				</div>
 			<?php } ?>
 			<?php if ( false != get_theme_mod('post_button', true)) { ?>
-				<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena-revival'); ?></a>
+				<a tabindex="0" href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena-revival'); ?></a>
 			<?php } ?>
 		</div>
 

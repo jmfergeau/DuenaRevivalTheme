@@ -39,7 +39,7 @@
 	<div class="post_meta quote">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
 		<?php if ( !is_singular() ) { ?>
-		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e(__('Permalink', 'duena-revival')) ?></a></span>
+		<span class="post_permalink"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e(__('Permalink', 'duena-revival')) ?></a></span>
 		<?php } ?>
 		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link(__('No comments', 'duena-revival'), __('One comment', 'duena-revival'), __('% comments', 'duena-revival'), 'comments-link', __('Comments are closed', 'duena-revival') ); ?></span>
 		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
@@ -51,7 +51,7 @@
 	<div class="post_meta status">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
 		<?php if ( !is_singular() ) { ?>
-		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e(__('Permalink', 'duena-revival')) ?></a></span>
+		<span class="post_permalink"><a tabindex="0" href="<?php the_permalink(); ?>" title="<?php esc_attr_e(__('Permalink to:', 'duena-revival'));?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e(__('Permalink', 'duena-revival')) ?></a></span>
 		<?php } ?>
 		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link(__('No comments', 'duena-revival'), __('One comment', 'duena-revival'), __('% comments', 'duena-revival'), 'comments-link', __('Comments are closed', 'duena-revival') ); ?></span>
 		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>

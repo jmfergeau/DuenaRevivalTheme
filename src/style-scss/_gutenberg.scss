@@ -49,10 +49,7 @@ ul.wp-block-gallery {
     margin-left: 0 !important;
 }
 
-figure.wp-block-audio audio {
-    width: 100%;
-}
-
+figure.wp-block-audio audio,
 figure.wp-block-video video {
     width: 100%;
 }
@@ -165,6 +162,10 @@ p.wp-block-cover-text {
     height: 30px;
     border-radius: 15px;
     padding: 7px 35px 8px 15px;
+}
+
+.wp-block-search .wp-block-search__button {
+    padding: 0 1em;
 }
 
 pre {
