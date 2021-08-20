@@ -39,10 +39,16 @@ msgstr "Essayez notre outil de recherche ci-dessous pour chercher des informatio
 msgid "Category Archives: %s"
 msgstr "Archives de catégorie&nbsp;: %s"
 
+msgid "Category Archives: \""
+msgstr "Archives de catégorie&nbsp;: \""
+
 #: ../archive.php:24
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "Archives par mot-clé&nbsp;: %s"
+
+msgid "Tag Archives: \""
+msgstr "Archives par mot-clé&nbsp;: \""
 
 #: ../archive.php:31 ../author.php:45
 #, php-format
@@ -1097,6 +1103,12 @@ msgstr "Fil RSS"
 
 msgid "Rounded author Bio image"
 msgstr "Image de bio ronde"
+
+msgid "Dark mode"
+msgstr "Mode sombre"
+
+msgid "Makes the theme go dark mode if the user has dark mode activated on their computer or device. Disabling this will keep the theme in light mode at any time."
+msgstr "Le thème deviendra sombre si l'utilisateur a le mode sombre activé sur leur appareil ou ordinateur. Désactiver ceci gardera le thème en mode clair quoi qu'il arrive."
 
 #~ msgid "A Semantic Personal Publishing Platform"
 #~ msgstr "Une plate-forme sémantique de publication personnelle"

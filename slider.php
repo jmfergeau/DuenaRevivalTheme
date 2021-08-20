@@ -68,7 +68,7 @@
                             $btn_txt = __( 'Read more', 'duena-revival' );
                         }
                     ?>
-                    <a href="<?php the_permalink(); ?>" class="wp-block-button__link" title="<?php the_title(); ?>"><?php echo $btn_txt; ?></a>
+                    <a tabindex="0" href="<?php the_permalink(); ?>" class="wp-block-button__link" title="<?php the_title(); ?>"><?php echo $btn_txt; ?></a>
                     <?php } ?>
                 </div>
             <?php

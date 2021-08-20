@@ -1,15 +1,18 @@
 v5.0.0
 - Tweak: Updated to Bootstrap 5.1.0
 - Tweak: The author bio picture can be a circle. Perfect for squared pictures! (Default is disabled)
+- Tweak: Dark mode can be toggled by the website author so it can be completely disabled. (Default is enabled)
 - Fix: Added compatibility for WP new features
+- Fix: Added requirements to latest WP standards
 - Fix: The main navbar and the full theme now works with tab
+- Fix: Missing background on breadcrumbs
 - Fix: Fixed striped tables colors and taxonomy block in dark mode
 - Fix: The arrow-like nodes in the breadcrumb bar are back
 - Fix: Due to incompatibilites with WP 5.5 and higher, Superfish is removed for a non-JQuery homemade solution for menus.
-- Fix: Sticky aside posts are now displayed correctly.
+- Fix: Sticky aside posts are now displayed correctly
 - Fix: The search bar doesn't look weird anymore on some screen sizes
-- Fix: Added requirements to latest WP standards.
-- Fix: Minor CSS corrections.
+- Fix: Added missing translations
+- Fix: Minor CSS corrections
 
 v4.0.1
 - Fix: Minor CSS corrections

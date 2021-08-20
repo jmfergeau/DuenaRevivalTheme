@@ -50,8 +50,9 @@
     .single-post-nav a:hover {
         background: $grey1;
     }
-    .breadcrumb>li {
-        text-shadow: 0 5px 7px rgba(1, 1, 1, 0.30);
+    .breadcrumb>li,
+    .breadcrumb>a {
+        text-shadow: $text-shadow;
         background: none;
     }
     #top-search #submit {

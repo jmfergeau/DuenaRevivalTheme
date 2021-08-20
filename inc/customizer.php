@@ -100,9 +100,11 @@ function duena_revival_customize_register( $wp_customize ) {
 		// "class" => "hidden", ???
 		'priority' => 16
 	)));
+
+	/* Makes the author picture round or not (5.0.0) */
 	$wp_customize->add_setting( 'g_author_bio_img_round', array(
 		'sanitize_callback' => 'duena_revival_sanitize_checkbox',
-		'default' => 'false'
+		'default' => '0'
 	) );
 	$wp_customize->add_control( 'g_author_bio_img_round', array(
 		'label' => __( "Rounded author Bio image", "duena-revival" ),
@@ -350,6 +352,19 @@ function duena_revival_customize_register( $wp_customize ) {
 					'section' => 'colors',
 					'settings' => 'cs_secondary_color'
 	)));
+
+	/* Dark mode togglable. Still needs the user to have a dark theme support and enabled on their os. (5.0.0) */
+	$wp_customize->add_setting( 'cs_darkmode', array(
+		'default' => '1',
+		'sanitize_callback' => 'duena_revival_sanitize_checkbox'
+	) );
+	$wp_customize->add_control( 'cs_darkmode', array(
+			'label' => __( "Dark mode", "duena-revival" ),
+			'section' => 'colors',
+			'description' => __( "Makes the theme go dark mode if the user has dark mode activated on their computer or device. Disabling this will keep the theme in light mode at any time.", "duena-revival" ),
+			'settings' => 'cs_darkmode',
+			'type' => 'checkbox'
+	) );
 
 	/*-----------------------------------------------------------------------------------*/
 	/*	Logo - NOTE: This has moved to the title_tagline section

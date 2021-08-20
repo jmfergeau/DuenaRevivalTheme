@@ -209,6 +209,11 @@ function duena_revival_styles() {
 	// Main stylesheet
 	wp_enqueue_style( 'duena-revival-style', get_stylesheet_uri() );
 
+	if (get_theme_mod('cs_darkmode', '1') === '1') {
+		wp_register_style( 'styledark', get_template_directory_uri() . '/styledark.css', '', '1.0');
+		wp_enqueue_style( 'styledark' );
+	};
+
 	// Add inline styles from theme options
 	$duena_revival_user_css = duena_revival_get_user_colors();
     wp_add_inline_style( 'duena-revival-style', $duena_revival_user_css );
@@ -336,7 +341,7 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
 	} elseif ( is_category() ) {
       $thisCat = get_category(get_query_var('cat'), false);
       if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
-      echo $before . 'Category Archives: "' . single_cat_title('', false) . '"' . $after;
+      echo $before . __( 'Category Archives: "', 'duena-revival' ) . single_cat_title('', false) . '"' . $after;
 
     } elseif ( is_search() ) {
       echo $before . 'Search for: "' . get_search_query() . '"' . $after;
@@ -398,7 +403,7 @@ if (! function_exists( 'duena_revival_breadcrumb' )) {
       if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
 
     } elseif ( is_tag() ) {
-      echo $before . 'Tag Archives: "' . single_tag_title('', false) . '"' . $after;
+      echo $before . __( 'Tag Archives: "', 'duena-revival' ) . single_tag_title('', false) . '"' . $after;
 
     } elseif ( is_author() ) {
       global $author;
@@ -470,7 +475,7 @@ if ( ! function_exists ( 'duena_revival_show_author_bio' ) ) {
 						$img_alt = get_bloginfo( 'name' );
 					}
 					echo "<figure class='author_bio_img'><img ";
-					if ( get_theme_mod('g_author_bio_img_round', false ) == true ) { // Makes the picture round from the options (5.0.0)
+					if ( get_theme_mod('g_author_bio_img_round', '0' ) === '1' ) { // Makes the picture round from the options (5.0.0)
 						echo "style='border-radius: 20rem!important;'";
 					} else {
 						echo "class='rounded'";

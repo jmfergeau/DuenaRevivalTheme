@@ -42,9 +42,15 @@ msgstr ""
 msgid "Category Archives: %s"
 msgstr ""
 
+msgid "Category Archives: \""
+msgstr ""
+
 #: ../archive.php:24
 #, php-format
 msgid "Tag Archives: %s"
+msgstr ""
+
+msgid "Tag Archives: \""
 msgstr ""
 
 #: ../archive.php:31 ../author.php:45
@@ -1130,4 +1136,10 @@ msgid "RSS feed"
 msgstr ""
 
 msgid "Rounded author Bio image"
+msgstr ""
+
+msgid "Dark mode"
+msgstr ""
+
+msgid "Makes the theme go dark mode if the user has dark mode activated on their computer or device. Disabling this will keep the theme in light mode at any time."
 msgstr ""

@@ -6,9 +6,9 @@
         {
             "label": "sass compile",
             "type": "shell",
-            "command": "sass --source-map --style=compressed ${workspaceFolder}/src/style-scss/style.scss ${workspaceFolder}/style.css",
+            "command": "sass --source-map --style=compressed ${workspaceFolder}/src/style-scss/style.scss ${workspaceFolder}/style.css && sass --source-map --style=compressed ${workspaceFolder}/src/style-scss/styledark.scss ${workspaceFolder}/styledark.css",
             "windows": {
-                "command": "sass --source-map --style=compressed ${workspaceFolder}\\src\\style-scss\\style.scss ${workspaceFolder}\\style.css",
+                "command": "sass --source-map --style=compressed ${workspaceFolder}\\src\\style-scss\\style.scss ${workspaceFolder}\\style.css && sass --source-map --style=compressed ${workspaceFolder}\\src\\style-scss\\styledark.scss ${workspaceFolder}\\styledark.css",
                 "options": {
                     "shell": {
                         "executable": "cmd.exe",

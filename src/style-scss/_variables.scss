@@ -1,10 +1,11 @@
 // Variables for style.css and maybe some others
-
-$font1: 'Damion', cursive;
-$font2: 'BenchNine', sans-serif;
+$font1: 'Damion',
+cursive;
+$font2: 'BenchNine',
+sans-serif;
 $font3: 'Font Awesome 5 Free';
-$font4: 'Georgia', serif;
-
+$font4: 'Georgia',
+serif;
 $primary-def: #ff5b5b;
 $secondary-def: #71A08B;
 $white: #fff;
@@ -17,6 +18,6 @@ $grey3: #262626;
 $grey4: #ebeae7;
 $grey5: #666666;
 $grey6: #c4c4c4;
-
+$text-shadow: 0 5px 7px rgb(1 1 1 / 30%);
 // Taken from bootstrap. Update from there if necessary
 $spacer: 1rem !default;
