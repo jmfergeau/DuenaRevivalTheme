@@ -190,9 +190,9 @@ add_action( 'widgets_init', 'duena_revival_widgets_init' );
 function duena_revival_styles() {
 	global $wp_styles;
 
-	// Bootstrap styles
-	wp_register_style( 'duena-revival-bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_style( 'duena-revival-bootstrap' );
+	// Bootstrap styles (now mixed with style.css in 5.0.0)
+	//wp_register_style( 'duena-revival-bootstrap', get_template_directory_uri() . '/vendor/bootstrap/css/bootstrap.min.css');
+	//wp_enqueue_style( 'duena-revival-bootstrap' );
 
 	// Slider styles
 	wp_register_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css');
@@ -226,7 +226,7 @@ function duena_revival_styles() {
 
 function duena_revival_scripts() {
 
-	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/vendor/bootstrap/js/bootstrap.bundle.min.js', array(), '5.1.0', true );
+	wp_enqueue_script( 'duena-revival-bootstrapjs', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), '5.1.3', true );
 
 	wp_enqueue_script( 'duena-revival-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
