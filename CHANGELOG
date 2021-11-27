@@ -1,7 +1,8 @@
 v5.0.0
-- Tweak: Updated to Bootstrap 5.1.0
+- Tweak: Updated to Bootstrap 5.1.3
 - Tweak: The author bio picture can be a circle. Perfect for squared pictures! (Default is disabled)
-- Tweak: Dark mode can be toggled by the website author so it can be completely disabled. (Default is enabled)
+- Tweak: Dark mode can be toggled by the viewers using a button at the bottom-left. The choice is remembered using a cookie.
+- Tweak: Scrollbars are now themed for all browsers.
 - Fix: Added compatibility for WP new features
 - Fix: Added requirements to latest WP standards
 - Fix: The main navbar and the full theme now works with tab

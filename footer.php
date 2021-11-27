@@ -40,6 +40,9 @@
 	</footer><!-- #colophon -->
 </div><!-- .page-wrapper -->
 
+<!-- Dark mode button -->
+<button id="darkmodebtn" href="#!"><i class="fas fa-adjust"></i></button>
+
 <?php wp_footer(); ?>
 </body>
 </html>

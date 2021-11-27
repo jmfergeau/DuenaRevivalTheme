@@ -254,6 +254,9 @@ function duena_revival_scripts() {
 	// Bootstrap JS | What was its use? Geez dude...
 	//wp_enqueue_script('bootstrap-custom', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '2.0', true);
 
+	// Dark mode handler (5.0.0)
+	wp_enqueue_script( 'dark-mode-handler', get_template_directory_uri() . '/js/darkmode.js', array(), '1.0', true );
+
 	// Custom Script File
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
 

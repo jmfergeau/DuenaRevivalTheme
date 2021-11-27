@@ -1,7 +1,7 @@
 /* Dark mode support (2.2.1) */
 
-@media (prefers-color-scheme: dark) {
-    h1,
+body.darkmode {
+    & h1,
     h2,
     h3,
     h4,
@@ -17,15 +17,15 @@
     .post_meta .post_comment a {
         color: $lesserwhite !important;
     }
-    .wp-block-separator hr {
+    & .wp-block-separator hr {
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
     }
-    .wp-block-image figcaption,
+    & .wp-block-image figcaption,
     .wp-block-video figcaption,
     .wp-block-audio figcaption {
         color: $grey5 !important;
     }
-    #top-search .input-search,
+    & #top-search .input-search,
     .hentry,
     .author-info,
     .single-post-nav,
@@ -43,22 +43,19 @@
         color: $lesserwhite !important;
         background: $grey2 !important;
     }
-    .page_nav_wrap .post_nav ul li a,
+    & .page_nav_wrap .post_nav ul li a,
     .page_nav_wrap .post_nav ul li span {
         color: $lesserwhite;
     }
-    .single-post-nav a:hover {
+    & .single-post-nav a:hover {
         background: $grey1;
     }
-    .breadcrumb>li,
+    & .breadcrumb>li,
     .breadcrumb>a {
         text-shadow: $text-shadow;
         background: none;
     }
-    #top-search #submit {
-        background: url(images/top-search-submit-dark.png) no-repeat 0 0;
-    }
-    #commentform textarea,
+    & #commentform textarea,
     #commentform input[type="text"] input[type="text"]:focus,
     input[type="email"]:focus,
     input[type="password"]:focus,
@@ -69,32 +66,84 @@
         background: $grey1;
         border: 1px solid $grey5;
     }
-    .wp-block-search input[type="search"] {
+    & .wp-block-search input[type="search"] {
         color: $lesswhite;
         background: $grey1;
         border: none;
     }
-    .wp-block-calendar caption {
+    & .wp-block-calendar caption {
         color: $lesserwhite !important;
     }
-    .wp-block-calendar th {
+    & .wp-block-calendar th {
         background: $grey5;
     }
-    .wp-block-calendar tbody {
+    & .wp-block-calendar tbody {
         color: $lesswhite;
         background: $grey1;
     }
-    .wp-block-calendar td {
+    & .wp-block-calendar td {
         color: $lesswhite;
     }
-    code,
+    & code,
     .wp-block-table.is-style-stripes tr:nth-child(odd) td {
         color: $lesswhite;
         background: $grey1;
     }
-    pre {
+    & pre {
         color: $lesserwhite;
         background: $grey1;
         border: 1px solid $grey5;
+        /* Dark mode on scrollbars */
+        scrollbar-color: $primary-def $grey3;
+        &::-webkit-scrollbar {
+            width: 12px;
+        }
+        &::-webkit-scrollbar-track {
+            background: $grey3;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary-def ;
+            border-radius: 20px;
+            border: 3px solid $grey3;
+        }
+        /* /Dark mode on scrollbars */
     }
+}
+
+#top-search.darkmode #submit  {  /* WHAT Y U NO ANIMATE */
+    vertical-align: top;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url(images/top-search-submit-dark.png) no-repeat 0 0;
+    border: none;
+    padding: 0;
+    width: 35px;
+    height: 33px;
+    box-shadow: none;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+/* scrollbar styles */
+/* firefox support */
+.darkmode {
+    scrollbar-color: $primary-def $grey3; 
+}
+
+/* The others support */
+.darkmode::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+.darkmode::-webkit-scrollbar-track {
+    background: $grey3;
+}
+  
+.darkmode::-webkit-scrollbar-thumb {
+    background-color: $primary-def ;
+    border-radius: 20px;
+    border: 3px solid $grey3;
 }
