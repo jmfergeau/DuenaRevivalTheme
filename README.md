@@ -6,12 +6,12 @@ Duena Revival Wordpress Theme v.4.0.0
 [![Version](https://img.shields.io/badge/wordpress-5.4.x-blue.svg)](https://wordpress.org)
 
 ## WARNING
-**This theme version might have issues with Wordpress 5.5 and higher.** The problem will be fixed in the next update. **There is release candidate versions of this next update! Feel free to [download and try them out](https://gitlab.com/maxlefou/DuenaRevivalTheme/-/tags)!**
+**This theme version might have issues with Wordpress 5.5 and higher.** The problem will be fixed in the next update. **There is release candidate versions of this next update! Feel free to [download and try them out](https://gitlab.com/jmfergeau/DuenaRevivalTheme/-/tags)!**
 
 
 Duena revival is a project that aims to maintain the [Duena Wordpress theme](https://github.com/DuenaStudio/DuenaTheme) to the latest Wordpress standards, as well as adding missing features. Check the changelog file to see what is updated.
 
-![Preview](https://gitlab.com/maxlefou/DuenaRevivalTheme/raw/master/screenshot.png)
+![Preview](https://gitlab.com/jmfergeau/DuenaRevivalTheme/raw/master/screenshot.png)
 
 Duena is a Bootstrap template designed specifically for personal blogs.
 Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out.
